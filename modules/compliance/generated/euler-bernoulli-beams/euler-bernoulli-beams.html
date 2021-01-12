@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This site is about foldable robotics.
+">
+  <meta name="author" content="Daniel M. Aukes">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Euler-Bernoulli Beams | Foldable Robotics </title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  
+  <!-- Bootstrap core CSS -->
+  <link href="/egr557_2021/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+
+  <link href="/egr557_2021/assets/blog.css" rel="stylesheet">
+  <link href="/egr557_2021/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/egr557_2021/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/egr557_2021/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/egr557_2021/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/egr557_2021/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/egr557_2021/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/egr557_2021/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/egr557_2021/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/egr557_2021/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/egr557_2021/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/egr557_2021/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/egr557_2021/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/egr557_2021/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/egr557_2021/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/egr557_2021/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/egr557_2021/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+<body>
+<div class="container">      
+<header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+      
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/egr557_2021/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+
+    </div>
+  </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/egr557_2021/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modules
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/introduction">Introduction</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/biomechanics">Biomechanics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/kinematics">Kinematics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/compliance">Mechanics and Compliance</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/dynamics">Dynamics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/optimization">Optimization</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/manufacturing">Prototyping & Manufacturing</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/integration">Integration</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/validation">Experimental Validation</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/project">Project</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/python">Python</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/misc">Misc</a>
+          
+        </div>
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/class_schedule">Class Schedule</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/my-assignments">Assignments</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/my-tutorials">Tutorials</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/calendar">Google Calendar</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Module: <a href="/egr557_2021/modules/compliance">compliance</a>
+      </h5>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h4>
+        Euler-Bernoulli Beams
+      </h4>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+</div>
+</div>
+</div><!-- /.row -->
+<main role="main" class="container">
+  <h1 id="euler-bernoulli-beams">Euler-Bernoulli Beams</h1>
+<p>The relationship between the bending moment and the radius of curvature(<span class="math inline">\(\rho\)</span>) for a beam of Young’s modulus <span class="math inline">\(E\)</span> and cross-sectional moment of inertia(second moment of area) <span class="math inline">\(I\)</span> is given by</p>
+<p><span class="math display">\[
+M=-\frac{EI}{\rho}
+\]</span></p>
+<p>Now let’s say <span class="math inline">\(\omega(x)\)</span> describes the deflection of a beam in the z direction as a function of its length, <span class="math inline">\(x\)</span>. When deflections are small – assumed in the Euler-Bernoulli model, then the second derivative can serve as an approximate the radius of curvature (using the small angle approximation <span class="math inline">\(\sin{\theta}=\theta\)</span>), making</p>
+<p><span class="math display">\[\frac{1}{\rho} = \frac{\delta^2\omega}{\delta x^2}\]</span></p>
+<p>and</p>
+<p><span class="math display">\[M = -EI\frac{\delta^2 \omega(x)}{\delta x^2}\]</span></p>
+<p><span class="math display">\[\frac{\delta^2}{\delta x^2}\left(EI\frac{\delta^2 \omega(x)}{\delta x^2}\right) = p(x)\]</span></p>
+<p>where <span class="math inline">\(p\)</span> is a distributed load, <span class="math inline">\(E\)</span> is Young’s Modulus, and <span class="math inline">\(I\)</span> is the</p>
+<p><span class="math display">\[\frac{\delta^2 \omega}{\delta x^2} =\frac{M}{EI}\]</span></p>
+<p>where <span class="math inline">\(M\)</span> is the moment,</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">copyright 2016-2017 Dan Aukes</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> pi</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>b,h,theta,P,L,E,I,x,w,M,q,p,A,B,C,D,p0,M0<span class="op">=</span>sympy.symbols(<span class="st">&#39;b,h,theta,P,L,E,I,x,w,M,q,p,A,B,C,D,p0,M0&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_x(w,subs1<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    subs1 <span class="op">=</span> subs1 <span class="kw">or</span> {}</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    w <span class="op">=</span> w.subs(subs1)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    unit <span class="op">=</span> <span class="bu">dict</span>([(item,<span class="dv">1</span>) <span class="cf">for</span> item <span class="kw">in</span> w.atoms(sympy.Symbol) <span class="cf">if</span> item<span class="op">!=</span>x])</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    unit.update(subs1)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    w_num <span class="op">=</span> w.subs(unit)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    f_w <span class="op">=</span> sympy.lambdify(x,w_num)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    xn <span class="op">=</span> numpy.r_[<span class="dv">0</span>:unit[L]:<span class="ot">100j</span>]</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    yn <span class="op">=</span> f_w(xn)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    plt.plot(xn,yn)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    plt.axis(<span class="st">&#39;equal&#39;</span>)</span></code></pre></div>
+<p>First we need to compute <span class="math inline">\(M(x)\)</span>, the moment on the beam as a function of the loading.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>M_dd <span class="op">=</span> p</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>M_d <span class="op">=</span> sympy.integrate(M_dd,(x,<span class="dv">0</span>,x)) <span class="op">+</span> A</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>M_d</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle A + p x\)</span></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>M <span class="op">=</span> sympy.integrate(M_d,(x,<span class="dv">0</span>,x)) <span class="op">+</span> B</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>M</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle A x + B + \frac{p x^{2}}{2}\)</span></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>w_d <span class="op">=</span> sympy.integrate(M<span class="op">/</span>E<span class="op">/</span>I,(x,<span class="dv">0</span>,x)) <span class="op">+</span> C</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>w_d</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle \frac{A x^{2}}{2 E I} + \frac{B x}{E I} + C + \frac{p x^{3}}{6 E I}\)</span></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> sympy.integrate(w_d,(x,<span class="dv">0</span>,x)) <span class="op">+</span> D</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>w</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle \frac{A x^{3}}{6 E I} + \frac{B x^{2}}{2 E I} + C x + D + \frac{p x^{4}}{24 E I}\)</span></p>
+<p>For a point load <span class="math inline">\(P\)</span> exerted on a beam at length (<span class="math inline">\(x=l\)</span>), the moment can be expressed as:</p>
+<p><span class="math display">\[M(x) = P(l-x)\]</span></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>eq1 <span class="op">=</span> M_d.subs({x:L}) <span class="op">-</span> P</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>eq2 <span class="op">=</span> M.subs({x:L}) <span class="op">-</span> <span class="dv">0</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>eq3 <span class="op">=</span> w_d.subs({x:<span class="dv">0</span>}) <span class="op">-</span> <span class="dv">0</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>eq4 <span class="op">=</span> w.subs({x:<span class="dv">0</span>}) <span class="op">-</span> <span class="dv">0</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>eq5 <span class="op">=</span> M_dd <span class="op">-</span> <span class="dv">0</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span>sympy.solve([eq1,eq2,eq3,eq4,eq5],(A,B,C,D,p))</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>sol</span></code></pre></div>
+<pre><code>{A: P, B: -L*P, C: 0, D: 0, p: 0}</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>w2 <span class="op">=</span> w.subs(sol)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>w2.simplify()</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle \frac{P x^{2} \left(- 3 L + x\right)}{6 E I}\)</span></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>w_d2 <span class="op">=</span> w_d.subs(sol)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>w_d2.simplify()</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle \frac{P x \left(- 2 L + x\right)}{2 E I}\)</span></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>M2<span class="op">=</span>M.subs(sol)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>M2.simplify()</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle P \left(- L + x\right)\)</span></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>w_max <span class="op">=</span> w2.subs({x:L})</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>w_max.simplify()</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle - \frac{L^{3} P}{3 E I}\)</span></p>
+<p>Now we can turn this process into a function</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calc_beam_equations(pp,E,I,eq):</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    M_dd <span class="op">=</span> pp</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    M_d <span class="op">=</span> sympy.integrate(M_dd,(x,<span class="dv">0</span>,x)) <span class="op">+</span> A</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    M <span class="op">=</span> sympy.integrate(M_d,(x,<span class="dv">0</span>,x)) <span class="op">+</span> B</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    w_d <span class="op">=</span> sympy.integrate(M<span class="op">/</span>E<span class="op">/</span>I,(x,<span class="dv">0</span>,x)) <span class="op">+</span> C</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    w <span class="op">=</span> sympy.integrate(w_d,(x,<span class="dv">0</span>,x)) <span class="op">+</span> D</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    eq1 <span class="op">=</span> M_d.subs(eq[<span class="dv">0</span>][<span class="dv">0</span>]) <span class="op">-</span> eq[<span class="dv">0</span>][<span class="dv">1</span>]</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    eq2 <span class="op">=</span> M.subs(eq[<span class="dv">1</span>][<span class="dv">0</span>]) <span class="op">-</span> eq[<span class="dv">1</span>][<span class="dv">1</span>]</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    eq3 <span class="op">=</span> w_d.subs(eq[<span class="dv">2</span>][<span class="dv">0</span>]) <span class="op">-</span> eq[<span class="dv">2</span>][<span class="dv">1</span>]</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    eq4 <span class="op">=</span> w.subs(eq[<span class="dv">3</span>][<span class="dv">0</span>]) <span class="op">-</span> eq[<span class="dv">3</span>][<span class="dv">1</span>]</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    eq <span class="op">=</span> [eq1,eq2,eq3,eq4]    </span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    sol <span class="op">=</span>sympy.solve(eq,(A,B,C,D))</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    w2 <span class="op">=</span> w.subs(sol)</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    w2 <span class="op">=</span> w2.simplify()</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>    w_d2 <span class="op">=</span> w_d.subs(sol)</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>    w_d2 <span class="op">=</span> w_d2.simplify()</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    M2<span class="op">=</span>M.subs(sol)</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    M2 <span class="op">=</span> M2.simplify()</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> w2,w_d2,M2</span></code></pre></div>
+<p>Repeating the point load</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>eq1 <span class="op">=</span> {x:L},P</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>eq2 <span class="op">=</span> {x:L},<span class="dv">0</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>eq3 <span class="op">=</span> {x:<span class="dv">0</span>},<span class="dv">0</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>eq4 <span class="op">=</span> {x:<span class="dv">0</span>},<span class="dv">0</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>eq <span class="op">=</span> [eq1,eq2,eq3,eq4]</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>w,w_d,M <span class="op">=</span> calc_beam_equations(<span class="dv">0</span>,E,I,eq)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>plot_x(w)</span></code></pre></div>
+<figure>
+<img src="output_20_0.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>For a distibuted load <span class="math inline">\(p(x)\)</span>,</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>eq1 <span class="op">=</span> {x:L},<span class="dv">0</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>eq2 <span class="op">=</span> {x:L},<span class="dv">0</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>eq3 <span class="op">=</span> {x:<span class="dv">0</span>},<span class="dv">0</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>eq4 <span class="op">=</span> {x:<span class="dv">0</span>},<span class="dv">0</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>eq <span class="op">=</span> [eq1,eq2,eq3,eq4]</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>w,w_d,M <span class="op">=</span> calc_beam_equations(<span class="op">-</span>p,E,I,eq)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>plot_x(w)</span></code></pre></div>
+<figure>
+<img src="output_23_0.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
+</figure>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>w</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle \frac{p x^{2} \left(- 6 L^{2} + 4 L x - x^{2}\right)}{24 E I}\)</span></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>w_d</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle \frac{p x \left(- 3 L^{2} + 3 L x - x^{2}\right)}{6 E I}\)</span></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>M</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle \frac{p \left(- L^{2} + 2 L x - x^{2}\right)}{2}\)</span></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>w_max <span class="op">=</span> w.subs({x:L})</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>w_max.simplify()</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle - \frac{L^{4} p}{8 E I}\)</span></p>
+<p>For a distributed load where <span class="math inline">\(p = p_0\frac{L-x}{L}\)</span>, the boundary conditions stay the same but the function is different</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>w,w_d,M <span class="op">=</span> calc_beam_equations(<span class="op">-</span>(p0<span class="op">/</span>L<span class="op">*</span>(L<span class="op">-</span>x)),E,I,eq)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>plot_x(w)</span></code></pre></div>
+<figure>
+<img src="output_29_0.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
+</figure>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>w</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle \frac{p_{0} x^{2} \left(5 L \left(- 2 L^{2} + 2 L x - x^{2}\right) + x^{3}\right)}{120 E I L}\)</span></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>w_d</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle \frac{p_{0} x \left(2 L \left(- 2 L^{2} + 3 L x - 2 x^{2}\right) + x^{3}\right)}{24 E I L}\)</span></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>M</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle \frac{p_{0} \left(L \left(- L^{2} + 3 L x - 3 x^{2}\right) + x^{3}\right)}{6 L}\)</span></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>w_max <span class="op">=</span> w.subs({x:L})</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>w_max.simplify()</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle - \frac{L^{4} p_{0}}{30 E I}\)</span></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>eq1 <span class="op">=</span> {x:L},P</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>eq2 <span class="op">=</span> {x:L},<span class="dv">0</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>eq3 <span class="op">=</span> {x:<span class="dv">0</span>},<span class="dv">0</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>eq4 <span class="op">=</span> {x:<span class="dv">0</span>},<span class="dv">0</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>eq <span class="op">=</span> [eq1,eq2,eq3,eq4]</span></code></pre></div>
+<p>Now what about a cross sectional area that changes as a function of x? As we know, the cross sectional moment of inertia <span class="math inline">\(I\)</span> for a rectangular beam of width <span class="math inline">\(b\)</span> and thickness <span class="math inline">\(h\)</span> is <span class="math display">\[I=\frac{bh^3}{12}\]</span>. If we make b a function of x, for example <span class="math inline">\(b(x)=L-x\)</span>, what happens to the curvature?</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>b2<span class="op">=</span>(L<span class="op">-</span>x)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>I2 <span class="op">=</span> b2<span class="op">*</span>h<span class="op">**</span><span class="dv">3</span><span class="op">/</span><span class="dv">12</span></span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>w,w_d,M <span class="op">=</span> calc_beam_equations(<span class="dv">0</span>,E,I2,eq)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>plot_x(w,{P:<span class="fl">.1</span>,L:<span class="dv">1</span>})</span></code></pre></div>
+<figure>
+<img src="output_37_0.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
+</figure>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>w</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle - \frac{6 P x^{2}}{E h^{3}}\)</span></p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>w_d</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle - \frac{12 P x}{E h^{3}}\)</span></p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>M</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle P \left(- L + x\right)\)</span></p>
+<p>As you can see it grows linearly as a function of x. Therefore, a cross section that decreases linearly is good at equalizing the radius of curvature (and the stresses) in a beam</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>eq1 <span class="op">=</span> {x:L},P</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>eq2 <span class="op">=</span> {x:L},<span class="dv">0</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>eq3 <span class="op">=</span> {x:<span class="dv">0</span>},<span class="dv">0</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>eq4 <span class="op">=</span> {x:<span class="dv">0</span>},<span class="dv">0</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>eq <span class="op">=</span> [eq1,eq2,eq3,eq4]</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>I2 <span class="op">=</span> b<span class="op">*</span>h<span class="op">**</span><span class="dv">3</span><span class="op">/</span><span class="dv">12</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>w,w_d,M <span class="op">=</span> calc_beam_equations(<span class="dv">0</span>,E,I2,eq)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>subs1 <span class="op">=</span> {b:<span class="fl">.01</span>,h:<span class="fl">.01</span>,E:<span class="fl">1e7</span>,L:<span class="fl">.1</span>,P:<span class="fl">.1</span>}</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> w.subs(subs1)</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>w</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle 2.0 x^{2} \left(x - 0.3\right)\)</span></p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>w_max <span class="op">=</span> w.subs({x:<span class="fl">.1</span>})</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>w_max</span></code></pre></div>
+<p><span class="math inline">\(\displaystyle -0.004\)</span></p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>plot_x(w,subs1)</span></code></pre></div>
+<figure>
+<img src="output_46_0.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
+</figure>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+
+</main><!-- /.container -->
+<footer class="blog-footer">
+  
+
+  <p>Copyright &copy; 2020 Daniel M. Aukes.  All rights reserved.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This site is about foldable robotics.
+">
+  <meta name="author" content="Daniel M. Aukes">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Vectors and Vector Math | Foldable Robotics </title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  
+  <!-- Bootstrap core CSS -->
+  <link href="/egr557_2021/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+
+  <link href="/egr557_2021/assets/blog.css" rel="stylesheet">
+  <link href="/egr557_2021/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/egr557_2021/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/egr557_2021/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/egr557_2021/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/egr557_2021/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/egr557_2021/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/egr557_2021/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/egr557_2021/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/egr557_2021/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/egr557_2021/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/egr557_2021/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/egr557_2021/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/egr557_2021/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/egr557_2021/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/egr557_2021/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/egr557_2021/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+<body>
+<div class="container">      
+<header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+      
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/egr557_2021/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+
+    </div>
+  </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/egr557_2021/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modules
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/introduction">Introduction</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/biomechanics">Biomechanics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/kinematics">Kinematics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/compliance">Mechanics and Compliance</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/dynamics">Dynamics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/optimization">Optimization</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/manufacturing">Prototyping & Manufacturing</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/integration">Integration</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/validation">Experimental Validation</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/project">Project</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/python">Python</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/misc">Misc</a>
+          
+        </div>
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/class_schedule">Class Schedule</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/my-assignments">Assignments</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/my-tutorials">Tutorials</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/calendar">Google Calendar</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Module: <a href="/egr557_2021/modules/kinematics">kinematics</a>
+      </h5>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h4>
+        Vectors and Vector Math
+      </h4>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+</div>
+</div>
+</div><!-- /.row -->
+<main role="main" class="container">
+  <h1 id="vectors-and-vector-math">Vectors and Vector Math</h1>
+<p>A <span class="math inline">\(\vec{v}\)</span> defines a magnitude and direction in <span class="math inline">\(n\)</span>-dimensional space.</p>
+<p>The concept of a vector comes with a lot of baggage. The first thing you must think about is how many dimensions are you working in? Two or three-dimensional space is normal, but the concept of a vector extends to any dimension.</p>
+<p>One way to interpret a vector is the <em>thing</em> which describes the difference in position between two points. But what is a point? I would argue that a point is a vector, whose magnitude and direction are referenced from a common origin. So it seems that if we use that definition, a vector is self referencing.</p>
+<p>With the idea of Cartesian space comes the idea of axes – such as x,y,z axes – which represent orthonormal basis vectors. This allows one to mathematically define a vector with a set of scalar quantities, which represent the magnitude along the direction of each basis vector. Given a set of basis vectors <span class="math inline">\(\hat{a}_x\)</span>,<span class="math inline">\(\hat{a}_y\)</span>, and <span class="math inline">\(\hat{a}_z\)</span>, for example, one can use three scalar quantities <span class="math inline">\(v_x\)</span>, <span class="math inline">\(v_y\)</span>, and <span class="math inline">\(v_z\)</span> to create an arbitrary vector <span class="math inline">\(\vec{v}\)</span> with the expression <span class="math display">\[ \vec{v} = v_x \hat{a}_x + v_y \hat{a}_y + v_z \hat{a}_z. \label{eqn:vector_basisform} \]</span></p>
+<p>The <span class="math inline">\(\vec{}\)</span> symbol is used to indicate a vector, while the the <span class="math inline">\(\hat{}\)</span> is used to indicate a vector with a magnitude of <span class="math inline">\(1\)</span> in <span class="math inline">\(\eqref{eqn:vector_basisform}\)</span>.</p>
+<h3 id="scalar-multiplication">Scalar Multiplication</h3>
+<p>Vectors can be multiplied by scalars in order to change their magnitude while preserving their direction. The expression <span class="math inline">\(a\vec{v}\)</span> represents a vector which is <span class="math inline">\(a\)</span> times the magnitude of <span class="math inline">\(\vec{v}\)</span>. Scalars may be positive or negative; negative scalars indicate an opposite orientation of the vector.</p>
+<h3 id="vector-addition-and-subtraction">Vector Addition and Subtraction</h3>
+<p>Vectors may be be added together in expressions, and are commutative and associative. <span class="math display">\[
+\vec{u} + \vec{v} = \vec{v} + \vec{u} \\
+\vec{u} + (\vec{v}+\vec{w}) = (\vec{u}+\vec{v})+\vec{w}
+\]</span></p>
+<p>When multiplied by scalars, vector sums are also distributive <span class="math display">\[
+a(\vec{v}+\vec{w}) = a\vec{v}+a\vec{w}
+\]</span></p>
+<h3 id="dot-product">Dot Product</h3>
+<p>The dot product is defined by the expression <span class="math display">\[
+\vec{v} \cdot \vec{w} \triangleq \left|\vec{v}\right|\left|\vec{w}\right|\cos{\theta},\label{eqn:vector_dot_product}
+\]</span></p>
+<p>where <span class="math inline">\(\left|\vec{v}\right|\)</span> indicates the magnitude of vector <span class="math inline">\(\vec{v}\)</span>. The dot product has many uses. It can be used to determine the magnitude of a vector, as in <span class="math display">\[
+\left|v\right| = \sqrt{\vec{v} \cdot \vec{v}}. \label{eq:vector_dot_product_magnitude}\]</span></p>
+<p>The result of a dot product is a scalar number. Since scalar algebra is distributive and commutative, expressions using the dot product are also distributive and commutative. <span class="math display">\[\vec{u} \cdot \vec{v} = \vec{v} \cdot \vec{u} \\
+\vec{u} \cdot \left(\vec{v}+\vec{w}\right) = \vec{u}\cdot\vec{v} + \vec{u}\cdot\vec{w} \label{eqn:vector_dot_distributive}\]</span></p>
+<h3 id="cross-product">Cross Product</h3>
+<p>The cross product is defined by the expression <span class="math display">\[
+\vec{v} \times \vec{w} \triangleq \left|\vec{v}\right|\left|\vec{w}\right|\sin{\theta}\hat{u}, \label{eqn:vector_cross_product}\]</span></p>
+<p>where <span class="math inline">\(\hat{u}\)</span> is the unit vector orthogonal to <span class="math inline">\(\vec{v}\)</span> and <span class="math inline">\(\vec{w}\)</span>, according to the right hand rule. Due to this definition, the cross product of <span class="math inline">\(\vec{w}\times\vec{v}\)</span> will produce a vector equal in magnitude and opposite direction to <span class="math inline">\(\vec{v}\times\vec{w}\)</span>. Thus, the cross product can be said to be anticommutative. <span class="math display">\[
+\vec{u} \times \vec{v} = -\vec{v} \times \vec{u}\]</span> The cross product operator can also be distributed. <span class="math display">\[
+\vec{u} \times \left(\vec{v}+\vec{w}\right) = \vec{u}\times\vec{v} + \vec{u}\times\vec{w}\]</span></p>
+<h3 class="unnumbered" id="exercises">Exercises</h3>
+<ol type="1">
+<li>Using , write an expression for a vector <span class="math inline">\(a\)</span> whose magnitude along <span class="math inline">\(\hat{a}_x\)</span> is 4, whose magnitude along <span class="math inline">\(\hat{a}_y\)</span> is 7, and whose magnitude along <span class="math inline">\(\hat{a}_z\)</span> is -3.</li>
+<li>Using , write an expression for a vector <span class="math inline">\(b\)</span> whose magnitude along <span class="math inline">\(\hat{a}_x\)</span> is 1, whose magnitude along <span class="math inline">\(\hat{a}_y\)</span> is 5, and whose magnitude along <span class="math inline">\(\hat{a}_z\)</span> is -2.</li>
+<li>Using , expand the expression <span class="math inline">\(\vec{a}\cdot\vec{b}\)</span>, using the results of</li>
+<li>Look up the term orthogonal on google. What is the angle between two orthogonal vectors? What is the magnitude of an unit vector?</li>
+<li>Assuming <span class="math inline">\(\hat{a}_x\)</span>,<span class="math inline">\(\hat{a}_x\)</span>, and <span class="math inline">\(\hat{a}_x\)</span> are orthogonal unit vectors, and using , supply the following:
+<ol type="a">
+<li><span class="math inline">\(\hat{a}_x\cdot\hat{a}_x = ?\)</span></li>
+<li><span class="math inline">\(\hat{a}_x\cdot\hat{a}_y = ?\)</span></li>
+<li><span class="math inline">\(\hat{a}_x\cdot\hat{a}_z = ?\)</span></li>
+<li><span class="math inline">\(\hat{a}_y\cdot\hat{a}_x = ?\)</span></li>
+<li><span class="math inline">\(\hat{a}_y\cdot\hat{a}_y = ?\)</span></li>
+<li><span class="math inline">\(\hat{a}_y\cdot\hat{a}_z = ?\)</span></li>
+<li><span class="math inline">\(\hat{a}_z\cdot\hat{a}_x = ?\)</span></li>
+<li><span class="math inline">\(\hat{a}_z\cdot\hat{a}_y = ?\)</span></li>
+<li><span class="math inline">\(\hat{a}_z\cdot\hat{a}_z = ?\)</span></li>
+</ol></li>
+</ol>
+<h3 id="expanded-basis-vector-forms">Expanded basis vector forms</h3>
+<p>If two vectors <span class="math inline">\(\vec{u}\)</span> and <span class="math inline">\(\vec{v}\)</span> can be expanded into component basis vectors <span class="math inline">\(\hat{a}_x\)</span>,<span class="math inline">\(\hat{a}_y\)</span>,and <span class="math inline">\(\hat{a}_z\)</span> such that <span class="math display">\[
+\vec{u}=u_x\hat{a}_x + u_y\hat{a}_y+u_z\hat{a}_z \text{ and}\\
+\vec{v}=v_x\hat{a}_x + v_y\hat{a}_y+v_z\hat{a}_z,\]</span> can then be rewritten as <span class="math display">\[
+\vec{v} \cdot \vec{w} = (u_x\hat{a}_x + u_y\hat{a}_y+u_z\hat{a}_z) \cdot (v_x\hat{a}_x + v_y\hat{a}_y+v_z\hat{a}_z)\]</span></p>
+<p>which, using the distributive property equals <span class="math display">\[
+\vec{v} \cdot \vec{w} = u_x\hat{a}_x \cdot v_x\hat{a}_x + u_x\hat{a}_x \cdot v_y\hat{a}_y + u_x\hat{a}_x \cdot v_z\hat{a}_z  + \\
+u_y\hat{a}_y \cdot v_x\hat{a}_x +u_y\hat{a}_y \cdot v_y\hat{a}_y + u_y\hat{a}_y \cdot v_z\hat{a}_z + \nonumber\\
+u_z\hat{a}_z \cdot v_x\hat{a}_x +u_z\hat{a}_z \cdot v_y\hat{a}_y +u_z\hat{a}_z \cdot v_z\hat{a}_z \nonumber\]</span></p>
+<p>grouping scalars, <span class="math display">\[
+\vec{v} \cdot \vec{w} = u_x v_x (\hat{a}_x \cdot \hat{a}_x) + u_x v_y (\hat{a}_x \cdot \hat{a}_y) + u_x v_z(\hat{a}_x \cdot \hat{a}_z)  + \label{eqn:dot_product_basis_simplification1} \\
+u_y v_x(\hat{a}_y \cdot \hat{a}_x) +u_y v_y(\hat{a}_y \cdot \hat{a}_y) + u_y v_z(\hat{a}_y \cdot \hat{a}_z) + \nonumber\\
+u_z v_x(\hat{a}_z \cdot \hat{a}_x) +u_z v_y(\hat{a}_z \cdot\hat{a}_y) +u_z v_z(\hat{a}_z \cdot \hat{a}_z) \nonumber\]</span></p>
+<p>using the definition of the dot product, we can see that the dot product of orthogonal basis unit vectors is equal to 0 while the dot product of a basis vector with itself is equal to 1. This can be summarized by <span class="math display">\[
+\hat{a}_x\cdot\hat{a}_x = 1\\
+\hat{a}_x\cdot\hat{a}_y = 0\\
+\hat{a}_x\cdot\hat{a}_z = 0\\
+\hat{a}_y\cdot\hat{a}_x = 0\\
+\hat{a}_y\cdot\hat{a}_y = 1\\
+\hat{a}_y\cdot\hat{a}_z = 0\\
+\hat{a}_z\cdot\hat{a}_x = 0\\
+\hat{a}_z\cdot\hat{a}_y = 0\\
+\hat{a}_z\cdot\hat{a}_z = 1\]</span> This simplifies to <span class="math display">\[
+\vec{v} \cdot \vec{w} = u_x v_x +u_y v_y+u_z v_z\]</span></p>
+<p>The expression for the cross product can similarly be simplified. Given the same <span class="math inline">\(\vec{u}\)</span> and <span class="math inline">\(\vec{v}\)</span>, can be rewritten as <span class="math display">\[\vec{v} \times \vec{w} = (u_x\hat{a}_x + u_y\hat{a}_y+u_z\hat{a}_z) \times (v_x\hat{a}_x + v_y\hat{a}_y+v_z\hat{a}_z)\]</span> which, using the distributive property equals <span class="math display">\[\vec{v} \times \vec{w} = u_x\hat{a}_x \times v_x\hat{a}_x + u_x\hat{a}_x \times v_y\hat{a}_y + u_x\hat{a}_x \times v_z\hat{a}_z  + \\
+u_y\hat{a}_y \times v_x\hat{a}_x +u_y\hat{a}_y \times v_y\hat{a}_y + u_y\hat{a}_y \times v_z\hat{a}_z + \nonumber\\
+u_z\hat{a}_z \times v_x\hat{a}_x +u_z\hat{a}_z \times v_y\hat{a}_y +u_z\hat{a}_z \times v_z\hat{a}_z \nonumber\]</span></p>
+<p>grouping scalars, <span class="math display">\[\vec{v} \times \vec{w} = u_x v_x (\hat{a}_x \times \hat{a}_x) + u_x v_y (\hat{a}_x \times \hat{a}_y) + u_x v_z(\hat{a}_x \times \hat{a}_z)  + \label{eqn:cross_product_basis_simplification1}\\
+u_y v_x(\hat{a}_y \times \hat{a}_x) +u_y v_y(\hat{a}_y \times \hat{a}_y) + u_y v_z(\hat{a}_y \times \hat{a}_z) + \nonumber\\
+u_z v_x(\hat{a}_z \times \hat{a}_x) +u_z v_y(\hat{a}_z \times\hat{a}_y) +u_z v_z(\hat{a}_z \times \hat{a}_z) \nonumber\]</span></p>
+<p>using the definition of the cross product, we can see that the cross product of orthogonal basis unit vectors produces an orthogonal unit vector to both according to the right hand rule, while the cross product of a basis vector with itself is equal to the zero vector. This can be summarized by <span class="math display">\[\hat{a}_x\times\hat{a}_x = \vec{0}\\
+\hat{a}_x\times\hat{a}_y = \hat{a}_z\\
+\hat{a}_x\times\hat{a}_z = -\hat{a}_y\\
+\hat{a}_y\times\hat{a}_x = -\hat{a}_z\\
+\hat{a}_y\times\hat{a}_y = \vec{0}\\
+\hat{a}_y\times\hat{a}_z = \hat{a}_x\\
+\hat{a}_z\times\hat{a}_x = \hat{a}_y\\
+\hat{a}_z\times\hat{a}_y = -\hat{a}_x\\
+\hat{a}_z\times\hat{a}_z = \vec{0}\]</span> This simplifies to <span class="math display">\[\vec{v} \times \vec{w} = u_x v_y\hat{a}_z - u_x v_z\hat{a}_y - u_y v_x\hat{a}_z + u_y v_z\hat{a}_x + u_z v_x\hat{a}_y - u_z v_y\hat{a}_x\]</span></p>
+<!--
+## rotations and translations
+
+who knows all about rotations what is a rotation in 2d what is a rotation in 3d how do you make a rotation about a point other than 0,0? definition of affine. what happens when i moulting everything by two? gets two times further from origin as well. what if I want to stretch scale and skew and trapezoid connection between 2d affine transformations and 3d perspective shift... length is preserved not angles\
+take a look at your phone straight on
+
+what is translation, what does it look like
+
+matrix form
+
+two steps or one to rotate translate?
+
+define transformation matrix
+
+simple polygon with plot class sympy to generate rotation matrix.\
+do translate, rotate, translate, symbolically and find the theta and displacement elements in combined matrix\
+pick center of polygon and scale
+
+$$
+\vec{v} = x\hat{a}_x +y\hat{a}_y + z\hat{a}_z
+$$
+
+$$
+\left[
+\begin{array}{ccc}
+    cos(q) & sin(q) & 0 \\
+    sin(q) & cos(q) & 0 \\
+    0 & 0 & 1 \\
+\end{array}
+\right]
+$$
+-->
+
+</main><!-- /.container -->
+<footer class="blog-footer">
+  
+
+  <p>Copyright &copy; 2020 Daniel M. Aukes.  All rights reserved.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This site is about foldable robotics.
+">
+  <meta name="author" content="Daniel M. Aukes">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Solidworks Export Tutorial | Foldable Robotics </title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  
+  <!-- Bootstrap core CSS -->
+  <link href="/egr557_2021/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+
+  <link href="/egr557_2021/assets/blog.css" rel="stylesheet">
+  <link href="/egr557_2021/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/egr557_2021/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/egr557_2021/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/egr557_2021/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/egr557_2021/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/egr557_2021/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/egr557_2021/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/egr557_2021/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/egr557_2021/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/egr557_2021/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/egr557_2021/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/egr557_2021/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/egr557_2021/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/egr557_2021/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/egr557_2021/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/egr557_2021/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+<body>
+<div class="container">      
+<header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+      
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/egr557_2021/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+
+    </div>
+  </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/egr557_2021/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modules
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/introduction">Introduction</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/biomechanics">Biomechanics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/kinematics">Kinematics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/compliance">Mechanics and Compliance</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/dynamics">Dynamics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/optimization">Optimization</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/manufacturing">Prototyping & Manufacturing</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/integration">Integration</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/validation">Experimental Validation</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/project">Project</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/python">Python</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/misc">Misc</a>
+          
+        </div>
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/class_schedule">Class Schedule</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/my-assignments">Assignments</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/my-tutorials">Tutorials</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/calendar">Google Calendar</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Module: <a href="/egr557_2021/modules/kinematics">kinematics</a>
+      </h5>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h4>
+        Solidworks Export Tutorial
+      </h4>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+</div>
+</div>
+</div><!-- /.row -->
+<main role="main" class="container">
+  <p>Solidworks is an attractive way to model popup devices because you can interact with the three-dimensional kinematics of your popup device. However, Solidworks is not good at everything. First, it cannot create your cut-files for you automatically. Solidworks knows nothing about <em>how</em> you’re going to make your device, out of how many layers, and with what manufacturing processes. Second, Solidworks is such an expansive tool, and can be used in so many different ways that the most straightforward way to design a popup device is not very obvious.</p>
+<p>So, to help users with these issues, we have outlined a workflow which can be used to rapidly create a popup device whose kinematics you can visualise and interact with quickly. Second, we also outline the steps to export those basic multilayer kinematics to a popupCAD file so that the manufacturing specifics can be done in an environment with built-in manufacturing knowledge.</p>
+<p>Download <a href="../../figures/solidworks-export-tutorial/example.zip">example.zip</a> to see this example project.</p>
+<!--
+
+Tutorial Video
+----------------
+
+Please follow [this link](https://www.youtube.com/embed/fqtUoCcbiJk?rel=0&amp;showinfo=0)^[[https://www.youtube.com/embed/fqtUoCcbiJk?rel=0&amp;showinfo=0](https://www.youtube.com/embed/fqtUoCcbiJk?rel=0&amp;showinfo=0)] to watch the tutorial video:
+-->
+<h2 id="step-by-step-instructions">Step-by-step Instructions</h2>
+<ol type="1">
+<li><p>Create a new part file</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/01.png" style="height:2in" alt="01" /><figcaption aria-hidden="true">01</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/02.png" style="height:2in" alt="02" /><figcaption aria-hidden="true">02</figcaption>
+</figure></li>
+<li><p>Select a reference plane(top, for example) and then create a new sketch (or create a new sketch and select any reference plane)</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/03.png" style="height:2in" alt="03" /><figcaption aria-hidden="true">03</figcaption>
+</figure></li>
+<li><p>Sketch the lines which define your robot. The outline of your robot should be a drawn out of solid lines. Any internal hinges should be drawn as construction lines, or made into construction lines once drawn. If you are making a robot which consists of multiple sub-laminates, you should create one of these sketches per sublaminate.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/04.png" style="height:2in" alt="04" /><figcaption aria-hidden="true">04</figcaption>
+</figure></li>
+<li><p>Next, for each sub-laminate sketch that you have created, you can should create a planar surface. Go to insert-&gt;surfaces-&gt;planar surface. Select each sketch. This should create a surface whose outline matches the closed shape of solid lines you drew in your sketch.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/05.png" style="height:2in" alt="05" /><figcaption aria-hidden="true">05</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/06.png" style="height:2in" alt="06" /><figcaption aria-hidden="true">06</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/07.png" style="height:2in" alt="07" /><figcaption aria-hidden="true">07</figcaption>
+</figure></li>
+<li><p>For each surface you just created, you want to split that surface along all the lines representing joints from your original sketch. First, unhide the original sketch by clicking on the eyglasses icon under the surface-&gt;sketch in the left project pane. This will allow you to view, select, and reference lines drawn in that sketch.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/09.png" style="height:2in" alt="09" /><figcaption aria-hidden="true">09</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/10.png" style="height:2in" alt="10" /><figcaption aria-hidden="true">10</figcaption>
+</figure></li>
+<li><p>Next, create a new sketch on the same reference plane(such as the top plane), select one or more joint lines, and in the sketch tools, select “convert entities.” Only select sets of lines which do not cross each other, as the next step will fail. Make sure that the lines you do select completely cross the surface, or create a loop.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/11.png" style="height:2in" alt="11" /><figcaption aria-hidden="true">11</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/12.png" style="height:2in" alt="12" /><figcaption aria-hidden="true">12</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/13.png" style="height:2in" alt="13" /><figcaption aria-hidden="true">13</figcaption>
+</figure></li>
+<li><p>Repeat the last two steps for the remaining joint lines, making sure not to select sets of lines which cross each other or more than two lines at any point.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/14.png" style="height:2in" alt="14" /><figcaption aria-hidden="true">14</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/15.png" style="height:2in" alt="15" /><figcaption aria-hidden="true">15</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/16.png" style="height:2in" alt="16" /><figcaption aria-hidden="true">16</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/17.png" style="height:2in" alt="17" /><figcaption aria-hidden="true">17</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/18.png" style="height:2in" alt="18" /><figcaption aria-hidden="true">18</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/19.png" style="height:2in" alt="19" /><figcaption aria-hidden="true">19</figcaption>
+</figure></li>
+<li><p>Use insert-&gt;curve-&gt;split line to separate faces. You will need to do this for each sketch you just created. When you do this, remember to select all the surface faces to ensure they get split by the sketch.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/20.png" style="height:2in" alt="20" /><figcaption aria-hidden="true">20</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/21.png" style="height:2in" alt="21" /><figcaption aria-hidden="true">21</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/22.png" style="height:2in" alt="22" /><figcaption aria-hidden="true">22</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/23.png" style="height:2in" alt="23" /><figcaption aria-hidden="true">23</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/24.png" style="height:2in" alt="24" /><figcaption aria-hidden="true">24</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/25.png" style="height:2in" alt="25" /><figcaption aria-hidden="true">25</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/26.png" style="height:2in" alt="26" /><figcaption aria-hidden="true">26</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/27.png" style="height:2in" alt="27" /><figcaption aria-hidden="true">27</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/28.png" style="height:2in" alt="28" /><figcaption aria-hidden="true">28</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/29.png" style="height:2in" alt="29" /><figcaption aria-hidden="true">29</figcaption>
+</figure></li>
+<li><p>Use the insert-&gt;surface-&gt;offset function to create independent surfaces from faces of original body. Hint: to repeat creating the same feature over and over, hit enter after creating one offset surface feature and solidworks will begin a new one.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/30.png" style="height:2in" alt="30" /><figcaption aria-hidden="true">30</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/31.png" style="height:2in" alt="31" /><figcaption aria-hidden="true">31</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/32.png" style="height:2in" alt="32" /><figcaption aria-hidden="true">32</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/33.png" style="height:2in" alt="33" /><figcaption aria-hidden="true">33</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/34.png" style="height:2in" alt="34" /><figcaption aria-hidden="true">34</figcaption>
+</figure></li>
+<li><p>Use insert-&gt;boss/base-&gt;thicken feature to thicken each feature. Hint: deselect the merge body option after creating the first thickened part, otherwise the bodies will merge back together.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/35.png" style="height:2in" alt="35" /><figcaption aria-hidden="true">35</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/36.png" style="height:2in" alt="36" /><figcaption aria-hidden="true">36</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/37.png" style="height:2in" alt="37" /><figcaption aria-hidden="true">37</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/38.png" style="height:2in" alt="38" /><figcaption aria-hidden="true">38</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/39.png" style="height:2in" alt="39" /><figcaption aria-hidden="true">39</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/40.png" style="height:2in" alt="40" /><figcaption aria-hidden="true">40</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/41.png" style="height:2in" alt="41" /><figcaption aria-hidden="true">41</figcaption>
+</figure></li>
+<li><p>Save your file!!</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/42.png" style="height:2in" alt="42" /><figcaption aria-hidden="true">42</figcaption>
+</figure></li>
+<li><p>Look at the project menu on the left. You should have a number of solid bodies in your part file.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/43.png" style="height:2in" alt="43" /><figcaption aria-hidden="true">43</figcaption>
+</figure></li>
+<li><p>Right click on the solid bodies folder and select “save bodies”</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/44.png" style="height:2in" alt="44" /><figcaption aria-hidden="true">44</figcaption>
+</figure></li>
+<li><p>In the save bodies menu, auto-assign names and select an assembly name. This will automatically put all the saved bodies into an assembly file. Click the green check box. Select “rebuild” if a notification box pops up. This should begin the save process and open up your new assembly file in the background</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/45.png" style="height:2in" alt="45" /><figcaption aria-hidden="true">45</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/46.png" style="height:2in" alt="46" /><figcaption aria-hidden="true">46</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/47.png" style="height:2in" alt="47" /><figcaption aria-hidden="true">47</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/48.png" style="height:2in" alt="48" /><figcaption aria-hidden="true">48</figcaption>
+</figure></li>
+<li><p>Save and close your part file. Now the newly-created assembly file should be visible.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/49.png" style="height:2in" alt="49" /><figcaption aria-hidden="true">49</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/51.png" style="height:2in" alt="51" /><figcaption aria-hidden="true">51</figcaption>
+</figure></li>
+<li><p>All the parts in your assembly are fixed in space relative to each other. To visualize how they will move, you must float all the parts except for one. To do this, select all the parts you wish to be able to move, right click on them in the project manager on the left, and select “float.” These parts should now be able to be moved by dragging them.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/52.png" style="height:2in" alt="52" /><figcaption aria-hidden="true">52</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/53.png" style="height:2in" alt="53" /><figcaption aria-hidden="true">53</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/54.png" style="height:2in" alt="54" /><figcaption aria-hidden="true">54</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/55.png" style="height:2in" alt="55" /><figcaption aria-hidden="true">55</figcaption>
+</figure></li>
+<li><p>Next, you must create mating conditions to define the joint kinematics of your devie. Since these thickened flat sheets represent several layers laminated together, they will most likely rotate around their midplane. However, to assemble the device faster, it is easier to select edges and points on the top or bottom surface, with the knowledge that it may not move exactly the same in real life. Select one mating line on two parts you would like to joint with a joint and then select the “mate” button in the assembly tab. This will bring the two lines together. Hit enter to accept</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/57.png" style="height:2in" alt="57" /><figcaption aria-hidden="true">57</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/58.png" style="height:2in" alt="58" /><figcaption aria-hidden="true">58</figcaption>
+</figure></li>
+<li><p>Next select two points at the end of the mating edge you just joined, one for each part. This should join those two points and constrain the parts as if they are joined by a hinge. You can now move those two parts relative to each other.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/59.png" style="height:2in" alt="59" /><figcaption aria-hidden="true">59</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/60.png" style="height:2in" alt="60" /><figcaption aria-hidden="true">60</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/61.png" style="height:2in" alt="61" /><figcaption aria-hidden="true">61</figcaption>
+</figure></li>
+<li><p>Repeat this process for each joint you wish to create. This should fully define the motion of the device. You can move the device around as it will work once created, as in this <a href="example.mp4">video</a></p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/62.png" style="height:2in" alt="62" /><figcaption aria-hidden="true">62</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/63.png" style="height:2in" alt="63" /><figcaption aria-hidden="true">63</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/64.png" style="height:2in" alt="64" /><figcaption aria-hidden="true">64</figcaption>
+</figure></li>
+<li><p>Once you have defined the kinematics of the device, you must now re-flatten the assembly so that you can export it to popupCAD. Add additional mating constraints to neighboring faces of your device, making them “coincident” to each other. This will flatten it.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/65.png" style="height:2in" alt="65" /><figcaption aria-hidden="true">65</figcaption>
+</figure></li>
+<li><p>Save your Assembly</p></li>
+<li><p>Make a new drawing by selecting file-&gt;“create drawing from assembly”</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/66.png" style="height:2in" alt="66" /><figcaption aria-hidden="true">66</figcaption>
+</figure></li>
+<li><p>Deselect the sheet format option</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/67.png" style="height:2in" alt="67" /><figcaption aria-hidden="true">67</figcaption>
+</figure></li>
+<li><p>Drag in the top view of the assembly and hit enter. (I’m assuming you used the top view to create your original sketches)</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/68.png" style="height:2in" alt="68" /><figcaption aria-hidden="true">68</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/69.png" style="height:2in" alt="69" /><figcaption aria-hidden="true">69</figcaption>
+</figure></li>
+<li><p>download the macro found at <a href="https://github.com/popupcad/popupcad_solidworks_exporter/raw/master/swp/ExportDrawingFaces.swp" class="uri">https://github.com/popupcad/popupcad_solidworks_exporter/raw/master/swp/ExportDrawingFaces.swp</a>.</p></li>
+<li><p>Select the top view</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/71.png" style="height:2in" alt="71" /><figcaption aria-hidden="true">71</figcaption>
+</figure></li>
+<li><p>Export the top view. Go to tools-&gt;macro-&gt;edit, and select “ExportDrawingFaces.swp,” found in the /swp directory of the downloaded macro project. Note: this will only work with Solidworks 2014, 64-bit. Otherwise you will have to re-create the macro project from the included source files. That will have to be the subject of a different tutorial</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/72.png" style="height:2in" alt="72" /><figcaption aria-hidden="true">72</figcaption>
+</figure>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/73.png" style="height:2in" alt="73" /><figcaption aria-hidden="true">73</figcaption>
+</figure></li>
+<li><p>A code window should open. Select the run icon, and select run on the dialog that opens.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/74.png" style="height:2in" alt="74" /><figcaption aria-hidden="true">74</figcaption>
+</figure></li>
+<li><p>Select “Export Generic” and hit run to export the view to a .yaml file that your code can interpret.</p>
+<figure>
+<img src="../../figures/solidworks-export-tutorial/images/75.png" style="height:2in" alt="75" /><figcaption aria-hidden="true">75</figcaption>
+</figure></li>
+</ol>
+
+</main><!-- /.container -->
+<footer class="blog-footer">
+  
+
+  <p>Copyright &copy; 2020 Daniel M. Aukes.  All rights reserved.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

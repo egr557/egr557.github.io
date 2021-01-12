@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This site is about foldable robotics.
+">
+  <meta name="author" content="Daniel M. Aukes">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Solving Four-Bar Constraints | Foldable Robotics </title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  
+  <!-- Bootstrap core CSS -->
+  <link href="/egr557_2021/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+
+  <link href="/egr557_2021/assets/blog.css" rel="stylesheet">
+  <link href="/egr557_2021/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/egr557_2021/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/egr557_2021/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/egr557_2021/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/egr557_2021/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/egr557_2021/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/egr557_2021/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/egr557_2021/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/egr557_2021/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/egr557_2021/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/egr557_2021/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/egr557_2021/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/egr557_2021/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/egr557_2021/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/egr557_2021/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/egr557_2021/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+<body>
+<div class="container">      
+<header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+      
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/egr557_2021/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+
+    </div>
+  </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/egr557_2021/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modules
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/introduction">Introduction</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/biomechanics">Biomechanics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/kinematics">Kinematics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/compliance">Mechanics and Compliance</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/dynamics">Dynamics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/optimization">Optimization</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/manufacturing">Prototyping & Manufacturing</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/integration">Integration</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/validation">Experimental Validation</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/project">Project</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/python">Python</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/misc">Misc</a>
+          
+        </div>
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/class_schedule">Class Schedule</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/my-assignments">Assignments</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/my-tutorials">Tutorials</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/calendar">Google Calendar</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Module: <a href="/egr557_2021/modules/kinematics">kinematics</a>
+      </h5>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h4>
+        Solving Four-Bar Constraints
+      </h4>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+</div>
+</div>
+</div><!-- /.row -->
+<main role="main" class="container">
+  <h1 id="solving-four-bar-constraints">Solving Four-Bar Constraints</h1>
+<p>Turn on inline plotting</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code></pre></div>
+<p>import required packages</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pynamics</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.frame <span class="im">import</span> Frame</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.variable_types <span class="im">import</span> Differentiable,Constant</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.system <span class="im">import</span> System</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.body <span class="im">import</span> Body</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.dyadic <span class="im">import</span> Dyadic</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.output <span class="im">import</span> Output,PointsOutput</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.particle <span class="im">import</span> Particle</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pynamics.integration</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>plt.ion()</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> pi</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.constraint <span class="im">import</span> Constraint</span></code></pre></div>
+<p>Create a pynamics system</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>system <span class="op">=</span> System()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>pynamics.set_system(<span class="va">__name__</span>,system)</span></code></pre></div>
+<p>Declare constants</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>lA <span class="op">=</span> Constant(<span class="dv">2</span>,<span class="st">&#39;lA&#39;</span>,system)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>lB <span class="op">=</span> Constant(<span class="fl">1.5</span>,<span class="st">&#39;lB&#39;</span>,system)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>lC <span class="op">=</span> Constant(<span class="dv">1</span>,<span class="st">&#39;lC&#39;</span>,system)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>lD <span class="op">=</span> Constant(<span class="dv">1</span>,<span class="st">&#39;lD&#39;</span>,system)</span></code></pre></div>
+<p>This cell is not currently used mA = Constant(1,‘mA,’system) mB = Constant(1,‘mB,’system) mC = Constant(1,‘mC,’system) g = Constant(9.81,‘g,’system) b = Constant(1e0,‘b,’system) k = Constant(1e1,‘k,’system)</p>
+<p>preload1 = Constant(0<em>pi/180,‘preload1,’system) preload2 = Constant(0</em>pi/180,‘preload2,’system) preload3 = Constant(0*pi/180,‘preload3,’system)</p>
+<p>Ixx_A = Constant(1,‘Ixx_A,’system) Iyy_A = Constant(1,‘Iyy_A,’system) Izz_A = Constant(1,‘Izz_A,’system) Ixx_B = Constant(1,‘Ixx_B,’system) Iyy_B = Constant(1,‘Iyy_B,’system) Izz_B = Constant(1,‘Izz_B,’system) Ixx_C = Constant(1,‘Ixx_C,’system) Iyy_C = Constant(1,‘Iyy_C,’system) Izz_C = Constant(1,‘Izz_C,’system) This cell is not currently used tinitial = 0 tfinal = 5 tstep = 1/30 t = numpy.r_[tinitial:tfinal:tstep] Create three differentiable state variables</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>qA,qA_d,qA_dd <span class="op">=</span> Differentiable(<span class="st">&#39;qA&#39;</span>,system)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>qB,qB_d,qB_dd <span class="op">=</span> Differentiable(<span class="st">&#39;qB&#39;</span>,system)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>qC,qC_d,qC_dd <span class="op">=</span> Differentiable(<span class="st">&#39;qC&#39;</span>,system)</span></code></pre></div>
+<p>Create an initial guess for their starting positions. Note that this is not necessarily accurate given the constraint that they are supposed to be connected with given, constant length. We will use these initial values to seed the solver that will find a valid initial state</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>initialvalues <span class="op">=</span> {}</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>initialvalues[qA]<span class="op">=-</span><span class="dv">90</span><span class="op">*</span>pi<span class="op">/</span><span class="dv">180</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>initialvalues[qA_d]<span class="op">=</span><span class="dv">0</span><span class="op">*</span>pi<span class="op">/</span><span class="dv">180</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>initialvalues[qB]<span class="op">=</span><span class="dv">90</span><span class="op">*</span>pi<span class="op">/</span><span class="dv">180</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>initialvalues[qB_d]<span class="op">=</span><span class="dv">0</span><span class="op">*</span>pi<span class="op">/</span><span class="dv">180</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>initialvalues[qC]<span class="op">=</span><span class="dv">90</span><span class="op">*</span>pi<span class="op">/</span><span class="dv">180</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>initialvalues[qC_d]<span class="op">=</span><span class="dv">0</span><span class="op">*</span>pi<span class="op">/</span><span class="dv">180</span></span></code></pre></div>
+<p>Retrieve state variables in the order they are stored in the system</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>statevariables <span class="op">=</span> system.get_state_variables()</span></code></pre></div>
+<p>Create four frames</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> Frame(<span class="st">&#39;N&#39;</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> Frame(<span class="st">&#39;A&#39;</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> Frame(<span class="st">&#39;B&#39;</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> Frame(<span class="st">&#39;C&#39;</span>)</span></code></pre></div>
+<p>Declare N as the Newtonian (fixed) frame</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>system.set_newtonian(N)</span></code></pre></div>
+<p>Rotate A,B, and C about their local Z axes.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>A.rotate_fixed_axis_directed(N,[<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>],qA,system)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>B.rotate_fixed_axis_directed(A,[<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>],qB,system)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>C.rotate_fixed_axis_directed(B,[<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>],qC,system)</span></code></pre></div>
+<p>Define vectors that will be used to solve for kinematics</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>pNA<span class="op">=</span><span class="dv">0</span><span class="op">*</span>N.x</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>pAB<span class="op">=</span>pNA<span class="op">+</span>lA<span class="op">*</span>A.x</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>pBC <span class="op">=</span> pAB <span class="op">+</span> lB<span class="op">*</span>B.x</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>pCtip <span class="op">=</span> pBC <span class="op">+</span> lC<span class="op">*</span>C.x</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>pD <span class="op">=</span> lD<span class="op">*</span>N.x</span></code></pre></div>
+<p>Declare a list of points that will be used for plotting</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>points <span class="op">=</span> [pNA,pAB,pBC,pCtip]</span></code></pre></div>
+<p>create a list of initial values ini0 in the order of the system’s state variables</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>statevariables <span class="op">=</span> system.get_state_variables()</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>ini0 <span class="op">=</span> [initialvalues[item] <span class="cf">for</span> item <span class="kw">in</span> statevariables]</span></code></pre></div>
+<p>Define the closed loop kinematics of the four bar linkage.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>eq_vector <span class="op">=</span> pCtip<span class="op">-</span>pD</span></code></pre></div>
+<p>Dot the vector equation with N.x and N.y to create two scalar equations. This will remove two degrees of freedom from our system.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>eq <span class="op">=</span> []</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>eq.append((eq_vector).dot(N.x))</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>eq.append((eq_vector).dot(N.y))</span></code></pre></div>
+<p>Take the derivative of the equations to linearize with regard to the velocity variables</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>eq_d<span class="op">=</span>[(system.derivative(item)) <span class="cf">for</span> item <span class="kw">in</span> eq]</span></code></pre></div>
+<p>This cell is not currently used eq_dd=[(system.derivative(item)) for item in eq_d] Solve for a valid initial state</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>c<span class="op">=</span>Constraint(eq)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>qi <span class="op">=</span> [qA]</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>qd <span class="op">=</span> [qB,qC]</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>guess <span class="op">=</span> [initialvalues[item] <span class="cf">for</span> item <span class="kw">in</span> qd]</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>constants <span class="op">=</span> system.constant_values.copy()</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>defined <span class="op">=</span> <span class="bu">dict</span>([(item,initialvalues[item]) <span class="cf">for</span> item <span class="kw">in</span> qi])</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>constants.update(defined)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> c.solve_numeric(qd,guess,constants)</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>ini <span class="op">=</span> []</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> system.get_state_variables():</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> item <span class="kw">in</span> qd:</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>        ini.append(result.x[qd.index(item)])</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>        ini.append(initialvalues[item])</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>points <span class="op">=</span> PointsOutput(points, constant_values<span class="op">=</span>system.constant_values)</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>points.calc(numpy.array([ini0,ini]))</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>points.plot_time()</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>result.fun</span></code></pre></div>
+<pre><code>2021-01-05 13:27:22,131 - pynamics.output - INFO - calculating outputs
+2021-01-05 13:27:22,131 - pynamics.output - INFO - done calculating outputs
+
+
+
+
+
+5.147252723372451e-14</code></pre>
+<figure>
+<img src="output_40_2.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
+</figure>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<p>Now, given a valid configuration, solve for the linearized, velocity-based constraint equation. If <span class="math display">\[eq = \textbf{A} q_i + \textbf{B} q_d = 0\]</span> then, solving for <span class="math inline">\(q_d\)</span>, <span class="math display">\[-\textbf{B}q_d = \textbf{A}q_i\]</span> <span class="math display">\[q_d = -\textbf{B}^{-1}\textbf{A}q_i\]</span></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>eq_d <span class="op">=</span> sympy.Matrix(eq_d)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>qi <span class="op">=</span> sympy.Matrix([qA_d])</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>qd <span class="op">=</span> sympy.Matrix([qB_d,qC_d])</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> eq_d.jacobian(qi)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> eq_d.jacobian(qd)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>J <span class="op">=</span> <span class="op">-</span>B.inv()<span class="op">*</span>A</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>J</span></code></pre></div>
+<pre><code>⎡                                                      (sin(qA)⋅sin(qB)⋅sin(qC
+⎢                                                      ───────────────────────
+⎢                                                                             
+⎢                                                                             
+⎢                                                                             
+⎢(-lA⋅sin(qA) - lB⋅sin(qA)⋅cos(qB) - lB⋅sin(qB)⋅cos(qA) + lC⋅(sin(qA)⋅sin(qB) 
+⎢─────────────────────────────────────────────────────────────────────────────
+⎢                                                                             
+⎣                                                                             
+
+) - sin(qA)⋅cos(qB)⋅cos(qC) - sin(qB)⋅cos(qA)⋅cos(qC) - sin(qC)⋅cos(qA)⋅cos(qB
+──────────────────────────────────────────────────────────────────────────────
+                                                   2        2                 
+                                             lB⋅sin (qA)⋅sin (qB)⋅sin(qC) + lB
+                                                                              
+- cos(qA)⋅cos(qB))⋅sin(qC) + lC⋅(-sin(qA)⋅cos(qB) - sin(qB)⋅cos(qA))⋅cos(qC))⋅
+──────────────────────────────────────────────────────────────────────────────
+                      2        2                        2                2    
+             lB⋅lC⋅sin (qA)⋅sin (qB)⋅sin(qC) + lB⋅lC⋅sin (qA)⋅sin(qC)⋅cos (qB)
+
+))⋅(lA⋅cos(qA) - lB⋅sin(qA)⋅sin(qB) + lB⋅cos(qA)⋅cos(qB) + lC⋅(-sin(qA)⋅sin(qB
+──────────────────────────────────────────────────────────────────────────────
+    2                2             2                2                     2   
+⋅sin (qA)⋅sin(qC)⋅cos (qB) + lB⋅sin (qB)⋅sin(qC)⋅cos (qA) + lB⋅sin(qC)⋅cos (qA
+                                                                              
+(-lB⋅sin(qA)⋅sin(qB) + lB⋅cos(qA)⋅cos(qB) - lC⋅sin(qA)⋅sin(qB)⋅cos(qC) - lC⋅si
+──────────────────────────────────────────────────────────────────────────────
+            2                2                        2        2              
+ + lB⋅lC⋅sin (qB)⋅sin(qC)⋅cos (qA) + lB⋅lC⋅sin(qC)⋅cos (qA)⋅cos (qB)          
+
+) + cos(qA)⋅cos(qB))⋅cos(qC) + lC⋅(-sin(qA)⋅cos(qB) - sin(qB)⋅cos(qA))⋅sin(qC)
+──────────────────────────────────────────────────────────────────────────────
+     2                                                                        
+)⋅cos (qB)                                                                    
+                                                                              
+n(qA)⋅sin(qC)⋅cos(qB) - lC⋅sin(qB)⋅sin(qC)⋅cos(qA) + lC⋅cos(qA)⋅cos(qB)⋅cos(qC
+──────────────────────────────────────────────────────────────────────────────
+                                                                              
+                                                                              
+
+)   (sin(qA)⋅sin(qB)⋅cos(qC) + sin(qA)⋅sin(qC)⋅cos(qB) + sin(qB)⋅sin(qC)⋅cos(q
+─ + ──────────────────────────────────────────────────────────────────────────
+                                                                              
+                                                                        lB⋅sin
+                                                                              
+))   (lA⋅cos(qA) - lB⋅sin(qA)⋅sin(qB) + lB⋅cos(qA)⋅cos(qB) + lC⋅(-sin(qA)⋅sin(
+── + ─────────────────────────────────────────────────────────────────────────
+                                                                              
+                                                                              
+
+A) - cos(qA)⋅cos(qB)⋅cos(qC))⋅(-lA⋅sin(qA) - lB⋅sin(qA)⋅cos(qB) - lB⋅sin(qB)⋅c
+──────────────────────────────────────────────────────────────────────────────
+2        2                     2                2             2               
+ (qA)⋅sin (qB)⋅sin(qC) + lB⋅sin (qA)⋅sin(qC)⋅cos (qB) + lB⋅sin (qB)⋅sin(qC)⋅co
+                                                                              
+qB) + cos(qA)⋅cos(qB))⋅cos(qC) + lC⋅(-sin(qA)⋅cos(qB) - sin(qB)⋅cos(qA))⋅sin(q
+──────────────────────────────────────────────────────────────────────────────
+                         2        2                        2                2 
+                lB⋅lC⋅sin (qA)⋅sin (qB)⋅sin(qC) + lB⋅lC⋅sin (qA)⋅sin(qC)⋅cos (
+
+os(qA) + lC⋅(sin(qA)⋅sin(qB) - cos(qA)⋅cos(qB))⋅sin(qC) + lC⋅(-sin(qA)⋅cos(qB)
+──────────────────────────────────────────────────────────────────────────────
+ 2                     2        2                                             
+s (qA) + lB⋅sin(qC)⋅cos (qA)⋅cos (qB)                                         
+                                                                              
+C))⋅(lB⋅sin(qA)⋅cos(qB) + lB⋅sin(qB)⋅cos(qA) - lC⋅sin(qA)⋅sin(qB)⋅sin(qC) + lC
+──────────────────────────────────────────────────────────────────────────────
+               2                2                        2        2           
+qB) + lB⋅lC⋅sin (qB)⋅sin(qC)⋅cos (qA) + lB⋅lC⋅sin(qC)⋅cos (qA)⋅cos (qB)       
+
+ - sin(qB)⋅cos(qA))⋅cos(qC))                                                  
+────────────────────────────                                                  
+                                                                              
+                                                                              
+                                                                              
+⋅sin(qA)⋅cos(qB)⋅cos(qC) + lC⋅sin(qB)⋅cos(qA)⋅cos(qC) + lC⋅sin(qC)⋅cos(qA)⋅cos
+──────────────────────────────────────────────────────────────────────────────
+                                                                              
+                                                                              
+
+     ⎤
+     ⎥
+     ⎥
+     ⎥
+     ⎥
+(qB))⎥
+─────⎥
+     ⎥
+     ⎦</code></pre>
+<p>That expression is quite long. We can use the simplify function provided by sympy to shorten the expression:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>J.simplify()</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>J</span></code></pre></div>
+<pre><code>⎡ ⎛lA⋅sin(qB)                  ⎞  ⎤
+⎢-⎜────────── + lA⋅cos(qB) + lB⎟  ⎥
+⎢ ⎝ tan(qC)                    ⎠  ⎥
+⎢──────────────────────────────── ⎥
+⎢               lB                ⎥
+⎢                                 ⎥
+⎢lA⋅(lB⋅sin(qB) + lC⋅sin(qB + qC))⎥
+⎢─────────────────────────────────⎥
+⎣          lB⋅lC⋅sin(qC)          ⎦</code></pre>
+<p>Solving for the dependent variables <span class="math inline">\(q_d\)</span>:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>qd2 <span class="op">=</span> J<span class="op">*</span>qi</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>qd2</span></code></pre></div>
+<pre><code>⎡      ⎛lA⋅sin(qB)                  ⎞  ⎤
+⎢-qA_d⋅⎜────────── + lA⋅cos(qB) + lB⎟  ⎥
+⎢      ⎝ tan(qC)                    ⎠  ⎥
+⎢───────────────────────────────────── ⎥
+⎢                  lB                  ⎥
+⎢                                      ⎥
+⎢lA⋅qA_d⋅(lB⋅sin(qB) + lC⋅sin(qB + qC))⎥
+⎢──────────────────────────────────────⎥
+⎣            lB⋅lC⋅sin(qC)             ⎦</code></pre>
+<p>Now we can create a substitution dictionary to replace all occurrances of <span class="math inline">\(\dot{q}_b\)</span> and <span class="math inline">\(\dot{q}_c\)</span></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>subs <span class="op">=</span> <span class="bu">dict</span>([(ii,jj) <span class="cf">for</span> ii,jj <span class="kw">in</span> <span class="bu">zip</span>(qd,qd2)])</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>subs</span></code></pre></div>
+<pre><code>⎧            ⎛lA⋅sin(qB)                  ⎞                                   
+⎪      -qA_d⋅⎜────────── + lA⋅cos(qB) + lB⎟                                   
+⎨            ⎝ tan(qC)                    ⎠         lA⋅qA_d⋅(lB⋅sin(qB) + lC⋅s
+⎪qB_d: ─────────────────────────────────────, qC_d: ──────────────────────────
+⎩                        lB                                     lB⋅lC⋅sin(qC) 
+
+            ⎫
+            ⎪
+in(qB + qC))⎬
+────────────⎪
+            ⎭</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pAcm=pNA+lA/2*A.x</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co"># pBcm=pAB+lB/2*B.x</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># pCcm=pBC+lC/2*C.x</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co"># wNA = N.getw_(A)</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co"># wAB = A.getw_(B)</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co"># wBC = B.getw_(C)</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co"># IA = Dyadic.build(A,Ixx_A,Iyy_A,Izz_A)</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="co"># IB = Dyadic.build(B,Ixx_B,Iyy_B,Izz_B)</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="co"># IC = Dyadic.build(C,Ixx_C,Iyy_C,Izz_C)</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="co"># BodyA = Body(&#39;BodyA&#39;,A,pAcm,mA,IA,system)</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="co"># BodyB = Body(&#39;BodyB&#39;,B,pBcm,mB,IB,system)</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="co"># #BodyC = Body(&#39;BodyC&#39;,C,pCcm,mC,IC,system)</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="co"># BodyC = Particle(pCcm,mC,&#39;ParticleC&#39;,system)</span></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a><span class="co"># system.addforce(-b*wNA,wNA)</span></span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a><span class="co"># system.addforce(-b*wAB,wAB)</span></span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a><span class="co"># system.addforce(-b*wBC,wBC)</span></span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a><span class="co"># system.add_spring_force1(k,(qA-preload1)*N.z,wNA) </span></span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a><span class="co"># system.add_spring_force1(k,(qB-preload2)*A.z,wAB)</span></span>
+<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a><span class="co"># system.add_spring_force1(k,(qC-preload3)*B.z,wBC)</span></span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a><span class="co"># system.addforcegravity(-g*N.y)</span></span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a><span class="co"># vCtip = pCtip.time_derivative(N,system)</span></span>
+<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a><span class="co"># f,ma = system.getdynamics()</span></span>
+<span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a><span class="co"># dyn = sympy.Matrix(f)-sympy.Matrix(ma)</span></span>
+<span id="cb28-35"><a href="#cb28-35" aria-hidden="true" tabindex="-1"></a><span class="co"># eq_dd = sympy.Matrix(eq_dd)</span></span>
+<span id="cb28-36"><a href="#cb28-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a><span class="co"># A_new = A+(B*D.inv()*C)</span></span>
+<span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a><span class="co"># func1 = system.state_space_post_invert(f,ma,eq_dd)</span></span>
+<span id="cb28-40"><a href="#cb28-40" aria-hidden="true" tabindex="-1"></a><span class="co"># states=pynamics.integration.integrate_odeint(func1,ini,t,rtol=1e-12,atol=1e-12,hmin=1e-14, args=({&#39;constants&#39;:system.constant_values},))</span></span>
+<span id="cb28-41"><a href="#cb28-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-42"><a href="#cb28-42" aria-hidden="true" tabindex="-1"></a><span class="co"># KE = system.get_KE()</span></span>
+<span id="cb28-43"><a href="#cb28-43" aria-hidden="true" tabindex="-1"></a><span class="co"># PE = system.getPEGravity(pNA) - system.getPESprings()</span></span>
+<span id="cb28-44"><a href="#cb28-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-45"><a href="#cb28-45" aria-hidden="true" tabindex="-1"></a><span class="co"># points = [pNA,pAB,pBC,pCtip]</span></span>
+<span id="cb28-46"><a href="#cb28-46" aria-hidden="true" tabindex="-1"></a><span class="co"># #points = [item for item2 in points for item in [item2.dot(system.newtonian.x),item2.dot(system.newtonian.y)]]</span></span>
+<span id="cb28-47"><a href="#cb28-47" aria-hidden="true" tabindex="-1"></a><span class="co"># points_output = PointsOutput(points,system)</span></span>
+<span id="cb28-48"><a href="#cb28-48" aria-hidden="true" tabindex="-1"></a><span class="co"># y = points_output.calc(states)</span></span>
+<span id="cb28-49"><a href="#cb28-49" aria-hidden="true" tabindex="-1"></a><span class="co"># #y.resize(y.shape[0],int(y.shape[1]/2),2)</span></span>
+<span id="cb28-50"><a href="#cb28-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-51"><a href="#cb28-51" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.figure()</span></span>
+<span id="cb28-52"><a href="#cb28-52" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(t,states[:,:3])</span></span>
+<span id="cb28-53"><a href="#cb28-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-54"><a href="#cb28-54" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.figure()</span></span>
+<span id="cb28-55"><a href="#cb28-55" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(*(y[::int(len(y)/20)].T))</span></span>
+<span id="cb28-56"><a href="#cb28-56" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.axis(&#39;equal&#39;)</span></span>
+<span id="cb28-57"><a href="#cb28-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-58"><a href="#cb28-58" aria-hidden="true" tabindex="-1"></a><span class="co"># energy_output = Output([KE-PE],system)</span></span>
+<span id="cb28-59"><a href="#cb28-59" aria-hidden="true" tabindex="-1"></a><span class="co"># energy_output.calc(states)</span></span>
+<span id="cb28-60"><a href="#cb28-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-61"><a href="#cb28-61" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.figure()</span></span>
+<span id="cb28-62"><a href="#cb28-62" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(energy_output.y)</span></span>
+<span id="cb28-63"><a href="#cb28-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-64"><a href="#cb28-64" aria-hidden="true" tabindex="-1"></a><span class="co"># points_output.animate(fps = 30,movie_name = &#39;render.mp4&#39;,lw=2)</span></span>
+<span id="cb28-65"><a href="#cb28-65" aria-hidden="true" tabindex="-1"></a><span class="co"># #a()</span></span></code></pre></div>
+
+</main><!-- /.container -->
+<footer class="blog-footer">
+  
+
+  <p>Copyright &copy; 2020 Daniel M. Aukes.  All rights reserved.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

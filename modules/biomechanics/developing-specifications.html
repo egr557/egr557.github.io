@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This site is about foldable robotics.
+">
+  <meta name="author" content="Daniel M. Aukes">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Developing Specifications | Foldable Robotics </title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  
+  <!-- Bootstrap core CSS -->
+  <link href="/egr557_2021/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+
+  <link href="/egr557_2021/assets/blog.css" rel="stylesheet">
+  <link href="/egr557_2021/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/egr557_2021/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/egr557_2021/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/egr557_2021/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/egr557_2021/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/egr557_2021/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/egr557_2021/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/egr557_2021/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/egr557_2021/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/egr557_2021/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/egr557_2021/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/egr557_2021/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/egr557_2021/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/egr557_2021/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/egr557_2021/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/egr557_2021/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+<body>
+<div class="container">      
+<header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+      
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/egr557_2021/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+
+    </div>
+  </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/egr557_2021/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modules
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/introduction">Introduction</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/biomechanics">Biomechanics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/kinematics">Kinematics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/compliance">Mechanics and Compliance</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/dynamics">Dynamics</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/optimization">Optimization</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/manufacturing">Prototyping & Manufacturing</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/integration">Integration</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/validation">Experimental Validation</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/project">Project</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/python">Python</a>
+          
+          <a class="dropdown-item" href="/egr557_2021/modules/misc">Misc</a>
+          
+        </div>
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/class_schedule">Class Schedule</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/my-assignments">Assignments</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/my-tutorials">Tutorials</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/egr557_2021/calendar">Google Calendar</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Module: <a href="/egr557_2021/modules/biomechanics">biomechanics</a>
+      </h5>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h4>
+        Developing Specifications
+      </h4>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+</div>
+</div>
+</div><!-- /.row -->
+<main role="main" class="container">
+  <h1 id="developing-specifications">Developing Specifications</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Developing specifications for a novel robot is difficult, especially considering how wide-open the potential design space is. I recommend a bio-inspired approach in order to simplify your design workspace. Other difficulties might involve not being able to find information in research literature. This will require a bit more inference on your part.</p>
+<h2 id="workflow">Workflow</h2>
+<ol type="1">
+<li>Synthesize the information you have from your biomechanics investigation into an initial specifications table. For example, if you know ground reaction forces from your paper, and some masses, try to find peak accelerations. If you know forces and velocities, try to find the power usage. If you know maximum jump height and mass, find energy required for a jump. Your template should have some critical information which must be synthesized. (10 points)</li>
+<li>Discuss whether/how you will need to scale your robot up or down, or how you can mitigate the differences. (10 points)</li>
+</ol>
+<h3 id="anatomy-kinematics">Anatomy / Kinematics</h3>
+<p>Identify a biological template you would like to start from. How does it move? How many appendages does it use to move around?</p>
+<ol type="1">
+<li>Draw the simplest engineering representation of the system you can of your proposed mechanical system. How many rigid bodies are there? How many can be approximated as massless(1/10 of the total mass or less)? Where are the springs? Where is the (main) motor? (10 points)</li>
+<li>Identify all the joints that move during this animal’s gait<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Identify the type of motion of each joint. Is it a simple one degree of freedom joint, like a knee, or can it move about more than one axis (like an ankle or a hip)? Can you simplify the joint for one particular type of motion or does it use all its degrees of freedom during a gait?</li>
+</ol>
+<h2 id="parameters">Parameters</h2>
+<p>Next, identify key parameters about this template</p>
+<ol type="a">
+<li>size: what size scale are we talking about?</li>
+<li>mass: how much mass does the animal move around?</li>
+<li>forces: what kind of forces does the animal exert on the world?<br />
+</li>
+<li>energy &amp; efficiency: energy consumed and produced by the animal.</li>
+<li>kinematics</li>
+</ol>
+<h3 id="scale">Scale</h3>
+<p>How are animals’ bodies scaled? Talk about scaling laws</p>
+<p>What is this animal’s overall scale?</p>
+<p>Anatomically, what are the lengths of key moving body parts, such as the femur, tibia, etc?</p>
+<ol type="1">
+<li>body length</li>
+</ol>
+<h3 id="mass">Mass</h3>
+<ol type="1">
+<li>what are the major body parts and how big are they? What about inertias?</li>
+<li>does the animal often carry a “payload?” What is the upper limit of body mass reported?</li>
+</ol>
+<h3 id="motion">Motion</h3>
+<ul>
+<li><p>What are the ways that motion data is collected by biologists and biomechanicists?</p>
+<ul>
+<li>Ghost Crab</li>
+<li>Gecko</li>
+<li>Cockroach</li>
+</ul></li>
+<li><p>Bob Full, Dan Goldman, Hugh Herr, George Lauder</p></li>
+<li><p>What does a gait cycle look like?</p>
+<ul>
+<li>Can you find examples of this animal’s motion as it moves in the literature?</li>
+<li>Would it be possible to collect motion data “in the wild” with a video camera?</li>
+</ul></li>
+<li><p>What is the stride length during a typical gait cycle?</p></li>
+<li><p>Distance &amp; Speed</p>
+<ul>
+<li>how far does the animal move in a single stride</li>
+<li>how fast does the animal move? Unscaled Scaled</li>
+</ul></li>
+</ul>
+<h3 id="forces">Forces</h3>
+<ol type="1">
+<li>Find the ground reaction forces involved with completing a typical locomotion cycle. (10 points)
+<ul>
+<li>A figure from literature (with the appropriate references) of the animal during a locomotion cycle typical of the one you are studying will suffice. Make sure you include the units.</li>
+</ul></li>
+</ol>
+<h3 id="energy">Energy</h3>
+<ol type="1">
+<li>Based on mass and a knowledge of the duration and magnitude of the ground/world reaction forces involved in a single stride, what mechanical energy / power would be required to complete a single locomotion cycle?<br />
+</li>
+<li>How much energy is metabolized to create that output motion</li>
+<li>What is the locomotion effcicency?</li>
+<li>How could you calculate this?</li>
+<li>How much respiration energy / power is used? If you can’t find it, are there references for a similar animal you could scale?
+<ol type="1">
+<li>Can you find a reference that tells you how to scale respiration energy across different size animals?</li>
+</ol></li>
+</ol>
+<h3 id="mechanical-analogs">Mechanical Analogs</h3>
+<h2 id="exercise-finish-the-following-table.">Exercise: Finish the following table.</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">item</th>
+<th style="text-align: left;">var</th>
+<th style="text-align: left;">ref</th>
+<th style="text-align: left;">calc</th>
+<th style="text-align: left;">value</th>
+<th style="text-align: left;">unit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mass</td>
+<td style="text-align: left;"><span class="math inline">\(m\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">kg</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Size</td>
+<td style="text-align: left;"><span class="math inline">\(l_0\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Running speed</td>
+<td style="text-align: left;"><span class="math inline">\(v_{x}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(\frac{\text{m}}{\text{s}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ground reaction force(max)</td>
+<td style="text-align: left;"><span class="math inline">\(f_{y_{max}}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">N</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kinetic Energy</td>
+<td style="text-align: left;"><span class="math inline">\(K\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(\frac{mv_{x}^2}{2}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">J</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Respiration Rate</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">J</td>
+</tr>
+</tbody>
+</table>
+<p>Live document posted here: <a href="https://docs.google.com/spreadsheets/d/1cUHzWVrsvnuZnJfA5co5CvMN9mpavxyOL-AWfa9b9Bc/edit?usp=sharing" class="uri">https://docs.google.com/spreadsheets/d/1cUHzWVrsvnuZnJfA5co5CvMN9mpavxyOL-AWfa9b9Bc/edit?usp=sharing</a></p>
+<!--TODO: Finish Example
+## Example: Roadrunner
+-->
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Bodies / links that don’t move (or whose motion is negligible) can be lumped together as one rigid body for the purposes of the model. For example, in human walking models, the whole upper body is often lumped together as the trunk<!--TODO: cite--><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main><!-- /.container -->
+<footer class="blog-footer">
+  
+
+  <p>Copyright &copy; 2020 Daniel M. Aukes.  All rights reserved.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
