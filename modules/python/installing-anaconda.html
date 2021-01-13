@@ -212,16 +212,15 @@
 </ul></li>
 <li><p><em>(optional)</em> If you were not able to check the box to add anaconda to your system path,</p>
 <ol type="1">
-<li>go to file explorer</li>
-<li>right click on my computer</li>
-<li>on the left menu sele advanced system settings</li>
-<li>click on environment variables</li>
-<li>in the lower window, find the path variable, and click edit</li>
-<li>(in windows 10), click edit text</li>
-<li>Go to the <em>end</em> of the string, and paste in the following(with “Miniconda3” replaced by the root folder for your miniconda / anaconda installation). <strong>Important:</strong> Make sure there are semicolons between each path. Do not replace any other items in the path.<br />
-</li>
-</ol>
+<li><p>go to file explorer</p></li>
+<li><p>right click on my computer</p></li>
+<li><p>on the left menu sele advanced system settings</p></li>
+<li><p>click on environment variables</p></li>
+<li><p>in the lower window, find the path variable, and click edit</p></li>
+<li><p>(in windows 10), click edit text.</p></li>
+<li><p>Go to the <em>end</em> of the string, and paste in the following, <em>ensuring consistency with the actual install location</em>. <strong>Important:</strong> Make sure there are semicolons between each path. Do not replace any other items in the path.</p>
 <pre><code>C:\Anaconda3;C:\Anaconda3\Scripts;C:\Anaconda3\Library\bin;</code></pre></li>
+</ol></li>
 <li><p><strong>Install standard packages.</strong> open up powershell <em>in administrator mode</em>, and paste the following code(line by line):</p>
 <pre><code>Set-ExecutionPolicy remotesigned
 conda init powershell

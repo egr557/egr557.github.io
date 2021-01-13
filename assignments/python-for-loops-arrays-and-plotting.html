@@ -192,9 +192,7 @@
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
-
-
-<h1 id="python-for-loops-arrays-and-plotting">Python <code>for</code> loops, Arrays, and Plotting</h1>
+  <h1 id="python-for-loops-arrays-and-plotting">Python <code>for</code> loops, Arrays, and Plotting</h1>
 <h2 id="asdf">References</h2>
 <h3 id="python">Python</h3>
 <ul>
@@ -220,12 +218,53 @@
 <h2 id="introduction">Introduction</h2>
 <p>The purpose of this assignment is to get to know Python and Juptyer Notebook.</p>
 <h2 id="procedure">Procedure</h2>
+<!--hide-->
+<ol type="1">
+<li>open jupyter notebook by opening a command prompt and typing <code>jupyter notebook</code></li>
+<li>in the first code window add this command: <code>%matplotlib inline</code>. This will generate inline plots. Run the command by typing “shift+enter.”</li>
+</ol>
+<h3 id="looping">Looping</h3>
+<ol type="1">
+<li>Read through the above <a href="#asdf">references</a> as well as searching online to become familiar with Python <code>for</code> loops and lists.</li>
+<li>create a list called <code>list1</code> filled with the values <code>1,2,4,'a'</code> and <code>True</code> <!--
+    ```python
+    list1=[1,2,4,'a',True]
+    ```
+--></li>
+<li>iterate through and <code>print()</code> each item in the list. <!--
+    ```python
+    for item in list1:
+        print item
+    ```
 
-
-<h2>THIS ASSIGNMENT HAS NOT YET BEEN POSTED</h2>
-
-
-
+    ```python
+    [print(item) for item in list1]
+    ```
+--></li>
+</ol>
+<h3 id="arrays-1">Arrays</h3>
+<ol type="1">
+<li>Read through the above <a href="#asdf">references</a> as well as searching online to become familiar with numpy arrays, and their differences from Matlab</li>
+<li>Create a new list(call it list2) using the <code>range()</code> function, from 0 to 5</li>
+<li>Create a numpy array from list2. Call it <code>x</code></li>
+<li>Use the <code>numpy.sin()</code> function to compute the sin of x. Call the answer <code>y</code>.</li>
+</ol>
+<h3 id="plotting">Plotting</h3>
+<ol type="1">
+<li>Read through the above <a href="#asdf">references</a> as well as searching online to become familiar with plotting using the matplotlib package.</li>
+<li>Create a new matplotlib figure, call it <code>f</code></li>
+<li>plot <code>x</code> vs <code>y</code> from the previous step</li>
+<li>set axes to equal proportions</li>
+<li>Title your figure and axes with something descriptive.</li>
+<li>Save your figure as a pdf in your python script.</li>
+</ol>
+<h2 id="submission">Submission</h2>
+<p>Please include:</p>
+<ol type="1">
+<li>Fully compiled jupyter notebook (.ipynb) code</li>
+</ol>
+<p>Please follow the “Submission Best Practices” document posted on Canvas.</p>
+<!--unhide-->
 <h2 id="rubric">Rubric</h2>
 <table>
 <thead>
@@ -253,10 +292,6 @@
 </tr>
 </tbody>
 </table>
-
-
-
-  
 
 </main><!-- /.container -->
 <footer class="blog-footer">
