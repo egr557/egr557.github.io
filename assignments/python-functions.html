@@ -192,36 +192,83 @@
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
-
-
-<h1 id="python-functions">Python Functions</h1>
-<h2 id="procedure">Procedure</h2>
-
-
-<h2>THIS ASSIGNMENT HAS NOT YET BEEN POSTED</h2>
-
-
-</li>
+  <h1 id="python-functions">Python Functions</h1>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://pythontips.com/2013/08/04/args-and-kwargs-in-python-explained/">*args and **kwargs in python explained</a></li>
+<li><a href="https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html">NumPy for Matlab users</a></li>
 </ul>
-<h2 id="rubric-1">Rubric</h2>
+<h2 id="procedure">Procedure</h2>
+<!--hide-->
+<ol type="1">
+<li><p>Become familiar with Python functions, including how you declare and call them.</p></li>
+<li><p>Create a function <code>sum1()</code> that takes two arguments x and y and returns their sum. Demonstrate your working function by running the following commands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum1(<span class="dv">2</span>,<span class="dv">3</span>))</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum1(x<span class="op">=</span><span class="dv">3</span>,y<span class="op">=</span><span class="dv">4</span>))</span></code></pre></div></li>
+<li><p>Create a function <code>sum2()</code> that takes two arguments x and y with default values of 10 and 20, respectively, and returns their sum. Demonstrate your working function by running the following commands:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum2())</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum2(<span class="dv">2</span>))</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum2(y<span class="op">=</span><span class="dv">5</span>))</span></code></pre></div></li>
+<li><p>Create a list of 100 elements called <code>list1</code> using <code>range()</code>.<br />
+</p></li>
+<li><p>Create a function <code>sum3()</code> that takes n arguments and computes their sum. Demonstrate your working function by running the following commands:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum3())</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum3(<span class="dv">2</span>,<span class="dv">3</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum3(<span class="op">*</span>list1))</span></code></pre></div></li>
+<li><p>Create a dictionary using the following code:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dict1<span class="op">=</span>{<span class="st">&#39;item1&#39;</span>:<span class="dv">4</span>, <span class="st">&#39;item2&#39;</span>:<span class="dv">7</span>}</span></code></pre></div></li>
+<li><p>Create a function <code>sum4()</code> that takes n <em>keyword arguments</em>, prints each key, and computes the sum of all keyed values. Demonstrate your working function by running the following commands</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum4())</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum4(x<span class="op">=</span><span class="dv">2</span>,y<span class="op">=</span><span class="dv">3</span>))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum4(<span class="op">**</span>dict1))</span></code></pre></div></li>
+<li><p>Create a function <code>sum5()</code> which sums an arbitrary number of arguments and the values of any keyword arguments, and prints the key of each keyword arguments. Demonstrate your working function by running the following commands</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum5())</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum5(<span class="dv">3</span>,<span class="dv">4</span>,x<span class="op">=</span><span class="dv">2</span>,y<span class="op">=</span><span class="dv">3</span>))</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sum5(<span class="op">*</span>list1,<span class="op">**</span>dict1))</span></code></pre></div></li>
+</ol>
+<h2 id="discussion">Discussion</h2>
+<ol type="1">
+<li><p>Describe what happens to x when supplying a function with <code>*</code> within a function call, as in <code>function1(*x)</code>.</p></li>
+<li><p>Describe what happens to x when supplying a function with <code>**</code> within a function call, as in <code>function1(**x)</code>.</p></li>
+<li><p>If a function is declared with variables <code>x</code> and <code>y</code>, as specified below, using the <code>*</code> and <code>**</code> arguments, please describe in what form(data type) those variables are delivered to function, and how to access sub-elements contained within them.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> arbitrary_function(<span class="op">*</span>x,<span class="op">**</span>y):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">#put code here</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> arbitrary_value</span></code></pre></div></li>
+</ol>
+<h2 id="submission">Submission</h2>
+<p>Please include:</p>
+<ol type="1">
+<li>Report with the following
+<ol type="1">
+<li>Answers to the discussion points above</li>
+</ol></li>
+<li>Code</li>
+</ol>
+<p>Please follow the “Submission Best Practices” document posted on Canvas. This assignment may be submitted as a .pdf document or a jupyter notebook (.ipynb). If submitted as a notebook, make sure it is fully compiled. This can be done by opening the file in the jupyter browser and in the top jupyter menu selecting “Kernel” –&gt; “Restart and Run All.”</p>
+<!--unhide-->
+<h2 id="rubric">Rubric</h2>
 <table>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Description</th>
-<th style="text-align: left;">Points</th>
+<th style="text-align: right;">Points</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">Report</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Code</td>
+<td style="text-align: right;">70</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;"><strong>Total</strong></td>
-<td style="text-align: left;">100</td>
+<td style="text-align: right;"><strong>100</strong></td>
 </tr>
 </tbody>
 </table>
-
-
-
-  
 
 </main><!-- /.container -->
 <footer class="blog-footer">
