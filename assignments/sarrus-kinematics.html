@@ -8,7 +8,7 @@
 ">
   <meta name="author" content="Daniel M. Aukes">
   <meta name="generator" content="Jekyll v4.1.1">
-  <title>System Kinematics | Foldable Robotics </title>
+  <title>Sarrus Kinematics | Foldable Robotics </title>
 
   <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
   
@@ -175,7 +175,7 @@
   
   
       <h4>
-        System Kinematics
+        Sarrus Kinematics
       </h4>
   
   
@@ -184,7 +184,7 @@
   
   
       <h5>
-        Team Assignment
+        Individual Assignment
       </h5>
   
   
@@ -192,42 +192,138 @@
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
-
-
-<h1 id="create-and-plot-kinematics">Create and Plot Kinematics</h1>
+  <h1 id="spherical-kinematics">Spherical Kinematics</h1>
 <h2 id="assignment-overview">Assignment Overview</h2>
-<p>The purpose of this assignment is to model the kinematics so that you can estimate the forces, and torques, power requirements, and speed of your system.</p>
-<h2 id="resources">Resources</h2>
-<ul>
-<li>Numerical Kinematics</li>
-<li>Pynamics-based Kinematics</li>
-</ul>
-<h2 id="procedure">Procedure</h2>
-
-
-<h2>THIS ASSIGNMENT HAS NOT YET BEEN POSTED</h2>
-
-
-
-<h2 id="rubric-2">Rubric</h2>
+<p>The purpose of this assignment is to get you comfortable using the numerical computational capabilities of Python to start estimating the performance of your design.</p>
+<figure>
+<img src="../assets/sarrus.png" style="width:50.0%" alt="mechanism" /><figcaption aria-hidden="true">mechanism</figcaption>
+</figure>
+<!--![two views of the same folded spherical mechanism](../../figures/spherical-mechanism.png){width=50%}-->
+<h2 id="instructions">Instructions</h2>
+<!--hide-->
+<h3 id="numerically-solve-for-a-mechanisms-position">Numerically Solve for a Mechanism’s Position</h3>
+<p>Using the examples on the foldable robotics website as a starting point, solve for the kinematics of the mechanism above.</p>
+<ol type="1">
+<li>Make a table of link lengths corresponding to the vectors defined by the six heavy black lines. Please approximate the lengths of each link of the mechanism, as well as the device’s initial position. No need to match exactly with the original drawing.</li>
+<li>Plot the mechanism in Python using the matplotlib.pyplot package, making sure to label each vertex over each line.</li>
+<li>Create an objective function whose error is zero when:
+<ol type="a">
+<li>All of the length constraints of the mechanism are correctly estimated</li>
+<li>The base of the robot is fixed to the ground and in a specified orientation</li>
+<li>The end-effector(defined by the link between <span class="math inline">\(p_3\)</span> and <span class="math inline">\(p_4\)</span>) is parallel to the input link.</li>
+<li>The <span class="math inline">\(\hat{n}_x\)</span>-component of the distance between <span class="math inline">\(p_0\)</span> and <span class="math inline">\(p_4\)</span> is zero.</li>
+<li>The internal degree of freedom defined by <span class="math inline">\(q\)</span> matches a value given or set by you.</li>
+</ol></li>
+<li>Solve this function three times using the <code>scipy.optimize.minimize</code> function: once for each of three states where the input <span class="math inline">\(q\)</span> is varied by a small, constant amount..<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Select an initial guess for the state of the system that is close to the right answer but not exact; update the initial guess with the results of the prior solution after that.
+<ol type="a">
+<li>Show the result of each evaluation. This should demonstrate that the error in the result after each calculation is small (less than ~1e-3).</li>
+<li>Plot the device in each of its three configurations (within a single figure)</li>
+</ol></li>
+<li>Now approximate the rate of change of the middle point of the trajectory by finding the slope between the first and third point. Define a point on the mechanism that serves as the “output” or “end-effector.”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
+<ol type="a">
+<li>Calculate the slope in python and print the result.</li>
+<li>Plot the 3-point trajectory.</li>
+<li>Overplot the slope on the middle point using an arrow.</li>
+</ol></li>
+<li>Compute the Jacobian Matrix in that middle state. This should be a 2x1 matrix, as it is a 2D mechanism.</li>
+<li>Now, assume that a force <span class="math inline">\(\vec{f}\)</span> of <span class="math inline">\(f=\left[\begin{matrix}10\\-10\end{matrix}\right]\)</span>(2D) <!--or $f=\left[\begin{matrix}10\\-10\\5\end{matrix}\right]$(3D)--> is applied to the end-effector. Compute the force experienced at the input.</li>
+<li>What happens when the force <span class="math inline">\(\vec{f}\)</span> applied to the end-effector changes to <span class="math inline">\(f=\left[\begin{matrix}0\\-10\end{matrix}\right]\)</span>(2D). Provide a rationale as to how or why this answer contrasts with the previous one. <!--1. Discussion Question: Why is the input a force and not a torque?--></li>
+<li>Now, assume that the input is moving at a rate of 2.4 depending on if you selected a linear or angular values. How fast is the output moving?</li>
+</ol>
+<h2 id="submission">Submission</h2>
+<p>Please include:</p>
+<ol type="1">
+<li>Report with the following
+<ol type="1">
+<li>Your plot of the mechanism with labeled vertices</li>
+<li>Your code detailing your approach to solving the problem</li>
+<li>Detailed description of the steps you took (included as blocks alongside chunks of related code)</li>
+<li>Include answers to all questions above</li>
+</ol></li>
+</ol>
+<p>This can be submitted as a single jupyter notebook file. Please follow the posted submission instructions for Jupyter submissions</p>
+<h2 id="rubric">Rubric</h2>
 <table>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Description</th>
-<th style="text-align: left;">Points</th>
+<th style="text-align: right;">Points</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">Step 1</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 3a</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 3b</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 3b</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 3c</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 3d</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 3e</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 4a</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 4b</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 5</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 6</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 7</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 8</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 9</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"><strong>Total</strong></td>
-<td style="text-align: left;">200</td>
+<td style="text-align: right;">100</td>
 </tr>
 </tbody>
 </table>
-
-
-
-  
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>consider using a for loop<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p><span class="math inline">\(p_3\)</span> or <span class="math inline">\(p_4\)</span> would be a good choice.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main><!-- /.container -->
 <footer class="blog-footer">
