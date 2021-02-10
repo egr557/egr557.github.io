@@ -8,7 +8,7 @@
 ">
   <meta name="author" content="Daniel M. Aukes">
   <meta name="generator" content="Jekyll v4.1.1">
-  <title>Dynamics Fundamentals | Foldable Robotics </title>
+  <title>Jacobians | Foldable Robotics </title>
 
   <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
   
@@ -166,7 +166,7 @@
   
   
       <h5>
-        Module: <a href="/modules/dynamics">dynamics</a>
+        Module: <a href="/modules/kinematics">kinematics</a>
       </h5>
   
   
@@ -175,52 +175,70 @@
   
   
       <h4>
-        Dynamics Fundamentals
+        Jacobians
       </h4>
   
   
 </div>
 <div class="col-md-4 text-center">
   
-  
-      <h5>
-        Individual Assignment
-      </h5>
-  
-  
 </div>
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
+  <h1 id="jacobians">Jacobians</h1>
+<h2 id="jacobians-1">Jacobians</h2>
+<p>A Jacobian is a matrix that collects the partial derivatives of rates of change between two vectors. These rates of change are related by</p>
+<p><span class="math display">\[\dot{a}=\mathbf{J}\dot{b}\]</span></p>
+<p><span class="math display">\[\mathbf{J}=
+\left[\begin{matrix}
+j_{11} &amp; j_{12} &amp; \ldots &amp; j_{1n}\\
+j_{21} &amp; j_{22} &amp; \ldots &amp; j_{2n}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+j_{m1} &amp; j_{m2} &amp; \ldots &amp; j_{mn}\\
+\end{matrix}
+\right]\]</span></p>
+<p>where <span class="math inline">\(j_{ij} = \frac{\partial \dot{a}_i}{\partial \dot{b}_j}\)</span></p>
+<h2 id="physical-meaning">Physical Meaning</h2>
+<div class="text-center">
+<p><img src="../../sketches/gear-ratio.png" style="width:50.0%" /></p>
+</div>
+<h2 id="how-jacobians-are-used">How Jacobians are Used</h2>
+<div class="text-center">
+<p><img src="../../sketches/arm-traj.png" style="width:50.0%" /></p>
+</div>
+<h2 id="how-jacobians-are-used-1">How Jacobians are Used</h2>
+<div class="text-center">
+<p><img src="../../sketches/arm-traj2.png" style="width:50.0%" /></p>
+</div>
+<h2 id="how-jacobians-are-used-2">How Jacobians are Used</h2>
+<div class="text-center">
+<p><img src="../../sketches/arm-traj2.png" style="width:50.0%" /></p>
+</div>
+<p>To calculate the speed of a Robot Arm as a function of its inputs</p>
+<p><span class="math display">\[\dot{y}= \mathbf{J}\dot{q}\]</span></p>
+<h2 id="virtual-work">Virtual Work</h2>
+<p><span class="math display">\[P_{in} = P_{out}\]</span> <span class="math display">\[P_{in} = \tau^T \dot{q} = F^T \dot{y}=P_{out}\]</span> <span class="math display">\[\tau^T \dot{q} = F^T \mathbf{J}\dot{q}\]</span> <span class="math display">\[\tau^T  = F^T \mathbf{J}\]</span> <span class="math display">\[\tau  = \mathbf{J}^T F\]</span></p>
+<p>Relating forces felt at end-effector to torques felt by motors.</p>
+<h2 id="torques-to-forces">Torques to Forces</h2>
+<div class="text-center">
+<p><img src="../../sketches/jtf.png" style="width:50.0%" /></p>
+</div>
+<p><span class="math display">\[\tau  = \mathbf{J}^T F\]</span></p>
+<!---
+::: {.columns}
+::: {.column width=45%}
 
+![](arm-traj.png)
 
-<h1 id="dynamics-fundamentals">Dynamics Fundamentals</h1>
-<h2 id="introduction">Introduction</h2>
-<p>The purpose of this assignment is to get you started computing kinematics 
+:::
+::: {.column width=45%}
 
-<h2>THIS ASSIGNMENT HAS NOT YET BEEN POSTED</h2>
+![](arm-traj2.png)
 
-
-
-<h2 id="rubric">Rubric</h2>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Points</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>Total</strong></td>
-<td style="text-align: left;">100</td>
-</tr>
-</tbody>
-</table>
-
-
-
-  
+:::
+:::
+-->
 
 </main><!-- /.container -->
 <footer class="blog-footer">

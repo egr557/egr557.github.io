@@ -8,7 +8,7 @@
 ">
   <meta name="author" content="Daniel M. Aukes">
   <meta name="generator" content="Jekyll v4.1.1">
-  <title>Dynamics | Foldable Robotics </title>
+  <title>System Kinematics | Foldable Robotics </title>
 
   <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
   
@@ -166,7 +166,7 @@
   
   
       <h5>
-        Module: <a href="/modules/dynamics">dynamics</a>
+        Module: <a href="/modules/kinematics">kinematics</a>
       </h5>
   
   
@@ -175,152 +175,92 @@
   
   
       <h4>
-        Dynamics
+        System Kinematics
       </h4>
   
   
 </div>
 <div class="col-md-4 text-center">
   
+  
+      <h5>
+        Team Assignment
+      </h5>
+  
+  
 </div>
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
-  <article class="post">
 
-  <div class="post-content">
-    
-    
-        
-    
-    <h2>Modules</h2>
-    <div class="row">
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/dynamics/generated/01-rotations.html"><i class="fas fa-chalkboard-teacher fa-5x"></i></a></h3><h3 class="card-title">Rotations</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/dynamics/generated/02-vectors.html"><i class="fas fa-chalkboard-teacher fa-5x"></i></a></h3><h3 class="card-title">Frames, Basis Vectors, and Vectors</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/dynamics/generated/03-variable-types.html"><i class="fas fa-chalkboard-teacher fa-5x"></i></a></h3><h3 class="card-title">Variable Types</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/dynamics/generated/04-dyads-dyadics-and-inertia.html"><i class="fas fa-chalkboard-teacher fa-5x"></i></a></h3><h3 class="card-title">Dyads, Dyadics, and Inertia</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/dynamics/generated/05-derivatives-and-the-golden-rule.html"><i class="fas fa-chalkboard-teacher fa-5x"></i></a></h3><h3 class="card-title">Derivatives and the Golden Rule</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/dynamics/generated/06-forces-and-torques.html"><i class="fas fa-chalkboard-teacher fa-5x"></i></a></h3><h3 class="card-title">Forces and Torques</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/dynamics/generated/07-kanes-method/07-kanes-method.html"><i class="fas fa-chalkboard-teacher fa-5x"></i></a></h3><h3 class="card-title">Kane's method</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/dynamics/generated/08-triple-pendulum-example/08-triple-pendulum-example.html"><i class="fas fa-chalkboard-teacher fa-5x"></i></a></h3><h3 class="card-title">Triple Pendulum Example</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/dynamics/generated/09-falling-rod-example/09-falling-rod-example.html"><i class="fas fa-chalkboard-teacher fa-5x"></i></a></h3><h3 class="card-title">Falling Rod Example</h3></div>
-</div>
-    
-    </div>
-    
-    
-    
 
-    
-    <h2>Assignments</h2>
-    <div class="row">
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/system-dynamics-I.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">System Dynamics</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/system-dynamics-II.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">System Dynamics II</h3></div>
-</div>
-    
-    </div>
-    
+<h1 id="create-and-plot-kinematics">Create and Plot Kinematics</h1>
+<h2 id="assignment-overview">Assignment Overview</h2>
+<p>The purpose of this assignment is to model the kinematics so that you can estimate the forces, and torques, power requirements, and speed of your system. This will be done using a symbolic approach with the pynamics package</p>
+<h2 id="resources">Resources</h2>
+<!--* []()-->
+<ul>
+<li>Triple Pendulum Example</li>
+<li>EGR557 Kinematics Module</li>
+<li>EGR557 Dynamics Module</li>
+<li>pynamics repository</li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<p>Meet with your team to go over each of the prototypes and mockups you have individually created through past homework assignments. As a team, come up with a mechanism that satisfies your team’s need for scope/tractability, manufacturability, and cost.</p>
+<p>Decide as a team whether you will be using powered actuator(s) or passive energy storage device(s). This will impact data collection assignments, how much your team spends, the complexity of your prototype, and the strength of the materials you use (you may need to upgrade from light cardboard to stiffer posterboard or even fiberglass)</p>
+<ol type="1">
+<li><p>Create a figure (either in python, in a vector-based drawing program like inkscape or illustrator, or as a solidworks rendering) of your system kinematics. Annotate the image to include:</p>
+<ul>
+<li>Names for each rotational reference frame. You will need one for each rigid body (that moves independently), as well as one for the Newtonian reference frame (N). Use the convention of a capital letter (A,B,C,…)</li>
+<li>Labeled joint locations, such as <span class="math inline">\(\vec{p}_{AB}\)</span></li>
+<li>A set of orthonormal basis vectors for each frame <span class="math inline">\((\hat{n}_x,\hat{n}_y,\hat{n}_z),(\hat{a}_x,\hat{a}_y,\hat{a}_z)\)</span>. It is best practice to align one of the basis vectors (like <span class="math inline">\(\hat{a}_x\)</span>) with each rigid link.</li>
+<li>variable names for each state variable <span class="math inline">\((q_1,q_2,x_1,y_1,\ldots)\)</span></li>
+<li>geometric constants such as link lengths (like <span class="math inline">\(l_1,l_2\)</span>)</li>
+</ul>
+<p>Save this figure for reuse later. You will need to add mass and inertial information as well as system stiffness information, so make sure you do your work in a way that permits reusing and modifying the figure.</p></li>
+<li><p>Make the device in paper or cardboard. You need an up-to-date model if it has changed from your individual assignments. The paper model should dimensionally match your code.</p></li>
+<li><p>Using a pynamics-based script, develop a kinematic model for your device. Following the triple pendulum example,</p>
+<ol type="1">
+<li>Import packages</li>
+<li>Define variables and constants (you may want to add, remove, or rename variables to match your figure)</li>
+<li>Declare frames (you may need to add frames or rename them)</li>
+<li>Define frame rotations (you may want to switch the axis about which frames rotate)</li>
+<li>Compose kinematics (this depends entirely on the geometry of your system)</li>
+<li>Take time-derivatives of position vectors</li>
+<li>Assemble into a Jacobian that maps input velocities to output velocities.</li>
+</ol></li>
+<li><p>Select or Solve for a valid initial condition that represents the system in the middle of a typical gait, when it is both moving and when forces are being applied to it (or to the world by it)</p>
+<p><em>Despite the fact that you will be using a symbolic representation, you still need to solve for a valid initial condition if your device is a “parallel mechanism.” This may be done using a nonlinear solver such as <code>scipy.optimize.minimize</code></em></p></li>
+<li><p>Plot the system in this position.</p></li>
+<li><p>From your biomechanics-based specifications, define one or more force vector estimates (one for each end effector) that the system should be expected to experience. Consider including, based on your research</p>
+<ul>
+<li>the force of gravity exerted by the mass of a “payload” or the main body of the robot.</li>
+<li>the acceleration the system experiences during a typical gait</li>
+<li>ground reaction forces measured from biomechanics studies.</li>
+</ul></li>
+<li><p>Calculate the force or torque required at the input to satisfy the end-effector force requirements</p></li>
+<li><p>Estimate the velocity of the end-effector in this configuration. Using the Jacobian, calculate the speed required by the input(s) to achieve that output motion.</p>
+<p><em>This may not be directly solvable based on your device kinematics; an iterative guess-and-check approach is ok.</em></p></li>
+<li><p>Finally, using the two estimates about force and speed at the input, compute the required power in this configuration.</p></li>
+</ol>
+<!--## Discussion
+
+1. Identify the degrees of freedom of your device.
+
+<!--
+1. Solve the inverse kinematics problem for your system as its end effector moves through the given motion path.
+1. Identify whether your kinematics are serial or parallel
+1. Plot the motion of your device throughout its range of motion.
+1. Identify the rotational joints or linear attachment points where actuators to the system (active or passive) will be mounted.  These joints or points are  where the actuators or springs will deliver torques or forces, respectively.  There should be at least one input for each of your system's degree of freedom.
+
+
+
+
+<h2>THIS ASSIGNMENT HAS NOT YET BEEN POSTED</h2>
+
+
+
   
-    
-
-    
-    
-    
-
-    
-    
-    
-
-
-    
-
-    
-    
-    
-    
-    
-    <!--
-TODO:
-## Notes
-
-* Forward Dynamics
-  * Example: Triple pendulum
-  * Frames
-  * Kinematics
-  * Forces
-  * F=ma
-  * Integration
-  * Plotting & Animation
-* Representation Options
-  * Use of different state variables
-  * Global vs local representation
-  * Choice of Frames 
-* Constraints
-  * Concept of constraints
-  * Intermittent constraints
-    * Penalty Method
-    * discontinuous integration
-    * Baumgarte's formula
-  * Position Constraints
-  * Velocity constraints
-  * Getting forces out of Lagrance multipliers
-  * Example: Four bar mechanism
-* Model Fitting
-* Inverse Dynamics
-  * Data  
-  * Problems
-    * Accuracy & tolerance
-    * Sampling rate
--->
-<!--TODO: Bring in pynamics paper-->
-<!--* Numerical precision-->
-
-    
-  </div>
-
-</article>
 
 </main><!-- /.container -->
 <footer class="blog-footer">

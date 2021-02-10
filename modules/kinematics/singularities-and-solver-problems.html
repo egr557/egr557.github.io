@@ -191,7 +191,7 @@
 <p>Singularities can be described as a mathematical or mechanical condition in which one or more degrees of freedom of your device or of your description of the device – can no longer be controlled or solved for. A typical kinematic singularity may be seen</p>
 <h2 id="mechanism-singularities">Mechanism Singularities</h2>
 <figure>
-<img src="../../figures/design/singular_kinematics.png" alt="Singular Kinematics" /><figcaption aria-hidden="true">Singular Kinematics</figcaption>
+<img src="../../figures/design/singular_kinematics.png" class="img-fluid" alt="Singular Kinematics" /><figcaption aria-hidden="true">Singular Kinematics</figcaption>
 </figure>
 <p>One of the biggest challegnes of foldable devices is that they all start off flat. Which means they all start off in a mechanism singularity. This is probably the worst way to start, as it means that the device, when assembled or erected into its final configuration, could be pushed into more than one valid state. Furthermore, if designed wrong, a mechanism may slip past a singularity and be unable to escape it. This is exacerbated by the fact that foldable mechanisms cannot rotate freely more than +/- 180 degrees, meaning that you have to go back the way you came, rather than rotate through a second singularity.</p>
 <p>This means that the user has to take care during the design process to avoid mechanism singularities during assembly and operation.</p>
@@ -211,17 +211,31 @@
 <p>The next step is to compute the kinematics of this device. There are several limitations to foldable devices which must be discussed. First, most origami-inspired devices typically start flat, as they are typically manufactured from flat sheets of material(paper, plastic, cardboard, fiberglass, carbon fiber, metal). The ability of a mechanism to be foldable from a flat sheet is defined as “flat-foldability.” This makes manufacturing easier but comes with several implications.</p>
 <p>First, when a device starts as a flat sheet, it can be considered to be in a “singular” configuration. This occurs when one or more of the mechanism’s joints simultaneously align on a plane, making it impossible to move the mechanism in ways it would otherwise be able to. Singularities in the middle of a mechanism’s workspace typically need to be avoided, as these conditions typically make the device uncontrollable.</p>
 <figure>
-<img src="../../sketches/inversion.png" alt="Kinematic Inversion" /><figcaption aria-hidden="true">Kinematic Inversion</figcaption>
+<img src="../../sketches/inversion.png" class="img-fluid" alt="Kinematic Inversion" /><figcaption aria-hidden="true">Kinematic Inversion</figcaption>
 </figure>
 <p>A singularity is often also accompanied by a kinematic inversion. An inversion occurs when links in a devices kinematics pass through an inversion, occupying a valid state in which many of the other links occupy the same states as in the uninverted state. With an inverted four-bar linkage, as seen above, the implications on the motion of this transmission is that the motion of the lower link no longer leads to the same motion of the upper link. The rates of change, being state-based, are quite different (the rates of change of the links are opposite each other when compared to the uninverted state). This means that the motion of the input linkage cannot be used to drive the motion of the output to and through its singularity alone. If it emerges on the other side of a singularity in an inverted state, the input link cannot move it in the same way nor can it get it out on its own through its own rotation.</p>
-<p>As a foldable mechanism typically starts in a flat state when it emerges from the manufacturing stages, care must be taken to assemble it (often by hand) into its desired configuration, and that the resulting design must be kept appropriately away from singularities. The problem can become harder with soft mechanisms, as soft mechanisms may bend and flex in ways unintended by the rigid kinematics, which pushes the devices througha singularity.</p>
+<p>As a foldable mechanism typically starts in a flat state when it emerges from the manufacturing stages, care must be taken to assemble it (often by hand) into its desired configuration, and that the resulting design must be kept appropriately away from singularities. The problem can become harder with soft mechanisms, as soft mechanisms may bend and flex in ways unintended by the rigid kinematics, which pushes the devices through a singularity.</p>
 <figure>
-<img src="../../sketches/inversion2.png" alt=" Caption" /><figcaption aria-hidden="true"><!--TODO--> Caption</figcaption>
+<img src="../../sketches/inversion2.png" class="img-fluid" alt="Inversion Due to Flexibility" /><figcaption aria-hidden="true">Inversion Due to Flexibility</figcaption>
 </figure>
-<p>Singularities also make the analysis of flat-foldable mechanisms tricky, as the user must supply the intended state of the mechanism in order to</p>
-<p>The next step is to compute from the</p>
-<p>If trying to replicate a traditional robot, there are several caveats to making a paper robot which can do the same thing. First, a device constructed from hinges is limited by the travel of each hinge. At most, an ideally-thin sheet of material may only bend +/- 180 degrees. Any continuous rotations must be handled outside of your hinging mechanism. That is fine, and later sections deal with integrating other devices with your printable mechanism.</p>
+<p>Singularities also make the analysis of flat-foldable mechanisms tricky, as the user must supply the intended state of the mechanism in order to <!--TODO: Finish
+The next step is to compute from the
+--> If trying to replicate a traditional robot, there are several caveats to making a paper robot which can do the same thing. First, a device constructed from hinges is limited by the travel of each hinge. At most, an ideally-thin sheet of material may only bend +/- 180 degrees. Any continuous rotations must be handled outside of your hinging mechanism. That is fine, and later sections deal with integrating other devices with your printable mechanism.</p>
 <p>Hinge lines may be imported for kinematics study, just as body lines are imported for manufacturing file generation. For this we recommend importing just the body and hinge information in order to infer link-link connections to establish the topology, for plotting.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p><span class="citation" data-cites="Gosselin1990">[1]</span>,<span class="citation" data-cites="McCarthy2011">[2]</span>,<span class="citation" data-cites="Waldron1966">[3]</span></p>
+<h2 class="unnumbered" id="bibliography">Bibliography</h2>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-Gosselin1990" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">C. Gosselin and J. Angeles, <span>“<span class="nocase">Singularity analysis of closed-loop kinematic chains</span>,”</span> <em>IEEE Transactions on Robotics and Automation</em>, vol. 6, no. 3, pp. 281–290, Jun. 1990.</div>
+</div>
+<div id="ref-McCarthy2011" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">J. M. McCarthy and G. S. Soh, <em><span class="nocase">Geometric Design of Linkages</span></em>, vol. 11. New York, NY: Springer New York, 2011.</div>
+</div>
+<div id="ref-Waldron1966" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">K. J. Waldron, <span>“<span class="nocase">The constraint analysis of mechanisms</span>,”</span> <em>Journal of Mechanisms</em>, vol. 1, no. 2, pp. 101–114, Jan. 1966.</div>
+</div>
+</div>
 
 </main><!-- /.container -->
 <footer class="blog-footer">
