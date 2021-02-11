@@ -192,9 +192,7 @@
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
-
-
-<h1 id="create-and-plot-kinematics">Create and Plot Kinematics</h1>
+  <h1 id="create-and-plot-kinematics">Create and Plot Kinematics</h1>
 <h2 id="assignment-overview">Assignment Overview</h2>
 <p>The purpose of this assignment is to model the kinematics so that you can estimate the forces, and torques, power requirements, and speed of your system. This will be done using a symbolic approach with the pynamics package</p>
 <h2 id="resources">Resources</h2>
@@ -254,13 +252,122 @@
 1. Identify the rotational joints or linear attachment points where actuators to the system (active or passive) will be mounted.  These joints or points are  where the actuators or springs will deliver torques or forces, respectively.  There should be at least one input for each of your system's degree of freedom.
 
 
+<!--hide-->
+<!--
+1. Define (plot) the motion path of the end-effector in terms of the specific gait you are interested in (walk, run, forward hop, vertical jump). 
+1. Identify a "critical portion" of your motion path, such as the stance phase of walking or the power stroke in swimming, as the worst-case portion of the motion path you would like to focus your analysis on.  This is where most of the power is being delivered from the motors.
+1. Calculate dy and dq as your system moves through a motion path.  Use the trapezoidal rule to get a better estimate of the rate of change at each point in the path.
+1. From dy and dq, calculate the Jacobian, J throughout the critical portion of your motion path
+1. From your specifications, estimate the expected forces on the end-effector.  This may be ground reaction forces for a leg or thrust forces for swimming / flying.
+1. Use the equation $\mathbf{\tau} = \mathbf{J}^T \mathbf{f}$ to calculate the expected joint torques
+1. From your specifications, estimate the expected output velocity vector
+1. Using $\dot{y}=J\dot{q}$, find the motor speeds required to achieve that forward velocity.
+1. using either $P=\mathbf{f}^T\dot{\mathbf{y}}$ or $P=\mathbf{\tau}^T\dot{\mathbf{q}}$, identify the power required to achieve your specifications.
 
+1. Adjust the design parameters such as mass, link lengths, etc to match your specifications.
 
-<h2>THIS ASSIGNMENT HAS NOT YET BEEN POSTED</h2>
-
-
-
-  
+-->
+<h2 id="discussion">Discussion</h2>
+<p>Answer the following questions</p>
+<ol type="1">
+<li>How many degrees of freedom does your device have? How many motors? If the answer is not the same, what determines the state of the remaining degrees of freedom? How did you arrive at that number?</li>
+<li>If your mechanism has more than one degree of freedom, please describe how those multiple degrees of freedom will work togehter to create a locomotory gait or useful motion. What is your plan for synchonizing, especially if passive energy storage?</li>
+<li>How did you estimate your expected end-effector forces</li>
+<li>How did you estimate your expected end-effector speeds</li>
+</ol>
+<!--1. What is the valid range of motion of your device for each internal degree of freedom?-->
+<!--
+1. In your motion path you plotted in step X, what did you plot?  A point?  A link?  More than one point or link?  How many degrees of freedom does it take to represent the motion of that element?
+-->
+<h2 id="submission">Submission</h2>
+<h3 id="draft-submission">Draft Submission</h3>
+<p>Please bring your (1) figure and (2) code to class on monday. We will do a checkoff in class and go over questions. You should attempt each step of the code, though it is fine if there are errors, or if it fails compute due to errors in previous sections.</p>
+<h3 id="final-submission">Final Submission</h3>
+<p>Please include a Jupyter notebook with the following:</p>
+<ol type="1">
+<li>Detailed description of the completed steps above (included as blocks alongside chunks of related code)</li>
+<li>Code used in solving the problem (inline in the report in code blocks), along with descriptions detailing your approach</li>
+<li>Answers to all discussion questions above.</li>
+</ol>
+<p>Please follow the “Submission Best Practices” document posted on Canvas. This assignment should be submitted to canvas as a .pdf document or a jupyter notebook (.ipynb). If submitted as a notebook, make sure it is fully compiled. This can be done by opening the file in the jupyter browser and in the top jupyter menu selecting “Kernel” –&gt; “Restart and Run All.”</p>
+<p>Please also post the completed assignment to your team’s website. This may be posted as a jupyter notebook, a rendered jupyter notebook, or a static web page with embedded code and figures. In addition to answering completing each point in the instructions and discussion, please also include:</p>
+<ul>
+<li><strong>Bibliography: </strong>Please add to and refer to your Bibliography as needed</li>
+<li>Appendices</li>
+<li>Data - upload and link to all raw data collected in the generation of this report</li>
+<li>Code - upload and link to any other code created and by your team (other than the jupyter notebook itself) in the generation of this report.</li>
+</ul>
+<h2 id="rubric">Rubric</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Description</th>
+<th style="text-align: right;">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Draft</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 1</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 2</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 3</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 4</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 5</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 6</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 7</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 8</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 9</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Discussion 1</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Discussion 2</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Discussion 3</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Discussion 4</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
 
 </main><!-- /.container -->
 <footer class="blog-footer">
