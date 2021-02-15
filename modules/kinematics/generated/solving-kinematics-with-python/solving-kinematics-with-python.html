@@ -279,7 +279,7 @@
 <h2 id="constraint-equations-creation">Constraint Equations Creation</h2>
 <p>The next function which is generated is responsible for generating and evaluating all the constraint equations for a given system. Consider a four-bar linkage of four vectors</p>
 <figure>
-<img src="../figures/kinematics/fourbar.png" alt="four bar linkage" /><figcaption aria-hidden="true">four bar linkage</figcaption>
+<img src="../../../../figures/kinematics/fourbar.png" alt="four bar linkage" /><figcaption aria-hidden="true">four bar linkage</figcaption>
 </figure>
 <p>The planar four bar linkage can be defined by four points: <span class="math inline">\(p_1\)</span>, <span class="math inline">\(p_2\)</span>, <span class="math inline">\(p_3\)</span>, and <span class="math inline">\(p_4\)</span>. The distance between these points is fixed by a rigid link. Additionally, you can see that link 1 is rigidly attached to the world frame, which defines both its position and orientation. For the 8 unknowns of the system, there must be 8 equations which can fully define the position of those four planar vectors.</p>
 <p>To sum them up:</p>
@@ -424,7 +424,7 @@
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span>x.reshape((<span class="dv">5</span>,<span class="dv">2</span>))</span></code></pre></div>
 <p>Compute the error of the resulting configuration found. If it is near zero, it was able to find a solution</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>result.fun</span></code></pre></div>
-<pre><code>9.026945578091845e-08</code></pre>
+<pre><code>6.995398416354163e-08</code></pre>
 <div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()<span class="op">;</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>)</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>plot_mechanism(x)</span>
@@ -455,42 +455,42 @@
 <span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> numpy.array(path)</span>
 <span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>q_in <span class="op">=</span> numpy.array(q_in)</span></code></pre></div>
-<pre><code>8.954604775481941e-08
-1.0605149701359381e-07
-1.1603444240028001e-07
-1.2568357289407063e-07
-1.3252296031531973e-07
-1.303927497546157e-07
-1.1055470659842001e-07
-1.0347870343210644e-07
-1.4326399272675837e-07
-1.1309582318996748e-07
-1.4207654357420516e-07
-2.4060996478020476e-07
-1.7810528407780235e-07
-1.5975008557724472e-07
-9.590066657917192e-08
-1.7700686447282094e-07
-3.9566333144106975e-08
-1.1876719247582358e-07
-1.1655392361752263e-07
-1.0429181687303234e-07
-7.127932217128096e-08
-9.680282350805894e-08
-1.048837227646731e-07
-1.1962328720255813e-07
-1.0626426656512877e-07
-9.631685415663405e-08
-7.675044388829596e-08
-9.505238600853311e-08
-8.780147577786808e-08
-7.0653811899816e-08
-7.419618998681557e-08
-1.324904732467908e-07
-9.914423485684517e-08
-1.0736378471729707e-07
-1.3780530211060153e-07
-0.05964248047601034</code></pre>
+<pre><code>6.994958769426199e-08
+9.03578396742785e-08
+6.818126377658796e-08
+1.1818014822372901e-07
+1.3004526572734587e-07
+7.467395056150183e-08
+1.2559675148416404e-07
+1.4897331305062183e-07
+1.253274772729213e-07
+1.258116374074979e-07
+1.505113906941631e-07
+1.1481247697290997e-07
+1.3302576309248917e-07
+1.5438581509636946e-07
+1.4823286472018718e-07
+8.048563077184548e-08
+1.501539143887747e-07
+8.411210379488795e-08
+1.3379806951996817e-07
+5.470048532108741e-08
+7.428209498159685e-08
+9.595800307845717e-08
+1.1400509698539673e-07
+1.203941078844774e-07
+1.1868997192356723e-07
+9.960076488049228e-08
+9.571107464619422e-08
+6.135278614690043e-08
+7.810011261766794e-08
+8.497313988110125e-08
+8.837061348200097e-08
+8.54950552319171e-08
+8.865031358808815e-08
+1.427182998700313e-07
+7.347182723175156e-08
+0.059675897246800585</code></pre>
 <p>Plotting the result…</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> plt.figure()</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> f.add_subplot(<span class="dv">111</span>)</span>
@@ -518,44 +518,44 @@
 <p>But what if we’re only interested in the portion of the path where the end effector is supposed to be touching the ground? Restricting to that portion of the path:</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>y_out <span class="op">=</span> numpy.vstack([p4,p4[<span class="dv">0</span>:<span class="dv">2</span>]])</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>y_out</span></code></pre></div>
-<pre><code>array([[ 0.64264254, -2.69384769],
-       [ 0.78280718, -2.79823563],
-       [ 0.95188291, -2.8864637 ],
-       [ 1.14481075, -2.95549861],
-       [ 1.35560972, -3.00354476],
-       [ 1.57761493, -3.03016872],
-       [ 1.80367928, -3.0363504 ],
-       [ 2.02632015, -3.02444964],
-       [ 2.23779278, -2.99806986],
-       [ 2.43010901, -2.96177109],
-       [ 2.5950436 , -2.92057243],
-       [ 2.72424758, -2.87916311],
-       [ 2.80967609, -2.8407959 ],
-       [ 2.84463886, -2.80599016],
-       [ 2.82567066, -2.77151734],
-       [ 2.75487825, -2.73055566],
-       [ 2.64131427, -2.6748451 ],
-       [ 2.49927046, -2.59849738],
-       [ 2.34322112, -2.50118147],
-       [ 2.18279366, -2.38830951],
-       [ 2.02157383, -2.26852096],
-       [ 1.85940193, -2.15087843],
-       [ 1.69523185, -2.04329027],
-       [ 1.52883454, -1.9520413 ],
-       [ 1.3613649 , -1.88182059],
-       [ 1.19531722, -1.83586462],
-       [ 1.03425538, -1.81608168],
-       [ 0.8824903 , -1.8231402 ],
-       [ 0.74476959, -1.85653494],
-       [ 0.62598402, -1.91465079],
-       [ 0.5308936 , -1.99483816],
-       [ 0.46386041, -2.09351186],
-       [ 0.4285866 , -2.2062853 ],
-       [ 0.4278607 , -2.32814798],
-       [ 0.46332547, -2.45369081],
-       [ 0.50264674, -2.53318552],
-       [ 0.64264254, -2.69384769],
-       [ 0.78280718, -2.79823563]])</code></pre>
+<pre><code>array([[ 0.64264265, -2.69384763],
+       [ 0.7828071 , -2.79823562],
+       [ 0.95188307, -2.88646359],
+       [ 1.14481075, -2.95549859],
+       [ 1.35560967, -3.00354474],
+       [ 1.57761488, -3.03016873],
+       [ 1.80367917, -3.0363504 ],
+       [ 2.02631997, -3.02444975],
+       [ 2.23779282, -2.99806976],
+       [ 2.43010895, -2.96177114],
+       [ 2.59504363, -2.92057242],
+       [ 2.72424749, -2.87916297],
+       [ 2.8096761 , -2.84079601],
+       [ 2.8446389 , -2.80599015],
+       [ 2.82567041, -2.77151729],
+       [ 2.75487839, -2.73055544],
+       [ 2.64131426, -2.6748451 ],
+       [ 2.49927055, -2.59849718],
+       [ 2.34322093, -2.50118151],
+       [ 2.18279387, -2.38830935],
+       [ 2.02157382, -2.26852097],
+       [ 1.85940198, -2.1508784 ],
+       [ 1.69523179, -2.04329031],
+       [ 1.52883464, -1.9520413 ],
+       [ 1.36136489, -1.88182058],
+       [ 1.19531724, -1.83586468],
+       [ 1.03425529, -1.81608172],
+       [ 0.88249039, -1.82314016],
+       [ 0.74476959, -1.8565349 ],
+       [ 0.62598404, -1.91465079],
+       [ 0.5308936 , -1.99483821],
+       [ 0.46386026, -2.0935118 ],
+       [ 0.42858645, -2.2062852 ],
+       [ 0.42786054, -2.32814793],
+       [ 0.46332557, -2.45369074],
+       [ 0.50267501, -2.53323713],
+       [ 0.64264265, -2.69384763],
+       [ 0.7828071 , -2.79823562]])</code></pre>
 <div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>q_in <span class="op">=</span> numpy.r_[q_in,q_in[<span class="dv">0</span>:<span class="dv">2</span>]]</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>q_in</span></code></pre></div>
 <pre><code>array([-170, -160, -150, -140, -130, -120, -110, -100,  -90,  -80,  -70,
@@ -587,15 +587,15 @@
 <p>We use the trapezoidal rule to find the slope in y as a function of the previous and next neighbors of each point in the path. For a path of n points this will produce n-2 sets of partial derivatives</p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>dy <span class="op">=</span> y_out[<span class="dv">2</span>:,:]<span class="op">-</span>y_out[:<span class="op">-</span><span class="dv">2</span>,:]</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>dy</span></code></pre></div>
-<pre><code>array([[ 0.30924037, -0.19261601],
-       [ 0.36200357, -0.15726298],
-       [ 0.40372681, -0.11708106],
-       [ 0.43280418, -0.0746701 ],
-       [ 0.44806955, -0.03280564],
-       [ 0.44870522,  0.00571908],
-       [ 0.4341135 ,  0.03828054],
-       [ 0.40378886,  0.06267855],
-       [ 0.35725082,  0.07749743]])</code></pre>
+<pre><code>array([[ 0.30924041, -0.19261596],
+       [ 0.36200364, -0.15726297],
+       [ 0.40372661, -0.11708114],
+       [ 0.43280413, -0.07467014],
+       [ 0.4480695 , -0.03280566],
+       [ 0.44870509,  0.00571898],
+       [ 0.43411364,  0.03828064],
+       [ 0.40378898,  0.06267861],
+       [ 0.35725081,  0.07749734]])</code></pre>
 <div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>dq <span class="op">=</span> q_in[<span class="dv">2</span>:]<span class="op">-</span>q_in[:<span class="op">-</span><span class="dv">2</span>]</span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>dq</span></code></pre></div>
 <pre><code>array([20, 20, 20, 20, 20, 20, 20, 20, 20])</code></pre>
@@ -627,9 +627,9 @@
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>J.shape</span></code></pre></div>
 <pre><code>(2, 9)</code></pre>
 <div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>J</span></code></pre></div>
-<pre><code>array([[ 0.01546202,  0.01810018,  0.02018634,  0.02164021,  0.02240348,
-         0.02243526,  0.02170567,  0.02018944,  0.01786254],
-       [-0.0096308 , -0.00786315, -0.00585405, -0.00373351, -0.00164028,
+<pre><code>array([[ 0.01546202,  0.01810018,  0.02018633,  0.02164021,  0.02240348,
+         0.02243525,  0.02170568,  0.02018945,  0.01786254],
+       [-0.0096308 , -0.00786315, -0.00585406, -0.00373351, -0.00164028,
          0.00028595,  0.00191403,  0.00313393,  0.00387487]])</code></pre>
 <p>Now let’s find the torque required to accelerage a 1-kg mass forward at 1g, while holding itself up against gravity:</p>
 <div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">1</span> <span class="co">#kg</span></span>
@@ -640,39 +640,39 @@
 <span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> J.T.dot(f)</span>
 <span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>t <span class="co">#N-m</span></span></code></pre></div>
 <pre><code>array([[0.24616055],
-       [0.25470025],
-       [0.25545626],
+       [0.25470027],
+       [0.2554562 ],
        [0.24891613],
-       [0.23586928],
-       [0.2172847 ],
-       [0.19415607],
-       [0.1673146 ],
-       [0.13721904]])</code></pre>
+       [0.23586927],
+       [0.21728469],
+       [0.19415609],
+       [0.16731464],
+       [0.13721908]])</code></pre>
 <div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>t.<span class="bu">max</span>()</span></code></pre></div>
-<pre><code>0.2554562621161284</code></pre>
+<pre><code>0.2554562024243693</code></pre>
 <div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>t.<span class="bu">min</span>()</span></code></pre></div>
-<pre><code>0.13721904119448364</code></pre>
+<pre><code>0.13721907554495927</code></pre>
 <p>Thus, the torque required by a motor to hold those forces specified by <span class="math inline">\(f_x\)</span> and <span class="math inline">\(f_y\)</span> is around .25 N-m in the worst case.</p>
 <div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>motor_speed <span class="op">=</span> <span class="dv">500</span><span class="co">#rpm</span></span>
 <span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>dq_dt <span class="op">=</span> motor_speed<span class="op">*</span><span class="dv">2</span><span class="op">*</span>math.pi<span class="op">/</span><span class="dv">60</span></span>
 <span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>velocity <span class="op">=</span> J<span class="op">*</span>dq_dt</span></code></pre></div>
 <div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>velocity[<span class="dv">0</span>,:]</span></code></pre></div>
-<pre><code>array([0.80958939, 0.94772314, 1.05695432, 1.13307869, 1.17304335,
-       1.17470752, 1.13650647, 1.05711675, 0.93528047])</code></pre>
+<pre><code>array([0.80958951, 0.94772333, 1.05695379, 1.13307856, 1.17304321,
+       1.17470717, 1.13650686, 1.05711709, 0.93528043])</code></pre>
 <div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>f</span></code></pre></div>
 <pre><code>array([[ 9.81],
        [-9.81]])</code></pre>
 <div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> t.dot(dq_dt)</span>
 <span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>P</span></code></pre></div>
-<pre><code>array([[12.88893637],
-       [13.33607372],
-       [13.37565861],
-       [13.0332183 ],
-       [12.35008672],
-       [11.37700052],
-       [10.1659878 ],
-       [ 8.76057221],
-       [ 7.1847722 ]])</code></pre>
+<pre><code>array([[12.88893646],
+       [13.33607515],
+       [13.37565548],
+       [13.03321797],
+       [12.35008598],
+       [11.37699962],
+       [10.1659891 ],
+       [ 8.76057407],
+       [ 7.18477399]])</code></pre>
 
 </main><!-- /.container -->
 <footer class="blog-footer">
