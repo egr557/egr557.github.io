@@ -8,7 +8,7 @@
 ">
   <meta name="author" content="Daniel M. Aukes">
   <meta name="generator" content="Jekyll v4.1.1">
-  <title>System Dynamics | Foldable Robotics </title>
+  <title>System Dynamics I | Foldable Robotics </title>
 
   <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
   
@@ -175,7 +175,7 @@
   
   
       <h4>
-        System Dynamics
+        System Dynamics I
       </h4>
   
   
@@ -192,9 +192,7 @@
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
-
-
-<h1 id="system-dynamics">System Dynamics</h1>
+  <h1 id="system-dynamics-i">System Dynamics I</h1>
 <h2 id="assignment-overview">Assignment Overview</h2>
 <p>This assignment is intended to get you familiar with the dynamics of your system. We will start with the triple pendulum example and turn it into a leg.</p>
 <h2 id="resources">Resources</h2>
@@ -202,31 +200,73 @@
 <li>dynamics <a href="/modules/dynamics">modules</a></li>
 </ul>
 <h2 id="procedure">Procedure</h2>
-
-
-<h2>THIS ASSIGNMENT HAS NOT YET BEEN POSTED</h2>
-
-
-
-<h2 id="rubric-2">Rubric</h2>
+<!--hide-->
+<p>Starting with system kinematics code as well as the pendulum code shared on Wednesday (2/17/2021),</p>
+<ol type="1">
+<li><strong>Scale:</strong> Ensure your system is using SI units. You should be specifying lengths in meters (so millimeters should be scaled down to the .001 range), forces in Newtons, and radians (not degrees), and masses in kg. You may make educated guesses about mass for now.</li>
+<li><strong>Define Inertias:</strong> Add a center of mass and a particle or rigid body to each rotational frame. You may use particles for now if you are not sure of the inertial properties of your bodies, but you should plan on finding these values soon for any “payloads” or parts of your system that carry extra loads (other than the weight of paper).</li>
+<li><strong>Add Forces:</strong> Add the acceleration due to gravity. Add rotational springs in the joints (using k=0 is ok for now) and a damper to at least one rotational joint. You do not need to add external motor/spring forces but you should start planning to collect that data.</li>
+<li><strong>Constraints:</strong> Keep mechanism constraints in, but follow the pendulum example of double-differentiating all constraint equations.
+<ul>
+<li>If you defined your mechanism as unattached to the Newtonian frame, add enough constraints so that it is fully attached to ground (for now). you will be eventually removing these constraints.</li>
+</ul></li>
+<li><strong>Solution:</strong> Add the code from the bottom of the pendulum example for solving for f=ma, integrating, plotting, and animating. Run the code to see your results. It should look similar to the pendulum example with constraints added, as in like a rag-doll or floppy</li>
+<li><strong>Tuning:</strong> Now adjust the damper value <span class="math inline">\(b\)</span> to something nonzero, that over 10s shows that the system is settling.</li>
+<li><em>(Optional):</em> Adjust joint stiffness values so that your system looks more realistic.</li>
+</ol>
+<h3 id="draft-submission">Draft Submission</h3>
+<p>Please bring your code to class on Wednesday (2/26/2021). We will do a checkoff in class and go over questions. You should show each step of the code in class, though it is fine if there are errors, or if it fails compute due to errors in previous sections.</p>
+<h3 id="final-submission">Final Submission</h3>
+<p>Please include a Jupyter notebook with the following:</p>
+<ol type="1">
+<li>Detailed description of the completed steps above (included as blocks alongside chunks of related code)</li>
+<li>Code used in solving the problem (inline in the report in code blocks), along with descriptions detailing your approach.</li>
+</ol>
+<p>Please follow the “Submission Best Practices” document posted on Canvas. This assignment should be submitted to canvas as a .pdf document or a jupyter notebook (.ipynb). If submitted as a notebook, make sure it is fully compiled. This can be done by opening the file in the jupyter browser and in the top jupyter menu selecting “Kernel” –&gt; “Restart and Run All.”</p>
+<p>Please also post the completed assignment to your team’s website. This may be posted as a jupyter notebook, a rendered jupyter notebook, or a static web page with embedded code and figures.</p>
+<h2 id="rubric">Rubric</h2>
 <table>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Description</th>
-<th style="text-align: left;">Points</th>
+<th style="text-align: right;">Points</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">Draft</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 1</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 2</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 3</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 4</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 5</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 6</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"><strong>Total</strong></td>
-<td style="text-align: left;">200</td>
+<td style="text-align: right;"><strong>200</strong></td>
 </tr>
 </tbody>
 </table>
-
-
-
-  
 
 </main><!-- /.container -->
 <footer class="blog-footer">
