@@ -8,7 +8,7 @@
 ">
   <meta name="author" content="Daniel M. Aukes">
   <meta name="generator" content="Jekyll v4.1.1">
-  <title>Compliance | Foldable Robotics </title>
+  <title>Solidworks FEA Tutorial | Foldable Robotics </title>
 
   <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
   
@@ -175,7 +175,7 @@
   
   
       <h4>
-        Compliance
+        Solidworks FEA Tutorial
       </h4>
   
   
@@ -186,62 +186,60 @@
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
-  <article class="post">
-
-  <div class="post-content">
-    
-    
-        
-    
-    <h2>Modules</h2>
-    <div class="row">
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/compliance/generated/euler-bernoulli-beams/euler-bernoulli-beams.html"><i class="fas fa-chalkboard-teacher fa-5x"></i></a></h3><h3 class="card-title">Euler-Bernoulli Beams</h3></div>
-</div>
-    
-    </div>
-    
-    
-    
-
-    
-  
-    
-
-    
-    <h2>Tutorials</h2>
-    <div class="row">
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/compliance/solidworks-fea-tutorial.html"><i class="fas fa-graduation-cap fa-5x"></i></a></h3><h3 class="card-title">Solidworks FEA Tutorial</h3></div>
-</div>
-    
-    </div>
-    
-    
-    
-
-    
-    
-    
-
-
-    
-
-    
-    
-    
-    
-    
-    
-
-    
-  </div>
-
-</article>
+  <h2 id="solidworks-fea-tutorial">Solidworks FEA Tutorial</h2>
+<ol type="1">
+<li><p>Create a new part</p>
+<p><a href="../../figures/solidworks-fea/01.png" target="_blank"><img src="../../figures/solidworks-fea/01.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Select the Top Plane</p>
+<p><a href="../../figures/solidworks-fea/02.png" target="_blank"><img src="../../figures/solidworks-fea/02.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Create a new Sketch</p></li>
+<li><p>Select the rectangle tool</p></li>
+<li><p>Draw a rectangle (hint: click on the origin to constrain the rectangle to that point)</p>
+<p><a href="../../figures/solidworks-fea/03.png" target="_blank"><img src="../../figures/solidworks-fea/03.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Select the dimensioning tool</p>
+<p><a href="../../figures/solidworks-fea/04.png" target="_blank"><img src="../../figures/solidworks-fea/04.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Click on the top edge of the rectangle. A dimension will appear. Enter the desired dimension</p></li>
+<li><p>Repeat for the side of the rectangle</p></li>
+<li><p>Select the features tab and then select extruded boss/base</p>
+<p><a href="../../figures/solidworks-fea/05.png" target="_blank"><img src="../../figures/solidworks-fea/05.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Enter the thickness of your laminate</p>
+<p><a href="../../figures/solidworks-fea/06.png" target="_blank"><img src="../../figures/solidworks-fea/06.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Save your part into a new folder</p>
+<p><a href="../../figures/solidworks-fea/07.png" target="_blank"><img src="../../figures/solidworks-fea/07.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Turn on the Solidworks Simulaton Add in. Go to tools–&gt;add ins</p>
+<p><a href="../../figures/solidworks-fea/08.png" target="_blank"><img src="../../figures/solidworks-fea/08.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Click on the check box to the left of the “solidworks simulation item”</p>
+<p><a href="../../figures/solidworks-fea/09.png" target="_blank"><img src="../../figures/solidworks-fea/09.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Now select the Simulation tab.</p>
+<p><a href="../../figures/solidworks-fea/10.png" target="_blank"><img src="../../figures/solidworks-fea/10.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Create a new study</p>
+<p><a href="../../figures/solidworks-fea/11.png" target="_blank"><img src="../../figures/solidworks-fea/11.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Next, define your fixtures. Go to the menu on the left and select fixtures–&gt;Fixed Geometry…</p>
+<p><a href="../../figures/solidworks-fea/12.png" target="_blank"><img src="../../figures/solidworks-fea/12.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Define the fixed end of the cantilever beam by rotating the part and selecting the left cross-sectional face of the beam.</p>
+<p><a href="../../figures/solidworks-fea/13.png" target="_blank"><img src="../../figures/solidworks-fea/13.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Define an axis along which you will align a force. Select The Front plane and the top plane, then select insert–&gt;reference geometry–&gt;axis from the top menu</p>
+<p><a href="../../figures/solidworks-fea/14.png" target="_blank"><img src="../../figures/solidworks-fea/14.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>The two-planes method should be automatically selected for you. Select the green check mark to accept the new axis</p>
+<p><a href="../../figures/solidworks-fea/15.png" target="_blank"><img src="../../figures/solidworks-fea/15.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Define your forces. In the left menu select External forces/torques–&gt;force…</p>
+<p><a href="../../figures/solidworks-fea/16.png" target="_blank"><img src="../../figures/solidworks-fea/16.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Select the right cross-sectional face of the beam, then ensure the force option is selected on the left. Check the “sekected direction option,” and the new axis you just created (axis 1). Then select the axial load option and define the magnitued of the force.</p>
+<p><a href="../../figures/solidworks-fea/17.png" target="_blank"><img src="../../figures/solidworks-fea/17.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>Next, define your material. You can select from a list of favorite materials, or go into the material selector to create a custom material. <a href="../../figures/solidworks-fea/18.png" target="_blank"><img src="../../figures/solidworks-fea/18.png" style="width:50.0%" alt="png" /></a> <a href="../../figures/solidworks-fea/19.png" target="_blank"><img src="../../figures/solidworks-fea/19.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>In the left menu, select mesh–&gt;mesh and run to run your simulation</p>
+<p><a href="../../figures/solidworks-fea/20.png" target="_blank"><img src="../../figures/solidworks-fea/20.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>If you get a message that the solver failed, with an option to restart, select “yes”</p></li>
+<li><p>If you get a message to turn on large displacement solving, select yes.</p>
+<p><a href="../../figures/solidworks-fea/21.png" target="_blank"><img src="../../figures/solidworks-fea/21.png" style="width:50.0%" alt="png" /></a></p></li>
+<li><p>If it succeeds, you may now view the results of the solver</p>
+<p><a href="../../figures/solidworks-fea/22.png" target="_blank"><img src="../../figures/solidworks-fea/22.png" style="width:50.0%" alt="png" /></a> <a href="../../figures/solidworks-fea/23.png" target="_blank"><img src="../../figures/solidworks-fea/23.png" style="width:50.0%" alt="png" /></a></p></li>
+</ol>
+<h2 id="notes">Notes</h2>
+<p>Common sources of failure include:</p>
+<ul>
+<li>Too high of a force or too soft of a material for the given dimensions. Try selecting a stiffer material</li>
+</ul>
 
 </main><!-- /.container -->
 <footer class="blog-footer">
