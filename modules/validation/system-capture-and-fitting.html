@@ -8,7 +8,7 @@
 ">
   <meta name="author" content="Daniel M. Aukes">
   <meta name="generator" content="Jekyll v4.1.1">
-  <title>Model Fitting | Foldable Robotics </title>
+  <title>System Capture and Fitting | Foldable Robotics </title>
 
   <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
   
@@ -166,7 +166,7 @@
   
   
       <h5>
-        Module: <a href="/modules/optimization">optimization</a>
+        Module: <a href="/modules/validation">validation</a>
       </h5>
   
   
@@ -175,7 +175,7 @@
   
   
       <h4>
-        Model Fitting
+        System Capture and Fitting
       </h4>
   
   
@@ -192,25 +192,77 @@
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
-
-
-<h1 id="model-fitting">Model Fitting</h1>
+  <h1 id="system-capture-and-fitting-camera">System Capture and Fitting (camera)</h1>
 <h2 id="introduction">Introduction</h2>
-<p>The purpose of this assignment is to get your team to model the various aspects of your model including</p>
+<p>The purpose of this assignment is to collect data on your system for use in fitting your model</p>
+<h2 id="course-resources">Course Resources</h2>
 <ul>
-<li>The full system</li>
-<li>Actuators</li>
-<li>Energy Storage Devices</li>
-<li>System / Link Stiffness</li>
+<li>Optimization Module</li>
+<li>Experimental Validation Module</li>
+<li>Dynamics Module</li>
 </ul>
-<h2 id="procedure">Procedure</h2>
-
-
-<h2>THIS ASSIGNMENT HAS NOT YET BEEN POSTED</h2>
-
-
-
+<h2 id="instructions">Instructions</h2>
+<!--hide-->
+<ol type="1">
+<li>Attach 3 optical tracking markers to the fixed base frame, at the same camera depth as your experimental setup. They must not be colinear, and would best be arranged orthogonally (as in x-y vectors)</li>
+<li>Measure the distance between all three markers.</li>
+<li>Measure the distance from your camera to the center of your experiment’s z-plane.</li>
+<li>Attach at least one marker to the output of your energy storage device / actuator so that it can alwyas be viewed by the camera. Attach more markers if you intend to capture flexibility, bending, or compliance.</li>
+<li>Attach your camera to the fixed/rigid frame using a tripod or fixed camera mount.</li>
+<li>Take a practice video and run it through your capture software to ensure the markers are always visible.</li>
+<li>Start recording. Use high-quality mode.</li>
+<li>Trigger your energy storage device or actuator with a step input. The input signal must be measurable (voltage &amp; current, distance, force, etc) or calculable (mass, energy).</li>
+<li>Track the motion of your system until it stops moving. Make sure motion is planar.</li>
+<li>Export/save the video to your computer</li>
+<li>Using open source motion tracking software export the x-y position of all markers over time.</li>
+<li>Using the base frame markers as reference points, size and rotate your data to get x-y values in SI units.</li>
+<li>Using the model-fitting example in the optimization module, feed in the marker position data of the system output to the output of the model.</li>
+<li>Supply all known or measurable values</li>
+<li>Run the optimization to identify unknown system parameters</li>
+</ol>
+<h2 id="discussion">Discussion</h2>
+<ul>
+<li>What optimizaiton method did you use?</li>
+<li>What worked? What didn’t work?</li>
+</ul>
+<h2 id="suggestions">Suggestions</h2>
+<p>To add a known force, attach a known mass to a string, let it deflect and settle, then cut the string.</p>
+<p>To displace a known distance, pull the device in a known direction with a string, measuring the displacement. Let it settle, then cut the string.</p>
+<p>If measuring voltage and current, a power supply’s current reading may not be sufficiently fast enough to capture transient responses</p>
+<p>If measuring anything that has a digital readout (but no serial output), make sure the readout is visible by the camera. You can then convert the voltage reading manually using the video time as a reference.</p>
 <h2 id="rubric">Rubric</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Item</th>
+<th style="text-align: left;">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Writeup</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Plots</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Code</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">…</td>
+<td style="text-align: left;">…</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<!--unhide-->
+<h2 id="rubric-1">Rubric</h2>
 <table>
 <thead>
 <tr class="header">
@@ -221,14 +273,10 @@
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><strong>Total</strong></td>
-<td style="text-align: left;">100</td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
-
-
-
-  
 
 </main><!-- /.container -->
 <footer class="blog-footer">

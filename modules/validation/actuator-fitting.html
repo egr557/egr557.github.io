@@ -8,7 +8,7 @@
 ">
   <meta name="author" content="Daniel M. Aukes">
   <meta name="generator" content="Jekyll v4.1.1">
-  <title>Subsystem Prototyping | Foldable Robotics </title>
+  <title>Actuator Fitting | Foldable Robotics </title>
 
   <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
   
@@ -166,7 +166,7 @@
   
   
       <h5>
-        Module: <a href="/modules/manufacturing">manufacturing</a>
+        Module: <a href="/modules/validation">validation</a>
       </h5>
   
   
@@ -175,52 +175,113 @@
   
   
       <h4>
-        Subsystem Prototyping
+        Actuator Fitting
       </h4>
   
   
 </div>
 <div class="col-md-4 text-center">
   
-  
-      <h5>
-        Individual Assignment
-      </h5>
-  
-  
 </div>
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
-
-
-<h1 id="subsystem-prototyping">Subsystem Prototyping</h1>
-<h2 id="introduction">Introduction</h2>
-<p>The purpose of this assignment is to prototype a key part of the system. 
-
-<h2>THIS ASSIGNMENT HAS NOT YET BEEN POSTED</h2>
-
-
-
+  <h2 id="introduction">Introduction</h2>
+<p>The purpose of this assignment is to develop a model for your actuator.</p>
+<h2 id="steps">Steps</h2>
+<!--hide-->
+<ol type="1">
+<li>Decide as a team what kind of actuator you will use. This semester you may choose any actuator or energy storage device you like, including
+<ul>
+<li>A stretched or wound spring</li>
+<li>A preloaded beam</li>
+<li>A deformed elastic shape</li>
+<li>A motor, gear motor, or RC Servo</li>
+<li>Shape Memory Alloy</li>
+<li>… (see the professor to get something else approved)</li>
+</ul></li>
+<li>Develop a model which accurately captures the principal dynamics of the actuator.
+<ul>
+<li>For metal springs, you will need to know the spring constant as well as any nonlinear hard limits (as in when a compression spring bottoms out).</li>
+<li>For elastic materials, you may need to capture
+<ul>
+<li>nonlinear stress/strain or force/displacement curve</li>
+<li>rate-dependent loss (can be modeled as viscous damping)</li>
+</ul></li>
+<li>For motors, you will need to include:
+<ul>
+<li>Coil resistance &amp; inductance</li>
+<li>inertia</li>
+<li>input voltage</li>
+<li>gear ratio</li>
+</ul></li>
+</ul></li>
+<li>Measure or identify as many of the parameters as you can using scientific methods.</li>
+<li>Develop an experiment that measures force and/or motion of a system powered by your actuator, while controlling for or reducing the impact of unmodeled effects.
+<ul>
+<li>include a picture and/or video of the experiment.</li>
+<li>run the experiment and collect data on how it moves when the actuator is activated.</li>
+</ul></li>
+<li>Include the actuator model developed above within a system-level model that includes the rest of your experiment
+<ul>
+<li>include the masses or inertias that your actuator is connected to</li>
+<li>include other system compliance and damping effects as needed</li>
+<li>include the kinematics of the surrounding mechanism (such as the lever arm, external gear ratio, pulley diameter, etc)</li>
+<li>if there are unknown parameters, consider using an optimization step to identify the parameters</li>
+</ul></li>
+<li>Plot and compare the results of your model with simulation results.</li>
+<li>(Optional) If necessary, use optimization to improve your parameter estimates, and re-match your model to a second set of experimental data.</li>
+</ol>
+<h2 id="discussion">Discussion</h2>
+<p>Write a detailed description of how you accomplisehd each of the steps above. Be sure to include discussion on the following points:</p>
+<ul>
+<li>Assumptions you made</li>
+<li>Ways you eliminated unmodeled effects in the experiment</li>
+<li>Model elements you decided to approximate or simplify</li>
+<li>Description of your experiment</li>
+<li>Description of your system-level model</li>
+<li>Analysis of the quality of your model to capture the dynamics of your actuator, as well as a discussion of any optimization used to better fit your model.</li>
+</ul>
+<!--unhide-->
 <h2 id="rubric">Rubric</h2>
 <table>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Description</th>
-<th style="text-align: left;">Points</th>
+<th style="text-align: right;">Points</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">Actator Model</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Experimental Setup</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">System Model</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Discussion</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Figures</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Images</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;"><strong>Total</strong></td>
-<td style="text-align: left;">100</td>
+<td style="text-align: right;"></td>
 </tr>
 </tbody>
 </table>
-
-
-
-  
 
 </main><!-- /.container -->
 <footer class="blog-footer">

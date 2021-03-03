@@ -8,7 +8,7 @@
 ">
   <meta name="author" content="Daniel M. Aukes">
   <meta name="generator" content="Jekyll v4.1.1">
-  <title>Cantilever Beams | Foldable Robotics </title>
+  <title>FEA Modeling | Foldable Robotics </title>
 
   <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
   
@@ -166,7 +166,7 @@
   
   
       <h5>
-        Module: <a href="/modules/misc">misc</a>
+        Module: <a href="/modules/compliance">compliance</a>
       </h5>
   
   
@@ -175,7 +175,7 @@
   
   
       <h4>
-        Cantilever Beams
+        FEA Modeling
       </h4>
   
   
@@ -186,101 +186,53 @@
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
-  <h1 id="cantilever-beams">Cantilever Beams</h1>
-<h2 id="overview">Overview</h2>
-<p>Compute the stiffness of a laminate beam</p>
-<h2 id="summary-of-steps">Summary of Steps</h2>
-<!--hide-->
-<figure>
-<img src="../../figures/weight-measurement.png" style="width:6.5in" alt="example" /><figcaption aria-hidden="true">example</figcaption>
-</figure>
-<ol type="1">
-<li><p>Prepare 4 rectangular samples of the rigid material your team is using (cardboard, posterboard,fiberglass) in the dimensions of 25mm x 125mm.<br />
-</p></li>
-<li><p>Measure the thickness of each of the samples in at least two places. You should have at least 8 measurements.</p></li>
-<li><p>Clamp two beams flat on top of one another on a table with 100mm hanging off the side.<br />
-<strong>Optional:</strong> Print out and vertically mount a grid pattern behind the beam for taking measurements via photos</p></li>
-<li><p>Tape a string to the bottom sample so the string hangs off the end of the lower beam</p></li>
-<li><p>Mount/place camera directly in front of the beam<br />
-<strong>Suggestion:</strong> use a tripod to ensure consistent measurements shot-to-shot.</p></li>
-<li><p>Take picture of the bottom beam unloaded.</p></li>
-<li><p>Measure the deflection of the bottom beam with respect to the top beam material as a function of a small of load.</p>
-<ol type="1">
-<li><p>Take deflection / force readings for each beam with at least 5 different loads by measuring the distance between the loaded and unloaded beam <strong>Suggestion:</strong> You can use calibrated weights or paperclips, small amounts of water, etc. and then measure or calculate the mass afterwards. Or you can use a fish scale or digital load cell, but be sure to take consistent deflection/force readings.</p></li>
-<li><p>Take a picture of the beam at each load value.<br />
-<strong>Suggestion:</strong> Do not permanently bend or plasticly deform the material, otherwise the test will produce poor results.</p></li>
-</ol></li>
-<li><p>Repeat the test for the remaining two beams. You should have <span class="math inline">\(3*5=15\)</span> experimental values. Leave the same beam on the top throughout the tests.</p></li>
-</ol>
-<hr />
-<ol type="1">
-<li>Prepare 4 rectangular samples of the laminate material your team is using in the dimensions of 25mm x 125mm</li>
-<li>Repeat the prior experiment for your laminate.</li>
-</ol>
-<hr />
-<ol type="1">
-<li>Plot the force/deflection data for your single-layer experiment and extract the slope.</li>
-<li>Using the code introduced in class, compute the Young’s modulus for the this material based on the slope of your experimental data and the dimensions of the beam.</li>
-<li>Using the estimate for Young’s modulus, compute the stiffness of a 5-layer composite with those materials on the top and bottom layer.
-<ol type="1">
-<li>Assume the other layers do not contribute any stiffness, just thickness</li>
-<li>Assume a symmetric laminate</li>
-<li>You may use the laminate thickness measurement minus the layer thickness measurements to obtain the total thickness of the other non-contributing layers.</li>
-</ol></li>
-<li>Overplot the <strong>computed</strong> beam stiffness against the <strong>experimental</strong> stiffness data you obtained for the laminate.</li>
-</ol>
-<h2 id="discussion">Discussion</h2>
-<p>Answer the following questions</p>
-<ol type="1">
-<li>Describe any error in each of your results, and explain their potential sources.
-<ol type="1">
-<li>Consider both modeling error and experimental error, and explain how both may contribute.<br />
-</li>
-<li>Make an educated guess what was the dominant source of error.</li>
-</ol></li>
-</ol>
-<h2 id="submission">Submission</h2>
-<ol type="1">
-<li>Report with the following
-<ol type="1">
-<li>Detailed description of the steps you took, in paragraph form</li>
-<li>Include answers to the discussion points above</li>
-<li>Pictures</li>
-<li>Code</li>
-<li>Figures</li>
-</ol></li>
-</ol>
-<!--This assignment should be submitted as a writeup of your individual process.  Describe your approach to each of the steps in the assignment.  Provide pictures, code, and figures as necessary to make the point.   -->
-<h2 id="suggestions">Suggestions</h2>
+  <h1 id="fea-modeling">FEA Modeling</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The goal of this tutorial is to get you familiar computing the stiffness of a laminate using FEA. You may use any FEA tool you are comfortable with, or the code supplied in class as a starting point.</p>
+<h2 id="resources">Resources</h2>
 <ul>
-<li>Test individual layers to start</li>
-<li>You have permission to adapt the geometry to suit your own project as needed, but describe the differences in your setup</li>
-<li>Document your process</li>
-<li>I will be forgiving on precision, but I want to know what you did and how you did it</li>
-<li>You may use scissors, but you will need to measure what you actually cut.</li>
-<li>This work can be combined and put in your group’s final report, but the work for this assignment should be individual. You may coordinate with your group, however, so that each of your teammates test different design points however</li>
+<li><a href="generated/euler-bernoulli-beams/euler-bernoulli-beams.html">Euler-Bernoulli Beams</a></li>
+<li><a href="solidworks-fea-tutorial.html">Solidworks FEA Tutorial</a></li>
 </ul>
-<!--unhide-->
-<h2 id="rubric">Rubric</h2>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Description</th>
-<th style="text-align: right;">Points</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>Total</strong></td>
-<td style="text-align: right;"></td>
-</tr>
-</tbody>
-</table>
+<h2 id="procedure">Procedure</h2>
+<ol type="1">
+<li>Pick one or more geometries of your team’s robot design to focus on. Perhaps a “rigid” link which you would like to program to exhibit a certain springyness, a long skinny link which exhibits too much deflection, or, if your system is sufficiently rigid already, your flexible joint material, in order to “program” a desired springiness into your team’s joint dynamics.</li>
+<li>Create a CAD or scripted model for that link, replicating the geometry and using the experimentally-collected value for Young’s modulus you extracted from your previous individual assignment.
+<ul>
+<li>You may use any finite element software you are comfortable with.</li>
+</ul></li>
+<li>Define boundary conditions that are appropriate for your team’s particular design and use case.</li>
+<li>Define loading conditions that are appropriate for your team’s particular design and use case.</li>
+<li>Compute and plot the deflection of your geometry under load.</li>
+<li>Compute and plot the stress in your design. Identify the region(s) of maximum stress. (Von Mises stress is fine)</li>
+<li>Implement a design change which improves the performance of this geometry for your stated use case.</li>
+</ol>
+<h2 id="discussion-points">Discussion Points</h2>
+<p>Answer the following questions when writing up your report</p>
+<ol type="1">
+<li>What is your identified geometry, and why was it selected? How will modeling the deformation of this geometry inform the development of your robot?</li>
+<li>What FEA simulation tool did you select and why?</li>
+<li>What boundary conditions did you use, and why did you use them? Connect your answer back to the geometry you have selected and how you are considering that item’s deflection in your prototype.</li>
+<li>What loading conditions did you use, and why did you use them? Connect your answer back to the geometry you have selected and how you are considering that item’s deflection in your prototype.</li>
+<li>How do you expect your geometry to fail, and under what conditions?</li>
+<li>What design change did you implement, and how did that impact/improve the desired peformance of your element and system?</li>
+<li>Compare the simulated results against your experiences testing your prior prototype.</li>
+</ol>
 <!--
-| Discussion  |     50 |
-| Figures     |     20 |
-| Code        |     20 |
-| Pictures    |     10 |
+## Submission
+
+Please include:
+
+1. Report with the following
+    1. Detailed description of the steps you took, in paragraph form
+    1. Include answers to the discussion points above
+    1. Plots of deflection and stress.
+    1. Pictures of actual link failure under similar conditions.
+1. Design file (CAD or python script)
+1. Stiffness Analysis (CAD or python script)
+
+This can/should be submitted as a single jupyter notebook file.  Please follow the posted submission instructions
+
 -->
 
 </main><!-- /.container -->
