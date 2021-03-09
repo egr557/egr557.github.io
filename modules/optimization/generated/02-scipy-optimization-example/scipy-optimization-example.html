@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This site is about foldable robotics.
+">
+  <meta name="author" content="Daniel M. Aukes">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Scipy Optimization Example | Foldable Robotics </title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+
+  <link href="/assets/blog.css" rel="stylesheet">
+  <link href="/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+<body>
+<div class="container">      
+<header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+      
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+
+    </div>
+  </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modules
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" href="/modules/introduction">Introduction</a>
+          
+          <a class="dropdown-item" href="/modules/biomechanics">Biomechanics</a>
+          
+          <a class="dropdown-item" href="/modules/kinematics">Kinematics</a>
+          
+          <a class="dropdown-item" href="/modules/compliance">Mechanics and Compliance</a>
+          
+          <a class="dropdown-item" href="/modules/dynamics">Dynamics</a>
+          
+          <a class="dropdown-item" href="/modules/optimization">Optimization</a>
+          
+          <a class="dropdown-item" href="/modules/manufacturing">Prototyping & Manufacturing</a>
+          
+          <a class="dropdown-item" href="/modules/integration">Integration</a>
+          
+          <a class="dropdown-item" href="/modules/validation">Experimental Validation</a>
+          
+          <a class="dropdown-item" href="/modules/project">Project</a>
+          
+          <a class="dropdown-item" href="/modules/python">Python</a>
+          
+          <a class="dropdown-item" href="/modules/misc">Misc</a>
+          
+        </div>
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/class_schedule">Class Schedule</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-assignments">Assignments</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-tutorials">Tutorials</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/calendar#view_name=month" target="_blank">Canvas Calendar <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Module: <a href="/modules/optimization">optimization</a>
+      </h5>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h4>
+        Scipy Optimization Example
+      </h4>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+</div>
+</div>
+</div><!-- /.row -->
+<main role="main" class="container">
+  <h1 id="scipy-optimization-example">Scipy Optimization Example</h1>
+<p>This short example shows you how to use the scipy minimize function to identify model parameters. This example is set up similarly to the linear least squares example for consistency. Being able to define pretty much anything in a python function, however, gives you great power to customize this, as opposed to a specific approach like linear least squares.</p>
+<p>First, we import all the necessary modules</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy.random</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy.linalg</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.optimize</span></code></pre></div>
+<p>Next create the x matrix</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> numpy.r_[<span class="op">-</span><span class="dv">10</span>:<span class="dv">10</span>:<span class="fl">.5</span>]</span></code></pre></div>
+<p>Next, define a y vector based on some model. Note: you can use any of these models or add them together. We scale the output in this example to eliminate the natural weighting of each of these functions over the given range.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#y = x</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#y = x**3</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#y = numpy.sin(x)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">/=</span> y.<span class="bu">max</span>()</span></code></pre></div>
+<p>Add some noise to y:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>rand <span class="op">=</span> numpy.random.randn(<span class="op">*</span>y.shape)<span class="op">/</span><span class="dv">10</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>y_rand <span class="op">=</span> y <span class="op">+</span> rand</span></code></pre></div>
+<p>Create an A matrix consisting of several different models</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> numpy.array([(x),(x)<span class="op">**</span><span class="dv">2</span>,(x)<span class="op">**</span><span class="dv">3</span>,numpy.sin(x)]).T</span></code></pre></div>
+<p>Now create a function that outputs the sum of squared error of each model applied to the given x. In this case we are solving for the weighting coefficients, <span class="math inline">\(k\)</span>, as in the linear least squares example:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfunc(k):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># make sure our coefficients are in the form of a numpy array</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> numpy.array(k)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># generate y* = Ak^T</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    y_model <span class="op">=</span> A.dot(k.T)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># sum the square of the error of our model against the input data, y_rand</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    error <span class="op">=</span> ((y_model<span class="op">-</span>y_rand)<span class="op">**</span><span class="dv">2</span>).<span class="bu">sum</span>()</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">#return the error</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> error</span></code></pre></div>
+<p>Create an initial guess for each of the weights. In this case we just give each coefficient the value of 1 as an initial guess</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ini <span class="op">=</span> [<span class="dv">1</span>]<span class="op">*</span>A.shape[<span class="dv">1</span>]</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ini</span></code></pre></div>
+<pre><code>[1, 1, 1, 1]</code></pre>
+<p>Now, call the minimize function. The first value should be the function you are trying to minimize, and the For more information see the optimization function <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html">page</a></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> scipy.optimize.minimize(myfunc,ini)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>sol</span></code></pre></div>
+<pre><code>      fun: 0.28702720540291854
+ hess_inv: array([[ 2.35078353e-03, -1.23710166e-05, -3.31813435e-05,
+         4.86252223e-04],
+       [-1.23710166e-05,  6.46844764e-06,  3.00084348e-07,
+        -3.66529431e-05],
+       [-3.31813435e-05,  3.00084348e-07,  5.62458858e-07,
+        -1.91576266e-05],
+       [ 4.86252223e-04, -3.66529431e-05, -1.91576266e-05,
+         2.78470245e-02]])
+      jac: array([3.7252903e-09, 3.7252903e-09, 3.7252903e-09, 3.7252903e-09])
+  message: &#39;Optimization terminated successfully.&#39;
+     nfev: 65
+      nit: 9
+     njev: 13
+   status: 0
+  success: True
+        x: array([-1.87589993e-03,  1.03221832e-02,  6.09189996e-05,  3.43725716e-03])</code></pre>
+<p><code>sol.x</code> contains the solution for <span class="math inline">\(k\)</span></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>k_optimum <span class="op">=</span> sol.x</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>k_optimum</span></code></pre></div>
+<pre><code>array([-1.87589993e-03,  1.03221832e-02,  6.09189996e-05,  3.43725716e-03])</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>xx <span class="op">=</span> numpy.r_[:<span class="dv">4</span>]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> <span class="st">&#39;$x$&#39;</span>,<span class="st">&#39;$x^2$&#39;</span>,<span class="st">&#39;$x^3$&#39;</span>,<span class="st">&#39;$\sin(x)$&#39;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> plt.figure()</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> f.add_subplot()</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>ax.bar(xx,k_optimum)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>ax.set_xticks(xx)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>ax.set_xticklabels(labels)</span></code></pre></div>
+<pre><code>[Text(0, 0, &#39;$x$&#39;),
+ Text(1, 0, &#39;$x^2$&#39;),
+ Text(2, 0, &#39;$x^3$&#39;),
+ Text(3, 0, &#39;$\\sin(x)$&#39;)]</code></pre>
+<figure>
+<img src="output_18_1.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>Now generate <span class="math inline">\(y^*\)</span></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>y_model <span class="op">=</span> A.dot(k_optimum.T)</span></code></pre></div>
+<p>Plot the model against the input data</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot()</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> ax.plot(x,y_rand,<span class="st">&#39;.&#39;</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> ax.plot(x,y_model)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>ax.legend(a<span class="op">+</span>b,[<span class="st">&#39;data&#39;</span>,<span class="st">&#39;model&#39;</span>])</span></code></pre></div>
+<pre><code>&lt;matplotlib.legend.Legend at 0x26f6a33cfa0&gt;</code></pre>
+<figure>
+<img src="output_22_1.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>And plot the residual as well</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y_model<span class="op">-</span>y_rand)</span></code></pre></div>
+<pre><code>[&lt;matplotlib.lines.Line2D at 0x26f6a3ac640&gt;]</code></pre>
+<figure>
+<img src="output_24_1.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>Now try other models, higher resolution data, and different domains</p>
+
+</main><!-- /.container -->
+<footer class="blog-footer">
+  
+
+  <p>Copyright &copy; 2020 Daniel M. Aukes.  All rights reserved.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

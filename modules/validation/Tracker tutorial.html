@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This site is about foldable robotics.
+">
+  <meta name="author" content="Daniel M. Aukes">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Tracker Tutorial | Foldable Robotics </title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+
+  <link href="/assets/blog.css" rel="stylesheet">
+  <link href="/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+<body>
+<div class="container">      
+<header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+      
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+
+    </div>
+  </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modules
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" href="/modules/introduction">Introduction</a>
+          
+          <a class="dropdown-item" href="/modules/biomechanics">Biomechanics</a>
+          
+          <a class="dropdown-item" href="/modules/kinematics">Kinematics</a>
+          
+          <a class="dropdown-item" href="/modules/compliance">Mechanics and Compliance</a>
+          
+          <a class="dropdown-item" href="/modules/dynamics">Dynamics</a>
+          
+          <a class="dropdown-item" href="/modules/optimization">Optimization</a>
+          
+          <a class="dropdown-item" href="/modules/manufacturing">Prototyping & Manufacturing</a>
+          
+          <a class="dropdown-item" href="/modules/integration">Integration</a>
+          
+          <a class="dropdown-item" href="/modules/validation">Experimental Validation</a>
+          
+          <a class="dropdown-item" href="/modules/project">Project</a>
+          
+          <a class="dropdown-item" href="/modules/python">Python</a>
+          
+          <a class="dropdown-item" href="/modules/misc">Misc</a>
+          
+        </div>
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/class_schedule">Class Schedule</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-assignments">Assignments</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-tutorials">Tutorials</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/calendar#view_name=month" target="_blank">Canvas Calendar <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Module: <a href="/modules/validation">validation</a>
+      </h5>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h4>
+        Tracker Tutorial
+      </h4>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+</div>
+</div>
+</div><!-- /.row -->
+<main role="main" class="container">
+  <h1 id="basic-tracker-tutorial">Basic Tracker Tutorial</h1>
+<p><em>Thanks to Chien-Wen Pan for his screenshots and assistance.</em></p>
+<h2 id="external-resources">External Resources</h2>
+<p><a href="https://physlets.org/tracker/">Tracker Software</a></p>
+<h2 id="procedure">Procedure</h2>
+<ol type="1">
+<li><p>Set up your Experiment</p>
+<ul>
+<li>Create your experiment so that captured motion is <em>planar</em> to the lens’s radial axis.</li>
+<li>Ensure markers are not occluded as your system moves. This will result in lost data.</li>
+<li>Ensure your “ground link” is rigidly attached to ground. Any unmeasured flexibility will add error to your system</li>
+<li>Eliminate the effects of contact and friction if possible. Rigidly attach your system in a given configuration rather than assuming it is unmoving due to friction.</li>
+</ul></li>
+<li><p>Place Markers.</p>
+<ul>
+<li>Utilize a high-contrast color scheme in the materials you use. If your device is dark or light-colored, create colored markers that are the inverse color scheme.</li>
+<li>Add markers to your (fixed) base reference frame. This will be useful in case your camera moves during capture.</li>
+<li>When sizing your markers, consider that the larger your marker, the larger the search window needs to be in tracker, which will slow tracking down. The smaller your marker, the higher</li>
+</ul></li>
+<li><p>Light your Experiment</p>
+<ul>
+<li>Light your scene well so that your camera may use a smaller aperture. This will help reduce blurring and improve tracking performance.<br />
+</li>
+<li>Avoid shadows, changing lighting conditions, or other dark/light spots in your scene. Sunlight is good as long as it does not go behind a cloud.</li>
+</ul></li>
+<li><p>Measure your experiment. Take key measurements of your system, including:</p>
+<ul>
+<li>Distance between each marker</li>
+<li>Mass of rigid links</li>
+<li>Distance between camera lens and plane of experiment. (useful for expert-level calibration)</li>
+</ul></li>
+<li><p>Take video. Suggestions:</p>
+<ul>
+<li>If possible to manually adjust camera settings, increase shutter rate
+<ul>
+<li>Set your shutter speed to at least 1/500th of a second or faster.</li>
+<li>Use a lens that has a long focus length so that you can reach the action (200mm or higher)</li>
+</ul></li>
+<li>Use “slow motion” mode if available. This will increase the frame-rate.</li>
+<li>Set the camera far enough back that it captures the whole scene as your device moves throughout its workspace. Utilize the center of the frame as much as possible to minimize lens distortion effects</li>
+<li>Measure the angle of “ground” by including</li>
+<li>Use a tripod to ensure your camera does not move.</li>
+</ul></li>
+<li><p>Open Tracker, then load a new video.</p>
+<p><img src="./Tracker%20tutorial_media/media/image3.jpg" style="width:5.73438in;height:4.29159in" /></p>
+<ol type="1">
+<li>Adjust the markers on the left and right of the timeline to select a portion of the video</li>
+</ol></li>
+<li><p>Create a “coordinate system.”</p>
+<p><img src="./Tracker%20tutorial_media/media/image4.jpg" style="width:5.75654in;height:4.19901in" /></p>
+<p><img src="./Tracker%20tutorial_media/media/image1.jpg" style="width:5.76563in;height:4.35842in" /></p></li>
+<li><p>Create a Calibration Stick. Use shift+left click to place two points, then enter the length</p>
+<p><img src="./Tracker%20tutorial_media/media/image8.jpg" style="width:5.63128in;height:4.24479in" /></p></li>
+<li><p>Track points.</p>
+<ol type="1">
+<li><p>Create a new point mass</p>
+<p><img src="./Tracker%20tutorial_media/media/image2.jpg" style="width:5.61757in;height:4.157in" /></p></li>
+<li><p>Using ctrl+shift+left click, select an identifiable object in the scene to create a keyframe</p>
+<p><img src="./Tracker%20tutorial_media/media/image5.jpg" style="width:5.73438in;height:4.30997in" /></p>
+<p><img src="./Tracker%20tutorial_media/media/image6.jpg" style="width:5.75162in;height:4.31106in" /></p>
+<ul>
+<li>you can also adjust the size of the search box</li>
+</ul></li>
+<li><p>If problems occur, you can adjust points or reselect a keyfram using the tools in the autotracker window.</p>
+<ul>
+<li>if you select a point in the plot, you can delete all points after and reselect the marker, or redefine the keyframe.</li>
+</ul>
+<p><img src="./Tracker%20tutorial_media/media/image7.jpg" style="width:5.75521in;height:4.36252in" /></p></li>
+</ol>
+<p>Repeat if you have multiple markers to track.</p></li>
+<li><p>Export data table to a .csv file. Note: it seems that tracker’s export function truncates floats to 2 values of precision. Copy and paste the table directly into a text editor and save as a .csv file to get full precision.</p></li>
+<li><p>Use the following code to extract your data and interpolate it:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">Created on Wed Mar  3 13:54:15 2021</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">@author: danaukes</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.interpolate <span class="im">as</span> si</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.read_csv(<span class="vs">r&#39;C:\Users\danaukes\Documents\Tracker\mydata.csv&#39;</span>, sep<span class="op">=</span><span class="st">&#39;,&#39;</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#x = df.x.astype(&#39;float64&#39;).to_numpy()</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> df.x.to_numpy()</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df.y.to_numpy()</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> df.t.to_numpy()</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>xy <span class="op">=</span> numpy.array([x,y]).T</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> si.interp1d(t,xy.T,fill_value<span class="op">=</span><span class="st">&#39;extrapolate&#39;</span>,kind<span class="op">=</span><span class="st">&#39;quadratic&#39;</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>new_t <span class="op">=</span> numpy.r_[<span class="dv">0</span>:t[<span class="op">-</span><span class="dv">1</span>]:<span class="fl">.1</span>]</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>plt.plot(t,x)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.plot(new_t,f(new_t)[<span class="dv">0</span>])</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>plt.plot(t,y)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>plt.plot(new_t,f(new_t)[<span class="dv">1</span>])</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y)</span></code></pre></div></li>
+</ol>
+
+</main><!-- /.container -->
+<footer class="blog-footer">
+  
+
+  <p>Copyright &copy; 2020 Daniel M. Aukes.  All rights reserved.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

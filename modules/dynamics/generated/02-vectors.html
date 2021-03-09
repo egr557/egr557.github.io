@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This site is about foldable robotics.
+">
+  <meta name="author" content="Daniel M. Aukes">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Frames, Basis Vectors, and Vectors | Foldable Robotics </title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+
+  <link href="/assets/blog.css" rel="stylesheet">
+  <link href="/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+<body>
+<div class="container">      
+<header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+      
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+
+    </div>
+  </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modules
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" href="/modules/introduction">Introduction</a>
+          
+          <a class="dropdown-item" href="/modules/biomechanics">Biomechanics</a>
+          
+          <a class="dropdown-item" href="/modules/kinematics">Kinematics</a>
+          
+          <a class="dropdown-item" href="/modules/compliance">Mechanics and Compliance</a>
+          
+          <a class="dropdown-item" href="/modules/dynamics">Dynamics</a>
+          
+          <a class="dropdown-item" href="/modules/optimization">Optimization</a>
+          
+          <a class="dropdown-item" href="/modules/manufacturing">Prototyping & Manufacturing</a>
+          
+          <a class="dropdown-item" href="/modules/integration">Integration</a>
+          
+          <a class="dropdown-item" href="/modules/validation">Experimental Validation</a>
+          
+          <a class="dropdown-item" href="/modules/project">Project</a>
+          
+          <a class="dropdown-item" href="/modules/python">Python</a>
+          
+          <a class="dropdown-item" href="/modules/misc">Misc</a>
+          
+        </div>
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/class_schedule">Class Schedule</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-assignments">Assignments</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-tutorials">Tutorials</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/calendar#view_name=month" target="_blank">Canvas Calendar <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Module: <a href="/modules/dynamics">dynamics</a>
+      </h5>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h4>
+        Frames, Basis Vectors, and Vectors
+      </h4>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+</div>
+</div>
+</div><!-- /.row -->
+<main role="main" class="container">
+  <h2 id="frames">Frames</h2>
+<p>When analyzing a system, sometimes it’s convenient or simple to represent a system in a specific way. We all know of the Cartesian system of coordinates which span a three dimensional space, but did you know that there are an infinte number of ways to describe that same space? Just as we are familiar with the x,y, and z directions, we can use different reference frames to navigate and represent the same coordinates and vectors in different ways.</p>
+<p>Take the example of your professor standing in front of you, giving a lecture. If both of you were to stretch your right hand out to your right, you wouldn’t be pointing in the same direction. To get to the door behind youyour professor would say go forward. Direction is relative to each of you based on your frame of reference.</p>
+<p>Sometimes the ability to select your directional representation is useful in dynamics, because depending on the representation, it may take many more or far fewer variables to do so. For example, when discussing the motion of a plane or car, it is often useful to describe the forces acting on the plane from the car’s perspective, even if you’re more interested in where the plane goes relative to your perspective standing on the ground. The planes perspective and the grounds perspective, in terms of their directional components, can be considered separate reference frames.</p>
+<h2 id="basis-vectors">Basis Vectors</h2>
+<p>The purpose of a reference frame is to hold a set of unique <em>basis vectors</em> which in linear algebra terms span an <span class="math inline">\(R^3\)</span> space. As long as these basis vectors span the space, they are capable of describing any vector within that space, a minimum requirement for a 3 dimensional reference frame. However, there are some other useful qualities of these basis vectors which typically make life easier, which are also enforced in <em>pynamics</em>.</p>
+<p><strong>Orthogonal:</strong> The basis vectors in an orthogonal reference frame are themselves orthogonal, or mutually perpendicular to each other. This means that there are no shared components of vectors; each basis vector is completely independent of each other. a more mathy way to describe this is that <span class="math inline">\(\vec{b}_1 \cdot \vec{b}_2 =0\)</span>, where <span class="math inline">\(\vec{b}_1\)</span> and <span class="math inline">\(\vec{b}_2\)</span> are any two basis vectors in a reference frame.</p>
+<p><strong>Normal:</strong> Basis vectors in a pynamics reference frame are <em>normal</em>, meaning their lengths have been normalized. They are <em>unit vectors</em>.</p>
+<p>In Pynamics, frames are implemented as a Python class, and serve to hold three <em>orthonormal</em> (orthogonal and normal) vectors. Frames can be named when created, and no two names can be the same; this name is applied to the x,y, and z basis vectors in each frame. Thus, no two basis vectors may be named the same in <em>pynamics</em>.</p>
+<h2 id="vectors">Vectors</h2>
+<p>Vectors in <em>pynamics</em> are represented as linear combinations of basis vectors from one or more frames. Once frames are created, the basis vectors they contain may be combined with other literal or symbolic variables to create symbolic vector expressions.</p>
+<p>Vectors are represented as a Python class, and leverage the ability to overload Python’s mathematical operators with other functionality. In this way, common operators such as <span class="math inline">\(+\)</span>,<span class="math inline">\(-\)</span>,<span class="math inline">\(*\)</span> and <span class="math inline">\(/\)</span> take on their own meaning when used in expressions with scalars, vectors, dyads, or dyadics. In this way</p>
+<p>Vectors cannot be created without a reference frame. Therefore, each frame supplies three orthogonal unit basis vectors which contain all the frame’s information and which can be used to construct a vector.</p>
+<h2 id="math">Math</h2>
+<p>Vectors have a number of general properties that are all made possible in pynamics. Below is a list of valid operations and their result.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Operation</th>
+<th style="text-align: left;">Operator</th>
+<th style="text-align: left;">Other</th>
+<th style="text-align: left;">Vector Order</th>
+<th style="text-align: left;">Result</th>
+<th style="text-align: left;">Commutative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Addition</td>
+<td style="text-align: left;">+</td>
+<td style="text-align: left;">vector</td>
+<td style="text-align: left;">before</td>
+<td style="text-align: left;"><span class="math inline">\(\vec{v}+\vec{v}_{other}\)</span></td>
+<td style="text-align: left;">y</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Addition</td>
+<td style="text-align: left;">+</td>
+<td style="text-align: left;">vector</td>
+<td style="text-align: left;">after</td>
+<td style="text-align: left;"><span class="math inline">\(s\vec{v}\)</span></td>
+<td style="text-align: left;">y</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Addition</td>
+<td style="text-align: left;">*</td>
+<td style="text-align: left;">vector</td>
+<td style="text-align: left;">before</td>
+<td style="text-align: left;"><span class="math inline">\(s\vec{v}\)</span></td>
+<td style="text-align: left;">y</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Addition</td>
+<td style="text-align: left;">*</td>
+<td style="text-align: left;">vector</td>
+<td style="text-align: left;">after</td>
+<td style="text-align: left;"><span class="math inline">\(s\vec{v}\)</span></td>
+<td style="text-align: left;">y</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">dot</td>
+<td style="text-align: left;">.dot()</td>
+<td style="text-align: left;">vector</td>
+<td style="text-align: left;">before</td>
+<td style="text-align: left;"><span class="math inline">\(\vec{v}_{other} \cdot \vec{v}\)</span></td>
+<td style="text-align: left;">y</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">dot</td>
+<td style="text-align: left;">.dot()</td>
+<td style="text-align: left;">vector</td>
+<td style="text-align: left;">after</td>
+<td style="text-align: left;"><span class="math inline">\(\vec{v} \cdot \vec{v}_{other}\)</span></td>
+<td style="text-align: left;">y</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cross</td>
+<td style="text-align: left;">.cross()</td>
+<td style="text-align: left;">vector</td>
+<td style="text-align: left;">before</td>
+<td style="text-align: left;"><span class="math inline">\(\vec{v}_{other} \times \vec{v}\)</span></td>
+<td style="text-align: left;">n</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cross</td>
+<td style="text-align: left;">.cross()</td>
+<td style="text-align: left;">vector</td>
+<td style="text-align: left;">after</td>
+<td style="text-align: left;"><span class="math inline">\(\vec{v} \times \vec{v}_{other}\)</span></td>
+<td style="text-align: left;">n</td>
+</tr>
+</tbody>
+</table>
+<p>Note: at this time, division with scalars, ie</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>v<span class="op">/</span>s</span></code></pre></div>
+<p>is not possible. Instead, simply invert the scalar and then multiply, as with</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="op">/</span>s)<span class="op">*</span>v</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pynamics</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.system <span class="im">import</span> System</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.frame <span class="im">import</span> Frame</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>system <span class="op">=</span> System()</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>pynamics.set_system(<span class="va">__name__</span>,system)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> Frame(<span class="st">&#39;A&#39;</span>)<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> Frame(<span class="st">&#39;B&#39;</span>)<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> Frame(<span class="st">&#39;C&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<p>Vector addition works out of the box because vectors don’t necessarily need to be represented using each others’ basis vectors</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> A.x <span class="op">+</span> B.y <span class="op">+</span> C.z<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>v</span></code></pre></div>
+<pre><code>A.x + B.y + C.z</code></pre>
+<p>Additionally, multiplication with a scalar works well:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s<span class="op">*</span>v)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(v<span class="op">*</span>s)</span></code></pre></div>
+<pre><code>3*A.x + 3*B.y + 3*C.z
+3*A.x + 3*B.y + 3*C.z</code></pre>
+<p>Furthermore, dot and cross product works well for vectors expressed by the same basis vectors:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>v1 <span class="op">=</span> <span class="dv">1</span><span class="op">*</span>A.x<span class="op">+</span><span class="dv">2</span><span class="op">*</span>A.y</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>v2 <span class="op">=</span> <span class="dv">3</span><span class="op">*</span>A.z<span class="op">+</span><span class="dv">4</span><span class="op">*</span>A.x</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(v1.dot(v2))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(v1.cross(v2))</span></code></pre></div>
+<pre><code>4
+6*A.x - 3*A.y - 8*A.z</code></pre>
+<p>However, out of the box, performing a dot or cross product with vectors composed of different basis vectors will not work, because a relationship needs to be established between them. For example, the following code will produce a custom error saying, “Frames don’t share a common parent”</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>v1 <span class="op">=</span> A.x<span class="op">+</span>B.y</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>v2 <span class="op">=</span> B.z<span class="op">+</span>C.x</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;v1.dot(v2)=&quot;</span>,v1.dot(v2))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;v1.cross(v2)=&quot;</span>,v1.cross(v2))</span></code></pre></div>
+<p>This can be addressed by defining a relationship between frames through rotations.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> sympy.symbols(<span class="st">&#39;a&#39;</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> sympy.symbols(<span class="st">&#39;b&#39;</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>B.rotate_fixed_axis_directed(A,[<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>],a,system)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>C.rotate_fixed_axis_directed(B,[<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>],b,system)</span></code></pre></div>
+<p>Now the following code should work</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>v1 <span class="op">=</span> A.x<span class="op">+</span>B.y</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>v2 <span class="op">=</span> B.z<span class="op">+</span>C.x</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;v1.dot(v2)=&quot;</span>,v1.dot(v2))</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;v1.cross(v2)=&quot;</span>,v1.cross(v2))</span></code></pre></div>
+<pre><code>v1.dot(v2)= cos(a)*cos(b)
+v1.cross(v2)= -A.y + B.x*(sin(a)*sin(b) - sin(b) + 1) + B.y*sin(b)*cos(a) + B.z*(sin(a)*cos(b) - cos(b))</code></pre>
+<h2 id="other-functions">Other Functions</h2>
+<h3 id="express">Express</h3>
+<p>If enough information is supplied, vectors can also be expressed in other reference frames. This uses the rotation information stored when the frame rotations are defined to transform all basis vectors stored within a vector type into a desired type. This can be useful for finding the shortest representation of a vector, or the resulting math. For example,</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(v1.express(B))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(v1.express(A))</span></code></pre></div>
+<pre><code>B.x*cos(a) + B.y*(1 - sin(a))
+A.x*(1 - sin(a)) + A.y*cos(a)</code></pre>
+<p>produces quite similar size representations, but complex expressions may benefit from shorter representations. Take this example where v is the cross product of vectors expressed in frames separated by two separate rotations.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> (A.x<span class="op">+</span>A.y<span class="op">+</span>A.z).cross(C.x<span class="op">+</span>C.y<span class="op">+</span>C.z)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>v</span></code></pre></div>
+<pre><code>B.x*((-sin(a) + cos(a))*(-sin(b) + cos(b)) - 1) + B.y*(-(sin(a) + cos(a))*(-sin(b) + cos(b)) + sin(b) + cos(b)) + B.z*(-(-sin(a) + cos(a))*(sin(b) + cos(b)) + sin(a) + cos(a))</code></pre>
+<p>When you express v in A, B, and C basis vectors, you will see that the middle frame is by far the shortest representation</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>v.express(A)</span></code></pre></div>
+<pre><code>A.x*(((-sin(a) + cos(a))*(-sin(b) + cos(b)) - 1)*cos(a) - (-(sin(a) + cos(a))*(-sin(b) + cos(b)) + sin(b) + cos(b))*sin(a)) + A.y*(((-sin(a) + cos(a))*(-sin(b) + cos(b)) - 1)*sin(a) + (-(sin(a) + cos(a))*(-sin(b) + cos(b)) + sin(b) + cos(b))*cos(a)) + A.z*(-(-sin(a) + cos(a))*(sin(b) + cos(b)) + sin(a) + cos(a))</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>v.express(B)</span></code></pre></div>
+<pre><code>B.x*((-sin(a) + cos(a))*(-sin(b) + cos(b)) - 1) + B.y*(-(sin(a) + cos(a))*(-sin(b) + cos(b)) + sin(b) + cos(b)) + B.z*(-(-sin(a) + cos(a))*(sin(b) + cos(b)) + sin(a) + cos(a))</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>v.express(C)</span></code></pre></div>
+<pre><code>C.x*(((-sin(a) + cos(a))*(-sin(b) + cos(b)) - 1)*cos(b) - (-(-sin(a) + cos(a))*(sin(b) + cos(b)) + sin(a) + cos(a))*sin(b)) + C.y*(-(sin(a) + cos(a))*(-sin(b) + cos(b)) + sin(b) + cos(b)) + C.z*(((-sin(a) + cos(a))*(-sin(b) + cos(b)) - 1)*sin(b) + (-(-sin(a) + cos(a))*(sin(b) + cos(b)) + sin(a) + cos(a))*cos(b))</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> v,v1,v2,A,B,C,a,b,system</span></code></pre></div>
+<p>This can have a real-world impact on the time to compute and integrate pynamics expressions</p>
+<h3 id="derivatives">Derivatives</h3>
+<p>Vectors can also have their time derivatives taken. For this to be possible, the variables that define the magnitude and direction of vectors need to be explicitly defined if they are time-differentiable. For more information on time-differentiable variables, see the variable-types module.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pynamics</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.frame <span class="im">import</span> Frame</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.variable_types <span class="im">import</span> Differentiable,Constant,Variable</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynamics.system <span class="im">import</span> System</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>system <span class="op">=</span> System()</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>pynamics.set_system(<span class="va">__name__</span>,system)</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> Frame(<span class="st">&#39;N&#39;</span>)<span class="op">;</span></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> Frame(<span class="st">&#39;A&#39;</span>)<span class="op">;</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>qA,qA_d,qA_dd <span class="op">=</span> Differentiable(<span class="st">&#39;qA&#39;</span>,system)</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>x,x_d,x_dd <span class="op">=</span> Differentiable(<span class="st">&#39;x&#39;</span>,system)</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>system.set_newtonian(N)</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>A.rotate_fixed_axis_directed(N,[<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>],qA,system)</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>pos <span class="op">=</span> x<span class="op">*</span>A.x</span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>vel<span class="op">=</span>pos.time_derivative(N)</span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>acc<span class="op">=</span>vel.time_derivative(N)</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;pos = &#39;</span>,pos)</span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;vel = &#39;</span>,vel)</span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;acc = &#39;</span>,acc)</span></code></pre></div>
+<pre><code>pos =  x*A.x
+vel =  qA_d*x*A.y + x_d*A.x
+acc =  A.x*(-qA_d**2*x + x_dd) + A.y*(2*qA_d*x_d + qA_dd*x)</code></pre>
+<p>You can combine derivatives with the express function to print the derivative in other frames</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>vel.express(N)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>acc.express(N)</span></code></pre></div>
+<h2 id="use-cases">Use Cases</h2>
+<p>Vectors are typically used in a number of cases</p>
+<ul>
+<li>describing the kinematics of a structure</li>
+<li>defining the magnitude and direction of a force, or the axis of rotation for a torque.</li>
+<li>vectors may</li>
+</ul>
+
+</main><!-- /.container -->
+<footer class="blog-footer">
+  
+
+  <p>Copyright &copy; 2020 Daniel M. Aukes.  All rights reserved.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

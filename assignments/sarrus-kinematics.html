@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This site is about foldable robotics.
+">
+  <meta name="author" content="Daniel M. Aukes">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Sarrus Kinematics | Foldable Robotics </title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+
+  <link href="/assets/blog.css" rel="stylesheet">
+  <link href="/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+<body>
+<div class="container">      
+<header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+      
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+
+    </div>
+  </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modules
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" href="/modules/introduction">Introduction</a>
+          
+          <a class="dropdown-item" href="/modules/biomechanics">Biomechanics</a>
+          
+          <a class="dropdown-item" href="/modules/kinematics">Kinematics</a>
+          
+          <a class="dropdown-item" href="/modules/compliance">Mechanics and Compliance</a>
+          
+          <a class="dropdown-item" href="/modules/dynamics">Dynamics</a>
+          
+          <a class="dropdown-item" href="/modules/optimization">Optimization</a>
+          
+          <a class="dropdown-item" href="/modules/manufacturing">Prototyping & Manufacturing</a>
+          
+          <a class="dropdown-item" href="/modules/integration">Integration</a>
+          
+          <a class="dropdown-item" href="/modules/validation">Experimental Validation</a>
+          
+          <a class="dropdown-item" href="/modules/project">Project</a>
+          
+          <a class="dropdown-item" href="/modules/python">Python</a>
+          
+          <a class="dropdown-item" href="/modules/misc">Misc</a>
+          
+        </div>
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/class_schedule">Class Schedule</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-assignments">Assignments</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-tutorials">Tutorials</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/calendar#view_name=month" target="_blank">Canvas Calendar <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Module: <a href="/modules/kinematics">kinematics</a>
+      </h5>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h4>
+        Sarrus Kinematics
+      </h4>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Individual Assignment
+      </h5>
+  
+  
+</div>
+</div>
+</div><!-- /.row -->
+<main role="main" class="container">
+  <h1 id="spherical-kinematics">Spherical Kinematics</h1>
+<h2 id="assignment-overview">Assignment Overview</h2>
+<p>The purpose of this assignment is to get you comfortable using the numerical computational capabilities of Python to start estimating the performance of your design.</p>
+<figure>
+<img src="../figures/kinematics/sarrus.png" style="width:50.0%" alt="mechanism" /><figcaption aria-hidden="true">mechanism</figcaption>
+</figure>
+<!--![two views of the same folded spherical mechanism](../../figures/spherical-mechanism.png){width=50%}-->
+<h2 id="instructions">Instructions</h2>
+<!--hide-->
+<h3 id="numerically-solve-for-a-mechanisms-position">Numerically Solve for a Mechanism’s Position</h3>
+<p>Using the examples on the foldable robotics website as a starting point, solve for the kinematics of the mechanism above.</p>
+<ol type="1">
+<li>Make a table of link lengths corresponding to the vectors defined by the six heavy black lines. Please approximate the lengths of each link of the mechanism, as well as the device’s initial position. No need to match exactly with the original drawing.</li>
+<li>Plot the mechanism in Python using the matplotlib.pyplot package, making sure to label each vertex over each line.</li>
+<li>Create an objective function whose error is zero when:
+<ol type="a">
+<li>All of the length constraints of the mechanism are correctly estimated</li>
+<li>The base of the robot is fixed to the ground and in a specified orientation</li>
+<li>The end-effector(defined by the link between <span class="math inline">\(p_3\)</span> and <span class="math inline">\(p_4\)</span>) is parallel to the base link(<span class="math inline">\(p_0\)</span>-<span class="math inline">\(p_5\)</span>).</li>
+<li>The <span class="math inline">\(\hat{n}_x\)</span>-component of the distance between <span class="math inline">\(p_0\)</span> and <span class="math inline">\(p_4\)</span> is zero.</li>
+<li>The internal degree of freedom defined by <span class="math inline">\(q\)</span> matches a value given or set by you.</li>
+</ol></li>
+<li>Solve this function three times using the <code>scipy.optimize.minimize</code> function: once for each of three states where the input <span class="math inline">\(q\)</span> is varied by a small, constant amount..<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Select an initial guess for the state of the system that is close to the right answer but not exact; update the initial guess with the results of the prior solution after that.
+<ol type="a">
+<li>Show the result of each evaluation. This should demonstrate that the error in the result after each calculation is small (less than ~1e-3).</li>
+<li>Plot the device in each of its three configurations (within a single figure)</li>
+</ol></li>
+<li>Now approximate the rate of change of the middle point of the trajectory by finding the slope between the first and third point. Define a point on the mechanism that serves as the “output” or “end-effector.”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
+<ol type="a">
+<li>Calculate the slope in python and print the result.</li>
+<li>Plot the 3-point trajectory.</li>
+<li>Overplot the slope on the middle point using an arrow.</li>
+</ol></li>
+<li>Compute the Jacobian Matrix in that middle state. This should be a 2x1 matrix, as it is a 2D mechanism.</li>
+<li>Now, assume that a force <span class="math inline">\(\vec{f}\)</span> of <span class="math inline">\(f=\left[\begin{matrix}10\\-10\end{matrix}\right]\)</span>(2D) <!--or $f=\left[\begin{matrix}10\\-10\\5\end{matrix}\right]$(3D)--> is applied to the end-effector. Compute the force experienced at the input.</li>
+<li>What happens when the force <span class="math inline">\(\vec{f}\)</span> applied to the end-effector changes to <span class="math inline">\(f=\left[\begin{matrix}0\\-10\end{matrix}\right]\)</span>(2D). Provide a rationale as to how or why this answer contrasts with the previous one. <!--1. Discussion Question: Why is the input a force and not a torque?--></li>
+<li>Now, assume that the input is moving at a rate of 2.4 <!--depending on if you selected a linear or angular values-->. How fast is the output moving?</li>
+</ol>
+<h2 id="submission">Submission</h2>
+<p>Please include:</p>
+<ol type="1">
+<li>A Jupyter notebook with the following
+<ol type="1">
+<li>Your plot of the mechanism with labeled vertices</li>
+<li>Your code detailing your approach to solving the problem</li>
+<li>Detailed description of the steps you took (included as blocks alongside chunks of related code)</li>
+<li>Include answers to all questions above</li>
+</ol></li>
+</ol>
+<p>This can be submitted as a single jupyter notebook file. Please follow the posted submission instructions for Jupyter submissions</p>
+<h2 id="rubric">Rubric</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Description</th>
+<th style="text-align: right;">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Step 1</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 3a</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 3b</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 3b</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 3c</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 3d</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 3e</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 4a</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 4b</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 5</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 6</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 7</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 8</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 9</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>consider using a for loop<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p><span class="math inline">\(p_3\)</span> or <span class="math inline">\(p_4\)</span> would be a good choice.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main><!-- /.container -->
+<footer class="blog-footer">
+  
+
+  <p>Copyright &copy; 2020 Daniel M. Aukes.  All rights reserved.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

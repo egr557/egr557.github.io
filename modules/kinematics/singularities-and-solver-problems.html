@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This site is about foldable robotics.
+">
+  <meta name="author" content="Daniel M. Aukes">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Singularities and Solver Problems | Foldable Robotics </title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+
+  <link href="/assets/blog.css" rel="stylesheet">
+  <link href="/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+<body>
+<div class="container">      
+<header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+      
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+
+    </div>
+  </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modules
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" href="/modules/introduction">Introduction</a>
+          
+          <a class="dropdown-item" href="/modules/biomechanics">Biomechanics</a>
+          
+          <a class="dropdown-item" href="/modules/kinematics">Kinematics</a>
+          
+          <a class="dropdown-item" href="/modules/compliance">Mechanics and Compliance</a>
+          
+          <a class="dropdown-item" href="/modules/dynamics">Dynamics</a>
+          
+          <a class="dropdown-item" href="/modules/optimization">Optimization</a>
+          
+          <a class="dropdown-item" href="/modules/manufacturing">Prototyping & Manufacturing</a>
+          
+          <a class="dropdown-item" href="/modules/integration">Integration</a>
+          
+          <a class="dropdown-item" href="/modules/validation">Experimental Validation</a>
+          
+          <a class="dropdown-item" href="/modules/project">Project</a>
+          
+          <a class="dropdown-item" href="/modules/python">Python</a>
+          
+          <a class="dropdown-item" href="/modules/misc">Misc</a>
+          
+        </div>
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/class_schedule">Class Schedule</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-assignments">Assignments</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-tutorials">Tutorials</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/calendar#view_name=month" target="_blank">Canvas Calendar <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Module: <a href="/modules/kinematics">kinematics</a>
+      </h5>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h4>
+        Singularities and Solver Problems
+      </h4>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+</div>
+</div>
+</div><!-- /.row -->
+<main role="main" class="container">
+  <h1 id="singularities-and-solver-problems">Singularities and Solver Problems</h1>
+<p>Many of the devices you will prototype are highly nonlinear mechanisms which may have certain charactersitics which are hard to solve for in your typical CAD sketcher.</p>
+<p>Singularities can be described as a mathematical or mechanical condition in which one or more degrees of freedom of your device or of your description of the device – can no longer be controlled or solved for. A typical kinematic singularity may be seen</p>
+<h2 id="mechanism-singularities">Mechanism Singularities</h2>
+<figure>
+<img src="../../figures/design/singular_kinematics.png" class="img-fluid" alt="Singular Kinematics" /><figcaption aria-hidden="true">Singular Kinematics</figcaption>
+</figure>
+<p>One of the biggest challegnes of foldable devices is that they all start off flat. Which means they all start off in a mechanism singularity. This is probably the worst way to start, as it means that the device, when assembled or erected into its final configuration, could be pushed into more than one valid state. Furthermore, if designed wrong, a mechanism may slip past a singularity and be unable to escape it. This is exacerbated by the fact that foldable mechanisms cannot rotate freely more than +/- 180 degrees, meaning that you have to go back the way you came, rather than rotate through a second singularity.</p>
+<p>This means that the user has to take care during the design process to avoid mechanism singularities during assembly and operation.</p>
+<h2 id="representational-singularities">Representational Singularities</h2>
+<p>Another type of singularity occurs when the mathematical framework used to describe your mechanism loses a degree of freedom due to redundancy in the description. A trivial example would be using a three-dimensional space to describe a planar mechanism. Consider a four-bar mechanism for example, in which all of the vectors used to describe the mechanism exist in the x-y plane. If you use a three-dimensional description, ie, include the z values for all the points in your mechanism – then solving for your system will always result in a singular matrix, as the column of z values may take any value and still produce a consistent and valid mechanism. Even though the mechanism may be in a valid configuration, the description cannot be used to solve for it.</p>
+<h2 id="solver-problems">Solver problems</h2>
+<p>The solvers used to solve a constrained sketch are typically fairly robust, as they must permit interaction with human designers in such a way that humans can drag sketch elements around throughout the sketch’s degrees of freedom, yet must also remain accurate. However, these sketchers often have some problems associated with them that you will also see in complex, nonlinear assemblies. First, the software may not always expose all the degrees of freedom or permit the user to freely drag sketch elements around in an inuitive fashion. A user may see only one or two degrees of freedom when the sketch has many more which are simply not moving in accordance to the user’s specific motion commands. There are several ways to explore the degrees of freedom of a device with more surety</p>
+<ul>
+<li>Lock all degrees of freedom but one - You can either fix elements or establish temporary relational constratints between elements to lock down parts of your mechanism you are not interested in.</li>
+<li>Switch your handle or dragged element. Often the solver uses a users’s motion command filtered through the element and at the point specified by the user. By subtley changing the location or body which is being dragged, the user can find additional degrees of freedom.</li>
+</ul>
+<h2 id="kinematics-via-sketches">Kinematics via Sketches</h2>
+<p>Another great way to explore designs is by sketching kinematics in 2D or 3D in CAD software. This section describes how to use engineering sketches in CAD to accomplish basic motion studies.</p>
+<p>Let’s assume you would like to create a folding mechanism in two dimensions. The two dimensional assumption is easier to discuss in book form, as 2D images are easier to understand. The exention to a 3d design is trivial in concept, but in practice it is much harder to sketch due to the same issues of typically having a 2d interaction with a 3d design space. So for the purposes of simplicity we’ll discuss 2d mechanisms.</p>
+<h2 id="kinematics-computation">Kinematics Computation</h2>
+<p>We now enter the part of the process which can be assisted by scripting. The workflow is simple. You have been working in the physical world, and have translated your physical prototype to a sketch</p>
+<p>The next step is to compute the kinematics of this device. There are several limitations to foldable devices which must be discussed. First, most origami-inspired devices typically start flat, as they are typically manufactured from flat sheets of material(paper, plastic, cardboard, fiberglass, carbon fiber, metal). The ability of a mechanism to be foldable from a flat sheet is defined as “flat-foldability.” This makes manufacturing easier but comes with several implications.</p>
+<p>First, when a device starts as a flat sheet, it can be considered to be in a “singular” configuration. This occurs when one or more of the mechanism’s joints simultaneously align on a plane, making it impossible to move the mechanism in ways it would otherwise be able to. Singularities in the middle of a mechanism’s workspace typically need to be avoided, as these conditions typically make the device uncontrollable.</p>
+<figure>
+<img src="../../sketches/inversion.png" class="img-fluid" alt="Kinematic Inversion" /><figcaption aria-hidden="true">Kinematic Inversion</figcaption>
+</figure>
+<p>A singularity is often also accompanied by a kinematic inversion. An inversion occurs when links in a devices kinematics pass through an inversion, occupying a valid state in which many of the other links occupy the same states as in the uninverted state. With an inverted four-bar linkage, as seen above, the implications on the motion of this transmission is that the motion of the lower link no longer leads to the same motion of the upper link. The rates of change, being state-based, are quite different (the rates of change of the links are opposite each other when compared to the uninverted state). This means that the motion of the input linkage cannot be used to drive the motion of the output to and through its singularity alone. If it emerges on the other side of a singularity in an inverted state, the input link cannot move it in the same way nor can it get it out on its own through its own rotation.</p>
+<p>As a foldable mechanism typically starts in a flat state when it emerges from the manufacturing stages, care must be taken to assemble it (often by hand) into its desired configuration, and that the resulting design must be kept appropriately away from singularities. The problem can become harder with soft mechanisms, as soft mechanisms may bend and flex in ways unintended by the rigid kinematics, which pushes the devices through a singularity.</p>
+<figure>
+<img src="../../sketches/inversion2.png" class="img-fluid" alt="Inversion Due to Flexibility" /><figcaption aria-hidden="true">Inversion Due to Flexibility</figcaption>
+</figure>
+<p>Singularities also make the analysis of flat-foldable mechanisms tricky, as the user must supply the intended state of the mechanism in order to <!--TODO: Finish
+The next step is to compute from the
+--> If trying to replicate a traditional robot, there are several caveats to making a paper robot which can do the same thing. First, a device constructed from hinges is limited by the travel of each hinge. At most, an ideally-thin sheet of material may only bend +/- 180 degrees. Any continuous rotations must be handled outside of your hinging mechanism. That is fine, and later sections deal with integrating other devices with your printable mechanism.</p>
+<p>Hinge lines may be imported for kinematics study, just as body lines are imported for manufacturing file generation. For this we recommend importing just the body and hinge information in order to infer link-link connections to establish the topology, for plotting.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p><span class="citation" data-cites="Gosselin1990">[1]</span>,<span class="citation" data-cites="McCarthy2011">[2]</span>,<span class="citation" data-cites="Waldron1966">[3]</span></p>
+<h2 class="unnumbered" id="bibliography">Bibliography</h2>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-Gosselin1990" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">C. Gosselin and J. Angeles, <span>“<span class="nocase">Singularity analysis of closed-loop kinematic chains</span>,”</span> <em>IEEE Transactions on Robotics and Automation</em>, vol. 6, no. 3, pp. 281–290, Jun. 1990.</div>
+</div>
+<div id="ref-McCarthy2011" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">J. M. McCarthy and G. S. Soh, <em><span class="nocase">Geometric Design of Linkages</span></em>, vol. 11. New York, NY: Springer New York, 2011.</div>
+</div>
+<div id="ref-Waldron1966" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">K. J. Waldron, <span>“<span class="nocase">The constraint analysis of mechanisms</span>,”</span> <em>Journal of Mechanisms</em>, vol. 1, no. 2, pp. 101–114, Jan. 1966.</div>
+</div>
+</div>
+
+</main><!-- /.container -->
+<footer class="blog-footer">
+  
+
+  <p>Copyright &copy; 2020 Daniel M. Aukes.  All rights reserved.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

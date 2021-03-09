@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This site is about foldable robotics.
+">
+  <meta name="author" content="Daniel M. Aukes">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>System Kinematics | Foldable Robotics </title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+
+  <link href="/assets/blog.css" rel="stylesheet">
+  <link href="/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+<body>
+<div class="container">      
+<header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+      
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+
+    </div>
+  </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modules
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" href="/modules/introduction">Introduction</a>
+          
+          <a class="dropdown-item" href="/modules/biomechanics">Biomechanics</a>
+          
+          <a class="dropdown-item" href="/modules/kinematics">Kinematics</a>
+          
+          <a class="dropdown-item" href="/modules/compliance">Mechanics and Compliance</a>
+          
+          <a class="dropdown-item" href="/modules/dynamics">Dynamics</a>
+          
+          <a class="dropdown-item" href="/modules/optimization">Optimization</a>
+          
+          <a class="dropdown-item" href="/modules/manufacturing">Prototyping & Manufacturing</a>
+          
+          <a class="dropdown-item" href="/modules/integration">Integration</a>
+          
+          <a class="dropdown-item" href="/modules/validation">Experimental Validation</a>
+          
+          <a class="dropdown-item" href="/modules/project">Project</a>
+          
+          <a class="dropdown-item" href="/modules/python">Python</a>
+          
+          <a class="dropdown-item" href="/modules/misc">Misc</a>
+          
+        </div>
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/class_schedule">Class Schedule</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-assignments">Assignments</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-tutorials">Tutorials</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/calendar#view_name=month" target="_blank">Canvas Calendar <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Module: <a href="/modules/kinematics">kinematics</a>
+      </h5>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h4>
+        System Kinematics
+      </h4>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Team Assignment
+      </h5>
+  
+  
+</div>
+</div>
+</div><!-- /.row -->
+<main role="main" class="container">
+  <h1 id="create-and-plot-kinematics">Create and Plot Kinematics</h1>
+<h2 id="assignment-overview">Assignment Overview</h2>
+<p>The purpose of this assignment is to model the kinematics so that you can estimate the forces, and torques, power requirements, and speed of your system. This will be done using a symbolic approach with the pynamics package</p>
+<h2 id="resources">Resources</h2>
+<!--* []()-->
+<ul>
+<li>Triple Pendulum Example</li>
+<li>EGR557 Kinematics Module</li>
+<li>EGR557 Dynamics Module</li>
+<li>pynamics repository</li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<p>Meet with your team to go over each of the prototypes and mockups you have individually created through past homework assignments. As a team, come up with a mechanism that satisfies your team’s need for scope/tractability, manufacturability, and cost.</p>
+<p>Decide as a team whether you will be using powered actuator(s) or passive energy storage device(s). This will impact data collection assignments, how much your team spends, the complexity of your prototype, and the strength of the materials you use (you may need to upgrade from light cardboard to stiffer posterboard or even fiberglass)</p>
+<ol type="1">
+<li><p>Create a figure (either in python, in a vector-based drawing program like inkscape or illustrator, or as a solidworks rendering) of your system kinematics. Annotate the image to include:</p>
+<ul>
+<li>Names for each rotational reference frame. You will need one for each rigid body (that moves independently), as well as one for the Newtonian reference frame (N). Use the convention of a capital letter (A,B,C,…)</li>
+<li>Labeled joint locations, such as <span class="math inline">\(\vec{p}_{AB}\)</span></li>
+<li>A set of orthonormal basis vectors for each frame <span class="math inline">\((\hat{n}_x,\hat{n}_y,\hat{n}_z),(\hat{a}_x,\hat{a}_y,\hat{a}_z)\)</span>. It is best practice to align one of the basis vectors (like <span class="math inline">\(\hat{a}_x\)</span>) with each rigid link.</li>
+<li>variable names for each state variable <span class="math inline">\((q_1,q_2,x_1,y_1,\ldots)\)</span></li>
+<li>geometric constants such as link lengths (like <span class="math inline">\(l_1,l_2\)</span>)</li>
+</ul>
+<p>Save this figure for reuse later. You will need to add mass and inertial information as well as system stiffness information, so make sure you do your work in a way that permits reusing and modifying the figure.</p></li>
+<li><p>Make the device in paper or cardboard. You need an up-to-date model if it has changed from your individual assignments. The paper model should dimensionally match your code.</p></li>
+<li><p>Using a pynamics-based script, develop a kinematic model for your device. Following the triple pendulum example,</p>
+<ol type="1">
+<li>Import packages</li>
+<li>Define variables and constants (you may want to add, remove, or rename variables to match your figure)</li>
+<li>Declare frames (you may need to add frames or rename them)</li>
+<li>Define frame rotations (you may want to switch the axis about which frames rotate)</li>
+<li>Compose kinematics (this depends entirely on the geometry of your system)</li>
+<li>Take time-derivatives of position vectors</li>
+<li>Assemble into a Jacobian that maps input velocities to output velocities.</li>
+</ol></li>
+<li><p>Select or Solve for a valid initial condition that represents the system in the middle of a typical gait, when it is both moving and when forces are being applied to it (or to the world by it)</p>
+<p><em>Despite the fact that you will be using a symbolic representation, you still need to solve for a valid initial condition if your device is a “parallel mechanism.” This may be done using a nonlinear solver such as <code>scipy.optimize.minimize</code></em></p></li>
+<li><p>Plot the system in this position.</p></li>
+<li><p>From your biomechanics-based specifications, define one or more force vector estimates (one for each end effector) that the system should be expected to experience. Consider including, based on your research</p>
+<ul>
+<li>the force of gravity exerted by the mass of a “payload” or the main body of the robot.</li>
+<li>the acceleration the system experiences during a typical gait</li>
+<li>ground reaction forces measured from biomechanics studies.</li>
+</ul></li>
+<li><p>Calculate the force or torque required at the input to satisfy the end-effector force requirements</p></li>
+<li><p>Estimate the velocity of the end-effector in this configuration. Using the Jacobian, calculate the speed required by the input(s) to achieve that output motion.</p>
+<p><em>This may not be directly solvable based on your device kinematics; an iterative guess-and-check approach is ok.</em></p></li>
+<li><p>Finally, using the two estimates about force and speed at the input, compute the required power in this configuration.</p></li>
+</ol>
+<!--## Discussion
+
+1. Identify the degrees of freedom of your device.
+
+<!--
+1. Solve the inverse kinematics problem for your system as its end effector moves through the given motion path.
+1. Identify whether your kinematics are serial or parallel
+1. Plot the motion of your device throughout its range of motion.
+1. Identify the rotational joints or linear attachment points where actuators to the system (active or passive) will be mounted.  These joints or points are  where the actuators or springs will deliver torques or forces, respectively.  There should be at least one input for each of your system's degree of freedom.
+
+
+<!--hide-->
+<!--
+1. Define (plot) the motion path of the end-effector in terms of the specific gait you are interested in (walk, run, forward hop, vertical jump). 
+1. Identify a "critical portion" of your motion path, such as the stance phase of walking or the power stroke in swimming, as the worst-case portion of the motion path you would like to focus your analysis on.  This is where most of the power is being delivered from the motors.
+1. Calculate dy and dq as your system moves through a motion path.  Use the trapezoidal rule to get a better estimate of the rate of change at each point in the path.
+1. From dy and dq, calculate the Jacobian, J throughout the critical portion of your motion path
+1. From your specifications, estimate the expected forces on the end-effector.  This may be ground reaction forces for a leg or thrust forces for swimming / flying.
+1. Use the equation $\mathbf{\tau} = \mathbf{J}^T \mathbf{f}$ to calculate the expected joint torques
+1. From your specifications, estimate the expected output velocity vector
+1. Using $\dot{y}=J\dot{q}$, find the motor speeds required to achieve that forward velocity.
+1. using either $P=\mathbf{f}^T\dot{\mathbf{y}}$ or $P=\mathbf{\tau}^T\dot{\mathbf{q}}$, identify the power required to achieve your specifications.
+
+1. Adjust the design parameters such as mass, link lengths, etc to match your specifications.
+
+-->
+<h2 id="discussion">Discussion</h2>
+<p>Answer the following questions</p>
+<ol type="1">
+<li>How many degrees of freedom does your device have? How many motors? If the answer is not the same, what determines the state of the remaining degrees of freedom? How did you arrive at that number?</li>
+<li>If your mechanism has more than one degree of freedom, please describe how those multiple degrees of freedom will work togehter to create a locomotory gait or useful motion. What is your plan for synchonizing, especially if passive energy storage?</li>
+<li>How did you estimate your expected end-effector forces</li>
+<li>How did you estimate your expected end-effector speeds</li>
+</ol>
+<!--1. What is the valid range of motion of your device for each internal degree of freedom?-->
+<!--
+1. In your motion path you plotted in step X, what did you plot?  A point?  A link?  More than one point or link?  How many degrees of freedom does it take to represent the motion of that element?
+-->
+<h2 id="submission">Submission</h2>
+<h3 id="draft-submission">Draft Submission</h3>
+<p>Please bring your (1) figure and (2) code to class on monday. We will do a checkoff in class and go over questions. You should attempt each step of the code, though it is fine if there are errors, or if it fails compute due to errors in previous sections.</p>
+<h3 id="final-submission">Final Submission</h3>
+<p>Please include a Jupyter notebook with the following:</p>
+<ol type="1">
+<li>Detailed description of the completed steps above (included as blocks alongside chunks of related code)</li>
+<li>Code used in solving the problem (inline in the report in code blocks), along with descriptions detailing your approach</li>
+<li>Answers to all discussion questions above.</li>
+</ol>
+<p>Please follow the “Submission Best Practices” document posted on Canvas. This assignment should be submitted to canvas as a .pdf document or a jupyter notebook (.ipynb). If submitted as a notebook, make sure it is fully compiled. This can be done by opening the file in the jupyter browser and in the top jupyter menu selecting “Kernel” –&gt; “Restart and Run All.”</p>
+<p>Please also post the completed assignment to your team’s website. This may be posted as a jupyter notebook, a rendered jupyter notebook, or a static web page with embedded code and figures. In addition to answering completing each point in the instructions and discussion, please also include:</p>
+<ul>
+<li><strong>Bibliography: </strong>Please add to and refer to your Bibliography as needed</li>
+<li>Appendices</li>
+<li>Data - upload and link to all raw data collected in the generation of this report</li>
+<li>Code - upload and link to any other code created and by your team (other than the jupyter notebook itself) in the generation of this report.</li>
+</ul>
+<h2 id="rubric">Rubric</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Description</th>
+<th style="text-align: right;">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Draft</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 1</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 2</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 3</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 4</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 5</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 6</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 7</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 8</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 9</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Discussion 1</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Discussion 2</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Discussion 3</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Discussion 4</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
+
+</main><!-- /.container -->
+<footer class="blog-footer">
+  
+
+  <p>Copyright &copy; 2020 Daniel M. Aukes.  All rights reserved.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This site is about foldable robotics.
+">
+  <meta name="author" content="Daniel M. Aukes">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Develop a Research Question | Foldable Robotics </title>
+
+  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+
+  <link href="/assets/blog.css" rel="stylesheet">
+  <link href="/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+<body>
+<div class="container">      
+<header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+      
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+
+    </div>
+  </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modules
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" href="/modules/introduction">Introduction</a>
+          
+          <a class="dropdown-item" href="/modules/biomechanics">Biomechanics</a>
+          
+          <a class="dropdown-item" href="/modules/kinematics">Kinematics</a>
+          
+          <a class="dropdown-item" href="/modules/compliance">Mechanics and Compliance</a>
+          
+          <a class="dropdown-item" href="/modules/dynamics">Dynamics</a>
+          
+          <a class="dropdown-item" href="/modules/optimization">Optimization</a>
+          
+          <a class="dropdown-item" href="/modules/manufacturing">Prototyping & Manufacturing</a>
+          
+          <a class="dropdown-item" href="/modules/integration">Integration</a>
+          
+          <a class="dropdown-item" href="/modules/validation">Experimental Validation</a>
+          
+          <a class="dropdown-item" href="/modules/project">Project</a>
+          
+          <a class="dropdown-item" href="/modules/python">Python</a>
+          
+          <a class="dropdown-item" href="/modules/misc">Misc</a>
+          
+        </div>
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/class_schedule">Class Schedule</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-assignments">Assignments</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="/my-tutorials">Tutorials</a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/calendar#view_name=month" target="_blank">Canvas Calendar <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+      <li class="nav-item">
+      
+      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
+      
+
+      </li>
+      
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Module: <a href="/modules/project">project</a>
+      </h5>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h4>
+        Develop a Research Question
+      </h4>
+  
+  
+</div>
+<div class="col-md-4 text-center">
+  
+  
+      <h5>
+        Team Assignment
+      </h5>
+  
+  
+</div>
+</div>
+</div><!-- /.row -->
+<main role="main" class="container">
+  <h1 id="develop-a-research-question">Develop a Research Question</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Generate a research question worthy of your time.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>The associated module on <a href="../modules/project/developing-a-research-question.html">developing a research question</a></li>
+<li><a href="https://www.mendeley.com/download-desktop-new/">Mendeley Desktop</a>, a useful citation manager</li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<!--hide-->
+<ol type="1">
+<li>Starting with the research question selected for your team, work on adapting and refining it to fit your team’s specific goals and this year’s course constraints (with regard to makeability, feasibility, etc) <!--
+1. Also share your team's research question in [this spreadsheet](https://docs.google.com/spreadsheets/d/1k6ijByA0g-oJudkLwM-ZLlvPZSHZwZmlc3XL_GJrA-8/edit?usp=sharing).  Your team's research question should be sufficiently unique.
+--></li>
+<li>Defend your selected question by answering the questions below.</li>
+</ol>
+<h2 id="discussion">Discussion</h2>
+<p>What is your research question?</p>
+<p>After describing your research question, explain your rationale for why it is a good question to ask by answering the following questions. For each numbered answer provide <em>at least one paragraph per response</em>.</p>
+<ol type="1">
+<li>Tractability: Is your question tractable and achievable? Discuss your plan for scoping your problem to fit in a 15-week course. (&gt;1 paragraph)
+<ul>
+<li><p>How have you focused or constrained the problem to differentiate yourself and/or become more tractable?</p>
+<p>Examples include looking at one specific type of motion, using a specific animal as a source of inspiration (for generating unique specifications), or limiting yourself to a particular set of materials, parts, cost requirements, etc.</p></li>
+</ul></li>
+<li>Novelty: Is your question novel? How have you established novelty?
+<ul>
+<li>What keywords did you use when performing a literature review on your topic?</li>
+<li>What were the four most highly cited references? (Consider using Mendeley or similar to format your citations according to the “Submission Best Practices” document)</li>
+<li>Provide a short summary of each, focusing on whether these papers have already done what you set out to do.</li>
+</ul></li>
+<li>Interesting: Is your question interesting, timely, and relevant?
+<ul>
+<li>What makes it important to others?<br />
+</li>
+<li>Why is this idea important now? What prevented it from being answered 10 years ago?</li>
+<li>Within what contexts could other people use your results?<br />
+</li>
+<li>What are the potential broader impacts on society?</li>
+</ul></li>
+<li>Open-Ended: Is your question open-ended? Could it leave room for a deeper look if given more time and resources? Discuss how you have structured your research question to permit further, deeper investigation.</li>
+<li>Modular: Is your question modular? How does it fit with other complementary research thrusts?</li>
+<li>Team Fit: How does answering this question leverage your interests and abilities?</li>
+<li>Topic Fit: How does the question use foldable robotics techniques to answer it?</li>
+</ol>
+<h2 id="submission">Submission</h2>
+<p><em>This assignment will be presented in your first team presentation (Week 7) as well as added to your project website (Week 4).</em> Thus, you may want to consider writing this assignment with jupyter notebook.</p>
+<p>Please follow the “Submission Best Practices” document posted on Canvas. This assignment may be submitted as a .pdf document or a jupyter notebook (.ipynb). If submitted as a notebook, make sure it is fully compiled. This can be done by opening the file in the jupyter browser and in the top jupyter menu selecting “Kernel” –&gt; “Restart and Run All.”</p>
+<!--Please create a research question document and upload it to your project website.  Link to it in the main page.-->
+<!--Also post your question to [this spreadsheet](https://docs.google.com/spreadsheets/d/1k6ijByA0g-oJudkLwM-ZLlvPZSHZwZmlc3XL_GJrA-8/edit?usp=sharing)-->
+<!--unhide-->
+<h2 id="rubric">Rubric</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Question</td>
+<td style="text-align: left;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tractability Discussion</td>
+<td style="text-align: left;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Novelty Discussion</td>
+<td style="text-align: left;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Interesting Discussion</td>
+<td style="text-align: left;">40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Open-endedness Discussion</td>
+<td style="text-align: left;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Modularity Discussion</td>
+<td style="text-align: left;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Team Fit Discussion</td>
+<td style="text-align: left;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Topic Fit Discussion</td>
+<td style="text-align: left;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: left;"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
+<!--
+| Rationale with answers to each question           | 70              |
+| Posted to Website                                 | 10              |
+| Posted to Spreadsheet                             | 10              |
+| Background Reading                                |                 |
+| Keyword identification                            |                 |
+| Keyword search                                    |                 |
+| Background Refinement                             |                 |
+| Come up with 10 keywords                          |                 |
+| Should be refined with professor and class        |                 |
+| Come up with 10 related papers                    |                 |
+| 5 within robotics                                 |                 |
+| 5 in related fields                               |                 |
+| Generate a question                               |                 |
+| Be specific                                       |                 |
+| Add constraints                                   |                 |
+| Combine new concepts from other fields            |                 |
+| Add a mechanism by which to solve / understand it |                 |
+| **Total**                                         | 200 |
+-->
+
+</main><!-- /.container -->
+<footer class="blog-footer">
+  
+
+  <p>Copyright &copy; 2020 Daniel M. Aukes.  All rights reserved.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
