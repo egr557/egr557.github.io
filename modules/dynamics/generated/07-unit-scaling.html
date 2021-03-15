@@ -8,7 +8,7 @@
 ">
   <meta name="author" content="Daniel M. Aukes">
   <meta name="generator" content="Jekyll v4.1.1">
-  <title>Week 10 Individual Assignment | Foldable Robotics </title>
+  <title>Unit Scaling | Foldable Robotics </title>
 
   <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
   
@@ -164,33 +164,45 @@
 <div class="row">
 <div class="col-md-4 text-center">
   
+  
+      <h5>
+        Module: <a href="/modules/dynamics">dynamics</a>
+      </h5>
+  
+  
 </div>
 <div class="col-md-4 text-center">
   
   
       <h4>
-        Week 10 Individual Assignment
+        Unit Scaling
       </h4>
   
   
 </div>
 <div class="col-md-4 text-center">
   
-  
-      <h5>
-        Individual Assignment
-      </h5>
-  
-  
 </div>
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
-
-
-<h2>THIS ASSIGNMENT HAS NOT YET BEEN POSTED</h2>
-
-  
+  <h1 id="unit-scaling">Unit Scaling</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> idealab_tools.units</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>idealab_tools.units.force</span></code></pre></div>
+<pre><code> kg*m/s^2</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>idealab_tools.units.force.base_units</span></code></pre></div>
+<pre><code>{&#39;kg&#39;: 1, &#39;m&#39;: 1, &#39;s&#39;: -2}</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>idealab_tools.units.force.compute_scaling()</span></code></pre></div>
+<pre><code>1</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>idealab_tools.units.Unit.set_scaling(m<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>idealab_tools.units.Unit.set_scaling(kg<span class="op">=</span><span class="fl">.1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>idealab_tools.units.force.compute_scaling()</span></code></pre></div>
+<pre><code>1.0</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>idealab_tools.units.length.compute_scaling()</span></code></pre></div>
+<pre><code>10</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>idealab_tools.units.energy.compute_scaling()</span></code></pre></div>
+<pre><code>10.0</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
 
 </main><!-- /.container -->
 <footer class="blog-footer">
