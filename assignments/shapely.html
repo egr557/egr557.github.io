@@ -192,11 +192,71 @@
 </div>
 </div><!-- /.row -->
 <main role="main" class="container">
-
-
-<h2>THIS ASSIGNMENT HAS NOT YET BEEN POSTED</h2>
-
-  
+  <h1 id="shapely-manufacturing">Shapely &amp; Manufacturing</h1>
+<h2 id="overview">Overview</h2>
+<p>The purpose of this exercise is to get used to working with shapely polygons and to use it to compute some manufacturing geometry. It is your job to determine how to compute the cut files using Python, shapely, and the foldable_robotics package</p>
+<h2 id="detailed-procedure">Detailed Procedure</h2>
+<p>Display the result of each step</p>
+<ol type="1">
+<li>Import shapely.geometry, foldable.layer, foldable.laminate, and foldable.manufacturing modules for using various shapely geometries, Layer(), and Laminate() classes, as well as for performing advanced computations.</li>
+<li>Create a new polygon a using shapely, with length and width rougly equal to <span class="math inline">\(l\)</span>.</li>
+<li>Initialize a <code>Layer()</code> <code>b</code> with polygon a.</li>
+<li>Erode layer <code>b</code> by <span class="math inline">\(\frac{l}{10}\)</span> and save as <code>c</code>.</li>
+<li>Dilate layer <code>b</code> by <span class="math inline">\(\frac{l}{10}\)</span> and save as <code>d</code>.</li>
+<li>Compose a <code>Laminate()</code> <code>e</code> consisting of <code>c</code>,<code>b</code>,and <code>d</code>, in that order from bottom(first) to top.</li>
+<li>Flip the layers of <code>e</code> and save as <code>f</code>.</li>
+<li>Identify the centroid of <code>a</code> and put that in a new layer <code>g</code>.</li>
+<li>Create a small circle of radius <span class="math inline">\(\frac{l}{4}\)</span> from <code>g</code> by dilating it by <span class="math inline">\(\frac{l}{4}\)</span> and saving it as <code>h</code></li>
+<li>Initialize a <code>Layer()</code> <code>h</code> with <code>g</code> inside it.</li>
+<li>Create a laminate <code>k</code> consisting of three layers of <code>h</code></li>
+<li>subtract <code>k</code> from <code>e</code> and save as <code>l</code></li>
+<li>rotate <code>l</code> by 30 degrees and save as <code>m</code></li>
+<li>translate <code>m</code> by <span class="math inline">\((\frac{l}{2},\frac{l}{2})\)</span> and save as <code>n</code></li>
+<li>union <code>n</code> and <code>l</code> and save as <code>o</code></li>
+<li>intersect <code>l</code> and <code>n</code></li>
+<li>find the symmetric difference of <code>l</code> and <code>n</code>.</li>
+<li>subtract <code>l</code> from <code>n</code></li>
+<li>subtract <code>n</code> from <code>l</code></li>
+<li>apply a “unary union” to <code>o</code> and save as <code>p</code></li>
+<li>turn <code>p</code> into a 3 layer laminate <code>q</code></li>
+<li>dilate <code>q</code> by <span class="math inline">\(\frac{l}{10}\)</span> and save as <code>r</code></li>
+<li>subtract <code>q</code> from <code>r</code> and save as <code>s</code></li>
+<li>dilate <code>r</code> by <span class="math inline">\(\frac{l}{5}\)</span> and save as <code>t</code></li>
+<li>identify the bounding box of <code>t</code> and save as <code>u</code></li>
+<li>subtract <code>o</code> from <code>u</code> and save as <code>v</code></li>
+<li>union <code>v</code> with <code>s</code> and <code>o</code> and save as <code>w</code></li>
+<li>plot each layer of <code>w</code> individually. (3 points)</li>
+</ol>
+<h2 id="discussion">Discussion</h2>
+<ol type="1">
+<li>Assuming geometry <code>o</code> repesents the desired part, which element represents the “web?”</li>
+<li>Assuming geometry <code>o</code> repesents the desired part, which element represents the “scrap?”</li>
+<li>Assuming geometry <code>o</code> repesents the desired part, which element represents the fully supported device?</li>
+<li>Is <code>o</code> as represented in its fully supported design manufacturable using laser cutting? why or why not?</li>
+</ol>
+<h2 id="rubric">Rubric</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Description</th>
+<th style="text-align: right;">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Steps</td>
+<td style="text-align: right;">60</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Discussion</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
 
 </main><!-- /.container -->
 <footer class="blog-footer">
