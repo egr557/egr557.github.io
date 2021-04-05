@@ -198,19 +198,48 @@
 <h2 id="procedure">Procedure</h2>
 <!--hide-->
 <ol type="1">
-<li><p>Explain, in words, how your team will evaluate the success of your robot’s design. This could be by measuring the forces produced by your design, the speed at which it walks, its thrust:weight ratio, the height it can jump, etc.</p>
-<ol type="1">
-<li>Do you have more than one performance metric you must use as for design goals? If so, either identify the most important one or explain how you will balance two competing criteria.</li>
-</ol>
+<li>Performance Measurement
+<ol type="a">
+<li><p>Explain, in words, how your team will evaluate the success of your robot’s design. This could be by measuring the forces produced by your design, the speed at which it walks, its thrust:weight ratio, the height it can jump, etc. Explain, in words, how you will measure performance in simulation. How will you measure performance in experiments?</p></li>
+<li><p>Are experimental vs. simulation metrics similar or vastly different? If different, how will you equate <span class="math inline">\(A\)</span> with <span class="math inline">\(B\)</span>?</p></li>
+<li><p>Do you have more than one performance metric you must use as for design goals? If so, either identify the most important one or explain how you will balance two competing criteria.</p>
 <p><em>For example, if you need a robot to jump high AND far, which is more important, or how do you establish a relationship between these two possibly competing goals?</em></p></li>
-<li><p>Explain, in math, the <strong>measurable</strong> performance metric(s) by which your team can estimate performance. What unit system does this metric use?</p></li>
-<li><p>Explain, in words, how you will measure performance in simulation. How will you measure performance in experiments? Are these two methods similar or vastly different? If different, how will you equate <span class="math inline">\(A\)</span> with <span class="math inline">\(B\)</span>?</p></li>
+<li><p>Explain, in math, the <strong>measurable</strong> performance metric(s) by which your team can estimate performance.</p></li>
 <li><p>Write, in code, a function that will evaluate the performance of your current system (as simulated in <em>System Dynamics II</em>).</p></li>
-<li><p>Brainstorm your team’s design constraints. Constraints are aspects of your design that are “bounded” by some physical limit (eg, the size of robot you can cut on a given laser cutter, the range of motion of a typical foldable hinge joint)</p></li>
-<li><p>Explain, in words, how you will track the violation of design constraints. For example, lets say your optimization routine suggests a design</p></li>
-<li><p>….MORE TO COME…</p></li>
+</ol></li>
+<li>Constraints
+<ol type="a">
+<li>Brainstorm and describe your team’s design constraints. Constraints are aspects of your design that are “bounded” by some physical limit (eg, the size of robot you can cut on a given laser cutter, the range of motion of a typical foldable hinge joint)</li>
+<li>Explain, in words, how you will track violation of design constraints. For example, lets say your optimization routine suggests a design that cannot be made in a single sheet of paper. Will you
+<ol type="a">
+<li>parameterize your design space in such a way that <span class="math inline">\(p=[-\infty,\infty]\)</span> translates to a bounded design range?</li>
+<li>penalize design performance when design parameters are outside of that range</li>
+<li>explicitly bound your parameter space?</li>
+</ol></li>
+</ol></li>
+<li>Execute the full optimization routine, using the code above, that
+<ol type="1">
+<li>permits you to parameterize your design space in one or more variable</li>
+<li>generates a scalar performance metric that implements your goal as stated above.</li>
+<li>selects an optimization approach based on your decisions above. This may be a <em>global</em> search or use one of the many optimization routines available in Python.</li>
+<li>bounds or penalizes designs outside of a permissable range</li>
+<li>Run your optimization and determine the optimal parameter value(s)</li>
+</ol></li>
+<li>Generate a figure that shows that your parameter value is at or very near the optimal value.</li>
 </ol>
 <!--unhide-->
+<h2 id="submission">Submission</h2>
+<p>Please include:</p>
+<ol type="1">
+<li>A Jupyter notebook with the following
+<ol type="1">
+<li>Detailed description / rationale of the steps you took (included as blocks alongside chunks of related code)</li>
+<li>Your code, detailing your approach to solving the problem</li>
+<li>Your plot of the mechanism, with labeled vertices</li>
+<li>Include answers to all questions above</li>
+</ol></li>
+</ol>
+<p>This can be submitted as a single jupyter notebook file. Please follow the posted submission instructions for Jupyter submissions</p>
 <table>
 <thead>
 <tr class="header">
@@ -220,6 +249,42 @@
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">1a</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1b</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1c</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1d</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1e</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2a</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2b</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"><strong>Total</strong></td>
 <td style="text-align: right;">200</td>
 </tr>
