@@ -1,941 +1,1051 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Motor Modeling Process | Foldable Robotics
+</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This site is about foldable robotics.
-">
-  <meta name="author" content="Daniel M. Aukes">
-  <meta name="generator" content="Jekyll v4.1.1">
-  <title>Motor Modeling Process | Foldable Robotics </title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
-  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
-  
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
-  
-  <!-- Bootstrap core CSS -->
-  <link href="/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
     }
+  }
+</style>
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
-  </style>
-  
-  <!-- Custom styles for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-  <!-- Custom styles for this template -->
+  };
 
-  <link href="/assets/blog.css" rel="stylesheet">
-  <link href="/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
-  
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/assets/favicon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  
-</head>
-<body>
-<div class="container">      
-<header class="blog-header py-3">
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
   <div class="row flex-nowrap justify-content-between align-items-center">
     <div class="col-2 pt-1">
-      
     </div>
     <div class="col-8 text-center">
       <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
     </div>
     <div class="col-2 d-flex justify-content-end align-items-center">
-
     </div>
   </div>
 </header>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Home</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Modules
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          
-          <a class="dropdown-item" href="/modules/introduction">Introduction</a>
-          
-          <a class="dropdown-item" href="/modules/biomechanics">Biomechanics</a>
-          
-          <a class="dropdown-item" href="/modules/kinematics">Kinematics</a>
-          
-          <a class="dropdown-item" href="/modules/compliance">Mechanics and Compliance</a>
-          
-          <a class="dropdown-item" href="/modules/dynamics">Dynamics</a>
-          
-          <a class="dropdown-item" href="/modules/optimization">Optimization</a>
-          
-          <a class="dropdown-item" href="/modules/manufacturing">Prototyping & Manufacturing</a>
-          
-          <a class="dropdown-item" href="/modules/integration">Integration</a>
-          
-          <a class="dropdown-item" href="/modules/validation">Experimental Validation</a>
-          
-          <a class="dropdown-item" href="/modules/project">Project</a>
-          
-          <a class="dropdown-item" href="/modules/python">Python</a>
-          
-          <a class="dropdown-item" href="/modules/misc">Misc</a>
-          
-        </div>
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="/class_schedule">Class Schedule</a>
-      
-
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="/my-assignments">Assignments</a>
-      
-
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="/my-tutorials">Tutorials</a>
-      
-
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="https://canvas.asu.edu/calendar#view_name=month" target="_blank">Canvas Calendar <i class="fas fa-external-link-alt"></i></i></a>
-      
-
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
-      
-
-      </li>
-      
+    </div>
   </div>
 </nav>
-<div class="row">
-<div class="col-md-4 text-center">
-  
-  
-      <h5>
-        Module: <a href="/modules/integration">integration</a>
-      </h5>
-  
-  
-</div>
-<div class="col-md-4 text-center">
-  
-  
-      <h4>
-        Motor Modeling Process
-      </h4>
-  
-  
-</div>
-<div class="col-md-4 text-center">
-  
-</div>
-</div>
-</div><!-- /.row -->
-<main role="main" class="container">
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Motor Modeling Process</h1>
   <h1 id="motor-modeling-process">Motor Modeling Process</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sin, cos, pi</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline  </span></code></pre></div>
-<h2 id="part-0-module-overview">Part 0: Module Overview</h2>
-<p>The purpose of this writeup is to familiarize you with the level of engineering required for selecting a motor and geartrain for your project. In this writup you will learn about the modeling, experimental, and design parameters you need in order to understand how to utilize a permanent-magnet DC motor in your project, how to pair it with a geartrain whose ratios you select, how to understand loss in your system, and how to select a battery</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> sin, cos, pi
+<span style="color:#f92672">import</span> numpy
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">%</span>matplotlib inline  
+</code></pre></div><h2 id="part-0-module-overview">Part 0: Module Overview</h2>
+<p>The purpose of this writeup is to familiarize you with the level of engineering required for selecting a motor and geartrain for your project.  In this writup you will learn about the modeling, experimental, and design parameters you need in order to understand how to utilize a permanent-magnet DC motor in your project, how to pair it with a geartrain whose ratios you select, how to understand loss in your system, and how to select a battery</p>
 <h3 id="example-problem-description">Example problem description</h3>
-<p>Your team has decided to develop a self-balancing hoverboard for cats. The system consists of two D.C. motors each attached to a belt drive which then attaches to two wheels. Onboard is a motor controller, battery, housing, and bluetooth communication for throttle and brake. The choice of motor, battery and belt drive are up to you, the designer.</p>
-<p>The company has created the following target performance specifications: <strong><em>The system must propel the hoverboard up a 10<span class="math inline">\(^{\circ}\)</span> smooth concrete ramp while loaded with a 3 kg. rider at a speed of 3 m/sec for 1000 m.</em></strong></p>
+<p>Your team has decided to develop a self-balancing hoverboard for cats.  The system consists of two D.C. motors each attached to a belt drive which then attaches to two wheels.  Onboard is a motor controller, battery, housing, and bluetooth communication for throttle and brake.  The choice of motor, battery and belt drive are up to you, the designer.</p>
+<p>The company has created the following target performance specifications:  <em><strong>The system must propel the hoverboard up a 10$^{\circ}$ smooth concrete ramp while loaded with a 3 kg. rider at a speed of 3 m/sec for 1000 m.</strong></em></p>
 <p>Engineers make analytical models to determine the components that go together to create the product, in this case you are the engineer and you must choose:</p>
-<ol type="1">
+<ol>
 <li>the motor,</li>
 <li>the battery, and</li>
 <li>the belt drive pulley sizes.</li>
 </ol>
-<figure>
-<img src="../../../../figures/motor_modeling/h1-cat.png" alt="hoverboard and kitty-rider" /><figcaption aria-hidden="true">hoverboard and kitty-rider</figcaption>
-</figure>
+<p><div class="text-center">
+  <a href="/figures/motor_modeling/h1-cat.png" target="_blank"><img src="/figures/motor_modeling/h1-cat.png" alt="hoverboard and kitty-rider"  class="img-fluid"/></a>
+</div></p>
 <h3 id="list-of-variables">List of Variables</h3>
-<p>These variables may be needed in your equations. Please do not substitute the supplied values till the last step of your solution, to verify that your expression is correct.</p>
+<p>These variables may be needed in your equations.  Please do not substitute the supplied values till the last step of your solution, to verify that your expression is correct.</p>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">Variable</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Value</th>
-<th style="text-align: left;">Unit</th>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Unit</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(r\)</span></td>
-<td style="text-align: left;">radius of wheel</td>
-<td style="text-align: left;">.04</td>
-<td style="text-align: left;">m</td>
+<tr>
+<td style="text-align:center">$r$</td>
+<td style="text-align:left">radius of wheel</td>
+<td style="text-align:left">.04</td>
+<td style="text-align:left">m</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(r_{pm}\)</span></td>
-<td style="text-align: left;">radius of pulley at the motor</td>
-<td style="text-align: left;">select</td>
-<td style="text-align: left;">m</td>
+<tr>
+<td style="text-align:center">$r_{pm}$</td>
+<td style="text-align:left">radius of pulley at the motor</td>
+<td style="text-align:left">select</td>
+<td style="text-align:left">m</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(r_{pw}\)</span></td>
-<td style="text-align: left;">radius of pulley at the wheel</td>
-<td style="text-align: left;">select</td>
-<td style="text-align: left;">m</td>
+<tr>
+<td style="text-align:center">$r_{pw}$</td>
+<td style="text-align:left">radius of pulley at the wheel</td>
+<td style="text-align:left">select</td>
+<td style="text-align:left">m</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(m\)</span></td>
-<td style="text-align: left;">mass of rider, board, and components</td>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">kg</td>
+<tr>
+<td style="text-align:center">$m$</td>
+<td style="text-align:left">mass of rider, board, and components</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">kg</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(g\)</span></td>
-<td style="text-align: left;">gravity</td>
-<td style="text-align: left;">9.81</td>
-<td style="text-align: left;">m/s<span class="math inline">\(^2\)</span></td>
+<tr>
+<td style="text-align:center">$g$</td>
+<td style="text-align:left">gravity</td>
+<td style="text-align:left">9.81</td>
+<td style="text-align:left">m/s$^2$</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\omega_{wheels}\)</span></td>
-<td style="text-align: left;">angular velocity of wheel</td>
-<td style="text-align: left;">solve</td>
-<td style="text-align: left;">rad/sec</td>
+<tr>
+<td style="text-align:center">$\omega_{wheels}$</td>
+<td style="text-align:left">angular velocity of wheel</td>
+<td style="text-align:left">solve</td>
+<td style="text-align:left">rad/sec</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\omega_{motor}\)</span></td>
-<td style="text-align: left;">angular velocity of motor</td>
-<td style="text-align: left;">select</td>
-<td style="text-align: left;">rad/sec</td>
+<tr>
+<td style="text-align:center">$\omega_{motor}$</td>
+<td style="text-align:left">angular velocity of motor</td>
+<td style="text-align:left">select</td>
+<td style="text-align:left">rad/sec</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(q\)</span></td>
-<td style="text-align: left;">angle of hill</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;"><span class="math inline">\(^{\circ}\)</span> (degrees)</td>
+<tr>
+<td style="text-align:center">$q$</td>
+<td style="text-align:left">angle of hill</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">$^{\circ}$ (degrees)</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\tau_{motor}\)</span></td>
-<td style="text-align: left;">motor torque</td>
-<td style="text-align: left;">select</td>
-<td style="text-align: left;">N-m</td>
+<tr>
+<td style="text-align:center">$\tau_{motor}$</td>
+<td style="text-align:left">motor torque</td>
+<td style="text-align:left">select</td>
+<td style="text-align:left">N-m</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\tau_{wheels}\)</span></td>
-<td style="text-align: left;">wheel torque</td>
-<td style="text-align: left;">solve</td>
-<td style="text-align: left;">N-m</td>
+<tr>
+<td style="text-align:center">$\tau_{wheels}$</td>
+<td style="text-align:left">wheel torque</td>
+<td style="text-align:left">solve</td>
+<td style="text-align:left">N-m</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(v\)</span></td>
-<td style="text-align: left;">velocity</td>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">m/s</td>
+<tr>
+<td style="text-align:center">$v$</td>
+<td style="text-align:left">velocity</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">m/s</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
-<td style="text-align: left;">distance</td>
-<td style="text-align: left;">1000</td>
-<td style="text-align: left;">m</td>
+<tr>
+<td style="text-align:center">$d$</td>
+<td style="text-align:left">distance</td>
+<td style="text-align:left">1000</td>
+<td style="text-align:left">m</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="fl">.04</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mass <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>gravity <span class="op">=</span> <span class="fl">9.81</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>velocity <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>distance <span class="op">=</span> <span class="dv">1000</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> <span class="dv">10</span> <span class="op">*</span> pi<span class="op">/</span><span class="dv">180</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>time <span class="op">=</span> distance<span class="op">/</span>velocity</span></code></pre></div>
-<h3 id="assumptions-and-notes">Assumptions and Notes</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">r <span style="color:#f92672">=</span> <span style="color:#f92672">.</span><span style="color:#ae81ff">04</span>
+mass <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+gravity <span style="color:#f92672">=</span> <span style="color:#ae81ff">9.81</span>
+velocity <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+distance <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>
+q <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> pi<span style="color:#f92672">/</span><span style="color:#ae81ff">180</span>
+time <span style="color:#f92672">=</span> distance<span style="color:#f92672">/</span>velocity
+</code></pre></div><h3 id="assumptions-and-notes">Assumptions and Notes</h3>
 <ul>
-<li>there are 180 degrees in each <span class="math inline">\(\pi\)</span> radians</li>
+<li>there are 180 degrees in each $\pi$ radians</li>
 </ul>
-<h2 id="part-i-free-body-diagrams-forces-mechanical-power">Part I: Free Body Diagrams, Forces, &amp; Mechanical Power</h2>
+<h2 id="part-i-free-body-diagrams-forces--mechanical-power">Part I: Free Body Diagrams, Forces, &amp; Mechanical Power</h2>
 <h3 id="problem-description">Problem Description</h3>
-<p>The purpose of this part’s motor assignment is to understand the mechanical power required to propel your hoverboard and rider up a hill at constant velocity.</p>
-<p>Remember that power is the scalar dot product of force and velocity or torque and angular velocity: <span class="math display">\[p=\vec{f}\cdot \vec{v} = \vec{\tau} \cdot \vec{\omega}\]</span> This gives you several ways to compute the mechanical power required. If you know the torque at the wheels, then you will need to know how fast the wheels are spinning. If you know the equivalent force at the wheel bearings, then you must find out the velocity of that point. Either way you will need to find a force / torque term and the matching velocity / angular velocity term.</p>
+<p>The purpose of this part&rsquo;s motor assignment is to understand the mechanical power required to propel your hoverboard and rider up a hill at constant velocity.</p>
+<p>Remember that power is the scalar dot product of force and velocity or torque and angular velocity:
+$$p=\vec{f}\cdot \vec{v} = \vec{\tau} \cdot \vec{\omega}$$
+This gives you several ways to compute the mechanical power required.  If you know the torque at the wheels, then you will need to know how fast the wheels are spinning.  If you know the equivalent force at the wheel bearings, then you must find out the velocity of that point.  Either way you will need to find a force / torque term and the matching velocity / angular velocity term.</p>
 <p>One way to find the forces involved in your system is with a <em>free body diagram</em>.</p>
 <h3 id="steps">Steps</h3>
-<ol type="1">
+<ol>
 <li>Create a 2D sketch of the longboard going up a hill. (See Figure 1)</li>
-<li>Create a free body diagram for the wheel. Draw and label all important variables and design parameters in your diagrams. This includes things like dimensions, forces, velocities, angles, vectors. Identify all forces acting upon each subsystem, including gravity, interaction forces between subsystems, and ground reaction forces.</li>
-<li>Use static force / moment balance equations to solve for static equilibrium in each subsystem. In planar systems, <span class="math display">\[\begin{aligned}
-\sum F_x &amp;= 0\\
-\sum F_y &amp;= 0\\
+<li>Create a free body diagram for the wheel.  Draw and label all important variables and design parameters in your diagrams.  This includes things like dimensions, forces, velocities, angles, vectors.  Identify all forces acting upon each subsystem, including gravity, interaction forces between subsystems, and ground reaction forces.</li>
+<li>Use static force / moment balance equations to solve for static equilibrium in each subsystem.  In planar systems,
+$$\begin{aligned}
+\sum F_x &amp;= 0\<br>
+\sum F_y &amp;= 0\<br>
 \sum M &amp;= 0
-\end{aligned}\]</span> Please expand these equations, using all forces and torques acting upon the wheel.</li>
-<li>Using the above equations, solve for <span class="math inline">\(f_T\)</span>, the force required to push the mass(<span class="math inline">\(m\)</span>) of board and rider up the hill.</li>
+\end{aligned}$$
+Please expand these equations, using all forces and torques acting upon the wheel.</li>
+<li>Using the above equations, solve for $f_T$, the force required to push the mass($m$) of board and rider up the hill.</li>
 <li>Using the above equations, solve for the torque required at the wheels to achieve static equilibrium.</li>
-<li>Given the velocity specification given in the assignment, how fast do the wheels spin? Remember the releationship between linear and angular velocity, <span class="math inline">\(\vec{v} = \vec{\omega} \times \vec{r}\)</span>, where <span class="math inline">\(\vec{v}\)</span> is linear velocity, <span class="math inline">\(\vec{\omega}\)</span> is angular velocity, and <span class="math inline">\(\vec{r}\)</span> is the vector to the point on the wheel’s radius.</li>
-<li>Given the equations for power mentioned above, please calculate how much power is required to maintain the board’s velocity up the hill.</li>
+<li>Given the velocity specification given in the assignment, how fast do the wheels spin?  Remember the releationship between linear and angular velocity, $\vec{v} = \vec{\omega} \times \vec{r}$, where $\vec{v}$ is linear velocity, $\vec{\omega}$ is angular velocity, and $\vec{r}$ is the vector to the point on the wheel&rsquo;s radius.</li>
+<li>Given the equations for power mentioned above, please calculate how much power is required to maintain the board&rsquo;s velocity up the hill.</li>
 </ol>
 <h3 id="assumptions-and-notes-1">Assumptions and Notes</h3>
 <ul>
 <li>It may be beneficial to use the B frame rather than the A frame to sum forces and torques</li>
 <li>Assume a planar system, <em>ie</em> 2D.</li>
-<li>Assume the rider is stationary on the board, with the mass of the system centered about the wheel.</li>
-<li>Keep all dimensions as variables throughout your work, <em>ie</em>, if we say the velocity of the rider is 5 m/sec, use a variable like <span class="math inline">\(v\)</span> as you work through your equations.</li>
+<li>Assume the rider is stationary on the board, with the mass of the system centered about the  wheel.</li>
+<li>Keep all dimensions as variables throughout your work,  <em>ie</em>, if we say the velocity of the rider is 5 m/sec, use a variable like $v$ as you work through your equations.</li>
 <li>Important terms are terms that are used in equations.</li>
 </ul>
 <h3 id="numerical-solution">Numerical Solution</h3>
-<h4 id="section">(1-2)</h4>
-<figure>
-<img src="../../../../figures/motor_modeling/fbd.png" alt="Free Body Diagram" /><figcaption aria-hidden="true">Free Body Diagram</figcaption>
-</figure>
-<h4 id="section-1">(3 - 4)</h4>
+<h4 id="1-2">(1-2)</h4>
+<p><div class="text-center">
+  <a href="/figures/motor_modeling/fbd.png" target="_blank"><img src="/figures/motor_modeling/fbd.png" alt="Free Body Diagram"  class="img-fluid"/></a>
+</div></p>
+<h4 id="3---4">(3 - 4)</h4>
 <p>In front wheel, using the B frame, since it is free spinning, the ground can only supply a reaction force normal to the wheels, and no moments can be transmitted.</p>
-<p><span class="math display">\[\begin{aligned}
-\sum F_x &amp;= 0\\
-\sum F_y &amp;= 0\\
+<p>$$\begin{aligned}
+\sum F_x &amp;= 0\<br>
+\sum F_y &amp;= 0\<br>
 \sum M &amp;= 0
-\end{aligned}\]</span></p>
-<p>if I first define <span class="math inline">\(\vec{f_R}\)</span> as: <span class="math display">\[\vec{f}_R = f_{T}\hat{b}_x + f_{N}\hat{b}_y\]</span></p>
+\end{aligned}$$</p>
+<p>if I first define $\vec{f_R}$ as:
+$$\vec{f}<em>R = f</em>{T}\hat{b}<em>x + f</em>{N}\hat{b}_y$$</p>
 <h5 id="rotation-matrix-for-frames-a-and-b">Rotation Matrix for Frames A and B</h5>
-<p><span class="math display">\[
+<p>$$
 \begin{array}{c|c c c}
-  ^AR^B &amp; \hat{b}_x &amp;\hat{b}_y &amp; \hat{b}_z\\
-  \hline
-  \hat{a}_x &amp;\cos q&amp;-\sin q &amp;0 \\
-  \hat{a}_y &amp;\sin q&amp; \cos q &amp;0 \\
-  \hat{a}_z &amp;0&amp;0&amp;1
- \end{array}
-\]</span></p>
-<p>Summing forces along <span class="math inline">\(b_x\)</span>: <span class="math display">\[\begin{aligned}
-0&amp;=\sum F_x\\
-0 &amp;= f_{T}\hat{b}_x - mg \sin(q)\hat{b}_x\\
-0 &amp;= f_{T} - mg \sin(q)\\
-f_{T} &amp;= mg \sin(q)\\
-\end{aligned}\]</span></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ft <span class="op">=</span> mass<span class="op">*</span>gravity<span class="op">*</span>sin(q)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ft</span></code></pre></div>
-<pre><code>5.1104658687377595</code></pre>
-<p>summing forces along <span class="math inline">\(b_y\)</span>: <span class="math display">\[\begin{aligned}
-0&amp;=\sum F_y\\
-0 &amp;= \vec{f}_{N}\hat{b}_y - mg \cos(q)\hat{b}_y\\
-0 &amp;= \vec{f}_{N} -\frac{ mg \cos(q)}{2} \\
-f_{N} &amp;= mg \cos(q)\\
-\end{aligned}\]</span></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fn <span class="op">=</span> mass<span class="op">*</span>gravity<span class="op">*</span>cos(q)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>fn</span></code></pre></div>
-<pre><code>28.98289217114928</code></pre>
-<h4 id="section-2">(5)</h4>
-<p>Sum moments to find motor torque: <span class="math display">\[\begin{aligned}
-0&amp;=\sum M \\
-0&amp;= -\tau_{wheels} \hat{b}_z + -r \hat{b}_y \times \vec{f}_R\\
-0&amp;= -\tau_{wheels} \hat{b}_z + -r \hat{b}_y \times \left(f_t\hat{b}_x + f_n \hat{b}_y\right)\\
-0&amp;= -\tau_{wheels} \hat{b}_z + \left(-r \hat{b}_y \times f_t\hat{b}_x \right)+\left(-r \hat{b}_y \times f_n \hat{b}_y\right)\\
-0&amp;= -\tau_{wheels} \hat{b}_z + rf_T \hat{b}_z\\
-0&amp;= -\tau_{wheels}  + rf_T\\
-\tau_{wheels}&amp;= rf_T\\
-\end{aligned}\]</span></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>t_wheels <span class="op">=</span> r<span class="op">*</span>ft</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>t_wheels</span></code></pre></div>
-<pre><code>0.2044186347495104</code></pre>
-<h4 id="section-3">(6)</h4>
-<p><span class="math display">\[ v=\omega_{wheels}r \]</span> <span class="math display">\[ \omega_{wheels}r =v\]</span> <span class="math display">\[ \omega_{wheels}=\frac{v}{r} \]</span></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>w_wheels <span class="op">=</span> velocity<span class="op">/</span>r</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>w_wheels</span></code></pre></div>
-<pre><code>75.0</code></pre>
-<h4 id="section-4">(7)</h4>
-<p>you can do this several ways. First, use the force-velocity formulation for power: <span class="math display">\[P = f_T* v = (mg \sin(q)) * (v)\]</span></p>
-<p>Alternatively, use the torque - angular velocity version: <span class="math display">\[P = t* \omega = (rmg \sin(q)) * (\frac{v}{r})\]</span></p>
-<p>You can also do it a different way. First calculate the total height change of the mass <span class="math display">\[ h = d*sin(q)\]</span> find the time it takes to get there: <span class="math display">\[ t = d/v\]</span> find the energy it takes to lift mg: <span class="math display">\[PE = mgh \]</span> and then find the average power as a function of energy and time: <span class="math display">\[\begin{aligned}
-P &amp;= \frac{PE}{t}\\
-P &amp;= \frac{mgh}{d/v}\\
-P &amp;= \frac{mgdsin(q)v}{d}\\
+^AR^B &amp; \hat{b}_x &amp;\hat{b}_y &amp; \hat{b}_z\<br>
+\hline
+\hat{a}_x &amp;\cos q&amp;-\sin q &amp;0 \<br>
+\hat{a}_y &amp;\sin q&amp; \cos q &amp;0 \<br>
+\hat{a}_z &amp;0&amp;0&amp;1
+\end{array}
+$$</p>
+<p>Summing forces along $b_x$:
+$$\begin{aligned}
+0&amp;=\sum F_x\<br>
+0 &amp;= f_{T}\hat{b}_x - mg \sin(q)\hat{b}_x\<br>
+0 &amp;= f_{T} - mg \sin(q)\<br>
+f_{T} &amp;= mg \sin(q)\<br>
+\end{aligned}$$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ft <span style="color:#f92672">=</span> mass<span style="color:#f92672">*</span>gravity<span style="color:#f92672">*</span>sin(q)
+ft
+</code></pre></div><pre><code>5.1104658687377595
+</code></pre>
+<p>summing forces along $b_y$:
+$$\begin{aligned}
+0&amp;=\sum F_y\<br>
+0 &amp;= \vec{f}_{N}\hat{b}<em>y - mg \cos(q)\hat{b}<em>y\<br>
+0 &amp;= \vec{f}</em>{N} -\frac{ mg \cos(q)}{2} \<br>
+f</em>{N} &amp;= mg \cos(q)\<br>
+\end{aligned}$$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fn <span style="color:#f92672">=</span> mass<span style="color:#f92672">*</span>gravity<span style="color:#f92672">*</span>cos(q)
+fn
+</code></pre></div><pre><code>28.98289217114928
+</code></pre>
+<h4 id="5">(5)</h4>
+<p>Sum moments to find motor torque:
+$$\begin{aligned}
+0&amp;=\sum M \<br>
+0&amp;= -\tau_{wheels} \hat{b}_z + -r \hat{b}_y \times \vec{f}_R\<br>
+0&amp;= -\tau_{wheels} \hat{b}_z + -r \hat{b}_y \times \left(f_t\hat{b}_x + f_n \hat{b}_y\right)\<br>
+0&amp;= -\tau_{wheels} \hat{b}_z + \left(-r \hat{b}_y \times f_t\hat{b}_x \right)+\left(-r \hat{b}_y \times f_n \hat{b}_y\right)\<br>
+0&amp;= -\tau_{wheels} \hat{b}_z + rf_T \hat{b}_z\<br>
+0&amp;= -\tau_{wheels}  + rf_T\<br>
+\tau_{wheels}&amp;= rf_T\<br>
+\end{aligned}$$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">t_wheels <span style="color:#f92672">=</span> r<span style="color:#f92672">*</span>ft
+t_wheels
+</code></pre></div><pre><code>0.2044186347495104
+</code></pre>
+<h4 id="6">(6)</h4>
+<p>$$ v=\omega_{wheels}r $$
+$$ \omega_{wheels}r =v$$
+$$ \omega_{wheels}=\frac{v}{r} $$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">w_wheels <span style="color:#f92672">=</span> velocity<span style="color:#f92672">/</span>r
+w_wheels
+</code></pre></div><pre><code>75.0
+</code></pre>
+<h4 id="7">(7)</h4>
+<p>you can do this several ways.  First, use the force-velocity formulation for power:
+$$P = f_T* v = (mg \sin(q)) * (v)$$</p>
+<p>Alternatively, use the torque - angular velocity version:
+$$P = t* \omega = (rmg \sin(q)) * (\frac{v}{r})$$</p>
+<p>You can also do it a different way.  First calculate the total height change of the mass
+$$ h = d*sin(q)$$
+find the time it takes to get there:
+$$ t = d/v$$
+find the energy it takes to lift mg:
+$$PE = mgh $$
+and then find the average power as a function of energy and time:
+$$\begin{aligned}
+P &amp;= \frac{PE}{t}\<br>
+P &amp;= \frac{mgh}{d/v}\<br>
+P &amp;= \frac{mgdsin(q)v}{d}\<br>
 P &amp;= mgsin(q)v
-\end{aligned}\]</span></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>power_mechanical <span class="op">=</span> ft<span class="op">*</span>velocity</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>power_mechanical</span></code></pre></div>
-<pre><code>15.33139760621328</code></pre>
-<h2 id="part-ii-friction-loss">Part II: Friction &amp; Loss</h2>
-<p>You need to estimate the effects of mechanical loss on your physical system. This is difficult because you don’t have your system. Nevertheless, it is your job to estimate how this loss will affect your energy requirements.</p>
+\end{aligned}$$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">power_mechanical <span style="color:#f92672">=</span> ft<span style="color:#f92672">*</span>velocity
+power_mechanical
+</code></pre></div><pre><code>15.33139760621328
+</code></pre>
+<h2 id="part-ii-friction--loss">Part II: Friction &amp; Loss</h2>
+<p>You need to estimate the effects of mechanical loss on your physical system.  This is difficult because you don&rsquo;t have your system.  Nevertheless, it is your job to estimate how this loss will affect your energy requirements.</p>
 <h3 id="coulomb-friction">Coulomb Friction</h3>
-<p>A discussion of friction usually begins and ends with the discussion of Coulomb Friction. A coulomb friction model usually depends on two materials sliding against each other, as well as a normal force(<span class="math inline">\(f_{normal}\)</span>) pushing those two surfaces together. The two materials interact at a variety of size scales, from atomic scales up to visible scales; the relationship between the two materials is characterized by a parameter <span class="math inline">\(\mu\)</span>. The relationship between the scalar magnitudes of these forces is characterized by this well known equation: <span class="math display">\[f_{friction} \leq \mu f_{normal}\]</span> while the direction of the friction force is always against the direction of travel.</p>
+<p>A discussion of friction usually begins and ends with the discussion of Coulomb Friction.  A coulomb friction model usually depends on  two materials sliding against each other, as well as a normal force($f_{normal}$) pushing those two surfaces together.  The two materials interact at a variety of size scales, from atomic scales up to visible scales; the relationship between the two materials is characterized by a parameter $\mu$.  The relationship between the scalar magnitudes of these forces is characterized by this well known equation:
+$$f_{friction} \leq \mu f_{normal}$$
+while the direction of the friction force is always against the direction of travel.</p>
 <h3 id="damping">Damping</h3>
-<p>Damping is a lossy force which is applied against the direction of travel. Bodies moving through a fluid often experience the effects of damping. There are many models for damping, but linear damping models are characterized by the equation <span class="math display">\[f_{damping} = b ||\vec{v}||\]</span></p>
+<p>Damping is a lossy force which is applied against the direction of travel.  Bodies moving through a fluid often experience the effects of damping. There are many models for damping, but linear damping models are characterized by the equation
+$$f_{damping} = b ||\vec{v}||$$</p>
 <h3 id="interfaces">Interfaces</h3>
-<p>Mechanical loss occurs when moving bodies interact with each other in non-ideal ways. This can be forces generated during sliding, rolling, pushing fluids out of the way while moving, etc.</p>
+<p>Mechanical loss occurs when moving bodies interact with each other in non-ideal ways.  This can be forces generated during sliding, rolling, pushing fluids out of the way while moving, etc.</p>
 <h3 id="steps-1">Steps</h3>
-<ol type="1">
-<li>Find an appropriate stand-in device for the proposed system. Discuss why this device is appropriate for estimating the mechanical loss in your system.</li>
-<li>Determine a method for measuring the loss. The method you use may have an impact on the types of models. You should consider what you are measuring and which models can be used with that measurement. Some may be more appropriate than others, and it is up to you to make a detailed justification why your selection is appropriate for the task.</li>
+<ol>
+<li>Find an appropriate stand-in device for the proposed system.  Discuss why this device is appropriate for estimating the mechanical loss in your system.</li>
+<li>Determine a method for measuring the loss.  The method you use may have an impact on the types of models.  You should consider what you are measuring and which models can be used with that measurement.  Some may be more appropriate than others, and it is up to you to make a detailed justification why your selection is appropriate for the task.</li>
 <li>Write up your method, justifying your while you go</li>
-<li>Using your model, now extrapolate to the proposed system, using the given design parameters and performance specifications. Use your model to compute two things. the additional power required from the motor, and the torque required at the wheel to overcome it.</li>
+<li>Using your model, now extrapolate to the proposed system, using the given design parameters and performance specifications.  Use your model to  compute two things. the additional power required from the motor, and the torque required at the wheel to overcome it.</li>
 </ol>
 <h2 id="part-iii-motor-modeling">Part III: Motor Modeling</h2>
-<p>The purpose of this assignment is to select an operating speed which can achieve your power requirements in delivering torque at the right velocity to your wheels. While you already calculated <span class="math inline">\(w_{wheels}\)</span> and <span class="math inline">\(\tau_{wheels}\)</span>, you have not yet selected a geartrain, permitting you to identify the best speed for delivering mechanical power to your system. Your system has one motor mounted at each of the two wheels, permitting you to halve the amount of power required for each motor(but not the total power required for the system)</p>
+<p>The purpose of this assignment is to select an operating speed which can achieve your power  requirements in delivering torque at the right velocity to your wheels.  While you already calculated $w_{wheels}$ and $\tau_{wheels}$, you have not yet selected a geartrain, permitting you to identify the best speed for delivering mechanical power to your system.  Your system has one motor mounted at each of the two wheels, permitting you to halve the amount of power required for each motor(but not the total power required for the system)</p>
 <h3 id="motor-model">Motor Model</h3>
-<figure>
-<img src="../../../../figures/motor_modeling/motor_model.png" alt="typical linear speed-torque curve" /><figcaption aria-hidden="true">typical linear speed-torque curve</figcaption>
-</figure>
-<p>Typically, motors are tested at a specified voltage under various loads. The resulting current, torque, and angular velocity are then experimentally found and recorded. From these values, a wealth of information can be gleaned about the motor. Typical permanent-magnet DC motors exhibit a torque-speed relationship that can be modeled as linear, as seen above.</p>
+<p><div class="text-center">
+  <a href="/figures/motor_modeling/motor_model.png" target="_blank"><img src="/figures/motor_modeling/motor_model.png" alt="typical linear speed-torque curve"  class="img-fluid"/></a>
+</div></p>
+<p>Typically, motors are tested at a specified voltage under various loads.  The resulting current, torque, and angular velocity are then experimentally found and recorded.  From these values, a wealth of information can be gleaned about the motor.  Typical permanent-magnet DC motors exhibit a torque-speed relationship that can be modeled as linear, as seen above.</p>
 <h3 id="motor-modeling-equations">Motor Modeling Equations</h3>
 <p>The voltage constant for motors is often given by a KV rating, usually in units of RPM/V. find the SI version.</p>
-<p>The torque constant relates the current to torque generated by the motor. one way to determine this is to find the stall current and the free running current and to find the slope between them.</p>
-<p><span class="math display">\[k_v = (KV)2\pi/60\]</span> This permits one to determine the motor’s free-running speed at any voltage using the equation <span class="math display">\[\omega_{free\ running} = k_v V\]</span></p>
-<p>We will use the following equations to compute <span class="math inline">\(k_t\)</span>: <span class="math display">\[k_t = \frac{\tau_{stall}-\tau_{free\ running}}{I_{stall} - I_{free\ running}}\]</span></p>
-<p>With <span class="math inline">\(k_t\)</span> determined you can then calculate the torque at any current and constant voltage using the function <span class="math display">\[\tau(I) = k_t(I-I_{free\ running})\]</span></p>
-<p>Using the assumption of a linear motor model(valid for fixed permanent magnet DC motors), we can find the torque at any speed from <span class="math inline">\(0\)</span> to <span class="math inline">\(\omega_{free\ running}\)</span> using the equation <span class="math display">\[\tau(\omega)=\tau_{stall}(k_v V - \omega)\]</span></p>
-<p>The following equations can be used to compute mechanical and electrical power: <span class="math display">\[P_{mechanical}=\tau*\omega\]</span> <span class="math display">\[P_{electrical}=IV\]</span></p>
-<p>The efficiency of your system can be calulated as a function of power out(mechanical) over power in(electrical).<br />
-<span class="math display">\[eff = \frac{P_{mechanical}}{P_{electrical}}\]</span></p>
+<p>The torque constant relates the current to torque generated by the motor.  one way to determine this is to find the stall current and the free running current and to find the slope between them.</p>
+<p>$$k_v = (KV)2\pi/60$$
+This permits one to determine the motor&rsquo;s free-running speed at any voltage using the equation
+$$\omega_{free\ running} = k_v V$$</p>
+<p>We will use the following equations to compute $k_t$:
+$$k_t = \frac{\tau_{stall}-\tau_{free\ running}}{I_{stall} - I_{free\ running}}$$</p>
+<p>With $k_t$ determined you can then calculate the torque at any current and constant voltage using the function
+$$\tau(I) = k_t(I-I_{free\ running})$$</p>
+<p>Using the assumption of a linear motor model(valid for fixed permanent magnet DC motors), we can find the torque at any speed from $0$ to $\omega_{free\ running}$ using the equation
+$$\tau(\omega)=\tau_{stall}(k_v V - \omega)$$</p>
+<p>The following equations can be used to compute mechanical and electrical power:
+$$P_{mechanical}=\tau*\omega$$
+$$P_{electrical}=IV$$</p>
+<p>The efficiency of your system can be calulated as a function of power out(mechanical) over power in(electrical).<br>
+$$eff = \frac{P_{mechanical}}{P_{electrical}}$$</p>
 <h3 id="updated-variables">Updated Variables</h3>
 <p>In addition to the variables supplied in the overview, there are some new variables and updated values which you can use in this assignment.</p>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">Variable</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Value</th>
-<th style="text-align: left;">Unit</th>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Unit</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(P_{mechanical}\)</span></td>
-<td style="text-align: left;">Required mechanical power per motor</td>
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">W</td>
+<tr>
+<td style="text-align:center">$P_{mechanical}$</td>
+<td style="text-align:left">Required mechanical power per motor</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">W</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(w_{max}\)</span></td>
-<td style="text-align: left;">Maximum (no-load) speed</td>
-<td style="text-align: left;">obtain</td>
-<td style="text-align: left;">rad/sec</td>
+<tr>
+<td style="text-align:center">$w_{max}$</td>
+<td style="text-align:left">Maximum (no-load) speed</td>
+<td style="text-align:left">obtain</td>
+<td style="text-align:left">rad/sec</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(V\)</span></td>
-<td style="text-align: left;">Nominal Voltage</td>
-<td style="text-align: left;">obtain</td>
-<td style="text-align: left;">V</td>
+<tr>
+<td style="text-align:center">$V$</td>
+<td style="text-align:left">Nominal Voltage</td>
+<td style="text-align:left">obtain</td>
+<td style="text-align:left">V</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\tau_{stall}\)</span></td>
-<td style="text-align: left;">Stall Torque</td>
-<td style="text-align: left;">obtain</td>
-<td style="text-align: left;">N-m</td>
+<tr>
+<td style="text-align:center">$\tau_{stall}$</td>
+<td style="text-align:left">Stall Torque</td>
+<td style="text-align:left">obtain</td>
+<td style="text-align:left">N-m</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(I_{stall}\)</span></td>
-<td style="text-align: left;">Stall Current</td>
-<td style="text-align: left;">obtain</td>
-<td style="text-align: left;">Amp</td>
+<tr>
+<td style="text-align:center">$I_{stall}$</td>
+<td style="text-align:left">Stall Current</td>
+<td style="text-align:left">obtain</td>
+<td style="text-align:left">Amp</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(I_{free\ running}\)</span></td>
-<td style="text-align: left;">free running current</td>
-<td style="text-align: left;">obtain</td>
-<td style="text-align: left;">Amp</td>
+<tr>
+<td style="text-align:center">$I_{free\ running}$</td>
+<td style="text-align:left">free running current</td>
+<td style="text-align:left">obtain</td>
+<td style="text-align:left">Amp</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(k_v\)</span></td>
-<td style="text-align: left;">selected motor’s speed/voltage relationship</td>
-<td style="text-align: left;">obtain</td>
-<td style="text-align: left;">rad/V-sec</td>
+<tr>
+<td style="text-align:center">$k_v$</td>
+<td style="text-align:left">selected motor&rsquo;s speed/voltage relationship</td>
+<td style="text-align:left">obtain</td>
+<td style="text-align:left">rad/V-sec</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(k_t\)</span></td>
-<td style="text-align: left;">selected motor’s current/torque relationship</td>
-<td style="text-align: left;">obtain</td>
-<td style="text-align: left;">N-m/Amp</td>
+<tr>
+<td style="text-align:center">$k_t$</td>
+<td style="text-align:left">selected motor&rsquo;s current/torque relationship</td>
+<td style="text-align:left">obtain</td>
+<td style="text-align:left">N-m/Amp</td>
 </tr>
 </tbody>
 </table>
 <h3 id="steps-2">Steps</h3>
-<ol type="1">
-<li>Go to <a href="https://www.pololu.com/product/2269" class="uri">https://www.pololu.com/product/2269</a> and find the following specs: Maximum(no load) RPM, stall torque, stall current, free running current, and voltage the motor was tested at to obtain those numbers.</li>
-<li>compute torque and speed constants using the equations above.<br />
-</li>
+<ol>
+<li>Go to <a href="https://www.pololu.com/product/2269">https://www.pololu.com/product/2269</a> and find the following specs: Maximum(no load) RPM, stall torque, stall current, free running current, and voltage the motor was tested at to obtain those numbers.</li>
+<li>compute torque and speed constants using the equations above.</li>
 <li>Write the equation you need to compute mechanical power</li>
 <li>Write the equation you need to compute electrical power</li>
-<li>Using <span class="math inline">\(k_v\)</span> &amp; <span class="math inline">\(V\)</span>, plot the <em>linear</em> speed-torque curve as a function of <span class="math inline">\(w_{motor}\)</span> (put <span class="math inline">\(w_{motor}\)</span> along the x-axis).</li>
-<li>Using the expression for <span class="math inline">\(P_{mechanical}\)</span> plot the mechanical power curve as a function of <span class="math inline">\(w_{motor}\)</span> (put <span class="math inline">\(w_{motor}\)</span> along the x-axis). Identify the motor operating point(speed) which produces the most power.</li>
-<li>Using <span class="math inline">\(\tau(I)\)</span>, solve for <span class="math inline">\(I\)</span> and use to compute the electrical power as a function of <span class="math inline">\(w_{motor}\)</span>.</li>
-<li>Using the expression for <span class="math inline">\(eff\)</span>, plot the motor efficiency as a function of <span class="math inline">\(w_{motor}\)</span> (put <span class="math inline">\(w_{motor}\)</span> along the x-axis). Identify the motor operating point(speed) which is the most efficient.</li>
-<li>Using the motor requirements derived in part 1, and the loss you determined in part 2, select an operating speed which balances power, efficiency, and specifications. Discuss why other operating points do not balance those considerations as effectively. Consider total power usage, current limitations, efficiency, size, weight, etc in your answer.</li>
+<li>Using $k_v$ &amp; $V$, plot the <em>linear</em> speed-torque curve as a function of $w_{motor}$ (put $w_{motor}$ along the x-axis).</li>
+<li>Using the expression for $P_{mechanical}$ plot the mechanical power curve as a function of $w_{motor}$ (put $w_{motor}$ along the x-axis). Identify the motor operating point(speed) which produces the most power.</li>
+<li>Using $\tau(I)$, solve for $I$ and use to compute the electrical power as a function of $w_{motor}$.</li>
+<li>Using the expression for $eff$, plot the motor efficiency as a function of $w_{motor}$ (put $w_{motor}$ along the x-axis). Identify the motor operating point(speed) which is the most efficient.</li>
+<li>Using the motor requirements derived in part 1, and the loss you determined in part 2, select an operating speed which balances power, efficiency, and specifications.  Discuss why other operating points do not balance those considerations as effectively.  Consider total power usage, current limitations, efficiency, size, weight, etc in your answer.</li>
 </ol>
 <h3 id="assumptions-and-notes-2">Assumptions and Notes</h3>
 <ul>
-<li>use Matlab, excel, python, etc for creating plots. Do not hand-draw.</li>
-<li>the x axis for your plots should go from 0 to <span class="math inline">\(w_{max}\)</span></li>
-<li>Remember there are two motors, one at each wheel. So the power requirements for each are half of your total requirements.</li>
+<li>use Matlab, excel, python, etc for creating plots.  Do not hand-draw.</li>
+<li>the x axis for your plots should go from 0 to $w_{max}$</li>
+<li>Remember there are two motors, one at each wheel.  So the power requirements for each are half of your total requirements.</li>
 <li>label your axes and title your figures</li>
-<li>Convert all units to SI before computing your answer. Answers/expressions in non-SI units will not be considered. Supply the conversion factor you used. ### Numerical Solution #### (1)</li>
+<li>Convert all units to SI before computing your answer.  Answers/expressions in non-SI units will not be considered.  Supply the conversion factor you used.</li>
 </ul>
+<h3 id="numerical-solution-1">Numerical Solution</h3>
+<h4 id="1">(1)</h4>
 <p>Using motor constants from <a href="https://www.pololu.com/product/2269">this</a> Pololu motor:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>w_max_rpm  <span class="op">=</span> <span class="dv">10000</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Convert to rad/sec</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>w_max <span class="op">=</span> w_max_rpm  <span class="op">*</span> <span class="dv">2</span><span class="op">*</span>pi<span class="op">/</span><span class="dv">60</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>torque_stall_ozin<span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#convert to N-m</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>torque_stall <span class="op">=</span> torque_stall_ozin <span class="op">*</span> <span class="fl">0.0070615518333333</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>current_stall <span class="op">=</span> <span class="fl">6.5</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>current_free_running  <span class="op">=</span> <span class="fl">.275</span></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>voltage_run <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>voltage_free_stall <span class="op">=</span> <span class="dv">0</span></span></code></pre></div>
-<p>Find the range of the current from stall to free-running</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>i_range <span class="op">=</span> current_stall<span class="op">-</span>current_free_running</span></code></pre></div>
-<h4 id="section-5">(2)</h4>
-<p>Find <span class="math inline">\(k_t\)</span> and <span class="math inline">\(k_v\)</span> , the torque and voltage constants</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>kt <span class="op">=</span> torque_stall<span class="op">/</span>i_range</span></code></pre></div>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>voltage_range <span class="op">=</span> voltage_run <span class="op">-</span> voltage_free_stall</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>kv <span class="op">=</span> w_max<span class="op">/</span>voltage_range</span></code></pre></div>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>voltage_run <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>ii <span class="op">=</span> numpy.r_[<span class="dv">0</span>:<span class="dv">1</span>:<span class="ot">21j</span>]</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> ii <span class="op">*</span> w_max</span></code></pre></div>
-<h4 id="section-6">(3-4)</h4>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calc_motor(kt,torque_stall,w_max,current_free_running,voltage_run,w_motor):</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    torque <span class="op">=</span> (<span class="dv">1</span><span class="op">-</span>(w_motor<span class="op">/</span>w_max))<span class="op">*</span>torque_stall</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    current <span class="op">=</span> torque<span class="op">/</span>kt<span class="op">+</span>current_free_running</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    motor_power_mechanical<span class="op">=</span> w_motor<span class="op">*</span>torque</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    motor_power_electrical <span class="op">=</span> current<span class="op">*</span>voltage_run</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    motor_efficiency <span class="op">=</span> motor_power_mechanical<span class="op">/</span>motor_power_electrical</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> torque,motor_power_mechanical, motor_power_electrical, motor_efficiency</span></code></pre></div>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>torque,motor_power_mechanical_t, motor_power_electrical_t, motor_efficiency <span class="op">=</span> calc_motor(kt,torque_stall,w_max,current_free_running,voltage_run,w)</span></code></pre></div>
-<h4 id="section-7">(5)</h4>
-<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>plt.plot(w,torque)</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;$\omega$ (rad/sec)&#39;</span>)</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;$</span><span class="ch">\\</span><span class="st">tau$ (Nm)&#39;</span>)</span></code></pre></div>
-<pre><code>Text(0, 0.5, &#39;$\\tau$ (Nm)&#39;)</code></pre>
-<figure>
-<img src="output_28_1.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
-</figure>
-<h4 id="section-8">(6)</h4>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>plt.plot(w,motor_power_mechanical_t)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;$\omega$ (rad/sec)&#39;</span>)</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;$Power$ (W)&#39;</span>)</span></code></pre></div>
-<pre><code>Text(0, 0.5, &#39;$Power$ (W)&#39;)</code></pre>
-<figure>
-<img src="output_30_1.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
-</figure>
-<p>As you can see, the maximum power occurs at w_max/2 #### (7-9)</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>plt.plot(w,motor_efficiency<span class="op">*</span><span class="dv">100</span>)</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;$\omega$ (rad/sec)&#39;</span>)</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;$Eff$ (%)&#39;</span>)</span></code></pre></div>
-<pre><code>Text(0, 0.5, &#39;$Eff$ (%)&#39;)</code></pre>
-<figure>
-<img src="output_32_1.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
-</figure>
-<p>I have selected 710 rad/sec as my operating point. Now I need to compute the mechancial power, electrical power, and effeciency once again</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>w_motor <span class="op">=</span> <span class="dv">710</span></span></code></pre></div>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>torque1,motor_power_mechanical1, motor_power_electrical1, motor_efficiency1 <span class="op">=</span> calc_motor(kt,torque_stall,w_max,current_free_running,voltage_run,w_motor)</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;torque = &#39;</span>, torque1)</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;motor_power_mechanical = &#39;</span>, motor_power_mechanical1)</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;motor_power_electrical = &#39;</span>, motor_power_electrical1)</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;motor_efficiency = &#39;</span>, motor_efficiency1)</span></code></pre></div>
-<pre><code>torque =  0.011369096418946867
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">w_max_rpm  <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000</span>
+<span style="color:#75715e">#Convert to rad/sec</span>
+w_max <span style="color:#f92672">=</span> w_max_rpm  <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>pi<span style="color:#f92672">/</span><span style="color:#ae81ff">60</span>
+
+torque_stall_ozin<span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+<span style="color:#75715e">#convert to N-m</span>
+torque_stall <span style="color:#f92672">=</span> torque_stall_ozin <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.0070615518333333</span>
+
+current_stall <span style="color:#f92672">=</span> <span style="color:#ae81ff">6.5</span>
+current_free_running  <span style="color:#f92672">=</span> <span style="color:#f92672">.</span><span style="color:#ae81ff">275</span>
+
+voltage_run <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
+voltage_free_stall <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</code></pre></div><p>Find the range of the current from stall to free-running</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">i_range <span style="color:#f92672">=</span> current_stall<span style="color:#f92672">-</span>current_free_running
+</code></pre></div><h4 id="2">(2)</h4>
+<p>Find $k_t$ and $k_v$ , the torque and voltage constants</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">kt <span style="color:#f92672">=</span> torque_stall<span style="color:#f92672">/</span>i_range
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">voltage_range <span style="color:#f92672">=</span> voltage_run <span style="color:#f92672">-</span> voltage_free_stall
+kv <span style="color:#f92672">=</span> w_max<span style="color:#f92672">/</span>voltage_range
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">voltage_run <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
+ii <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>r_[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">21j</span>]
+w <span style="color:#f92672">=</span> ii <span style="color:#f92672">*</span> w_max
+</code></pre></div><h4 id="3-4">(3-4)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calc_motor</span>(kt,torque_stall,w_max,current_free_running,voltage_run,w_motor):
+    torque <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>(w_motor<span style="color:#f92672">/</span>w_max))<span style="color:#f92672">*</span>torque_stall
+    current <span style="color:#f92672">=</span> torque<span style="color:#f92672">/</span>kt<span style="color:#f92672">+</span>current_free_running
+    motor_power_mechanical<span style="color:#f92672">=</span> w_motor<span style="color:#f92672">*</span>torque
+    motor_power_electrical <span style="color:#f92672">=</span> current<span style="color:#f92672">*</span>voltage_run
+    motor_efficiency <span style="color:#f92672">=</span> motor_power_mechanical<span style="color:#f92672">/</span>motor_power_electrical
+    <span style="color:#66d9ef">return</span> torque,motor_power_mechanical, motor_power_electrical, motor_efficiency
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">torque,motor_power_mechanical_t, motor_power_electrical_t, motor_efficiency <span style="color:#f92672">=</span> calc_motor(kt,torque_stall,w_max,current_free_running,voltage_run,w)
+</code></pre></div><h4 id="5-1">(5)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>figure()
+plt<span style="color:#f92672">.</span>plot(w,torque)
+plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;$\omega$ (rad/sec)&#39;</span>)
+plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;$</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">tau$ (Nm)&#39;</span>)
+</code></pre></div><pre><code>Text(0, 0.5, '$\\tau$ (Nm)')
+</code></pre>
+<p><div class="text-center">
+  <a href="output_28_1.png" target="_blank"><img src="output_28_1.png" alt="png"  class="img-fluid"/></a>
+</div></p>
+<h4 id="6-1">(6)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>figure()
+plt<span style="color:#f92672">.</span>plot(w,motor_power_mechanical_t)
+plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;$\omega$ (rad/sec)&#39;</span>)
+plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;$Power$ (W)&#39;</span>)
+</code></pre></div><pre><code>Text(0, 0.5, '$Power$ (W)')
+</code></pre>
+<p><div class="text-center">
+  <a href="output_30_1.png" target="_blank"><img src="output_30_1.png" alt="png"  class="img-fluid"/></a>
+</div></p>
+<p>As you can see, the maximum power occurs at w_max/2</p>
+<h4 id="7-9">(7-9)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>figure()
+plt<span style="color:#f92672">.</span>plot(w,motor_efficiency<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>)
+plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;$\omega$ (rad/sec)&#39;</span>)
+plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;$Eff$ (%)&#39;</span>)
+</code></pre></div><pre><code>Text(0, 0.5, '$Eff$ (%)')
+</code></pre>
+<p><div class="text-center">
+  <a href="output_32_1.png" target="_blank"><img src="output_32_1.png" alt="png"  class="img-fluid"/></a>
+</div></p>
+<p>I have selected 710 rad/sec as my operating point.  Now I need to compute the mechancial power, electrical power, and effeciency once again</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">w_motor <span style="color:#f92672">=</span> <span style="color:#ae81ff">710</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">torque1,motor_power_mechanical1, motor_power_electrical1, motor_efficiency1 <span style="color:#f92672">=</span> calc_motor(kt,torque_stall,w_max,current_free_running,voltage_run,w_motor)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;torque = &#39;</span>, torque1)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;motor_power_mechanical = &#39;</span>, motor_power_mechanical1)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;motor_power_electrical = &#39;</span>, motor_power_electrical1)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;motor_efficiency = &#39;</span>, motor_efficiency1)
+
+</code></pre></div><pre><code>torque =  0.011369096418946867
 motor_power_mechanical =  8.072058457452275
 motor_power_electrical =  13.676697849705437
-motor_efficiency =  0.5902052195754348</code></pre>
+motor_efficiency =  0.5902052195754348
+</code></pre>
 <p>The full model in one plot, with the design point selected:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>)</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>p1 <span class="op">=</span> ax1.plot(w,torque, <span class="st">&#39;b-&#39;</span>)</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>p11 <span class="op">=</span> ax1.plot(w_motor,torque1,<span class="st">&#39;bo&#39;</span>)</span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">&#39;speed (rad/sec)&#39;</span>)</span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the y-axis label, ticks and tick labels match the line color.</span></span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">&#39;torque (N-m)&#39;</span>, color<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>ax1.tick_params(<span class="st">&#39;y&#39;</span>, colors<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> ax1.twinx()</span>
-<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>p2 <span class="op">=</span> ax2.plot(w, motor_power_mechanical_t, <span class="st">&#39;r-.&#39;</span>)</span>
-<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>p22 <span class="op">=</span> ax2.plot(w_motor, motor_power_mechanical1, <span class="st">&#39;ro&#39;</span>)</span>
-<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">&#39;power (W)&#39;</span>, color<span class="op">=</span><span class="st">&#39;r&#39;</span>)</span>
-<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>ax2.tick_params(<span class="st">&#39;y&#39;</span>, colors<span class="op">=</span><span class="st">&#39;r&#39;</span>)</span>
-<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>ax3 <span class="op">=</span> ax1.twinx()</span>
-<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>p3 <span class="op">=</span> ax3.plot(w, motor_efficiency<span class="op">*</span><span class="dv">100</span>, <span class="st">&#39;g-.&#39;</span>)</span>
-<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a>p3 <span class="op">=</span> ax3.plot(w_motor, motor_efficiency1<span class="op">*</span><span class="dv">100</span>, <span class="st">&#39;go&#39;</span>)</span>
-<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a>ax3.set_ylabel(<span class="st">&#39;efficiency (%)&#39;</span>, color<span class="op">=</span><span class="st">&#39;g&#39;</span>)</span>
-<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>ax3.tick_params(<span class="st">&#39;y&#39;</span>, colors<span class="op">=</span><span class="st">&#39;g&#39;</span>)</span>
-<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a><span class="co">#lns = [p1, p2, p3]</span></span>
-<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a><span class="co">#ax1.legend(handles=lns, loc=&#39;bevst&#39;)</span></span>
-<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a><span class="co"># right, left, top, bottom</span></span>
-<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a>ax3.spines[<span class="st">&#39;right&#39;</span>].set_position((<span class="st">&#39;outward&#39;</span>, <span class="dv">60</span>))  </span>
-<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">&#39;Motor Model&#39;</span>)</span>
-<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<figure>
-<img src="output_37_0.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
-</figure>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure()
+ax1 <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">111</span>)
+
+p1 <span style="color:#f92672">=</span> ax1<span style="color:#f92672">.</span>plot(w,torque, <span style="color:#e6db74">&#39;b-&#39;</span>)
+p11 <span style="color:#f92672">=</span> ax1<span style="color:#f92672">.</span>plot(w_motor,torque1,<span style="color:#e6db74">&#39;bo&#39;</span>)
+ax1<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;speed (rad/sec)&#39;</span>)
+<span style="color:#75715e"># Make the y-axis label, ticks and tick labels match the line color.</span>
+ax1<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;torque (N-m)&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>)
+ax1<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>, colors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>)
+
+ax2 <span style="color:#f92672">=</span> ax1<span style="color:#f92672">.</span>twinx()
+p2 <span style="color:#f92672">=</span> ax2<span style="color:#f92672">.</span>plot(w, motor_power_mechanical_t, <span style="color:#e6db74">&#39;r-.&#39;</span>)
+p22 <span style="color:#f92672">=</span> ax2<span style="color:#f92672">.</span>plot(w_motor, motor_power_mechanical1, <span style="color:#e6db74">&#39;ro&#39;</span>)
+ax2<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;power (W)&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>)
+ax2<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>, colors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>)
+
+ax3 <span style="color:#f92672">=</span> ax1<span style="color:#f92672">.</span>twinx()
+p3 <span style="color:#f92672">=</span> ax3<span style="color:#f92672">.</span>plot(w, motor_efficiency<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>, <span style="color:#e6db74">&#39;g-.&#39;</span>)
+p3 <span style="color:#f92672">=</span> ax3<span style="color:#f92672">.</span>plot(w_motor, motor_efficiency1<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>, <span style="color:#e6db74">&#39;go&#39;</span>)
+ax3<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;efficiency (%)&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>)
+ax3<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>, colors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>)
+
+<span style="color:#75715e">#lns = [p1, p2, p3]</span>
+<span style="color:#75715e">#ax1.legend(handles=lns, loc=&#39;bevst&#39;)</span>
+
+<span style="color:#75715e"># right, left, top, bottom</span>
+ax3<span style="color:#f92672">.</span>spines[<span style="color:#e6db74">&#39;right&#39;</span>]<span style="color:#f92672">.</span>set_position((<span style="color:#e6db74">&#39;outward&#39;</span>, <span style="color:#ae81ff">60</span>))  
+
+ax1<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Motor Model&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><div class="text-center">
+  <a href="output_37_0.png" target="_blank"><img src="output_37_0.png" alt="png"  class="img-fluid"/></a>
+</div></p>
 <h2 id="part-iv-geartrain-selection">Part IV: Geartrain Selection</h2>
 <h3 id="overview">Overview</h3>
-<p>The goal of this part is to determine the relationship between torque and angular velocity within your transmission (belt-drive system). The key is to remember the power equation. Assuming that the power into an ideal transmission is equal to the power out, you can solve for the change in velocity and force (or angular velocity and torque) between the input and output.</p>
-<p>Power on both sides of the transmission is defined by the torque and angular velocity delivered through it. <span class="math display">\[P = t\omega\]</span> additionally, for the purposes of this exercise you can assume the transmission is ideal, or <span class="math display">\[P_{in} = P_{out}\]</span> Assume a motor is connected to the wheel via belt and a set of pulleys with radius <span class="math inline">\(r_{pm}\)</span> over the motor and <span class="math inline">\(r_{pw}\)</span> over the wheel.</p>
+<p>The goal of this part is to determine the relationship between torque and angular velocity within your transmission (belt-drive system).  The key is to remember the power equation.  Assuming that the power into an ideal transmission is equal to the power out, you can solve for the change in velocity and force (or angular velocity and torque) between the input and output.</p>
+<p>Power on both sides of the transmission is defined by the torque and angular velocity delivered through it.
+$$P = t\omega$$
+additionally, for the purposes of this exercise you can assume the transmission is ideal, or
+$$P_{in} = P_{out}$$
+Assume a motor is connected to the wheel via belt and a set of pulleys with radius $r_{pm}$ over the motor and $r_{pw}$ over the wheel.</p>
 <h3 id="updated-variables-1">Updated Variables</h3>
 <p>In addition to the variables supplied in the overview, there are some updates.</p>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">Variable</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Value</th>
-<th style="text-align: left;">Unit</th>
+<tr>
+<th style="text-align:center">Variable</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Unit</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\omega_{wheels}\)</span></td>
-<td style="text-align: left;">angular velocity of wheel</td>
-<td style="text-align: left;">75 (solved in Part I)</td>
-<td style="text-align: left;">rad/sec</td>
+<tr>
+<td style="text-align:center">$\omega_{wheels}$</td>
+<td style="text-align:left">angular velocity of wheel</td>
+<td style="text-align:left">75 (solved in Part I)</td>
+<td style="text-align:left">rad/sec</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\tau_{wheels}\)</span></td>
-<td style="text-align: left;">torque at wheels</td>
-<td style="text-align: left;">.2 (solved in Part I)</td>
-<td style="text-align: left;">N-m</td>
+<tr>
+<td style="text-align:center">$\tau_{wheels}$</td>
+<td style="text-align:left">torque at wheels</td>
+<td style="text-align:left">.2 (solved in Part I)</td>
+<td style="text-align:left">N-m</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\omega_{motor}\)</span></td>
-<td style="text-align: left;">angular velocity of motor</td>
-<td style="text-align: left;">710 (solved Part III)</td>
-<td style="text-align: left;">rad/sec</td>
+<tr>
+<td style="text-align:center">$\omega_{motor}$</td>
+<td style="text-align:left">angular velocity of motor</td>
+<td style="text-align:left">710 (solved Part III)</td>
+<td style="text-align:left">rad/sec</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\tau_{motor}\)</span></td>
-<td style="text-align: left;">motor torque</td>
-<td style="text-align: left;">.0114 (solved Part III)</td>
-<td style="text-align: left;">N-m</td>
+<tr>
+<td style="text-align:center">$\tau_{motor}$</td>
+<td style="text-align:left">motor torque</td>
+<td style="text-align:left">.0114 (solved Part III)</td>
+<td style="text-align:left">N-m</td>
 </tr>
 </tbody>
 </table>
 <h3 id="steps-3">Steps</h3>
-<ol type="1">
-<li>Before doing anything else, draw a labeled sketch of the system to get an idea of the layout and how the components are connected. Use a straightedge for straight lines. label dimensions of your components. Include wheel radius and pulley radii.</li>
-<li>Assume a motor is connected to the wheel via belt and pulleys with radius <span class="math inline">\(r_{pm}\)</span> and <span class="math inline">\(r_{pw}\)</span>. find an expression which relates the angular velocity of the wheel to the angular velocity of the motor using those two variables.</li>
-<li>Using the previous solution for <span class="math inline">\(\tau_{wheels}\)</span>, the wheel torque required to maintain static equilibrium, find an expression for the torque required at the motors to establish static equilibrium. Do not use numerical answers, use variables.</li>
-<li>Go online and find a set of toothed belt pulleys. Use a gear ratio which makes sense for your design, and find the best approximate pair for your project. Make sure they are a matching pair, for the same belt. Report the links and discuss whether this selection is appropriate.</li>
-<li>Go back to the pololu site and compare with existing gearheads for the motor (<a href="https://www.pololu.com/search/compare/183" class="uri">https://www.pololu.com/search/compare/183</a>). would any of those make more sense to use? Explain the benefits and tradeoffs. re-run your previous models if necessary.</li>
+<ol>
+<li>Before doing anything else, draw a labeled sketch of the system to get an idea of the layout and how the components are connected.  Use a straightedge for straight lines.  label dimensions of your components.  Include wheel radius and pulley radii.</li>
+<li>Assume a motor is connected to the wheel via belt and pulleys with radius $r_{pm}$ and $r_{pw}$. find an expression which relates the angular velocity of the wheel to the angular velocity of the motor using those two variables.</li>
+<li>Using the previous solution for $\tau_{wheels}$, the wheel torque required to maintain static equilibrium, find an expression for the torque required at the motors to establish static equilibrium.  Do not use numerical answers, use variables.</li>
+<li>Go online and find a set of toothed belt pulleys.  Use a gear ratio which makes sense for your design, and find the best approximate pair for your project.  Make sure they are a matching pair, for the same belt.  Report the links and discuss whether this selection is appropriate.</li>
+<li>Go back to the pololu site and compare with existing gearheads for the motor (<a href="https://www.pololu.com/search/compare/183">https://www.pololu.com/search/compare/183</a>).  would any of those make more sense to use?  Explain the benefits and tradeoffs.  re-run your previous models if necessary.</li>
 </ol>
 <h3 id="assumptions-and-notes-3">Assumptions and Notes</h3>
 <ul>
-<li>There is one motor connected to each wheel. This means your wheel torque(.2Nm) and power(16W) requirements for each motor will be half (.1Nm, 8W, respectively)</li>
+<li>There is one motor connected to each wheel.  This means your wheel torque(.2Nm) and power(16W) requirements for each motor will be half (.1Nm, 8W, respectively)</li>
 <li>To find the speed in / out relationship, use the assumption that the speed of the belt is the same at all points, along with the linear to angular velocity relationship discovered previously.</li>
-<li>you can assume a frictionless geartrain and use the fact that the power in is equivalent to the power out, or solve the torque balance.</li>
-<li>Try <a href="https://shop.sdp-si.com/" class="uri">https://shop.sdp-si.com/</a>.</li>
+<li>you can assume a frictionless geartrain and use the fact that the power in is equivalent to the power out, or solve  the torque balance.</li>
+<li>Try <a href="https://shop.sdp-si.com/">https://shop.sdp-si.com/</a>.</li>
 </ul>
 <h2 id="part-iv-walkthrough">Part IV Walkthrough</h2>
-<ol type="1">
-<li>should include motor, battery, pulleys, board, rider, wheel. each should be labeled.<br />
-should be labels for pulley radii, wheel radii</li>
-<li>If the input power is defined by the torque and angular velocity into the transmission <span class="math display">\[P = t\omega\]</span> <span class="math display">\[P_{motor} = t_{motor} \omega_{motor}\]</span> then the output power is defined by <span class="math display">\[P_{wheel} = t_{wheel} \omega_{wheel}\]</span> given the speed relationship that the belt is moving at the same speed everywhere, <span class="math display">\[v_{belt} = r_{pm} \omega_{motor} = r_{pw} \omega_{wheel}\]</span> you can solve for the motor speed <span class="math display">\[\omega_{motor} =\frac{ r_{pw}}{r_{pm}} \omega_{wheel}\]</span></li>
-<li>Assuming that power in is equal to power out, you can then solve for the motor torque <span class="math display">\[\begin{aligned}
-P_{motor} &amp;= P_{wheel}\\
-t_{motor} \omega_{motor}&amp;= t_{wheel} \omega_{wheel}\\
-t_{motor}&amp;= \frac{t_{wheel} \omega_{wheel}}{ \omega_{motor} }\\
-t_{motor}&amp;= \frac{t_{wheel} \omega_{wheel}}{ \frac{ r_{pw}}{r_{pm}} \omega_{wheel} }\\
-t_{motor}&amp;= \frac{r_{pm}}{ r_{pw}}t_{wheel}\\
-\end{aligned}\]</span></li>
-<li>There are several things to check. First, the wheel pulley should not be larger than the wheel, otherwise it will hit the ground. Second, the belts should</li>
+<ol>
+<li></li>
 </ol>
+<p>should include motor, battery, pulleys, board, rider, wheel.   each should be labeled.<br>
+should be labels for pulley radii, wheel radii
+2. 
+If the input power is defined by the torque and angular velocity into the transmission
+$$P = t\omega$$
+$$P_{motor} = t_{motor} \omega_{motor}$$
+then the output power is defined by
+$$P_{wheel} = t_{wheel} \omega_{wheel}$$
+given the speed relationship that the belt is moving at the same speed everywhere,
+$$v_{belt} = r_{pm} \omega_{motor} = r_{pw} \omega_{wheel}$$
+you can solve for the motor speed
+$$\omega_{motor} =\frac{ r_{pw}}{r_{pm}} \omega_{wheel}$$
+3. 
+Assuming that power in is equal to power out, you can then  solve for the motor torque
+$$\begin{aligned}
+P_{motor} &amp;= P_{wheel}\<br>
+t_{motor} \omega_{motor}&amp;= t_{wheel} \omega_{wheel}\<br>
+t_{motor}&amp;= \frac{t_{wheel} \omega_{wheel}}{ \omega_{motor} }\<br>
+t_{motor}&amp;= \frac{t_{wheel} \omega_{wheel}}{ \frac{ r_{pw}}{r_{pm}} \omega_{wheel} }\<br>
+t_{motor}&amp;= \frac{r_{pm}}{ r_{pw}}t_{wheel}\<br>
+\end{aligned}$$
+4. 
+There are several things to check.  First, the wheel pulley should not be larger than the wheel, otherwise it will hit the ground.  Second, the belts should</p>
 <p>Compute the gear ratio required between motor and wheel</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>G <span class="op">=</span> w_wheels<span class="op">/</span>w_motor</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>G</span></code></pre></div>
-<pre><code>0.1056338028169014</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">G <span style="color:#f92672">=</span> w_wheels<span style="color:#f92672">/</span>w_motor
+G
+</code></pre></div><pre><code>0.1056338028169014
+</code></pre>
 <p>Selecting a pulley radius of .01m allows me to calculate the wheel pulley radius</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>rpm <span class="op">=</span> <span class="fl">.01</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>rpw <span class="op">=</span> rpm<span class="op">/</span>G</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;radius motor pulley = </span><span class="sc">{:.4f}</span><span class="st">&#39;</span>.<span class="bu">format</span>(rpm))</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;radius wheel pulley = </span><span class="sc">{:.4f}</span><span class="st">&#39;</span>.<span class="bu">format</span>(rpw))</span></code></pre></div>
-<pre><code>radius motor pulley = 0.0100
-radius wheel pulley = 0.0947</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">rpm <span style="color:#f92672">=</span> <span style="color:#f92672">.</span><span style="color:#ae81ff">01</span>
+rpw <span style="color:#f92672">=</span> rpm<span style="color:#f92672">/</span>G
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;radius motor pulley = {:.4f}&#39;</span><span style="color:#f92672">.</span>format(rpm))
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;radius wheel pulley = {:.4f}&#39;</span><span style="color:#f92672">.</span>format(rpw))
+
+</code></pre></div><pre><code>radius motor pulley = 0.0100
+radius wheel pulley = 0.0947
+</code></pre>
 <p>using the supplied equations I can calulate the wheel torque</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#w_motor = rpw/rpm * w_wheels</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>t_wheel <span class="op">=</span> t_wheels<span class="op">/</span><span class="dv">2</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>t_motor <span class="op">=</span> rpm<span class="op">/</span>rpw <span class="op">*</span> t_wheel</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;t_motor= </span><span class="sc">{:.2f}</span><span class="st">&#39;</span>.<span class="bu">format</span>(t_motor))</span></code></pre></div>
-<pre><code>t_motor= 0.01</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#w_motor = rpw/rpm * w_wheels</span>
+t_wheel <span style="color:#f92672">=</span> t_wheels<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+t_motor <span style="color:#f92672">=</span> rpm<span style="color:#f92672">/</span>rpw <span style="color:#f92672">*</span> t_wheel
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;t_motor= {:.2f}&#39;</span><span style="color:#f92672">.</span>format(t_motor))
+</code></pre></div><pre><code>t_motor= 0.01
+</code></pre>
 <p>Using the power required vs the power supplied allows me to calculate the extra power available to overcome loss forces:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>friction_force <span class="op">=</span> (motor_power_mechanical1<span class="op">*</span><span class="dv">2</span> <span class="op">-</span> power_mechanical)<span class="op">/</span>velocity</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>friction_force</span></code></pre></div>
-<pre><code>0.2709064362304237</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">friction_force <span style="color:#f92672">=</span> (motor_power_mechanical1<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> power_mechanical)<span style="color:#f92672">/</span>velocity
+friction_force
+</code></pre></div><pre><code>0.2709064362304237
+</code></pre>
 <h2 id="part-v-battery-selection">Part V: Battery Selection</h2>
 <p>The goal of this part is to understand the interplay between key parameters involved in battery selection</p>
 <h2 id="procedure">Procedure</h2>
-<ol type="1">
-<li>Using the motor speed you selected in Part III and the resulting motor efficiency at that point, calculate the electrical power required to run your system.<br />
-</li>
+<ol>
+<li>Using the motor speed you selected in Part III and the resulting motor efficiency at that point, calculate the electrical power required to run your system.</li>
 <li>Using the distance and velocity specifications from Part I, calculate the amount of time your system must run</li>
 <li>Integrate your electrical power requirement to determine electrical energy required.</li>
-<li>Find a battery online with both the power delivery capability and energy capacity to achieve the answers to 1 and 3. Compute and/or report the maximum discharge rate for the selected battery, along with the maximum capacity.</li>
-<li>Find the mass of the battery. Recompute the mechanical power requirements from Part I.<br />
-</li>
-<li>Look at the motor curves from Part III. Will the battery’s mass added to the system force you to select a new motor or gear train? All of the above? Will you then need an even bigger battery? Discuss whether/where your design breaks down and how you need to fix it.</li>
+<li>Find a battery online with both the power delivery capability and energy capacity to achieve the answers to 1 and 3.  Compute and/or report the maximum discharge rate for the selected battery, along with the maximum capacity.</li>
+<li>Find the mass of the battery.  Recompute the mechanical power requirements from Part I.</li>
+<li>Look at the motor curves from Part III.  Will the battery&rsquo;s mass added to the system force you to select a new motor or gear train?  All of the above?  Will you then need an even bigger battery?  Discuss whether/where your design breaks down and how you need to fix it.</li>
 </ol>
 <h2 id="suggestions">Suggestions</h2>
 <ul>
-<li>Different battery chemistries vary widely in their specifications. Make sure you are aware of the differences. Lithium-Ion and Lithium-Polymer batteries are suggested, as their power/mass density is quite high.</li>
-<li>Look online to find out some of the characteristics of LiPo batteries; make sure you understand what the “C” rating means when computing discharge current. Try <a href="https://rogershobbycenter.com/lipoguide/" class="uri">https://rogershobbycenter.com/lipoguide/</a></li>
+<li>Different battery chemistries vary widely in their specifications.  Make sure you are aware of the differences.  Lithium-Ion and Lithium-Polymer batteries are suggested, as their power/mass density is quite high.</li>
+<li>Look online to find out some of the characteristics of LiPo batteries; make sure you understand what the &ldquo;C&rdquo; rating means when computing discharge current.  Try <a href="https://rogershobbycenter.com/lipoguide/">https://rogershobbycenter.com/lipoguide/</a></li>
 </ul>
 <h2 id="battery-selection">Battery Selection</h2>
 <p>Lithium Polymer cells are typically 3.7V</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>voltage_battery <span class="op">=</span> <span class="fl">3.7</span></span></code></pre></div>
-<p>The total electrical power from both motors is twice each one:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>total_electrical_power <span class="op">=</span> motor_power_electrical1<span class="op">*</span><span class="dv">2</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>total_electrical_power</span></code></pre></div>
-<pre><code>27.353395699410875</code></pre>
-<p>the total energy <span class="math inline">\(E\)</span> related to power<span class="math inline">\(P\)</span> and time <span class="math inline">\(t\)</span> is equal <span class="math inline">\(E=\int P\partial t\)</span>. When P is constant, this simplifies to <span class="math inline">\(E=Pt\)</span></p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>total_electrical_energy <span class="op">=</span> total_electrical_power<span class="op">*</span>time</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>total_electrical_energy</span></code></pre></div>
-<pre><code>9117.798566470292</code></pre>
-<p>The battery current required use the electrical power equation <span class="math inline">\(P=IV\)</span> where <span class="math inline">\(P\)</span> is power, <span class="math inline">\(I\)</span> is current, and <span class="math inline">\(V\)</span> is voltage. Using the battery voltage established earlier:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>battery_current <span class="op">=</span> total_electrical_power<span class="op">/</span>voltage_battery </span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>battery_current</span></code></pre></div>
-<pre><code>7.3928096484894255</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">voltage_battery <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.7</span>
+</code></pre></div><p>The total electrical power from both motors is twice each one:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">total_electrical_power <span style="color:#f92672">=</span> motor_power_electrical1<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>
+total_electrical_power
+</code></pre></div><pre><code>27.353395699410875
+</code></pre>
+<p>the total energy $E$ related to power$P$ and time $t$ is equal $E=\int P\partial t$.  When P is constant, this simplifies to $E=Pt$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">total_electrical_energy <span style="color:#f92672">=</span> total_electrical_power<span style="color:#f92672">*</span>time
+total_electrical_energy
+</code></pre></div><pre><code>9117.798566470292
+</code></pre>
+<p>The battery current required use the electrical power equation $P=IV$ where $P$ is power, $I$ is current, and $V$ is voltage.  Using the battery voltage established earlier:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">battery_current <span style="color:#f92672">=</span> total_electrical_power<span style="color:#f92672">/</span>voltage_battery 
+battery_current
+</code></pre></div><pre><code>7.3928096484894255
+</code></pre>
 <p>Batteries are often rated in mAh, or milli-Amp-hours, which is a measure of total charge. This can be obtained by dividing by battery voltage and changing the units from coulombs to A-h</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>battery_rating_mAh <span class="op">=</span> total_electrical_energy<span class="op">/</span>voltage_battery <span class="op">/</span><span class="dv">60</span><span class="op">/</span><span class="dv">60</span><span class="op">*</span><span class="dv">1000</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>battery_rating_mAh</span></code></pre></div>
-<pre><code>684.519411897169</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">battery_rating_mAh <span style="color:#f92672">=</span> total_electrical_energy<span style="color:#f92672">/</span>voltage_battery <span style="color:#f92672">/</span><span style="color:#ae81ff">60</span><span style="color:#f92672">/</span><span style="color:#ae81ff">60</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1000</span>
+battery_rating_mAh
+</code></pre></div><pre><code>684.519411897169
+</code></pre>
 <h2 id="part-vi-testing">Part VI: Testing</h2>
 <h3 id="overview-1">Overview</h3>
-<p>This part is meant to confirm some of the values you retrieved from the pololu site. You will be testing a Pololu motor</p>
+<p>This part is meant to confirm some of the values you retrieved from the pololu site.  You will be testing a Pololu motor</p>
 <h3 id="steps-4">Steps</h3>
-<ol type="1">
+<ol>
 <li>Convert your previous system diagram from motor modeling assignment 4 to a vector drawing in illustrator, powerpoint, inkscape, etc.</li>
-<li>Go to the lab and extract the motor parameters for a selected motor. get <span class="math inline">\(k_v\)</span>, <span class="math inline">\(k_t\)</span> and the torque-speed curve for a given voltage (6V max).</li>
+<li>Go to the lab and extract the motor parameters for a selected motor.  get $k_v$, $k_t$ and the torque-speed curve for a given voltage (6V max).</li>
 <li>plot the speed torque curve given your motor parameters</li>
-<li>Using <span class="math display">\[\tau = k_i i\]</span> <span class="math display">\[V = iR + \omega/k_v\]</span> Find an expression for torque(<span class="math inline">\(\tau\)</span>) as a function of speed (<span class="math inline">\(\omega\)</span>)</li>
-<li>Using <span class="math inline">\(P=\tau*\omega\)</span>, find an expression for the Power as a function of speed</li>
+<li>Using
+$$\tau = k_i i$$
+$$V = iR + \omega/k_v$$
+Find an expression for torque($\tau$) as a function of speed ($\omega$)</li>
+<li>Using $P=\tau*\omega$, find an expression for the Power as a function of speed</li>
 <li>overplot this on your speed torque curve.</li>
-<li>Take the derivative of this expression as a function of speed, and find the speed which achieves maximum power. (Evaluate to ensure it’s a maximum not a minimum) Solve for <span class="math inline">\(P\)</span> at that point.</li>
+<li>Take the derivative of this expression as a function of speed, and find the speed which achieves  maximum power.  (Evaluate to ensure it&rsquo;s a maximum not a minimum)  Solve for $P$ at that point.</li>
 <li>Using the results from this expression and the angular velocity of the wheel, determine the optimal gear ratio.</li>
-<li>Using obtained motor parameters and the expression for electrical power(<span class="math inline">\(P=iV\)</span>) and mechanical power(<span class="math inline">\(P=\tau \omega\)</span>), calculate motor efficiency at this operating point.</li>
-<li><strong>Optional:</strong> Change your expression to maximize motor efficiency. Update the answer for optimal gear ratio.</li>
+<li>Using obtained motor parameters and the expression for electrical power($P=iV$) and mechanical power($P=\tau \omega$), calculate motor efficiency at this operating point.</li>
+<li><strong>Optional:</strong> Change your expression to maximize motor efficiency.  Update the answer for optimal gear ratio.</li>
 <li>Identify the total electrical energy required to meet product specifications, factoring in motor efficiency.</li>
 <li>Select a battery which meets both power and energy requirements.</li>
 </ol>
-<h3 id="numerical-solution-1">Numerical Solution</h3>
-<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy </span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
-<p>From the data, we can correlate the max speed and voltage together. From steady state at max speed,</p>
-<h4 id="section-9">(1)</h4>
-<figure>
-<img src="../../../../figures/motor_modeling/system.png" alt="System Overview" /><figcaption aria-hidden="true">System Overview</figcaption>
-</figure>
-<h4 id="section-10">(2-3)</h4>
+<h3 id="numerical-solution-2">Numerical Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">%</span>matplotlib inline
+<span style="color:#f92672">import</span> numpy 
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+</code></pre></div><p>From the data, we can correlate the max speed and voltage together.  From steady state at max speed,</p>
+<h4 id="1-1">(1)</h4>
+<p><div class="text-center">
+  <a href="/figures/motor_modeling/system.png" target="_blank"><img src="/figures/motor_modeling/system.png" alt="System Overview"  class="img-fluid"/></a>
+</div></p>
+<h4 id="2-3">(2-3)</h4>
 <p>Data plotted in excel to obtain linear fitted models during acceleration</p>
-<figure>
-<img src="../../../../figures/motor_modeling/torque-vs-current.png" alt="Torque vs Current" /><figcaption aria-hidden="true">Torque vs Current</figcaption>
-</figure>
-<figure>
-<img src="../../../../figures/motor_modeling/speed-vs-voltage.png" alt="Speed vs Voltage" /><figcaption aria-hidden="true">Speed vs Voltage</figcaption>
-</figure>
-<figure>
-<img src="../../../../figures/motor_modeling/torque_efficiency_speed.png" alt="Torque &amp; Efficiency vs Speed" /><figcaption aria-hidden="true">Torque &amp; Efficiency vs Speed</figcaption>
-</figure>
-<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">#w_max_rpm = 10000</span></span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="co">#w_max = w_max_rpm*2*pi/60</span></span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>w_max <span class="op">=</span> <span class="fl">212.6146</span></span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
-<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy </span>
-<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
-<p>From the data, we can correlate the max speed and voltage together. From steady state at max speed,</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>V_nominal <span class="op">=</span> <span class="fl">6.15</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>w_max <span class="op">=</span> <span class="dv">211</span></span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>k_v <span class="op">=</span> w_max<span class="op">/</span>V_nominal</span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>k_v</span></code></pre></div>
-<pre><code>34.30894308943089</code></pre>
+<p><div class="text-center">
+  <a href="/figures/motor_modeling/torque-vs-current.png" target="_blank"><img src="/figures/motor_modeling/torque-vs-current.png" alt="Torque vs Current"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/motor_modeling/speed-vs-voltage.png" target="_blank"><img src="/figures/motor_modeling/speed-vs-voltage.png" alt="Speed vs Voltage"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/motor_modeling/torque_efficiency_speed.png" target="_blank"><img src="/figures/motor_modeling/torque_efficiency_speed.png" alt="Torque &amp;amp; Efficiency vs Speed"  class="img-fluid"/></a>
+</div></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#w_max_rpm = 10000</span>
+<span style="color:#75715e">#w_max = w_max_rpm*2*pi/60</span>
+w_max <span style="color:#f92672">=</span> <span style="color:#ae81ff">212.6146</span>
+
+<span style="color:#f92672">%</span>matplotlib inline
+<span style="color:#f92672">import</span> numpy 
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+</code></pre></div><p>From the data, we can correlate the max speed and voltage together.  From steady state at max speed,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">V_nominal <span style="color:#f92672">=</span> <span style="color:#ae81ff">6.15</span>
+w_max <span style="color:#f92672">=</span> <span style="color:#ae81ff">211</span>
+k_v <span style="color:#f92672">=</span> w_max<span style="color:#f92672">/</span>V_nominal
+k_v
+</code></pre></div><pre><code>34.30894308943089
+</code></pre>
 <p>Or you can use the fitted model above</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>k_v <span class="op">=</span> <span class="fl">34.658</span></span></code></pre></div>
-<p>The Resistance was obtained by holding the motor fixed at a nonzero voltage and recording the current.</p>
-<p>Ohm’s Law: <span class="math display">\[V=IR\]</span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">k_v <span style="color:#f92672">=</span> <span style="color:#ae81ff">34.658</span>
+</code></pre></div><p>The Resistance was obtained by holding the motor fixed at a nonzero voltage and recording the current.</p>
+<p>Ohm&rsquo;s Law: 
+$$V=IR$$</p>
 <p>From measurements:</p>
-<p><span class="math display">\[V = 2.62\]</span> <span class="math display">\[I = 2.48\]</span> <span class="math display">\[R=V/I\]</span></p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">2.62</span><span class="op">/</span><span class="fl">2.48</span></span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>R</span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>i_stall <span class="op">=</span> V_nominal <span class="op">/</span> R</span>
-<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>i_stall</span></code></pre></div>
-<pre><code>5.8213740458015275</code></pre>
+<p>$$V = 2.62$$
+$$I = 2.48$$
+$$R=V/I$$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">R <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.62</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2.48</span>
+R
+
+i_stall <span style="color:#f92672">=</span> V_nominal <span style="color:#f92672">/</span> R
+i_stall
+</code></pre></div><pre><code>5.8213740458015275
+</code></pre>
 <p>Free running current was obtained from the data</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>i_free_running <span class="op">=</span> <span class="fl">.07</span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>kt <span class="op">=</span> <span class="fl">.021</span></span>
-<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>t_stall <span class="op">=</span> kt<span class="op">*</span>i_stall</span></code></pre></div>
-<h4 id="section-11">(4)</h4>
-<p>Given <span class="math inline">\(V = iR+\frac{\omega}{k_v}\)</span>, we can solve for <span class="math inline">\(i\)</span> <span class="math display">\[i = \frac{V-\frac{\omega}{k_v} }{R}\]</span> Then, given <span class="math inline">\(\tau = k_i i\)</span>, we can insert that previous answer to find <span class="math inline">\(\tau\)</span> <span class="math display">\[\tau =\frac{ k_i}{R}\left(V- \frac{\omega}{k_v}\right)\]</span></p>
-<h4 id="section-12">(5)</h4>
-<p>Given the previous answer and <span class="math inline">\(P=\tau\omega\)</span>,</p>
-<p><span class="math display">\[P=\frac{ k_i}{R}\left( V\omega - \frac{\omega^2}{k_v} \right)\]</span></p>
-<h4 id="section-13">(6)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">i_free_running <span style="color:#f92672">=</span> <span style="color:#f92672">.</span><span style="color:#ae81ff">07</span>
+
+kt <span style="color:#f92672">=</span> <span style="color:#f92672">.</span><span style="color:#ae81ff">021</span>
+t_stall <span style="color:#f92672">=</span> kt<span style="color:#f92672">*</span>i_stall
+</code></pre></div><h4 id="4">(4)</h4>
+<p>Given $V = iR+\frac{\omega}{k_v}$, we can solve for $i$
+$$i = \frac{V-\frac{\omega}{k_v} }{R}$$
+Then, given $\tau = k_i i$, we can insert that previous answer to find $\tau$ 
+$$\tau =\frac{ k_i}{R}\left(V- \frac{\omega}{k_v}\right)$$</p>
+<h4 id="5-2">(5)</h4>
+<p>Given the previous answer and $P=\tau\omega$,</p>
+<p>$$P=\frac{ k_i}{R}\left( V\omega - \frac{\omega^2}{k_v} \right)$$</p>
+<h4 id="6-2">(6)</h4>
 <p>See data collected from above with efficiency plotted over speed/torque, and the resulting model-based plots, with efficiency plotted over modeled speed/torque.</p>
-<h4 id="section-14">(7)</h4>
-<p><span class="math display">\[\frac{dP}{d\omega} = \frac{k_i}{R}\left(V-\frac{2\omega}{k_v}\right)\]</span></p>
-<p>Solving for <span class="math inline">\(\omega_{Pmax}\)</span> when <span class="math inline">\(\frac{dP}{d\omega} =0\)</span>, <span class="math display">\[0=\left(V-\frac{2\omega_{Pmax}}{k_v}\right)\]</span> <span class="math display">\[\frac{2\omega_{Pmax}}{k_v}=V\]</span> <span class="math display">\[\omega_{Pmax} = \frac{k_v V}{2}\]</span></p>
-<p>using the relation that <span class="math inline">\(k_v V = \omega_{unloaded}\)</span>, the unloaded motor speed, <span class="math display">\[\omega_{Pmax} = \frac{\omega_{unloaded}}{2}\]</span></p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>ii <span class="op">=</span> numpy.r_[<span class="dv">0</span>:<span class="dv">1</span>:<span class="ot">21j</span>]</span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>w<span class="op">=</span>ii<span class="op">*</span>w_max</span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>w</span>
-<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> (<span class="dv">1</span><span class="op">-</span>ii)<span class="op">*</span>t_stall</span>
-<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>t</span>
-<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>t2 <span class="op">=</span> (w_max<span class="op">-</span>w)<span class="op">/</span>w_max <span class="op">*</span> t_stall</span>
-<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>t2</span>
-<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>kt<span class="op">*</span>t<span class="op">+</span>i_free_running</span>
-<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a>p_mech <span class="op">=</span> t<span class="op">*</span> w</span>
-<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a>p_mech</span>
-<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a>p_elec <span class="op">=</span> i<span class="op">*</span> V_nominal</span>
-<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a>p_elec</span>
-<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a>eff <span class="op">=</span> p_mech<span class="op">/</span>p_elec <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb55-20"><a href="#cb55-20" aria-hidden="true" tabindex="-1"></a>eff</span>
-<span id="cb55-21"><a href="#cb55-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-22"><a href="#cb55-22" aria-hidden="true" tabindex="-1"></a>G<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb55-23"><a href="#cb55-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-24"><a href="#cb55-24" aria-hidden="true" tabindex="-1"></a>t_output <span class="op">=</span> G<span class="op">*</span>t</span>
-<span id="cb55-25"><a href="#cb55-25" aria-hidden="true" tabindex="-1"></a>w_output <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>G<span class="op">*</span>w</span>
-<span id="cb55-26"><a href="#cb55-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-27"><a href="#cb55-27" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb55-28"><a href="#cb55-28" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>)</span>
-<span id="cb55-29"><a href="#cb55-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-30"><a href="#cb55-30" aria-hidden="true" tabindex="-1"></a>p1 <span class="op">=</span> ax1.plot(w_output,t_output, <span class="st">&#39;b-&#39;</span>)</span>
-<span id="cb55-31"><a href="#cb55-31" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">&#39;speed (rad/sec)&#39;</span>)</span>
-<span id="cb55-32"><a href="#cb55-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the y-axis label, ticks and tick labels match the line color.</span></span>
-<span id="cb55-33"><a href="#cb55-33" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">&#39;torque (N-m)&#39;</span>, color<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
-<span id="cb55-34"><a href="#cb55-34" aria-hidden="true" tabindex="-1"></a>ax1.tick_params(<span class="st">&#39;y&#39;</span>, colors<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
-<span id="cb55-35"><a href="#cb55-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-36"><a href="#cb55-36" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> ax1.twinx()</span>
-<span id="cb55-37"><a href="#cb55-37" aria-hidden="true" tabindex="-1"></a>p2 <span class="op">=</span> ax2.plot(w_output, p_mech, <span class="st">&#39;ro-.&#39;</span>)</span>
-<span id="cb55-38"><a href="#cb55-38" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">&#39;power (W)&#39;</span>, color<span class="op">=</span><span class="st">&#39;r&#39;</span>)</span>
-<span id="cb55-39"><a href="#cb55-39" aria-hidden="true" tabindex="-1"></a>ax2.tick_params(<span class="st">&#39;y&#39;</span>, colors<span class="op">=</span><span class="st">&#39;r&#39;</span>)</span>
-<span id="cb55-40"><a href="#cb55-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-41"><a href="#cb55-41" aria-hidden="true" tabindex="-1"></a>ax3 <span class="op">=</span> ax1.twinx()</span>
-<span id="cb55-42"><a href="#cb55-42" aria-hidden="true" tabindex="-1"></a>p3 <span class="op">=</span> ax3.plot(w_output, eff, <span class="st">&#39;gx-.&#39;</span>)</span>
-<span id="cb55-43"><a href="#cb55-43" aria-hidden="true" tabindex="-1"></a>ax3.set_ylabel(<span class="st">&#39;efficiency (%)&#39;</span>, color<span class="op">=</span><span class="st">&#39;g&#39;</span>)</span>
-<span id="cb55-44"><a href="#cb55-44" aria-hidden="true" tabindex="-1"></a>ax3.tick_params(<span class="st">&#39;y&#39;</span>, colors<span class="op">=</span><span class="st">&#39;g&#39;</span>)</span>
-<span id="cb55-45"><a href="#cb55-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-46"><a href="#cb55-46" aria-hidden="true" tabindex="-1"></a><span class="co">#lns = [p1, p2, p3]</span></span>
-<span id="cb55-47"><a href="#cb55-47" aria-hidden="true" tabindex="-1"></a><span class="co">#ax1.legend(handles=lns, loc=&#39;bevst&#39;)</span></span>
-<span id="cb55-48"><a href="#cb55-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-49"><a href="#cb55-49" aria-hidden="true" tabindex="-1"></a><span class="co"># right, left, top, bottom</span></span>
-<span id="cb55-50"><a href="#cb55-50" aria-hidden="true" tabindex="-1"></a>ax3.spines[<span class="st">&#39;right&#39;</span>].set_position((<span class="st">&#39;outward&#39;</span>, <span class="dv">60</span>))  </span>
-<span id="cb55-51"><a href="#cb55-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-52"><a href="#cb55-52" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">&#39;Motor Model&#39;</span>)</span>
-<span id="cb55-53"><a href="#cb55-53" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<figure>
-<img src="output_73_0.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
-</figure>
-<h4 id="section-15">(8)</h4>
-<p>From the model above, the maximum power can be achieved at 105 rad/sec. The angular velocity of the wheel, previously calculated, was 75 rad/sec. Therefore:</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>G<span class="op">=</span><span class="dv">105</span><span class="op">/</span><span class="dv">75</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>t_output <span class="op">=</span> G<span class="op">*</span>t</span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>w_output <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>G<span class="op">*</span>w</span>
-<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>)</span>
-<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>p1 <span class="op">=</span> ax1.plot(w_output,t_output, <span class="st">&#39;b-&#39;</span>)</span>
-<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">&#39;speed (rad/sec)&#39;</span>)</span>
-<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the y-axis label, ticks and tick labels match the line color.</span></span>
-<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">&#39;torque (N-m)&#39;</span>, color<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
-<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a>ax1.tick_params(<span class="st">&#39;y&#39;</span>, colors<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
-<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> ax1.twinx()</span>
-<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a>p2 <span class="op">=</span> ax2.plot(w_output, p_mech, <span class="st">&#39;ro-.&#39;</span>)</span>
-<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">&#39;power (W)&#39;</span>, color<span class="op">=</span><span class="st">&#39;r&#39;</span>)</span>
-<span id="cb56-18"><a href="#cb56-18" aria-hidden="true" tabindex="-1"></a>ax2.tick_params(<span class="st">&#39;y&#39;</span>, colors<span class="op">=</span><span class="st">&#39;r&#39;</span>)</span>
-<span id="cb56-19"><a href="#cb56-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-20"><a href="#cb56-20" aria-hidden="true" tabindex="-1"></a>ax3 <span class="op">=</span> ax1.twinx()</span>
-<span id="cb56-21"><a href="#cb56-21" aria-hidden="true" tabindex="-1"></a>p3 <span class="op">=</span> ax3.plot(w_output, eff, <span class="st">&#39;gx-.&#39;</span>)</span>
-<span id="cb56-22"><a href="#cb56-22" aria-hidden="true" tabindex="-1"></a>ax3.set_ylabel(<span class="st">&#39;efficiency (%)&#39;</span>, color<span class="op">=</span><span class="st">&#39;g&#39;</span>)</span>
-<span id="cb56-23"><a href="#cb56-23" aria-hidden="true" tabindex="-1"></a>ax3.tick_params(<span class="st">&#39;y&#39;</span>, colors<span class="op">=</span><span class="st">&#39;g&#39;</span>)</span>
-<span id="cb56-24"><a href="#cb56-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-25"><a href="#cb56-25" aria-hidden="true" tabindex="-1"></a><span class="co">#lns = [p1, p2, p3]</span></span>
-<span id="cb56-26"><a href="#cb56-26" aria-hidden="true" tabindex="-1"></a><span class="co">#ax1.legend(handles=lns, loc=&#39;bevst&#39;)</span></span>
-<span id="cb56-27"><a href="#cb56-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-28"><a href="#cb56-28" aria-hidden="true" tabindex="-1"></a><span class="co"># right, left, top, bottom</span></span>
-<span id="cb56-29"><a href="#cb56-29" aria-hidden="true" tabindex="-1"></a>ax3.spines[<span class="st">&#39;right&#39;</span>].set_position((<span class="st">&#39;outward&#39;</span>, <span class="dv">60</span>))  </span>
-<span id="cb56-30"><a href="#cb56-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-31"><a href="#cb56-31" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">&#39;Motor Model&#39;</span>)</span>
-<span id="cb56-32"><a href="#cb56-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<figure>
-<img src="output_75_0.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
-</figure>
-<h4 id="section-16">(9)</h4>
+<h4 id="7-1">(7)</h4>
+<p>$$\frac{dP}{d\omega} = \frac{k_i}{R}\left(V-\frac{2\omega}{k_v}\right)$$</p>
+<p>Solving for $\omega_{Pmax}$ when $\frac{dP}{d\omega} =0$, 
+$$0=\left(V-\frac{2\omega_{Pmax}}{k_v}\right)$$
+$$\frac{2\omega_{Pmax}}{k_v}=V$$
+$$\omega_{Pmax} = \frac{k_v V}{2}$$</p>
+<p>using the relation that $k_v V = \omega_{unloaded}$, the unloaded motor speed, 
+$$\omega_{Pmax} = \frac{\omega_{unloaded}}{2}$$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ii <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>r_[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">21j</span>]
+w<span style="color:#f92672">=</span>ii<span style="color:#f92672">*</span>w_max
+w
+
+t <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>ii)<span style="color:#f92672">*</span>t_stall
+t
+
+t2 <span style="color:#f92672">=</span> (w_max<span style="color:#f92672">-</span>w)<span style="color:#f92672">/</span>w_max <span style="color:#f92672">*</span> t_stall
+t2
+
+i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>kt<span style="color:#f92672">*</span>t<span style="color:#f92672">+</span>i_free_running
+
+p_mech <span style="color:#f92672">=</span> t<span style="color:#f92672">*</span> w
+p_mech
+
+p_elec <span style="color:#f92672">=</span> i<span style="color:#f92672">*</span> V_nominal
+p_elec
+
+eff <span style="color:#f92672">=</span> p_mech<span style="color:#f92672">/</span>p_elec <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+eff
+
+G<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+
+t_output <span style="color:#f92672">=</span> G<span style="color:#f92672">*</span>t
+w_output <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>G<span style="color:#f92672">*</span>w
+
+fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure()
+ax1 <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">111</span>)
+
+p1 <span style="color:#f92672">=</span> ax1<span style="color:#f92672">.</span>plot(w_output,t_output, <span style="color:#e6db74">&#39;b-&#39;</span>)
+ax1<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;speed (rad/sec)&#39;</span>)
+<span style="color:#75715e"># Make the y-axis label, ticks and tick labels match the line color.</span>
+ax1<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;torque (N-m)&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>)
+ax1<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>, colors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>)
+
+ax2 <span style="color:#f92672">=</span> ax1<span style="color:#f92672">.</span>twinx()
+p2 <span style="color:#f92672">=</span> ax2<span style="color:#f92672">.</span>plot(w_output, p_mech, <span style="color:#e6db74">&#39;ro-.&#39;</span>)
+ax2<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;power (W)&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>)
+ax2<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>, colors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>)
+
+ax3 <span style="color:#f92672">=</span> ax1<span style="color:#f92672">.</span>twinx()
+p3 <span style="color:#f92672">=</span> ax3<span style="color:#f92672">.</span>plot(w_output, eff, <span style="color:#e6db74">&#39;gx-.&#39;</span>)
+ax3<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;efficiency (%)&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>)
+ax3<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>, colors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>)
+
+<span style="color:#75715e">#lns = [p1, p2, p3]</span>
+<span style="color:#75715e">#ax1.legend(handles=lns, loc=&#39;bevst&#39;)</span>
+
+<span style="color:#75715e"># right, left, top, bottom</span>
+ax3<span style="color:#f92672">.</span>spines[<span style="color:#e6db74">&#39;right&#39;</span>]<span style="color:#f92672">.</span>set_position((<span style="color:#e6db74">&#39;outward&#39;</span>, <span style="color:#ae81ff">60</span>))  
+
+ax1<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Motor Model&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><div class="text-center">
+  <a href="output_73_0.png" target="_blank"><img src="output_73_0.png" alt="png"  class="img-fluid"/></a>
+</div></p>
+<h4 id="8">(8)</h4>
+<p>From the model above, the maximum power can be achieved at 105 rad/sec.  The angular velocity of the wheel, previously calculated, was 75 rad/sec.  Therefore:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">G<span style="color:#f92672">=</span><span style="color:#ae81ff">105</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span>
+
+t_output <span style="color:#f92672">=</span> G<span style="color:#f92672">*</span>t
+w_output <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>G<span style="color:#f92672">*</span>w
+
+fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure()
+ax1 <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">111</span>)
+
+p1 <span style="color:#f92672">=</span> ax1<span style="color:#f92672">.</span>plot(w_output,t_output, <span style="color:#e6db74">&#39;b-&#39;</span>)
+ax1<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;speed (rad/sec)&#39;</span>)
+<span style="color:#75715e"># Make the y-axis label, ticks and tick labels match the line color.</span>
+ax1<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;torque (N-m)&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>)
+ax1<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>, colors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>)
+
+ax2 <span style="color:#f92672">=</span> ax1<span style="color:#f92672">.</span>twinx()
+p2 <span style="color:#f92672">=</span> ax2<span style="color:#f92672">.</span>plot(w_output, p_mech, <span style="color:#e6db74">&#39;ro-.&#39;</span>)
+ax2<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;power (W)&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>)
+ax2<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>, colors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>)
+
+ax3 <span style="color:#f92672">=</span> ax1<span style="color:#f92672">.</span>twinx()
+p3 <span style="color:#f92672">=</span> ax3<span style="color:#f92672">.</span>plot(w_output, eff, <span style="color:#e6db74">&#39;gx-.&#39;</span>)
+ax3<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;efficiency (%)&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>)
+ax3<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>, colors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>)
+
+<span style="color:#75715e">#lns = [p1, p2, p3]</span>
+<span style="color:#75715e">#ax1.legend(handles=lns, loc=&#39;bevst&#39;)</span>
+
+<span style="color:#75715e"># right, left, top, bottom</span>
+ax3<span style="color:#f92672">.</span>spines[<span style="color:#e6db74">&#39;right&#39;</span>]<span style="color:#f92672">.</span>set_position((<span style="color:#e6db74">&#39;outward&#39;</span>, <span style="color:#ae81ff">60</span>))  
+
+ax1<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Motor Model&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><div class="text-center">
+  <a href="output_75_0.png" target="_blank"><img src="output_75_0.png" alt="png"  class="img-fluid"/></a>
+</div></p>
+<h4 id="9">(9)</h4>
 <p>As you can see from the adjusted plot, the efficiency at the optimal speed is 35%</p>
-<h4 id="section-17">(11-12)</h4>
+<h4 id="11-12">(11-12)</h4>
 <p>covered in previous assignments.</p>
 
-</main><!-- /.container -->
-<footer class="blog-footer">
-  
+  </article>
+</main>
 
-  <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
-  <p><a href="#">Back to top</a></p>
-</footer>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
 </html>

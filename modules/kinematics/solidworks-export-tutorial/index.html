@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Solidworks Export Tutorial | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Solidworks Export Tutorial</h1>
+  <p>Solidworks is an attractive way to model popup devices because you can interact with the three-dimensional kinematics of your popup device.  However, Solidworks is not good at everything.  First, it cannot create your cut-files for you automatically.  Solidworks knows nothing about <em>how</em> you&rsquo;re going to make your device, out of how many layers, and with what manufacturing processes. Second, Solidworks is such an expansive tool, and can be used in so many different ways that the most straightforward way to design a popup device is not very obvious.</p>
+<p>So, to help users with these issues, we have outlined a workflow which can be used to rapidly create a popup device whose kinematics you can visualise and interact with quickly.  Second, we also outline the steps to export those basic multilayer kinematics to a popupCAD file so that the manufacturing specifics can be done in an environment with built-in manufacturing knowledge.</p>
+<p>Download <a href="/figures/solidworks-export-tutorial/example.zip">example.zip</a> to see this example project.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="step-by-step-instructions">Step-by-step Instructions</h2>
+<ol>
+<li>
+<p>Create a new part file</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/01.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/01.png" alt="01"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/02.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/02.png" alt="02"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Select a reference plane(top, for example) and then create a new sketch (or create a new sketch and select any reference plane)</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/03.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/03.png" alt="03"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Sketch the lines which define your robot.  The outline of your robot should be a drawn out of solid lines.  Any internal hinges should be drawn as construction lines, or made into construction lines once drawn.  If you are making a robot which consists of multiple sub-laminates, you should create one of these sketches per sublaminate.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/04.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/04.png" alt="04"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Next, for each sub-laminate sketch that you have created, you can should create a planar surface.  Go to  insert-&gt;surfaces-&gt;planar surface.  Select each sketch.  This should create a surface whose outline matches the closed shape of solid lines you drew in your sketch.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/05.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/05.png" alt="05"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/06.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/06.png" alt="06"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/07.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/07.png" alt="07"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>For each surface you just created, you want to split that surface along all the lines representing joints from your original sketch.  First, unhide the original sketch by clicking on the eyglasses icon under the surface-&gt;sketch in the left project pane.  This will allow you to view, select, and reference lines drawn in that sketch.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/09.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/09.png" alt="09"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/10.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/10.png" alt="10"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Next, create a new sketch on the same reference plane(such as the top plane), select one or more joint lines, and in the sketch tools, select &ldquo;convert entities&rdquo;.  Only select sets of lines which do not cross each other, as the next step will fail.  Make sure that the lines you do select completely cross the surface, or create a loop.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/11.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/11.png" alt="11"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/12.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/12.png" alt="12"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/13.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/13.png" alt="13"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Repeat the last two steps for the remaining joint lines, making sure not to select sets of lines which cross each other or more than two lines at any point.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/14.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/14.png" alt="14"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/15.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/15.png" alt="15"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/16.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/16.png" alt="16"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/17.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/17.png" alt="17"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/18.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/18.png" alt="18"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/19.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/19.png" alt="19"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Use insert-&gt;curve-&gt;split line to separate faces.  You will need to do this for each sketch you just created. When you do this, remember to select all the surface faces to ensure they get split by the sketch.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/20.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/20.png" alt="20"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/21.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/21.png" alt="21"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/22.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/22.png" alt="22"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/23.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/23.png" alt="23"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/24.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/24.png" alt="24"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/25.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/25.png" alt="25"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/26.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/26.png" alt="26"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/27.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/27.png" alt="27"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/28.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/28.png" alt="28"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/29.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/29.png" alt="29"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Use the insert-&gt;surface-&gt;offset function to create independent surfaces from faces of original body.  Hint: to repeat creating the same feature over and over, hit enter after creating one offset surface feature and solidworks will begin a new one.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/30.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/30.png" alt="30"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/31.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/31.png" alt="31"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/32.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/32.png" alt="32"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/33.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/33.png" alt="33"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/34.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/34.png" alt="34"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Use insert-&gt;boss/base-&gt;thicken feature to thicken each feature.  Hint: deselect the merge body option after creating the first thickened part, otherwise the bodies will merge back together.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/35.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/35.png" alt="35"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/36.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/36.png" alt="36"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/37.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/37.png" alt="37"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/38.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/38.png" alt="38"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/39.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/39.png" alt="39"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/40.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/40.png" alt="40"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/41.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/41.png" alt="41"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Save your file!!</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/42.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/42.png" alt="42"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Look at the project menu on the left.  You should have a number of solid bodies in your part file.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/43.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/43.png" alt="43"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Right click on the solid bodies folder and select &ldquo;save bodies&rdquo;</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/44.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/44.png" alt="44"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>In the save bodies menu, auto-assign names and select an assembly name.  This will automatically put all the saved bodies into an assembly file.  Click the green check box.  Select &ldquo;rebuild&rdquo; if a notification box pops up.  This should begin the save process and open up your new assembly file in the background</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/45.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/45.png" alt="45"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/46.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/46.png" alt="46"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/47.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/47.png" alt="47"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/48.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/48.png" alt="48"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Save and close your part file.  Now the newly-created assembly file should be visible.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/49.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/49.png" alt="49"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/51.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/51.png" alt="51"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>All the parts in your assembly are fixed in space relative to each other.  To visualize how they will move, you must float all the parts except for one.  To do this, select all the parts  you wish to be able to move, right click on them in the project manager on the left, and select &ldquo;float&rdquo;.  These parts should now be able to be moved by dragging them.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/52.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/52.png" alt="52"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/53.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/53.png" alt="53"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/54.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/54.png" alt="54"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/55.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/55.png" alt="55"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Next, you must create mating conditions to define the joint kinematics of your devie.  Since these thickened flat sheets represent several layers laminated together, they will most likely rotate around their midplane.  However, to assemble the device faster, it is easier to select edges and points on the top or bottom surface, with the knowledge that it may not move exactly the same in real life. Select one mating line on two parts you would like to joint with a joint and then select the &ldquo;mate&rdquo; button in the assembly tab.  This will bring the two lines together.  Hit enter to accept</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/57.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/57.png" alt="57"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/58.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/58.png" alt="58"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Next select two points at the end of the mating edge you just joined, one for each part.  This should join those two points and constrain the parts as if they are joined by a hinge.  You can now move those two parts relative to each other.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/59.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/59.png" alt="59"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/60.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/60.png" alt="60"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/61.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/61.png" alt="61"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Repeat this process for each joint you wish to create.  This should fully define the motion of the device.  You can move the device around as it will work once created, as in this <a href="example.mp4">video</a></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/62.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/62.png" alt="62"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/63.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/63.png" alt="63"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/64.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/64.png" alt="64"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Once you have defined the kinematics of the device, you must now re-flatten the assembly so that you can export it to popupCAD.  Add additional mating constraints to neighboring faces of your device, making them &ldquo;coincident&rdquo; to each other.  This will flatten it.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/65.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/65.png" alt="65"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Save your Assembly</p>
+</li>
+<li>
+<p>Make a new drawing by selecting file-&gt;&ldquo;create drawing from assembly&rdquo;</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/66.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/66.png" alt="66"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Deselect the sheet format option</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/67.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/67.png" alt="67"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Drag in the top view of the assembly and hit enter. (I&rsquo;m assuming you used the top view to create your original sketches)</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/68.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/68.png" alt="68"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/69.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/69.png" alt="69"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>download the macro found at <a href="https://github.com/popupcad/popupcad_solidworks_exporter/raw/master/swp/ExportDrawingFaces.swp">https://github.com/popupcad/popupcad_solidworks_exporter/raw/master/swp/ExportDrawingFaces.swp</a>.</p>
+</li>
+<li>
+<p>Select the top view</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/71.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/71.png" alt="71"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Export the top view.  Go to tools-&gt;macro-&gt;edit, and select &ldquo;ExportDrawingFaces.swp&rdquo;, found in the /swp directory of the downloaded macro project.  Note: this will only work with Solidworks 2014, 64-bit.  Otherwise you will have to re-create the macro project from the included source files.  That will have to be the subject of a different tutorial</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/72.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/72.png" alt="72"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/73.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/73.png" alt="73"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>A code window should open.  Select the run icon, and select run on the dialog that opens.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/74.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/74.png" alt="74"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Select &ldquo;Export Generic&rdquo; and hit run to export the view to a .yaml file that your code can interpret.</p>
+<p><div class="text-center">
+  <a href="/figures/solidworks-export-tutorial/images/75.png" target="_blank"><img src="/figures/solidworks-export-tutorial/images/75.png" alt="75"  class="img-fluid"/></a>
+</div></p>
+</li>
+</ol>
+
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

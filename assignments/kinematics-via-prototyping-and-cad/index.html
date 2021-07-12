@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Kinematics Via Prototyping &amp; CAD | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Kinematics Via Prototyping &amp; CAD</h1>
+  <h1 id="kinematics-via-prototyping--cad">Kinematics Via Prototyping &amp; CAD</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The goal of this assignment is to 1) propose a mechanism that your team can study as part of a larger laminate system, and 2) to get you comfortable sketching the kinematics of foldable systems in CAD, establishing constraints, and counting degrees of freedom.</p>
+<!-- raw HTML omitted -->
+<h2 id="prerequisites">Prerequisites</h2>
+<ol>
+<li>Solidworks should be installed.  It may be downloaded from <a href="https://myapps.asu.edu">https://myapps.asu.edu</a>.</li>
+</ol>
+<h2 id="steps">Steps</h2>
+<p>Pick one of the three basic kinematic elements we will be working with this semester: a planar four (or five) bar mechanism, a spherical four(or five) bar mechanism, or a sarrus linkage.  If you are not familiar with the operation of this mechanism, look it up online.</p>
+<ol>
+<li>Distill the kinematics of this device into a paper-compatible mockup and take a picture of it in several positions.</li>
+<li>Studying your device, conclude whether your system can be represented as a planar system, or if it is composed of three-dimensional elements^[spherical mechanisms are considered 3D, for example.]</li>
+<li>Following the solidworks tutorial from class for creating 2D or 3D kinematic models, create a 2D or 3D representation of your system kinematics.
+<ol>
+<li>Make sure you fully &ldquo;ground&rdquo; one &ldquo;base&rdquo; link.</li>
+</ol>
+</li>
+</ol>
+<h3 id="dof">DOF</h3>
+<ol>
+<li>
+<p><strong>Determine the degrees of freedom</strong> of the system.  Further constrain your system by adding one dimension at a time (more than those that are needed to ground the base and connect the links together) to further fix/lock your system.  Count how many additional dimensions you needed for your system to become immobilized.  Record how many degrees of freedom you determined for your mechanism</p>
+<p><em>Hint:</em> Try to add dimensions that define a variable innate to the mechanism &ndash; like the angle between two links &ndash; rather than a world-based dimension, like a horizontal distance measurement to a point, to keep this process simple.</p>
+</li>
+</ol>
+<h3 id="input--output">Input &amp; Output</h3>
+<ol>
+<li><strong>Define the input(s).</strong>  You will need one input per the device&rsquo;s degrees of freedom to fully define the position of the output.  The simplest and most straightforward way to think of an input, from the perspective of an origami-inspired robot, is the joint angle between two neighboring links of your mechanism.</li>
+<li><strong>Define the output</strong> of the mechanism by selecting a point on a rigid link that moves with the device&rsquo;s maximum degrees of freedom.  Just like the number of inputs, the motion of the device is determined &ndash; and limited &ndash; by its internal degrees of freedom.</li>
+</ol>
+<h3 id="range-of-motion">Range of motion</h3>
+<p>Now move your device around to the minimum and maximum limits of motion.  If more than a one degree-of-freedom device, configure the system to move along the desired path.  It may make sense for you to create one iteration of your device at each of its limits.</p>
+<ol>
+<li>Measure and record the input(s)' and output&rsquo;s total range of motion.</li>
+</ol>
+<h2 id="discussion">Discussion</h2>
+<p>Please discuss each of the following points.</p>
+<!-- raw HTML omitted -->
+<ol>
+<li>Do any of your joints need to move more than +/- 180 degrees as it moves between its minimum and maximum limit or throughout its workspace?  Given the constraints of folded paper, will this be a problem?  How do you plan to address it?</li>
+<li>Can you identify any singularities your mechanism might move through?  Is this desirable? How would you avoid unwanted singularities?</li>
+<li>How do you interpret the relationship between the amount of input and output motion you calculated when studying your device&rsquo;s range of motion?  What implications will this have on actuator selection or external &ldquo;gearing&rdquo;?</li>
+<li>Based on the variables / locations you indicated as inputs, will these spots be good positions to locate actuators?  Do you plan to add springs to any joints or between any additional points?  Which joints do you plan to leave completely unactuated?</li>
+</ol>
+<!-- raw HTML omitted -->
+<h2 id="rubric">Rubric</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Description</th>
+<th style="text-align:right">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Picture of prototype</td>
+<td style="text-align:right">25</td>
+</tr>
+<tr>
+<td style="text-align:left">Evaluation of 2D/3D</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td style="text-align:left">Drawing of Kinematics</td>
+<td style="text-align:right">25</td>
+</tr>
+<tr>
+<td style="text-align:left">DOF</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td style="text-align:left">Input/Output</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td style="text-align:left">Range of Motion</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td style="text-align:left">discussion</td>
+<td style="text-align:right">20</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Total</strong></td>
+<td style="text-align:right">100</td>
+</tr>
+</tbody>
+</table>
+
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mechanics and Compliance on Foldable Robotics</title>
+    <link>https://danaukes.com/modules/compliance/</link>
+    <description>Recent content in Mechanics and Compliance on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/modules/compliance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Approximating compliant beams with the pseudo-rigid-body model</title>
+      <link>https://danaukes.com/modules/compliance/generated/prbm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/compliance/generated/prbm/</guid>
+      <description>Approximating compliant beams with the pseudo-rigid-body model import sympy q = sympy.Symbol(&amp;#39;q&amp;#39;) d = sympy.Symbol(&amp;#39;d&amp;#39;) L = sympy.Symbol(&amp;#39;L&amp;#39;) P = sympy.Symbol(&amp;#39;P&amp;#39;) h = sympy.Symbol(&amp;#39;h&amp;#39;) b = sympy.Symbol(&amp;#39;b&amp;#39;) E = sympy.Symbol(&amp;#39;E&amp;#39;) x = sympy.Symbol(&amp;#39;x&amp;#39;) subs = {} #subs[k]=1000 subs[P]=.1 subs[L]=.1 subs[b]=.01 subs[h]=.01 subs[E]=1e7 subs[x]=.5 
+Approximating a cantilever with a single revolute joint Arbitrarily placing a compliant joint halfway along its length can be used to approximate a cantilever beam.</description>
+    </item>
+    
+    <item>
+      <title>Cantilever Beams</title>
+      <link>https://danaukes.com/modules/compliance/cantilever-beams/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/compliance/cantilever-beams/</guid>
+      <description>Cantilever Beams Overview Compute the stiffness of a laminate beam
+Summary of Steps 
+  Prepare 4 rectangular samples of the rigid material your team is using (cardboard, posterboard,fiberglass) in the dimensions of 25mm x 125mm.
+  Measure the thickness of each of the samples in at least two places. You should have at least 8 measurements.
+  Clamp two beams flat on top of one another on a table with 100mm hanging off the side.</description>
+    </item>
+    
+    <item>
+      <title>Euler-Bernoulli Beams</title>
+      <link>https://danaukes.com/modules/compliance/generated/euler-bernoulli-beams/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/compliance/generated/euler-bernoulli-beams/</guid>
+      <description>Euler-Bernoulli Beams The relationship between the bending moment and the radius of curvature($\rho$) for a beam of Young&amp;rsquo;s modulus $E$ and cross-sectional moment of inertia(second moment of area) $I$ is given by
+$$ M=-\frac{EI}{\rho} $$
+Now let&amp;rsquo;s say $\omega(x)$ describes the deflection of a beam in the z direction as a function of its length, $x$. When deflections are small &amp;ndash; assumed in the Euler-Bernoulli model, then the second derivative can serve as an approximate the radius of curvature (using the small angle approximation $\sin{\theta}=\theta$), making</description>
+    </item>
+    
+    <item>
+      <title>FEA Modeling</title>
+      <link>https://danaukes.com/modules/compliance/laminate-fea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/compliance/laminate-fea/</guid>
+      <description>FEA Modeling Introduction The goal of this tutorial is to get you familiar computing the stiffness of a laminate using FEA. You may use any FEA tool you are comfortable with, or the code supplied in class as a starting point.
+Resources  Euler-Bernoulli Beams Solidworks FEA Tutorial  Procedure  Pick one or more geometries of your team&amp;rsquo;s robot design to focus on. Perhaps a &amp;ldquo;rigid&amp;rdquo; link which you would like to program to exhibit a certain springyness, a long skinny link which exhibits too much deflection, or, if your system is sufficiently rigid already, your flexible joint material, in order to &amp;ldquo;program&amp;rdquo; a desired springiness into your team&amp;rsquo;s joint dynamics.</description>
+    </item>
+    
+    <item>
+      <title>Solidworks FEA Tutorial</title>
+      <link>https://danaukes.com/modules/compliance/solidworks-fea-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/compliance/solidworks-fea-tutorial/</guid>
+      <description>Solidworks FEA Tutorial   Create a new part
+
+  Select the Top Plane
+
+  Create a new Sketch
+  Select the rectangle tool
+  Draw a rectangle (hint: click on the origin to constrain the rectangle to that point)
+
+  Select the dimensioning tool
+
+  Click on the top edge of the rectangle. A dimension will appear.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Approximating compliant beams with the pseudo-rigid-body model | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Approximating compliant beams with the pseudo-rigid-body model</h1>
+  <h1 id="approximating-compliant-beams-with-the-pseudo-rigid-body-model">Approximating compliant beams with the pseudo-rigid-body model</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sympy
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">q <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>Symbol(<span style="color:#e6db74">&#39;q&#39;</span>)
+d <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>Symbol(<span style="color:#e6db74">&#39;d&#39;</span>)
+L <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>Symbol(<span style="color:#e6db74">&#39;L&#39;</span>)
+P <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>Symbol(<span style="color:#e6db74">&#39;P&#39;</span>)
+h <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>Symbol(<span style="color:#e6db74">&#39;h&#39;</span>)
+b <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>Symbol(<span style="color:#e6db74">&#39;b&#39;</span>)
+E <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>Symbol(<span style="color:#e6db74">&#39;E&#39;</span>)
+x <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>Symbol(<span style="color:#e6db74">&#39;x&#39;</span>)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">subs <span style="color:#f92672">=</span> {}
+<span style="color:#75715e">#subs[k]=1000</span>
+subs[P]<span style="color:#f92672">=.</span><span style="color:#ae81ff">1</span>
+subs[L]<span style="color:#f92672">=.</span><span style="color:#ae81ff">1</span>
+subs[b]<span style="color:#f92672">=.</span><span style="color:#ae81ff">01</span>
+subs[h]<span style="color:#f92672">=.</span><span style="color:#ae81ff">01</span>
+subs[E]<span style="color:#f92672">=</span><span style="color:#ae81ff">1e7</span>
+subs[x]<span style="color:#f92672">=.</span><span style="color:#ae81ff">5</span>
+</code></pre></div><p><div class="text-center">
+  <a href="/figures-external/beam-deflection.jpg" target="_blank"><img src="/figures-external/beam-deflection.jpg" alt=""  class="img-fluid"/></a>
+</div></p>
+<h2 id="approximating-a-cantilever-with-a-single-revolute-joint">Approximating a cantilever with a single revolute joint</h2>
+<p>Arbitrarily placing a compliant joint halfway along its length can be used to approximate a cantilever beam.</p>
+<h2 id="euler-bernoulli-equations">Euler-Bernoulli Equations</h2>
+<p>Point Load at the end:</p>
+<p>$$d = \frac{PL^3}{3EI}$$</p>
+<p>Cross-sectional moment of inertia for a rectangle</p>
+<p>$$I = \frac{bh^3}{12}$$</p>
+<p>Inserted:
+$$d = \frac{4PL^3h^3}{Eb}$$</p>
+<p>$$E_{rectangle} = \frac{4PL^3h^3}{db}$$
+$$E = \frac{PL^3}{3dI}$$</p>
+<p>Cross sectional moment of inertia for a rectangle</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">I <span style="color:#f92672">=</span> b<span style="color:#f92672">*</span>h<span style="color:#f92672">**</span><span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">12</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">d1 <span style="color:#f92672">=</span> P<span style="color:#f92672">*</span>L<span style="color:#f92672">**</span><span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">3</span><span style="color:#f92672">/</span>E<span style="color:#f92672">/</span>I
+d1<span style="color:#f92672">.</span>subs(subs)
+</code></pre></div><p>$\displaystyle 0.004$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">q1 <span style="color:#f92672">=</span> P<span style="color:#f92672">*</span>L<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">/</span>E<span style="color:#f92672">/</span>I
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">q1<span style="color:#f92672">.</span>subs(subs)
+</code></pre></div><p>$\displaystyle 0.06$</p>
+<h2 id="2-link-approximation">2-Link Approximation</h2>
+<h3 id="matching-displacement">Matching Displacement</h3>
+<p>x at .5</p>
+<p>$$d = L(1-x) \sin{\theta}$$</p>
+<!-- raw HTML omitted -->
+<p>$$\tau=k\theta = PL(1-x)\cos\theta $$</p>
+<p>Using a small Angle approximation, $\cos\theta = 1$</p>
+<p>$$k\theta = PL(1-x)$$
+$$\theta = \frac{PL(1-x)}{k}$$
+$$d=L(1-x)\sin\left(\frac{PL(1-x)}{k}\right)$$</p>
+<p>$$d=L(1-x)\sin\left(\frac{PL(1-x)}{k}\right)=\frac{PL^3}{3EI}$$
+$$(1-x)\sin\left(\frac{PL(1-x)}{k}\right)=\frac{PL^2}{3EI}$$</p>
+<p>$$\frac{PL(1-x)}{k}=\sin^{-1} \left(\frac{PL^2}{3EI(1-x)}\right)$$</p>
+<p>$${k}=\frac{PL(1-x)}{\sin^{-1} \left(\frac{PL^2}{3EI(1-x)}\right)}$$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">k1 <span style="color:#f92672">=</span> P<span style="color:#f92672">*</span>L<span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>x)<span style="color:#f92672">/</span>(sympy<span style="color:#f92672">.</span>asin(P<span style="color:#f92672">*</span>L<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span><span style="color:#f92672">/</span>(<span style="color:#ae81ff">3</span><span style="color:#f92672">*</span>E<span style="color:#f92672">*</span>I<span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>x))))
+k1<span style="color:#f92672">.</span>subs(subs)
+</code></pre></div><p>$\displaystyle 0.0624332120451467$</p>
+<p>The displacement matches</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">d2 <span style="color:#f92672">=</span> L<span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>x)<span style="color:#f92672">*</span>sympy<span style="color:#f92672">.</span>sin(P<span style="color:#f92672">*</span>L<span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>x)<span style="color:#f92672">/</span>k1)
+d2<span style="color:#f92672">.</span>subs(subs)
+</code></pre></div><p>$\displaystyle 0.004$</p>
+<p>But the orientation does not</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">q2 <span style="color:#f92672">=</span> P<span style="color:#f92672">*</span>L<span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>x)<span style="color:#f92672">/</span>k1
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">q2<span style="color:#f92672">.</span>subs(subs)
+</code></pre></div><p>$\displaystyle 0.080085580033659$</p>
+<h3 id="matching-theta">Matching Theta</h3>
+<p>From Cantilever beam equations:</p>
+<p>$$\theta = \frac{PL^2}{2EI}$$</p>
+<p>From approximation above, again assuming small angles:</p>
+<p>$$\theta = \frac{PL(1-x)}{k}$$</p>
+<p>$$\theta = \frac{PL^2}{2EI}= \frac{PL(1-x)}{k}$$
+$$\frac{L}{2EI}= \frac{1-x}{k}$$
+$$k=\frac{2EI(1-x)}{L}$$</p>
+<p>Using the value solved for to equate orientation:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">k2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>E<span style="color:#f92672">*</span>I<span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>x)<span style="color:#f92672">/</span>(L)
+</code></pre></div><p>Now orientation matches</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">q3 <span style="color:#f92672">=</span> P<span style="color:#f92672">*</span>L<span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>x)<span style="color:#f92672">/</span>k2
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">q3<span style="color:#f92672">.</span>subs(subs)
+</code></pre></div><p>$\displaystyle 0.06$</p>
+<p>But displacement does not</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">d3 <span style="color:#f92672">=</span> L<span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>x)<span style="color:#f92672">*</span>sympy<span style="color:#f92672">.</span>sin(P<span style="color:#f92672">*</span>L<span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>x)<span style="color:#f92672">/</span>k2)
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">d1<span style="color:#f92672">.</span>subs(subs)
+</code></pre></div><p>$\displaystyle 0.004$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">d3<span style="color:#f92672">.</span>subs(subs)
+</code></pre></div><p>$\displaystyle 0.00299820032397223$</p>
+<h3 id="matching-both">Matching Both</h3>
+<p>Now asking the question, what location x permits you to accurately model the deflection and angle of a cantilever beam with a single joint?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">del</span> subs[x]
+</code></pre></div><p>Create an error vector</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">error <span style="color:#f92672">=</span> []
+error<span style="color:#f92672">.</span>append(d1<span style="color:#f92672">-</span>d2)
+error<span style="color:#f92672">.</span>append(q1<span style="color:#f92672">-</span>q2)
+error<span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>Matrix(error)
+error <span style="color:#f92672">=</span> error<span style="color:#f92672">.</span>subs(subs)
+error
+</code></pre></div><p>$\displaystyle \left[\begin{matrix}0\0.06 - \operatorname{asin}{\left(\frac{0.04}{1 - x} \right)}\end{matrix}\right]$</p>
+<p>import optimization toolkit</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> scipy.optimize
+</code></pre></div><p>Turn &ldquo;error&rdquo; into a function that can be run using the <code>sympy.lambdify</code> function</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">f <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>lambdify((x),error)
+</code></pre></div><p>Scipy.optimize.minimize needs args supplied as a list, so define a new wrapper function that formats inputs correctly</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f2</span>(args):
+    a <span style="color:#f92672">=</span> f(<span style="color:#f92672">*</span>args)
+    b <span style="color:#f92672">=</span> (a<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">.</span>sum()
+    <span style="color:#66d9ef">return</span> b
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sol <span style="color:#f92672">=</span> scipy<span style="color:#f92672">.</span>optimize<span style="color:#f92672">.</span>minimize(f2,[<span style="color:#f92672">.</span><span style="color:#ae81ff">25</span>])
+sol
+</code></pre></div><pre><code>      fun: 2.0974856866229214e-09
+ hess_inv: array([[65.11062045]])
+      jac: array([-8.23593665e-06])
+  message: 'Optimization terminated successfully.'
+     nfev: 14
+      nit: 4
+     njev: 7
+   status: 0
+  success: True
+        x: array([0.33242421])
+</code></pre>
+<p>Now add x back to the list of substitutions</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">subs[x]<span style="color:#f92672">=</span>sol<span style="color:#f92672">.</span>x[<span style="color:#ae81ff">0</span>]
+</code></pre></div><p>So a virtual joint at x=1/3 correctly approximates displacement and orientation.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">d2<span style="color:#f92672">.</span>subs(subs)
+</code></pre></div><p>$\displaystyle 0.004$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">q2<span style="color:#f92672">.</span>subs(subs)
+</code></pre></div><p>$\displaystyle 0.0599542016846748$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+</code></pre></div>
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

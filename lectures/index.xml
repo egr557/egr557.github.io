@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lectures on Foldable Robotics</title>
+    <link>https://danaukes.com/lectures/</link>
+    <description>Recent content in Lectures on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/lectures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 1</title>
+      <link>https://danaukes.com/lectures/lecture01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture01/</guid>
+      <description>Introduction to Foldable Robotics. Go over syllabus and course logistics. Discuss software-based tools, assignments</description>
+    </item>
+    
+    <item>
+      <title>Lecture 10</title>
+      <link>https://danaukes.com/lectures/lecture10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture10/</guid>
+      <description>Go over upcoming kinematics assignments and break out into teams for work time</description>
+    </item>
+    
+    <item>
+      <title>Lecture 11</title>
+      <link>https://danaukes.com/lectures/lecture11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture11/</guid>
+      <description>Loop Equations, Team Updates</description>
+    </item>
+    
+    <item>
+      <title>Lecture 12</title>
+      <link>https://danaukes.com/lectures/lecture12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture12/</guid>
+      <description>Team Checkoffs, HW Checkoffs Go over inertia, forces, F=ma, Kane&amp;rsquo;s method, and triple pendulum walkthrough</description>
+    </item>
+    
+    <item>
+      <title>Lecture 13</title>
+      <link>https://danaukes.com/lectures/lecture13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture13/</guid>
+      <description>Present system architecture, kinematics, forces</description>
+    </item>
+    
+    <item>
+      <title>Lecture 14</title>
+      <link>https://danaukes.com/lectures/lecture14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture14/</guid>
+      <description>Seminar, Presentation I Overflow, HW Flex Time</description>
+    </item>
+    
+    <item>
+      <title>Lecture 15</title>
+      <link>https://danaukes.com/lectures/lecture15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture15/</guid>
+      <description>Introduction to Optimization and Application to Model Fitting</description>
+    </item>
+    
+    <item>
+      <title>Lecture 16</title>
+      <link>https://danaukes.com/lectures/lecture16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture16/</guid>
+      <description>Discuss Euler-Bernoulli Beam Equations, go through Solidworks FEA example</description>
+    </item>
+    
+    <item>
+      <title>Lecture 17</title>
+      <link>https://danaukes.com/lectures/lecture17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture17/</guid>
+      <description>Application examples for modeling reality</description>
+    </item>
+    
+    <item>
+      <title>Lecture 18</title>
+      <link>https://danaukes.com/lectures/lecture18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lecture 19</title>
+      <link>https://danaukes.com/lectures/lecture19/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture19/</guid>
+      <description>Special Guest Seminar</description>
+    </item>
+    
+    <item>
+      <title>Lecture 2</title>
+      <link>https://danaukes.com/lectures/lecture02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture02/</guid>
+      <description>Foldable Robotics History. Bring popup books to class and share</description>
+    </item>
+    
+    <item>
+      <title>Lecture 20</title>
+      <link>https://danaukes.com/lectures/lecture20/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture20/</guid>
+      <description>Special Guest Seminar</description>
+    </item>
+    
+    <item>
+      <title>Lecture 21</title>
+      <link>https://danaukes.com/lectures/lecture21/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture21/</guid>
+      <description>Present updated dynamics including actuator selection and modeling, system compliance, and design optimization</description>
+    </item>
+    
+    <item>
+      <title>Lecture 22</title>
+      <link>https://danaukes.com/lectures/lecture22/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture22/</guid>
+      <description>CSG, Laminate Manufacturability</description>
+    </item>
+    
+    <item>
+      <title>Lecture 23</title>
+      <link>https://danaukes.com/lectures/lecture23/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture23/</guid>
+      <description>Special Guest Seminar</description>
+    </item>
+    
+    <item>
+      <title>Lecture 24</title>
+      <link>https://danaukes.com/lectures/lecture24/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture24/</guid>
+      <description>Laminate Manufacturability</description>
+    </item>
+    
+    <item>
+      <title>Lecture 25</title>
+      <link>https://danaukes.com/lectures/lecture25/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture25/</guid>
+      <description>Digital Manufacturing</description>
+    </item>
+    
+    <item>
+      <title>Lecture 26</title>
+      <link>https://danaukes.com/lectures/lecture26/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture26/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lecture 27</title>
+      <link>https://danaukes.com/lectures/lecture27/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture27/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lecture 28</title>
+      <link>https://danaukes.com/lectures/lecture28/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture28/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lecture 29</title>
+      <link>https://danaukes.com/lectures/lecture29/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture29/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lecture 3</title>
+      <link>https://danaukes.com/lectures/lecture03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture03/</guid>
+      <description>No Class &amp;ndash; MLK Day</description>
+    </item>
+    
+    <item>
+      <title>Lecture 30</title>
+      <link>https://danaukes.com/lectures/lecture30/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture30/</guid>
+      <description>Final Presentation Videos</description>
+    </item>
+    
+    <item>
+      <title>Lecture 31</title>
+      <link>https://danaukes.com/lectures/lecture31/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture31/</guid>
+      <description>No Class</description>
+    </item>
+    
+    <item>
+      <title>Lecture 32</title>
+      <link>https://danaukes.com/lectures/lecture32/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture32/</guid>
+      <description>No Class</description>
+    </item>
+    
+    <item>
+      <title>Lecture 4</title>
+      <link>https://danaukes.com/lectures/lecture04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture04/</guid>
+      <description>Introduction to Biomechanics</description>
+    </item>
+    
+    <item>
+      <title>Lecture 5</title>
+      <link>https://danaukes.com/lectures/lecture05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture05/</guid>
+      <description>Pitch projects and coalesce in teams</description>
+    </item>
+    
+    <item>
+      <title>Lecture 6</title>
+      <link>https://danaukes.com/lectures/lecture06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture06/</guid>
+      <description>Work on developing research question in class (teams), present out. Solidworks kinematics examples.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 7</title>
+      <link>https://danaukes.com/lectures/lecture07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture07/</guid>
+      <description>Biomechanics wrap-up. Origami, Kirigami Background. Introduction to kinematics and degrees of freedom. Break into teams for work time (20 min). Meet back and discuss singularities</description>
+    </item>
+    
+    <item>
+      <title>Lecture 8</title>
+      <link>https://danaukes.com/lectures/lecture08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture08/</guid>
+      <description>Introduce Jacobian. Introduce constraint equations, plotting, numpy, nonlinear optimization, motion paths. Using motion path to determine Jacobian, estimate forces, speed, and power. Work on kinematics example in class</description>
+    </item>
+    
+    <item>
+      <title>Lecture 9</title>
+      <link>https://danaukes.com/lectures/lecture09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture09/</guid>
+      <description>Introduction to vectors, rotation, vector operations, differentiation</description>
+    </item>
+    
+  </channel>
+</rss>

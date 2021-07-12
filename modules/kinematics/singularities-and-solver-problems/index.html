@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Singularities and Solver Problems | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Singularities and Solver Problems</h1>
+  <h1 id="singularities-and-solver-problems">Singularities and Solver Problems</h1>
+<p>Many of the devices you will prototype are highly nonlinear mechanisms which may have certain charactersitics which are hard to solve for in your typical CAD sketcher.</p>
+<p>Singularities can be described as a mathematical or mechanical condition in which one or more degrees of freedom of your device or of your description of the device &ndash; can no longer be controlled or solved for. A typical kinematic singularity may be seen</p>
+<h2 id="mechanism-singularities">Mechanism Singularities</h2>
+<p><div class="text-center">
+  <a href="/figures/design/singular_kinematics.png" target="_blank"><img src="/figures/design/singular_kinematics.png" alt="Singular Kinematics"  class="img-fluid"/></a>
+</div></p>
+<p>One of the biggest challegnes of foldable devices is that they all start off flat. Which means they all start off in a mechanism singularity. This is probably the worst way to start, as it means that the device, when assembled or erected into its final configuration, could be pushed into more than one valid state. Furthermore, if designed wrong, a mechanism may slip past a singularity and be unable to escape it. This is exacerbated by the fact that foldable mechanisms cannot rotate freely more than +/- 180 degrees, meaning that you have to go back the way you came, rather than rotate through a second singularity.</p>
+<p>This means that the user has to take care during the design process to avoid mechanism singularities during assembly and operation.</p>
+<h2 id="representational-singularities">Representational Singularities</h2>
+<p>Another type of singularity occurs when the mathematical framework used to describe your mechanism loses a degree of freedom due to redundancy in the description. A trivial example would be using a three-dimensional space to describe a planar mechanism. Consider a four-bar mechanism for example, in which all of the vectors used to describe the mechanism exist in the x-y plane. If you use a three-dimensional description, ie, include the z values for all the points in your mechanism &ndash; then solving for your system will always result in a singular matrix, as the column of z values may take any value and still produce a consistent and valid mechanism. Even though the mechanism may be in a valid configuration, the description cannot be used to solve for it.</p>
+<h2 id="solver-problems">Solver problems</h2>
+<p>The solvers used to solve a constrained sketch are typically fairly robust, as they must permit interaction with human designers in such a way that humans can drag sketch elements around throughout the sketch&rsquo;s degrees of freedom, yet must also remain accurate. However, these sketchers often have some problems associated with them that you will also see in complex, nonlinear assemblies. First, the software may not always expose all the degrees of freedom or permit the user to freely drag sketch elements around in an inuitive fashion. A user may see only one or two degrees of freedom when the sketch has many more which are simply not moving in accordance to the user&rsquo;s specific motion commands. There are several ways to explore the degrees of freedom of a device with more surety</p>
+<ul>
+<li>Lock all degrees of freedom but one - You can either fix elements or establish temporary relational constratints between elements to lock down parts of your mechanism you are not interested in.</li>
+<li>Switch your handle or dragged element. Often the solver uses a users&rsquo;s motion command filtered through the element and at the point specified by the user. By subtley changing the location or body which is being dragged, the user can find additional degrees of freedom.</li>
+</ul>
+<h2 id="kinematics-via-sketches">Kinematics via Sketches</h2>
+<p>Another great way to explore designs is by sketching kinematics in 2D or 3D in CAD software. This section describes how to use engineering sketches in CAD to accomplish basic motion studies.</p>
+<p>Let&rsquo;s assume you would like to create a folding mechanism in two dimensions. The two dimensional assumption is easier to discuss in book form, as 2D images are easier to understand. The exention to a 3d design is trivial in concept, but in practice it is much harder to sketch due to the same issues of typically having a 2d interaction with a 3d design space. So for the purposes of simplicity we&rsquo;ll discuss 2d mechanisms.</p>
+<h2 id="kinematics-computation">Kinematics Computation</h2>
+<p>We now enter the part of the process which can be assisted by scripting. The workflow is simple. You have been working in the physical world, and have translated your physical prototype to a sketch</p>
+<p>The next step is to compute the kinematics of this device. There are several limitations to foldable devices which must be discussed. First, most origami-inspired devices typically start flat, as they are typically manufactured from flat sheets of material(paper, plastic, cardboard, fiberglass, carbon fiber, metal). The ability of a mechanism to be foldable from a flat sheet is defined as &ldquo;flat-foldability&rdquo;. This makes manufacturing easier but comes with several implications.</p>
+<p>First, when a device starts as a flat sheet, it can be considered to be in a &ldquo;singular&rdquo; configuration. This occurs when one or more of the mechanism&rsquo;s joints simultaneously align on a plane, making it impossible to move the mechanism in ways it would otherwise be able to. Singularities in the middle of a mechanism&rsquo;s workspace typically need to be avoided, as these conditions typically make the device uncontrollable.</p>
+<p><div class="text-center">
+  <a href="../../sketches/inversion.png" target="_blank"><img src="../../sketches/inversion.png" alt="Kinematic Inversion"  class="img-fluid"/></a>
+</div></p>
+<p>A singularity is often also accompanied by a kinematic inversion. An inversion occurs when links in a devices kinematics pass through an inversion, occupying a valid state in which many of the other links occupy the same states as in the uninverted state. With an inverted four-bar linkage, as seen above, the implications on the motion of this transmission is that the motion of the lower link no longer leads to the same motion of the upper link. The rates of change, being state-based, are quite different (the rates of change of the links are opposite each other when compared to the uninverted state). This means that the motion of the input linkage cannot be used to drive the motion of the output to and through its singularity alone. If it emerges on the other side of a singularity in an inverted state, the input link cannot move it in the same way nor can it get it out on its own through its own rotation.</p>
+<p>As a foldable mechanism typically starts in a flat state when it emerges from the manufacturing stages, care must be taken to assemble it (often by hand) into its desired configuration, and that the resulting design must be kept appropriately away from singularities. The problem can become harder with soft mechanisms, as soft mechanisms may bend and flex in ways unintended by the rigid kinematics, which pushes the devices through a singularity.</p>
+<p><div class="text-center">
+  <a href="../../sketches/inversion2.png" target="_blank"><img src="../../sketches/inversion2.png" alt="Inversion Due to Flexibility"  class="img-fluid"/></a>
+</div></p>
+<p>Singularities also make the analysis of flat-foldable mechanisms tricky, as the user must supply the intended state of the mechanism in order to</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>If trying to replicate a traditional robot, there are several caveats to making a paper robot which can do the same thing. First, a device constructed from hinges is limited by the travel of each hinge. At most, an ideally-thin sheet of material may only bend +/- 180 degrees. Any continuous rotations must be handled outside of your hinging mechanism. That is fine, and later sections deal with integrating other devices with your printable mechanism.</p>
+<p>Hinge lines may be imported for kinematics study, just as body lines are imported for manufacturing file generation. For this we recommend importing just the body and hinge information in order to infer link-link connections to establish the topology, for plotting.</p>
+<h2 id="further-reading">Further Reading</h2>
+<p>
+
+
+
+
+<span class="hugo-cite-intext"
+        itemprop="citation">(<span class="hugo-cite-group">
+
+          <a href="#gosselin1990"><span class="visually-hidden">Citation: </span><span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="givenName" content="C."><span itemprop="familyName">Gosselin</span></span>&#32;&amp;&#32;<span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="givenName" content="J."><span itemprop="familyName">Angeles</span></span>,&#32;<span itemprop="datePublished">1990</span></a><span class="hugo-cite-citation"> 
+
+
+
+
+
+
+
+
+
+
+<span itemscope
+      itemtype="https://schema.org/Article"
+      data-type="article"><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="familyName">Gosselin</span>,&#32;
+    <meta itemprop="givenName" content="C." />
+    C.</span>&#32;&amp;&#32;<span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="familyName">Angeles</span>,&#32;
+    <meta itemprop="givenName" content="J." />
+    J.</span>
+  &#32;
+    (<span itemprop="datePublished">1990</span>).
+  &#32;<span itemprop="name"><!-- raw HTML omitted -->Singularity analysis of closed-loop kinematic chains<!-- raw HTML omitted --></span>.<i>
+    <span itemprop="about">IEEE Transactions on Robotics and Automation</span>,&#32;6(3)</i>.&#32;<span itemprop="pagination">281–290</span>.
+  <a href="https://doi.org/10.1109/70.56660"
+     itemprop="identifier"
+     itemtype="https://schema.org/URL">https://doi.org/10.1109/70.56660</a></span>
+
+
+
+
+</span></span>)</span>
+,
+
+
+
+
+<span class="hugo-cite-intext"
+        itemprop="citation">(<span class="hugo-cite-group">
+
+          <a href="#mccarthy2011"><span class="visually-hidden">Citation: </span><span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="givenName" content="J. Michael"><span itemprop="familyName">McCarthy</span></span>&#32;&amp;&#32;<span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="givenName" content="Gim Song"><span itemprop="familyName">Soh</span></span>,&#32;<span itemprop="datePublished">2011</span></a><span class="hugo-cite-citation"> 
+
+
+
+
+
+
+
+
+
+
+<span itemscope 
+      itemtype="https://schema.org/Book"
+      data-type="book"><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="familyName">McCarthy</span>,&#32;
+    <meta itemprop="givenName" content="J. Michael" />
+    J.</span>&#32;&amp;&#32;<span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="familyName">Soh</span>,&#32;
+    <meta itemprop="givenName" content="Gim Song" />
+    G.</span>&#32;
+    (<span itemprop="datePublished">2011</span>).
+  &#32;<span itemprop="name">
+    <i><!-- raw HTML omitted -->Geometric Design of Linkages<!-- raw HTML omitted --></i></span>.
+  <meta itemprop="contentLocation"
+        value="New York, NY">&#32;
+  <span itemprop="publisher"
+             itemtype="http://schema.org/Organization"
+             itemscope="">
+    <span itemprop="name">Springer New York</span></span>.
+  <a href="https://doi.org/10.1007/978-1-4419-7892-9"
+     itemprop="identifier"
+     itemtype="https://schema.org/URL">https://doi.org/10.1007/978-1-4419-7892-9</a></span>
+
+
+
+
+</span></span>)</span>
+,
+
+
+
+
+<span class="hugo-cite-intext"
+        itemprop="citation">(<span class="hugo-cite-group">
+
+          <a href="#waldron1966"><span class="visually-hidden">Citation: </span><span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="givenName" content="K. J."><span itemprop="familyName">Waldron</span></span>,&#32;<span itemprop="datePublished">1966</span></a><span class="hugo-cite-citation"> 
+
+
+
+
+
+
+
+
+
+
+<span itemscope
+      itemtype="https://schema.org/Article"
+      data-type="article"><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="familyName">Waldron</span>,&#32;
+    <meta itemprop="givenName" content="K. J." />
+    K.</span>
+  &#32;
+    (<span itemprop="datePublished">1966</span>).
+  &#32;<span itemprop="name"><!-- raw HTML omitted -->The constraint analysis of mechanisms<!-- raw HTML omitted --></span>.<i>
+    <span itemprop="about">Journal of Mechanisms</span>,&#32;1(2)</i>.&#32;<span itemprop="pagination">101–114</span>.
+  <a href="https://doi.org/10.1016/0022-2569%2866%2990016-4"
+     itemprop="identifier"
+     itemtype="https://schema.org/URL">https://doi.org/10.1016/0022-2569(66)90016-4</a></span>
+
+
+
+
+</span></span>)</span>
+</p>
+<h2 id="bibliography">Bibliography</h2>
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<section class="hugo-cite-bibliography">
+  <dl>
+    
+
+      <div id="gosselin1990">
+        <dt>
+          Gosselin&#32;&amp;&#32;Angeles
+
+          
+          (1990)</dt>
+
+        <dd>
+          
+
+
+
+
+
+
+
+
+
+
+<span itemscope
+      itemtype="https://schema.org/Article"
+      data-type="article"><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="familyName">Gosselin</span>,&#32;
+    <meta itemprop="givenName" content="C." />
+    C.</span>&#32;&amp;&#32;<span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="familyName">Angeles</span>,&#32;
+    <meta itemprop="givenName" content="J." />
+    J.</span>
+  &#32;
+    (<span itemprop="datePublished">1990</span>).
+  &#32;<span itemprop="name"><!-- raw HTML omitted -->Singularity analysis of closed-loop kinematic chains<!-- raw HTML omitted --></span>.<i>
+    <span itemprop="about">IEEE Transactions on Robotics and Automation</span>,&#32;6(3)</i>.&#32;<span itemprop="pagination">281–290</span>.
+  <a href="https://doi.org/10.1109/70.56660"
+     itemprop="identifier"
+     itemtype="https://schema.org/URL">https://doi.org/10.1109/70.56660</a></span>
+
+
+
+
+</dd>
+
+      </div>
+
+      <div id="mccarthy2011">
+        <dt>
+          McCarthy&#32;&amp;&#32;Soh
+
+          
+          (2011)</dt>
+
+        <dd>
+          
+
+
+
+
+
+
+
+
+
+
+<span itemscope 
+      itemtype="https://schema.org/Book"
+      data-type="book"><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="familyName">McCarthy</span>,&#32;
+    <meta itemprop="givenName" content="J. Michael" />
+    J.</span>&#32;&amp;&#32;<span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="familyName">Soh</span>,&#32;
+    <meta itemprop="givenName" content="Gim Song" />
+    G.</span>&#32;
+    (<span itemprop="datePublished">2011</span>).
+  &#32;<span itemprop="name">
+    <i><!-- raw HTML omitted -->Geometric Design of Linkages<!-- raw HTML omitted --></i></span>.
+  <meta itemprop="contentLocation"
+        value="New York, NY">&#32;
+  <span itemprop="publisher"
+             itemtype="http://schema.org/Organization"
+             itemscope="">
+    <span itemprop="name">Springer New York</span></span>.
+  <a href="https://doi.org/10.1007/978-1-4419-7892-9"
+     itemprop="identifier"
+     itemtype="https://schema.org/URL">https://doi.org/10.1007/978-1-4419-7892-9</a></span>
+
+
+
+
+</dd>
+
+      </div>
+
+      <div id="waldron1966">
+        <dt>
+          Waldron
+
+          
+          (1966)</dt>
+
+        <dd>
+          
+
+
+
+
+
+
+
+
+
+
+<span itemscope
+      itemtype="https://schema.org/Article"
+      data-type="article"><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="familyName">Waldron</span>,&#32;
+    <meta itemprop="givenName" content="K. J." />
+    K.</span>
+  &#32;
+    (<span itemprop="datePublished">1966</span>).
+  &#32;<span itemprop="name"><!-- raw HTML omitted -->The constraint analysis of mechanisms<!-- raw HTML omitted --></span>.<i>
+    <span itemprop="about">Journal of Mechanisms</span>,&#32;1(2)</i>.&#32;<span itemprop="pagination">101–114</span>.
+  <a href="https://doi.org/10.1016/0022-2569%2866%2990016-4"
+     itemprop="identifier"
+     itemtype="https://schema.org/URL">https://doi.org/10.1016/0022-2569(66)90016-4</a></span>
+
+
+
+
+</dd>
+
+      </div>
+  </dl>
+</section>
+
+
+
+
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

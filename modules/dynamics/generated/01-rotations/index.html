@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Rotations | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Rotations</h1>
+  <h2 id="introduction">Introduction</h2>
+<p>While there may be many ways to navigate and describe the same three-dimensional space using reference frames, it is also necessary and desireable to be able to change representations; this can be useful for interpreting motion from a differet perspective, for adding forces or torques to a system using dirctional components which are a more natural description, or in order to perform mathematical operations between vectors which are represented by different basis vectors.  The method by which we represent one frame to another is through the concept of rotations.</p>
+<p>Rotations may be described in a number of ways, including axis,angle representations, quaternions, Euler parameters, Euler vectors, Rodrigues' parameters, etc.  Each representation has its benefits and drawbacks, but at the end of the day, each of these methods is simply a way to find the rotational relationships between reference frames and the basis vectors they contain.  A rotation is a specific type of vector transformation that <strong>1)</strong> Preserve length and <strong>2)</strong>, preserve angles between vectors.  Generically, we may think of rotational transformations as permitting the same vector to be represented using a new set of basis vectors, or, in another way of thinking, to actually rotate a body into a new orientation with relation to some other frame.  The first one is a change of representation, while the second indicates actual motion.</p>
+<p>In <em>pynamics</em>, the rotation class can be created in a variety of ways.  You may supply a 3x3 matrix directly, generate one using an axis, angle pair, or create one by defining a rotation along an x,y,or z axis.  Rotations in <em>pynamics</em> are stored as $3x3$ matrices.  Rotations do not have to be fixed, as the matrices which encode their information can hold variables.  Thus, axis,angle pairs themselves may be composed of one or more variables.</p>
+<p>Rotation classes <em>in pynamics</em> must be defined as the relationship between two existing frames.  Thus, rotations between frames must be created after the frames themselves.  Only one rotation may be stored between two reference frames.  (though there are ways to represent more than one).  Progrmmaticaly, this is because pynamics uses the rotational connections defined by the user in determining the shortest and simplest possible representation for vectors when performing vector operations, and having multiple pathways would undesireably increase computational cost and complexity.</p>
+<h2 id="theory">Theory</h2>
+<p>::: {style=&ldquo;text-align:center;&quot;}
+<div class="text-center">
+  <a href="/figures/dynamics/rotation_matrix.png" target="_blank"><img src="/figures/dynamics/rotation_matrix.png" alt="rotation between frames"  class="img-fluid"/></a>
+</div>
+:::</p>
+<p>$$
+\begin{array}{c|c c c}
+{}^N{\textbf{R}}^{A} &amp; \hat{a}_x &amp;\hat{a}_y &amp; \hat{a}_z\<br>
+\hline
+\hat{n}_x &amp;\cos q&amp;-\sin q &amp;0 \<br>
+\hat{n}_y &amp;\sin q&amp; \cos q &amp;0 \<br>
+\hat{n}_z &amp;0&amp;0&amp;1
+\end{array}
+$$</p>
+<p>Multiple rotations:</p>
+<p>$$
+{}^N{\textbf{R}}^{B} = {}^{N}{\textbf{R}}^{A} {}^N{\textbf{R}}^{B}
+$$</p>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pynamics
+<span style="color:#f92672">from</span> pynamics.system <span style="color:#f92672">import</span> System
+<span style="color:#f92672">from</span> pynamics.frame <span style="color:#f92672">import</span> Frame
+<span style="color:#f92672">import</span> sympy
+
+system <span style="color:#f92672">=</span> System()
+pynamics<span style="color:#f92672">.</span>set_system(__name__,system)
+
+a <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>symbols(<span style="color:#e6db74">&#39;a&#39;</span>)
+
+N <span style="color:#f92672">=</span> Frame(<span style="color:#e6db74">&#39;N&#39;</span>)
+A <span style="color:#f92672">=</span> Frame(<span style="color:#e6db74">&#39;A&#39;</span>)
+
+<span style="color:#75715e">#system.set_newtonian(N)</span>
+A<span style="color:#f92672">.</span>rotate_fixed_axis_directed(N,[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>],a,system)
+
+A<span style="color:#f92672">.</span>getR(N)
+</code></pre></div><pre><code>⎡cos(a)  -sin(a)  0⎤
+⎢                  ⎥
+⎢sin(a)  cos(a)   0⎥
+⎢                  ⎥
+⎣  0        0     1⎦
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">del</span> system,N,A,a
+</code></pre></div><h2 id="usage">Usage</h2>
+<p>Rotations are used throughout pynamics but they are not utilized directly very often, other than for debugging purposes.  Use cases include</p>
+<ul>
+<li>Generating basis vectors for use in general-purpose vector creation</li>
+<li>They can be used with constants to generate fixed changes of reference</li>
+<li>They are used in conjunction with differentiable state variables to determine rotational velocity and acceleration between frames</li>
+</ul>
+<p>Rotations in pynamics are typically generated in a sequential order from a base, or Newtonian frame (a non-accelerating world frame).  The ordering is not required, because internally pynamics establishes connections to neighboring rotations by creating a tree-like map of all frames connected to each other.  This can be done with or without explicitly defining the Newtonian frame first (though other functions dealing with differentiation require this declaration first)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pynamics
+<span style="color:#f92672">from</span> pynamics.system <span style="color:#f92672">import</span> System
+<span style="color:#f92672">from</span> pynamics.frame <span style="color:#f92672">import</span> Frame
+<span style="color:#f92672">import</span> sympy
+
+system <span style="color:#f92672">=</span> System()
+pynamics<span style="color:#f92672">.</span>set_system(__name__,system)
+
+a,b,c <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>symbols(<span style="color:#e6db74">&#39;a,b,c&#39;</span>)
+
+N <span style="color:#f92672">=</span> Frame(<span style="color:#e6db74">&#39;N&#39;</span>)
+A <span style="color:#f92672">=</span> Frame(<span style="color:#e6db74">&#39;A&#39;</span>)
+B <span style="color:#f92672">=</span> Frame(<span style="color:#e6db74">&#39;B&#39;</span>)
+C <span style="color:#f92672">=</span> Frame(<span style="color:#e6db74">&#39;C&#39;</span>)
+
+<span style="color:#75715e">#system.set_newtonian(N)</span>
+A<span style="color:#f92672">.</span>rotate_fixed_axis_directed(N,[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>],a,system)
+B<span style="color:#f92672">.</span>rotate_fixed_axis_directed(A,[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>],b,system)
+C<span style="color:#f92672">.</span>rotate_fixed_axis_directed(N,[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>],c,system)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">A<span style="color:#f92672">.</span>getR(N)
+</code></pre></div><pre><code>⎡cos(a)  -sin(a)  0⎤
+⎢                  ⎥
+⎢sin(a)  cos(a)   0⎥
+⎢                  ⎥
+⎣  0        0     1⎦
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">B<span style="color:#f92672">.</span>getR(N)
+</code></pre></div><pre><code>⎡cos(a)⋅cos(b)  -sin(a)  sin(b)⋅cos(a)⎤
+⎢                                     ⎥
+⎢sin(a)⋅cos(b)  cos(a)   sin(a)⋅sin(b)⎥
+⎢                                     ⎥
+⎣   -sin(b)        0        cos(b)    ⎦
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">C<span style="color:#f92672">.</span>getR(N)
+</code></pre></div><pre><code>⎡1    0        0   ⎤
+⎢                  ⎥
+⎢0  cos(c)  -sin(c)⎥
+⎢                  ⎥
+⎣0  sin(c)  cos(c) ⎦
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">C<span style="color:#f92672">.</span>getR(B)
+</code></pre></div><pre><code>⎡cos(a)⋅cos(b)  sin(a)⋅cos(b)⋅cos(c) - sin(b)⋅sin(c)  -sin(a)⋅sin(c)⋅cos(b) - 
+⎢                                                                             
+⎢   -sin(a)                cos(a)⋅cos(c)                         -sin(c)⋅cos(a
+⎢                                                                             
+⎣sin(b)⋅cos(a)  sin(a)⋅sin(b)⋅cos(c) + sin(c)⋅cos(b)  -sin(a)⋅sin(b)⋅sin(c) + 
+
+sin(b)⋅cos(c)⎤
+             ⎥
+)            ⎥
+             ⎥
+cos(b)⋅cos(c)⎦
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">del</span> a,b,c,N,A,B,C
+</code></pre></div>
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+The Fabrication Process | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: The Fabrication Process</h1>
+  <h1 id="the-fabrication-process">The Fabrication Process</h1>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="5-layer-design">5-Layer Design</h2>
+<p>A typical five layer design consists of</p>
+<ol>
+<li>Rigid Material</li>
+<li>Adhesive</li>
+<li>Flexure MAterial</li>
+<li>Adhesive</li>
+<li>Rigid Material</li>
+</ol>
+<h3 id="preparing-your-cut-files">Preparing your Cut Files</h3>
+<p>You should have already generated cutfiles using the process outlined in the last chapter.</p>
+<p>A good idea is to use the same page dimensions in your arwork as the bed of the laser.  It is also a good idea to combine cut files for the same material using a dxf or pdf editing tool, in order to minimize the number of manual operations.  Just make sure that layer 4 adhesive images are mirror-imaged.  More on that below&hellip;.</p>
+<p>Turn off all fill colors.  You will not be rastering anything.</p>
+<p>Another good idea is to use the color of your vector art to control whether something is used as a placement guide or is actually cut.  Often you can set red to be cut, while blue is ignored by the laser-cutter software.  This will be used later.</p>
+<h4 id="first-pass-cut-considerations">First-pass cut considerations</h4>
+<p><div class="text-center">
+  <a href="/figures/design/adhesive_down.png" target="_blank"><img src="/figures/design/adhesive_down.png" alt="adhesive facing down"  class="img-fluid"/></a>
+</div></p>
+<p>For single-material sheets which are cut out in the laser by themselves, there is freedom in how you rotate and orient your cut pattern when sending it to the laser.  It can be a mirror image of itself, and when you remove that material, you can flip it back over to use it.  Materials with a backing, however, must be cut so that the orientation of the artwork matches the process of manufacturing.</p>
+<p>If you are using a paper-backed adhesive, for example, its backing enforces which layer gets adhered to first, an important manufacturability consideration.  For example, if you cut a pattern with the adhesive down and backing up in the laser, the adhesive layer must be bonded to the layer <em>below</em> it in the stack order.  If you cut the material with the adhesive up and backing down, it must first be bonded to the layer <em>above</em> it before the backing can be removed.  In addition, you must consider ease of cutting as well.  For  standard paper-backed acrylic adhesive, it is sometimes easier to place it adhesive-side down in the laser, as the tacky adhesive holds itself down and prevents curling.  Thus, any adhesive which must be bonded to the material above it in the stack order must have its artwork mirrored if it is to be placed adhesive-facing down in the laser cutter.</p>
+<p>Let&rsquo;s consider this in the context of a five layer laminate, with layer 1 on the bottom of the stack, and layer 5 on the top.  This means that the adhesive layer&rsquo;s artwork (layer 2), if cut out with adhesive facing down in the laser cutter, must be bonded to the top of layer 1 before the backing can be peeled away.  This is desireable for the lamination step, as layer 3, the flexible layer, is less controllable as it is more flexible, and bonds to the adhesive even if it lightly touches it, making it more possible to have a manufacturing mistake.</p>
+<p>Now think about the adhesive on layer 4.  With the adhesive side down in the laser, the resulting cut will have the adhesive side touching layer 3.  Due to the above-mentioned manufacturability considerations, it is desirable for this thin, flexible adhesive layer to face the rigid layer instead (layer 5).  Thus, layer 4 adhesive artwork should be mirror-imaged, so that the adhesive faces up when placed in the stack, not down.</p>
+<h4 id="second-pass-cut-considerations">Second-pass cut considerations</h4>
+<p>When aligning your second pass cut, it is useful to re-use the rigid-layer cutfile to place the second-pass cut directly over the hole created in the first pass cut.  This makes it possible to use the rigid material left in the machine after the last first-pass cut to be reused after you have laminated all the layers together.  Utilize colors to bring in your second pass cut and align it to the first pass cut (use snapping or specify the position based on the position of the first-pass cut geometry.), and then disable the first pass cut by setting it to a color the laser will ignore.</p>
+<h3 id="cut-first-pass-cut-for-all-layers">Cut first-pass cut for all layers</h3>
+<h4 id="preparing-your-cut-settings">Preparing your Cut Settings</h4>
+<p>Disable raster cuts.  All cuts computed by our manufacturing code is intended to be cut all-the-way through.</p>
+<p>While each laser cutter is different, lets discuss a good strategy for ideally finding the best cut setting for your laser.  Start with the laser cutter at 100% speed and 100% power.  Perform a small test cut on your material in the top left corner by drawing a small box and checking to see if the box falls out of the material when cut.  If the material can be fully cut out, divide the power by half and try the cut again, moving the square to the right by a small amount so you don&rsquo;t cut over the same spot twice.  Continue this process until you have lowered the power to where it consistently cuts through your part, but uses the least amount of power possible.</p>
+<p>Conversely, if at 100% speed and 100% power the material is not fully cut out, lower the speed by half until you repeatedly can cut through the material.  For example, go from 100% to 50% to 25% to 12%.  Once you are able to fully cut through the material, slowly raise the speed as much as you can.</p>
+<p>It is a good idea to test your speeds and power out on a small piece of scrap material.  Then record your cut settings as you will need these often.</p>
+<p>Laser cutters often have different power settings for raster and vector.  Since we are only doing vector cuts, you can turn off the raster setting.</p>
+<p>Additionally, some laser cutters have path optimization options.  Select the &ldquo;inside-out&rdquo; strategy if available, as this will guarantee that your material, when cut, is not first separated from the surrounding material which is holding it.</p>
+<p>If there is a &ldquo;centering&rdquo; option, it is a good idea to disable it if you have already defined a page size equal to the laser bed size.  This will enable you to place your artwork exactly where you want it to be cut in the bed.  This option can sometimes be found in the laser cut settings as well as the printer preferences settings.</p>
+<h4 id="lenses-and-focusing">Lenses and Focusing:</h4>
+<p>Some laser cutters have multiple lens options.  For a thick laminate, try using a longer focal length lens.  This will make the laser less susceptible to small variations in thickness or height, at the expense of perhaps a smaller spot size &ndash; and kerf width.</p>
+<p>Additionally, for thick laminates, some times it is appropriate to adjust the bed height across several passes.  I have at times adjusted the bed after focusing so that the height is at the laminates top, mid, and bottom planes across 3 or more passes.  This ensures that the laser is focused at multiple heights in case your laser is having trouble cutting through a thick laminate.  Tighter integration with laser manufacturers might permit this setting to be automated in the future.</p>
+<p>This cut should also include any layer identification you will need to identify each layer of your laminate.  The rest of this sequence will assume you have identified the bottom layer as layer 1, and the top layer as layer 5.  A layer which is &ldquo;right side up&rdquo; should have the text legible, and an &ldquo;upside down layer&rdquo; is when the text is mirrored.</p>
+<p>As the lens is an optical system, it can be easily fouled by smoke and particulates ejected by prior cuts.  If you notice a loss of cutting power, clean the lens.</p>
+<h4 id="prepare-material">Prepare Material</h4>
+<p>Tape down the material in the laser cutter.  With the air on, it is easy for the material to be blown away as the laser cuts pieces away.  This can result in the part moving in the laser cutter and its precision being affected.</p>
+<p>Turn the air on.</p>
+<p>Ensure the bed is homed and that home is set to the same coordinate system as your artwork is defined.  This is often the top, left-hand corner of the printer bed.</p>
+<p><div class="text-center">
+  <a href="/figures/design/artwork-bed-prep.png" target="_blank"><img src="/figures/design/artwork-bed-prep.png" alt="&lt;!-- raw HTML omitted --&gt; Caption"  class="img-fluid"/></a>
+</div></p>
+<h4 id="cut-settings25w-universal-laser">Cut Settings(25W Universal Laser)</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Layer</th>
+<th style="text-align:left">Speed</th>
+<th style="text-align:left">Power</th>
+<th style="text-align:left">Passes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1-mil polyester</td>
+<td style="text-align:left">20%</td>
+<td style="text-align:left">100%</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">MHA acrylic adhesive</td>
+<td style="text-align:left">20%</td>
+<td style="text-align:left">100%</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">6-Ply Dick Blick Posterboard</td>
+<td style="text-align:left">15%</td>
+<td style="text-align:left">100%</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">6-Ply Dick Blick Posterboard</td>
+<td style="text-align:left">12%</td>
+<td style="text-align:left">100%</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">Full Laminate</td>
+<td style="text-align:left">5%</td>
+<td style="text-align:left">100%</td>
+<td style="text-align:left">1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cut">Cut</h4>
+<p>Starting with your flexible layer,</p>
+<ol>
+<li>Send your artwork to the printer.</li>
+<li>Open the lid, turn on the laser pointer if available, and run the sequence without the laser on to ensure the material is well aligned with the cut.</li>
+<li>When satisfied, stop the cut, reset the sequence, and close the lid</li>
+<li>Turn the air supply on to the laser head</li>
+<li>Turn on the vacuum or fume extraction system.</li>
+<li>Start the cut on your experimentally-determined cut setting.</li>
+</ol>
+<p>Repeat this sequence for the adhesive layer and <em>finally</em> the rigid layer.  When the rigid layer is finished cutting, remove the parts but do not remove the outer scrap.  We will use this to align the second-pass cut.</p>
+<h3 id="step-2-laminate-layers-together">Step 2: Laminate layers together</h3>
+<h4 id="turn-on-the-press">Turn on the press</h4>
+<p>Depending on the adhesive&rsquo;s melting point and the thickness of the other materials, it is necessary to set the temperature of the press correctly.  For our standard acrylic adhesive, the melting range is between 180-220$^{\circ}$F.  Light laminations should be for just long enough to get a bond across the full surface of the adhesive.</p>
+<h4 id="lamination-sequence">Lamination sequence</h4>
+<p>There is a trick to this.  Since soft materials bend and flex a lot, if you try and push it down in an alignment jig, there will inevitably be one area which makes initial contact, and the flexibiliy of the layer may not ensure that you get proper alignment.  You can do several things to fix this, including using a rigid backing to place a thin, flexible layer in better alignment.  The simplest method is to lay the soft material in the jig first, and then push it flat against the surface of the jig.  You can then proceed to push down the more rigid layer without the same risk of misalignment.</p>
+<p><strong>Sequence:</strong></p>
+<p><div class="text-center">
+  <a href="/figures/design/laminate1.png" target="_blank"><img src="/figures/design/laminate1.png" alt="&lt;!-- raw HTML omitted --&gt; Caption"  class="img-fluid"/></a>
+</div></p>
+<ol>
+<li>Place alignment pins in jig at spacing proper for your design</li>
+<li>Lay down adhesive layer 2 upside down (with adhesive side facing up) in the jig</li>
+<li>Lay down rigid layer 1 upside down, so that it matches layer 2&rsquo;s orientation</li>
+<li>Remove the locating pins from the jig.</li>
+<li>Slide layers off the jig together, taking care not to let them slip against each other and losing alignment</li>
+<li>Lightly laminate layers together</li>
+<li>Remove paper backing from layer 2, taking care not to peel away the adhesive as well.</li>
+<li>Place alignment pins in jig at spacing proper for your design</li>
+<li>Place adhesive layer 4 right side up (with adhesive side facing up) in the jig</li>
+<li>Place rigid layer 5 so that it matches layer 4 orientation</li>
+<li>Remove the locating pins from the jig</li>
+<li>Slide layers off the jig together, taking care not to let them slip against each other (losing alignment)</li>
+<li>Lightly laminate layers together</li>
+<li>Remove paper backing from layer 4, taking care not to peel away the adhesive as well.</li>
+<li>Place alignment pins in jig at spacing proper for your design</li>
+<li>Place layer 3 in the jig</li>
+<li>Place laminated layers 4 &amp; 5 in the jig so that it matches layer 3 orientation</li>
+<li>Remove the locating pins from the jig</li>
+<li>Slide both layers off the jig together, taking care not to let them slip against each other (losing alignment)</li>
+<li>You may laminate briefly to tack these layers down if they are prone to slipping (typically don&rsquo;t need to)</li>
+<li>Carefully flip layers 3,4&amp;5.</li>
+<li>Place alignment pins in jig at spacing proper for your design</li>
+<li>Place layers 1&amp;2</li>
+<li>Place layers 3, 4 &amp; 5 in the jig so that it matches  the orientation of layers 1&amp;2.</li>
+<li>Remove the locating pins from the jig</li>
+<li>Slide layers off the jig together, taking care not to let them slip against each other (losing alignment)</li>
+<li>Laminate layers together, keeping on the press to securely bond all layers.</li>
+</ol>
+<p><div class="text-center">
+  <a href="/figures/design/laminate2.png" target="_blank"><img src="/figures/design/laminate2.png" alt="steps 16-27"  class="img-fluid"/></a>
+</div></p>
+<h3 id="step-3-second-pass-cut">Step 3: Second-Pass Cut</h3>
+<p>If you followed these instructions, the rigid material scrap should still be taped in place in the bed of the laser, with the second pass cut aligned with the hole created by the first-pass cut.</p>
+<p>Alternately, you will need to make a new jig.  Place a new piece of rigid material in the bed and tape it down.  Run your second pass cut file on the rigid layer material.  This should remove the outer profile of the laminate.  Remove all inner material leaving the outline of your laminate.  This creates a jig to be used in the final cut. Put the laminate stack in the hole created at the end of the first pass cut.</p>
+<p>Before running the cut at full power, it is advisable to run a test cut to ensure that your jig aligns the material well.  Try running at a low power, high speed setting to trace a path on the top of the laminate for inspection.  Check around hinges to ensure that the cutout fully removes all connected material.</p>
+<p>Your laser cut settings for a full laminate should be slower and / or more powerful than the cut settings for your most difficult-to-cut individual layer.  For example, if your rigid material requires 100% power and 20% speed to be fully cut out, try setting your second pass cut setting to around 100% power, 10% speed as a first guess.  It will have to cut through at least twice the thickness of your thickest layer, and has to deal with focus issues that crop up in thicker materials.</p>
+<p>Repeat passes as needed, incrementally increasing or decreasing cut power and speed until you get the desired cut depth.</p>
+<p>If your laminate is thick or you have a short focal length lens, it may be worth considering raising the bed in order to bring the bottom plane of the material into better focus.  This can often be commanded directly from the cut settings in the printer preferences.</p>
+<p>Before fully removing your part, ensure that the final device has fully been separated from its support.  This can be often seen with the naked eye as the laser closes a given path (the part actually falls out a bit), or checked by gently trying to remove the inner part.  It is easier to cut multiple passes before moving it than after you have touched it, though.  <strong>Moving the part can lead to mis-aligned cuts</strong></p>
+<h3 id="remove-and-assemble">Remove and assemble</h3>
+<p>Once the laminate is removable, you may take it out of the laser and assemble it.</p>
+<h2 id="step-4-clean-up-your-area">Step 4: Clean up your Area</h2>
+<ul>
+<li>Turn the temperature of the press back to its normal setting</li>
+<li>Clean all scrap material.  Return big unused scrap, throw away small scrap</li>
+<li>Turn off air supply to laser(if applicable)</li>
+<li>Turn off laser(if applicable)</li>
+<li>Turn off vacuum to laser (if applicable)</li>
+<li>Put away all tools including scissors, focusing tool</li>
+<li>Clean files off the desktop and sign out</li>
+<li></li>
+</ul>
+
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

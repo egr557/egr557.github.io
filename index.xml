@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Foldable Robotics</title>
+    <link>https://danaukes.com/</link>
+    <description>Recent content on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://danaukes.com/modules/kinematics/generated/symbolic-kinematics-with-pynamics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/generated/symbolic-kinematics-with-pynamics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://danaukes.com/modules/python/generated/conditionals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/conditionals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Actuator Fitting</title>
+      <link>https://danaukes.com/modules/validation/actuator-fitting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/validation/actuator-fitting/</guid>
+      <description>Introduction The purpose of this assignment is to develop a model for your actuator.
+Steps  Decide as a team what kind of actuator you will use. This semester you may choose any actuator or energy storage device you like, including  A stretched or wound spring A preloaded beam A deformed elastic shape A motor, gear motor, or RC Servo Shape Memory Alloy &amp;hellip; (see the professor to get something else approved)   Develop a model which accurately captures the principal dynamics of the actuator.</description>
+    </item>
+    
+    <item>
+      <title>Add Folder to System Path</title>
+      <link>https://danaukes.com/modules/misc/add-folder-to-system-path/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/misc/add-folder-to-system-path/</guid>
+      <description>Add Folder to System Path These are the Windows 10 instructions. Different operating systems, including older versions of Windows act slightly differently. Please find OS specific instructions
+ Open file explorer Right click on &amp;ldquo;This PC&amp;rdquo;&amp;ndash;&amp;gt;&amp;ldquo;properties&amp;rdquo; On the left menu select &amp;ldquo;advanced system settings&amp;rdquo; Click on &amp;ldquo;Environment Variables&amp;hellip;&amp;rdquo; A dialog box will pop up with two windows. The top window is the user-level settings, while the lower box controls globals settings.</description>
+    </item>
+    
+    <item>
+      <title>Advanced Data Types</title>
+      <link>https://danaukes.com/modules/python/generated/advanced-data-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/advanced-data-types/</guid>
+      <description>Advanced Data Types Tuples tup1 = (0,1) tup1 (0, 1) tup2 = (3,-2) tup2 (3, -2) tup3 = tuple(range(5)) tup3 (0, 1, 2, 3, 4) tuple of tuples
+tup4 = (tup2,tup1) tup4 ((3, -2), (0, 1)) you can use the sorted method to create a sorted list of tuples
+sorted(tup4) [(0, 1), (3, -2)] you can also pick how you sort based on a lambda method</description>
+    </item>
+    
+    <item>
+      <title>Approximating compliant beams with the pseudo-rigid-body model</title>
+      <link>https://danaukes.com/modules/compliance/generated/prbm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/compliance/generated/prbm/</guid>
+      <description>Approximating compliant beams with the pseudo-rigid-body model import sympy q = sympy.Symbol(&amp;#39;q&amp;#39;) d = sympy.Symbol(&amp;#39;d&amp;#39;) L = sympy.Symbol(&amp;#39;L&amp;#39;) P = sympy.Symbol(&amp;#39;P&amp;#39;) h = sympy.Symbol(&amp;#39;h&amp;#39;) b = sympy.Symbol(&amp;#39;b&amp;#39;) E = sympy.Symbol(&amp;#39;E&amp;#39;) x = sympy.Symbol(&amp;#39;x&amp;#39;) subs = {} #subs[k]=1000 subs[P]=.1 subs[L]=.1 subs[b]=.01 subs[h]=.01 subs[E]=1e7 subs[x]=.5 
+Approximating a cantilever with a single revolute joint Arbitrarily placing a compliant joint halfway along its length can be used to approximate a cantilever beam.</description>
+    </item>
+    
+    <item>
+      <title>Arduino Setup Tutorial</title>
+      <link>https://danaukes.com/modules/integration/arduino/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/integration/arduino/</guid>
+      <description>Arduino IDE and pro trinket setup Refer to the website for all the documentation and files
+ Install the Arduino IDE Install Adafruit windows drivers(if applicable) Add repository  file &amp;ndash;&amp;gt; preferences in &amp;ldquo;additional board managers&amp;rdquo;, type &amp;ldquo;https://adafruit.github.io/arduino-board-index/package_adafruit_index.json&amp;quot;   Add adafruit boards manager  tools &amp;ndash;&amp;gt; board &amp;ndash;&amp;gt; board manager&amp;hellip; search for adafruit, select, and install.    USB Bootloader Settings  Plug in USB Bootloader Select Board:  ProTrinket5V/16MHz(USB)   Select Programmer:  USBTinyISP   upload  USB/Serial Cable Settings  Plug in USB/Serial Cable to the six pins at the end of the adafruit pro trinket If necessary, install ftdi drivers Select Board:  ProTrinket5V/16MHz(FTDI)   Select Port (use device manager to identify) Select Programmer:  AVR ISP   upload  Working with serial Serial Echo void setup() {Serial.</description>
+    </item>
+    
+    <item>
+      <title>Basic Data Types</title>
+      <link>https://danaukes.com/modules/python/generated/basic-data-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/basic-data-types/</guid>
+      <description>Basic Data Types type(4.1) float type(int(4.1)) int Bool True True False False 1==2 False 3!=5 True Integer 1 1 1+2 3 2-1 1 a = 1 b = 2 a+b 3 Float Operations import math 1.1 1.1 1.1*2.2 2.4200000000000004 2*1.1 2.2 round(1.4) 1 round(1.5) 2 round(-1.4) -1 round(-1.5) -2 math.trunc(1.8) 1 math.floor(1.8) 1 math.</description>
+    </item>
+    
+    <item>
+      <title>Biomechanics Background and Initial Specifications</title>
+      <link>https://danaukes.com/assignments/biomechanics-background-and-initial-specificaitons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/biomechanics-background-and-initial-specificaitons/</guid>
+      <description>Biomechanics Background and Initial Specifications Assignment Overview The goal of this part is to encourage you to get &amp;ldquo;bio-inspired&amp;rdquo;, to get you thinking about the scale of your robot, and to think about how to replicate the efficiencies of biological systems. You may refer to the developing specifications page for more information
+Please Read this whole assignment first.
+Suggestions  It will be useful to start using a program like Mendeley to collect and organize references.</description>
+    </item>
+    
+    <item>
+      <title>Cantilever Beams</title>
+      <link>https://danaukes.com/modules/compliance/cantilever-beams/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/compliance/cantilever-beams/</guid>
+      <description>Cantilever Beams Overview Compute the stiffness of a laminate beam
+Summary of Steps 
+  Prepare 4 rectangular samples of the rigid material your team is using (cardboard, posterboard,fiberglass) in the dimensions of 25mm x 125mm.
+  Measure the thickness of each of the samples in at least two places. You should have at least 8 measurements.
+  Clamp two beams flat on top of one another on a table with 100mm hanging off the side.</description>
+    </item>
+    
+    <item>
+      <title>CATME I</title>
+      <link>https://danaukes.com/assignments/catme-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/catme-i/</guid>
+      <description>CATME I Assignment Overview Please use the link provided in the email sent from CATME to complete an assessment of your teammates.
+Please remember that feedback to teammates will be released to them, so keep your criticism constructive
+Rubric    Description Points     Total 200    </description>
+    </item>
+    
+    <item>
+      <title>CATME II</title>
+      <link>https://danaukes.com/assignments/catme-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/catme-ii/</guid>
+      <description>CATME II Assignment Overview Please use the link provided in the email sent from CATME to complete an assessment of your teammates.
+Please remember that feedback to teammates will be released to them, so keep your criticism constructive
+Rubric    Description Points     Total {{page.points}}    </description>
+    </item>
+    
+    <item>
+      <title>convert excel spreadsheet to markdown table</title>
+      <link>https://danaukes.com/modules/misc/excel-to-markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/misc/excel-to-markdown/</guid>
+      <description>Introduction Often you are working in excel and want to output to a markdown table.
+  In excel, add a row under the top row. fill each element with a dash character, -.
+  To the right of the table, add a new formula to concatenate each column of that row together, separated by a vertical line character, |. For the first row composed of three columns, it should look like this:</description>
+    </item>
+    
+    <item>
+      <title>Converting Powerpoint to .mp4</title>
+      <link>https://danaukes.com/modules/project/powerpoint-to-mp4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/project/powerpoint-to-mp4/</guid>
+      <description>Converting Powerpoint to .mp4 Introduction This tutorial takes you step-by-step through creating a .mp4 version of a powerpoint presentation for posting to youtube or a personal website
+ Open the Powerpoint presentation you would like to convert. Go through each slide. For each video, a. set it up to play automatically, and a. Ensure it is set to play full-screen Go to &amp;ldquo;Slideshow&amp;rdquo; &amp;ndash;&amp;gt; &amp;ldquo;Record slide show&amp;rdquo; &amp;ndash;&amp;gt; &amp;ldquo;Record from beginning&amp;rdquo;, and narrate your presentation.</description>
+    </item>
+    
+    <item>
+      <title>Course Feedback I</title>
+      <link>https://danaukes.com/assignments/course-feedback-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/course-feedback-i/</guid>
+      <description>Course Feedback I Assignment Overview The goal of this assignment is to learn about your activities in this course and how the course can be improved in the future.
+Procedure  Fill out the survey listed in Canvas  Submission instructions  Submission of the form is all that is needed for credit.  Rubric    Description Points     Total 20      </description>
+    </item>
+    
+    <item>
+      <title>Course Feedback II</title>
+      <link>https://danaukes.com/assignments/course-feedback-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/course-feedback-ii/</guid>
+      <description>Course Feedback II Assignment Overview The goal of this assignment is to learn about your activities in this course and how the course can be improved in the future.
+Procedure  Fill out this survey Fill out the official course feedback survey. You should have gotten an email about it. This is not a graded component of this assignment, but is important for the future of the class and the students who take it.</description>
+    </item>
+    
+    <item>
+      <title>Data Collection and Experimental Validation</title>
+      <link>https://danaukes.com/assignments/data-collection-and-experimental-validation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/data-collection-and-experimental-validation/</guid>
+      <description>Data Collection and Experimental Validation Assignment Overview The purpose of this assignment is to collect data on your system and compare against the results estimated from simulation.
+Procedure  Perform an experiment to collect either trajectory or force information over 5 cycles of motion (if cyclic) or 5 separate experiments (if single-run). Take a picture of your setup. Annotate the photo with arrows, text boxes etc to help us undestand how you tested your device Record a video of at least one run of your experiment.</description>
+    </item>
+    
+    <item>
+      <title>Derivatives and the Golden Rule</title>
+      <link>https://danaukes.com/modules/dynamics/generated/05-derivatives-and-the-golden-rule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/05-derivatives-and-the-golden-rule/</guid>
+      <description>Derivatives and the Golden Rule $$ \frac{ {}^N{d\vec{v}}}{dt} = \frac{ {}^A{d\vec{v}}}{dt} + {}^N{\vec{w}}^{A} \times \vec{v} $$
+::: {style=&amp;ldquo;text-align:center;&amp;quot;} 
+ :::
+Example ::: {style=&amp;ldquo;text-align:center;&amp;quot;}  :::
+$$ \vec{r} = -l\hat{a}_y $$ $$ \vec{v} = \frac{ {}^N{d\vec{r}}}{dt} =\frac{ {}^{A} { d\vec{r}}}{dt} + {}^{N}{\vec{\omega}}^{A} \times \vec{r} $$ $$ \vec{v} = \frac{ {}^{N}{d\vec{r}}}{dt} = \dot{\theta}\hat{a}_z \times -l\hat{a}_y $$ $$ \vec{v} = \frac{ {}^{N}{}{ d\vec{r}}{}{}}{dt}= l\dot{\theta}\hat{a}_x $$ $$ \vec{a} = \frac{ {}^{N}{}{ d\vec{v}}{}{}}{dt} = \frac{ {}^{N}{}{d^2\vec{r}}{}{}}{dt^2} $$ $$ \vec{a} = \frac{ {}^{A}{}{d\vec{v}}{}{}}{dt} + {}^{N}{}{\vec{\omega}}^{A}{} \times \vec{v} $$ $$ \vec{a} = l\ddot{\theta}\hat{a}_x + \dot{\theta}\hat{a}_z \times l\dot{\theta}\hat{a}_x $$ $$ \vec{a} = l\ddot{\theta}\hat{a}_x + l\dot{\theta}^2\hat{a}_y $$</description>
+    </item>
+    
+    <item>
+      <title>Design and Manufacturing Workflow</title>
+      <link>https://danaukes.com/assignments/design-and-manufacturing-workflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/design-and-manufacturing-workflow/</guid>
+      <description>Design and Manufacturing Workflow Introduction The purpose of this assignment is to plan for the manufacturing of the full system, test the output, and hopefully use it to produce a prototype.
+Resources  Solidworks Tutorial kinematics tutorial:	https://drive.google.com/open?id=1En2zWrJg5EV_T9sTThubRUUclYcnW9jV&amp;amp;authuser=daukes%40asu.edu&amp;amp;usp=drive_fs The macros for exporting a laminate to .dxf: https://github.com/popupcad/code_popupcad_solidworks_exporter  Steps   Create a quick paper mockup of your final prototype design(You may use a prior prototype if it still applies, but you may destroy it.</description>
+    </item>
+    
+    <item>
+      <title>Design Optimization</title>
+      <link>https://danaukes.com/assignments/design-optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/design-optimization/</guid>
+      <description>Design Optimization Introduction The purpose of this assignment is to optimize the dynamics of your system to maximize performance against your team&amp;rsquo;s selected research question and design goal.
+Procedure   Performance Measurement a. Explain, in words, how your team will evaluate the success of your robot&amp;rsquo;s design. This could be by measuring the forces produced by your design, the speed at which it walks, its thrust:weight ratio, the height it can jump, etc.</description>
+    </item>
+    
+    <item>
+      <title>Develop a Research Question</title>
+      <link>https://danaukes.com/assignments/develop-a-research-question/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/develop-a-research-question/</guid>
+      <description>Develop a Research Question Introduction Generate a research question worthy of your time.
+Resources  The associated module on developing a research question Mendeley Desktop, a useful citation manager  Instructions  Starting with the research question selected for your team, work on adapting and refining it to fit your team&amp;rsquo;s specific goals and this year&amp;rsquo;s course constraints (with regard to makeability, feasibility, etc)   Defend your selected question by answering the questions below.</description>
+    </item>
+    
+    <item>
+      <title>Developing a Research Question</title>
+      <link>https://danaukes.com/modules/project/developing-a-research-question/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/project/developing-a-research-question/</guid>
+      <description>Developing a Research Question Introduction Robotics as a field is highly multi-disciplinary. Even within that field, designing a robot requires knowledge and input from a variety of domains, including biology, materials, mechanics, mechanical design,dynamics, CAD, manufacturing, optimization, control, etc. Because of its highly interdisciplinary nature, as new knowledge emerges from any of its connected fields, there is an opportunity to innovate. Designing novel and innovative robots requires adapting new ideas from those neighboring fields, connecting them together, and remixing them with existing techniques, in order to realize new modes of locomotion or achieve higher performance.</description>
+    </item>
+    
+    <item>
+      <title>Developing Specifications</title>
+      <link>https://danaukes.com/modules/biomechanics/developing-specifications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/biomechanics/developing-specifications/</guid>
+      <description>Developing Specifications Introduction Developing specifications for a novel robot is difficult, especially considering how wide-open the potential design space is. I recommend a bio-inspired approach in order to simplify your design workspace. Other difficulties might involve not being able to find information in research literature. This will require a bit more inference on your part.
+Workflow  Synthesize the information you have from your biomechanics investigation into an initial specifications table.</description>
+    </item>
+    
+    <item>
+      <title>Download and Link to Python Packages</title>
+      <link>https://danaukes.com/modules/python/download-and-link-to-python-packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/download-and-link-to-python-packages/</guid>
+      <description>Download and Link to Python Packages Say you want to run a python package from source using a git repository. Here is a quick set of steps, using the pynamics repository as an example:
+ Install and set up git extensions. clone the pynamics repository on your local computer  go here: https://github.com/idealabasu/code_pynamics click on clone and copy the path: right click in a destination directory and select the clone menu item   add the path to your new repository to your system variables  open up explorer, navigate to and right click on&amp;quot;this pc&amp;ndash;&amp;gt;properties&amp;ndash;&amp;gt;advanced system settings&amp;ndash;&amp;gt;environment variables&amp;quot; add a new PYTHONPATH key in your user variables if it does not exist add a path to the list of packages inside the repository folder, ie &amp;ldquo;C:\Users\username(wherever you&amp;rsquo;ve placed the repo)\code_pynamics\python&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Dyads, Dyadics, and Inertia</title>
+      <link>https://danaukes.com/modules/dynamics/generated/04-dyads-dyadics-and-inertia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/04-dyads-dyadics-and-inertia/</guid>
+      <description>Dyads Dyads and dyadics are a difficult concept to understand, initially. Dyads may be defined in a number of ways, but the way which makes most sense to me is that dyads are the vector-based mathematical representation for physical phenomena that contain coupled, multi-dimensional information. An example of a physical system that contains multi-dimensional information is inertia. Inertia describes the spatial distribution of mass throughout a rigid body, and this spatial distribution comes encoded in a structure in which mass is represented in two-vector pairs.</description>
+    </item>
+    
+    <item>
+      <title>Dynamics II Plan</title>
+      <link>https://danaukes.com/assignments/dynamics-ii-plan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/dynamics-ii-plan/</guid>
+      <description>Dynamics II Plan Introduction The purpose of this assignment is to decide as a team how you will split up the various Parameter ID tasks individually
+Procedure   Identify and discuss the materials you plan to use in fabrication. Decide who will be obtaining those materials and distributing them.
+  Identify and Discuss the various parameters you plan to model in your simulation, including
+  actuator modeling</description>
+    </item>
+    
+    <item>
+      <title>Dynamics II Prep (Parameter ID)</title>
+      <link>https://danaukes.com/assignments/dynamics-ii-prep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/dynamics-ii-prep/</guid>
+      <description>Dynamics II Prep Introduction The purpose of this assignment is to get your team to model the various aspects of your model including
+ The full system Actuator Parameters Energy Storage Devices System / Link Stiffness Damping and Friction  Procedure Part I Your team should have decided what each of your tasks are for this week. Please ensure you document what your contributions are. For example, you can omplete a task such as:</description>
+    </item>
+    
+    <item>
+      <title>Euler-Bernoulli Beams</title>
+      <link>https://danaukes.com/modules/compliance/generated/euler-bernoulli-beams/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/compliance/generated/euler-bernoulli-beams/</guid>
+      <description>Euler-Bernoulli Beams The relationship between the bending moment and the radius of curvature($\rho$) for a beam of Young&amp;rsquo;s modulus $E$ and cross-sectional moment of inertia(second moment of area) $I$ is given by
+$$ M=-\frac{EI}{\rho} $$
+Now let&amp;rsquo;s say $\omega(x)$ describes the deflection of a beam in the z direction as a function of its length, $x$. When deflections are small &amp;ndash; assumed in the Euler-Bernoulli model, then the second derivative can serve as an approximate the radius of curvature (using the small angle approximation $\sin{\theta}=\theta$), making</description>
+    </item>
+    
+    <item>
+      <title>Falling Rod Example</title>
+      <link>https://danaukes.com/modules/dynamics/generated/09-falling-rod-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/09-falling-rod-example/</guid>
+      <description>Falling Rod Example This example shows how to implement contact and friction using a penalty method and damping
+# -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34; Written by Daniel M. Aukes Email: danaukes&amp;lt;at&amp;gt;gmail.com Please see LICENSE for full license. &amp;#34;&amp;#34;&amp;#34; import sympy sympy.init_printing(pretty_print=False) import pynamics from pynamics.frame import Frame from pynamics.variable_types import Differentiable,Constant,Variable from pynamics.system import System from pynamics.body import Body from pynamics.dyadic import Dyadic from pynamics.output import Output,PointsOutput from pynamics.particle import Particle import pynamics.</description>
+    </item>
+    
+    <item>
+      <title>FEA Modeling</title>
+      <link>https://danaukes.com/modules/compliance/laminate-fea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/compliance/laminate-fea/</guid>
+      <description>FEA Modeling Introduction The goal of this tutorial is to get you familiar computing the stiffness of a laminate using FEA. You may use any FEA tool you are comfortable with, or the code supplied in class as a starting point.
+Resources  Euler-Bernoulli Beams Solidworks FEA Tutorial  Procedure  Pick one or more geometries of your team&amp;rsquo;s robot design to focus on. Perhaps a &amp;ldquo;rigid&amp;rdquo; link which you would like to program to exhibit a certain springyness, a long skinny link which exhibits too much deflection, or, if your system is sufficiently rigid already, your flexible joint material, in order to &amp;ldquo;program&amp;rdquo; a desired springiness into your team&amp;rsquo;s joint dynamics.</description>
+    </item>
+    
+    <item>
+      <title>Fitting a Dynamic Model</title>
+      <link>https://danaukes.com/modules/optimization/generated/04-fitting-a-dynamic-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/optimization/generated/04-fitting-a-dynamic-model/</guid>
+      <description>Fitting a Dynamic Model Introduction This example takes us through the beginning of the triple pendulum example again.
+# -*- coding: utf-8 -*- import pynamics from pynamics.frame import Frame from pynamics.variable_types import Differentiable,Constant from pynamics.system import System from pynamics.body import Body from pynamics.dyadic import Dyadic from pynamics.output import Output,PointsOutput from pynamics.particle import Particle import pynamics.integration import numpy import matplotlib.pyplot as plt plt.ion() from math import pi We need to import some additional libraries for optimization and interpolation</description>
+    </item>
+    
+    <item>
+      <title>Foldable Robotics Background</title>
+      <link>https://danaukes.com/modules/introduction/01-foldable-background/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/introduction/01-foldable-background/</guid>
+      <description>Foldable Robotics Background Laminate Fabrication Techniques  (Citation: Pister,&amp;#32;Judy&amp;amp; al.,&amp;#32;1992Pister,&amp;#32;K.,&amp;#32;Judy,&amp;#32;M.,&amp;#32;Burgett,&amp;#32;S.&amp;#32;&amp;amp;&amp;#32;Fearing,&amp;#32;R.&amp;#32;(1992).&amp;#32;Microfabricated hinges.Sensors and Actuators A: Physical,&amp;#32;33(3).&amp;#32;249–256.https://doi.org/10.1016/0924-4247(92)80172-Y)Foldable, laminate, and origami-inspired robots have origins in early MEMS work using planar processes to make three-dimensional mechansims in silicon (Citation: Pister,&amp;#32;Judy&amp;amp; al.,&amp;#32;1992Pister,&amp;#32;K.,&amp;#32;Judy,&amp;#32;M.,&amp;#32;Burgett,&amp;#32;S.&amp;#32;&amp;amp;&amp;#32;Fearing,&amp;#32;R.&amp;#32;(1992).&amp;#32;Microfabricated hinges.Sensors and Actuators A: Physical,&amp;#32;33(3).&amp;#32;249–256.https://doi.org/10.1016/0924-4247(92)80172-Y), where $\mu m$-scale hinges were fabricated in silicon to create articulated assemblies which folded out of a 2D plane.</description>
+    </item>
+    
+    <item>
+      <title>Foldable Robotics Timeline</title>
+      <link>https://danaukes.com/modules/introduction/02-foldable-timeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/introduction/02-foldable-timeline/</guid>
+      <description>Foldable Robotics Timeline 1992-1995 
+(Citation: Pister,&amp;#32;Judy&amp;amp; al.,&amp;#32;1992Pister,&amp;#32;K.,&amp;#32;Judy,&amp;#32;M.,&amp;#32;Burgett,&amp;#32;S.&amp;#32;&amp;amp;&amp;#32;Fearing,&amp;#32;R.&amp;#32;(1992).&amp;#32;Microfabricated hinges.Sensors and Actuators A: Physical,&amp;#32;33(3).&amp;#32;249–256.https://doi.org/10.1016/0924-4247(92)80172-Y)
+(Citation: Yeh,&amp;#32;Kruglick&amp;amp; al.,&amp;#32;1995Yeh,&amp;#32;R.,&amp;#32;Kruglick,&amp;#32;E.&amp;#32;&amp;amp;&amp;#32;Pister,&amp;#32;K.&amp;#32;(1995).&amp;#32;Microelectromechanical Components For Articulated Microrobots.&amp;#32;IEEE.https://doi.org/10.1109/SENSOR.1995.721817)
+(Citation: Reid,&amp;#32;Bright&amp;amp; al.,&amp;#32;1998Reid,&amp;#32;J.,&amp;#32;Bright,&amp;#32;V.&amp;#32;&amp;amp;&amp;#32;Butler,&amp;#32;J.&amp;#32;(1998).&amp;#32;Automated assembly of flip-up micromirrors.Sensors and Actuators A: Physical,&amp;#32;66(1-3).&amp;#32;292–298.https://doi.</description>
+    </item>
+    
+    <item>
+      <title>Forces and Torques</title>
+      <link>https://danaukes.com/modules/dynamics/generated/06-forces-and-torques/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/06-forces-and-torques/</guid>
+      <description>Forces and Torques Introduction Non-Conservative Forces Damping $$\vec{f} = -b\vec{v}$$
+Friction Friction is typically formulated as the forces acting between two bodies $A$ and $B$
+$$\vec{f} = \mu|\vec{n}|\frac{\vec{v}}{|\vec{v}|}$$
+where $\mu$ is the coefficient of friction, determined experimentally, $\vec{n}$ is the magnitude of the normal force between two rigid bodies, and $\vec{v}$ is the relative velocity of the contact point on $B$ with respect to the contact point on $A$. If $|\vec{v}|==0$, you must be careful to ensure that the expression does not evaluate as NaN.</description>
+    </item>
+    
+    <item>
+      <title>Frames, Basis Vectors, and Vectors</title>
+      <link>https://danaukes.com/modules/dynamics/generated/02-vectors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/02-vectors/</guid>
+      <description>Frames When analyzing a system, sometimes it&amp;rsquo;s convenient or simple to represent a system in a specific way. We all know of the Cartesian system of coordinates which span a three dimensional space, but did you know that there are an infinte number of ways to describe that same space? Just as we are familiar with the x,y, and z directions, we can use different reference frames to navigate and represent the same coordinates and vectors in different ways.</description>
+    </item>
+    
+    <item>
+      <title>Full Design Pipeline</title>
+      <link>https://danaukes.com/modules/manufacturing/generated/full-workflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/manufacturing/generated/full-workflow/</guid>
+      <description>Full Design Pipeline %matplotlib inline import foldable_robotics import foldable_robotics.dxf import numpy import shapely.geometry as sg from foldable_robotics.layer import Layer from foldable_robotics.laminate import Laminate import foldable_robotics.manufacturing import foldable_robotics.parts.castellated_hinge1 import idealab_tools.plot_tris from math import pi, sin,cos,tan import idealab_tools.text_to_polygons foldable_robotics.display_height=200 foldable_robotics.line_width=.5 from foldable_robotics.layer import Layer from foldable_robotics.laminate import Laminate import foldable_robotics import foldable_robotics.dxf import foldable_robotics.manufacturing import foldable_robotics.parts.castellated_hinge1 foldable_robotics.display_height=200 foldable_robotics.line_width=.5 #import workflow_support as ws import os import foldable_robotics.solidworks_support def get_bodies(filename, layername, num_layers): body = foldable_robotics.</description>
+    </item>
+    
+    <item>
+      <title>Google Colab Documentation</title>
+      <link>https://danaukes.com/modules/python/generated/google-colab-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/google-colab-tutorial/</guid>
+      <description>Google Colab Documentation Contributed by Mason Smith
+EGR 557 - Foldable Robotics
+1. Resources Introduction to Colab and Python
+Getting Started with Google Colab
+External data: Local Files, Drive, Sheets, and Cloud Storage
+How to Connect Google Colab with Google Drive
+Embedding your image in google colab markdown
+2. What is Google Colab &amp;ldquo;Colaboratory is a free Jupyter notebook environment that requires no setup and runs entirely in the cloud. With Colaboratory you can write and execute code, save and share your analyses, and access powerful computing resources, all for free from your browser&amp;hellip; As the name suggests, Google Colab comes with collaboration backed in the product.</description>
+    </item>
+    
+    <item>
+      <title>Graphical Synthesis</title>
+      <link>https://danaukes.com/modules/kinematics/graphical-synthesis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/graphical-synthesis/</guid>
+      <description>Graphical Synthesis A popular way of deriving the desired kinematics of a device graphically has also been employed for centures.
+By Hand Instructions Download the [part]({{ .site.Params.home }}/assets/graphical-synthesis/part2.sldprt)
+The following instructions can be done by hand or with a tool like Solidworks. If you do it by hand you will need a ruler and straightedge.
+  Draw a constant length line (the output link) in three different positions.</description>
+    </item>
+    
+    <item>
+      <title>Hinges</title>
+      <link>https://danaukes.com/modules/manufacturing/generated/hinges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/manufacturing/generated/hinges/</guid>
+      <description>Hinges import shapely.geometry as sg from foldable_robotics.layer import Layer from foldable_robotics.laminate import Laminate import numpy Hinges are portions of a laminate device where the stiff material has been removed to permit the remaining flexible material to rotate.
+The simplest hinge in a one-layer laminate is a perforated line
+radius = .01 num_perforations = 5 num_segments = num_perforations*2+1 num_points = num_segments+1 a=numpy.r_[0:1:num_points*1j] lines = [] for ii in range(int(len(a)/2)-1): p1 = sg.</description>
+    </item>
+    
+    <item>
+      <title>Incoming Survey</title>
+      <link>https://danaukes.com/assignments/incoming-survey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/incoming-survey/</guid>
+      <description>Incoming Survey Assignment Overview The goal of this assignment is to learn about you, your background, and your interests and abilities.
+Procedure  Fill out this survey  Submission instructions  Submission of the form is all that is needed for credit.  Rubric    Description Points     Total 50    </description>
+    </item>
+    
+    <item>
+      <title>Inertias for common shapes</title>
+      <link>https://danaukes.com/modules/dynamics/inertias-for-common-shapes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/inertias-for-common-shapes/</guid>
+      <description>Inertias for common shapes Rectangular parallelepiped/prism (a box) with length $a$, width $b$, height $c$
+$$V=abc$$
+$$I_{xx}=\frac{1}{12}m(b^2+c^2)$$ $$I_{yy}=\frac{1}{12}m(a^2+c^2)$$ $$I_{zz}=\frac{1}{12}m(a^2+b^2)$$
+$$I_{xy}=I_{yz}=I_{zx}=0$$
+Solid Cylinder with radius $r$ and length $h$
+$$V=\pi r^2 h$$
+$$I_{xx}=I_{yy}=\frac{1}{12}m(3r^2+h^2)$$ $$I_{zz}=\frac{1}{2}m(r^2)$$ $$I_{xy}=I_{yz}=I_{zx}=0$$
+Thick-walled cylinder with inner radius $r_i$ and outer radius $r_o$ and length $h$
+$$V=\pi (r_o^2-r_i^2) h$$
+$$I_{xx}=I_{yy}=\frac{1}{12}m(3(r_o^2+r_i^2)+h^2)$$ $$I_{zz}=\frac{1}{2}m(r_o^2+r_i^2)$$ $$I_{xy}=I_{yz}=I_{zx}=0$$
+Thin-walled cylinder with radius $r$ and length $h$
+$$I_{xx}=I_{yy}=\frac{1}{12}m(6r^2+h^2)$$ $$I_{zz}=m(r^2)$$ $$I_{xy}=I_{yz}=I_{zx}=0$$
+Solid Sphere with radius $r$
+$$V=\frac{4}{3}\pi r^3$$</description>
+    </item>
+    
+    <item>
+      <title>Install Python</title>
+      <link>https://danaukes.com/assignments/install-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/install-python/</guid>
+      <description>Install Python Assignment Overview The goal here is to verify you have python installed correctly.
+Resources  Installing Anaconda Python Tutorial Add folder to system path (Windows)  Procedure   Read the entire assignment before starting.
+  Follow the instuctions in the Installing Anaconda Python Tutorial for installing the anaconda distribution of python.
+  Download the windows build for ffmpeg, a common video encoder. Unzip and move it into a new root-level folder called &amp;ldquo;c:/binaries&amp;rdquo; or similar.</description>
+    </item>
+    
+    <item>
+      <title>Install Solidworks</title>
+      <link>https://danaukes.com/assignments/install-solidworks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/install-solidworks/</guid>
+      <description>Install Solidworks Assignment Overview The goal here is to ensure you have Solidworks installed correctly.
+Optional External Resources GNU Image Manipulation Program (Image Editor)
+Procedure   Read the entire assignment before starting.
+  Go to myapps.asu.edu and follow the instructions for installing Solidworks
+  After installation, open Solidworks and create a new part
+  Create a sketch
+
+  Add your name as text to the sketch</description>
+    </item>
+    
+    <item>
+      <title>Installing Anaconda</title>
+      <link>https://danaukes.com/modules/python/installing-anaconda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/installing-anaconda/</guid>
+      <description>Installing Anaconda Introduction Anaconda is a distribution of Python that includes the ability to manage packages using the conda package manager as well as the ability to create and manage environments, or collections of packages that work together. Anaconda ships as a ~500 Mb installer. This tutorial gets you started with miniconda, a slimmed down installer that allows you to install just the packages you need. Below are the steps to gettting a working installation of Python with all the packages you need for Foldable Robotics.</description>
+    </item>
+    
+    <item>
+      <title>Installing Git Extensions for Windows</title>
+      <link>https://danaukes.com/modules/misc/installing-git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/misc/installing-git/</guid>
+      <description>In Windows  Download and install Git  keep default install location I prefer to disable shell integration I prefer to use notepad++ as a text editor, but you must install it separately. keep &amp;ldquo;git from the command line and also from 3rd-party software&amp;rdquo; use openssh use openssl checkout windows-style, commit unix-style use mintty on the next page, check  enable file system caching enable git credential manager   Install   Download and install Kdiff.</description>
+    </item>
+    
+    <item>
+      <title>Intro to Python</title>
+      <link>https://danaukes.com/modules/python/why-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/why-python/</guid>
+      <description>Intro to Python One thing I really like about python is that it is based on good programming practice . if you&amp;rsquo;ve ever looked at python help tutorials online, you&amp;rsquo;ll see the term &amp;ldquo;pythonic&amp;rdquo;. The Zen of python by Tim Peters is copied below
+ The Zen of Python, by Tim Peters^[http://docs.python-guide.org/en/latest/writing/style/]
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.</description>
+    </item>
+    
+    <item>
+      <title>Intro to Shapely</title>
+      <link>https://danaukes.com/assignments/shapely/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/shapely/</guid>
+      <description>Shapely &amp;amp; Manufacturing Overview The purpose of this exercise is to get used to working with shapely polygons and to use it to compute some manufacturing geometry. It is your job to determine how to compute the cut files using Python, shapely, and the foldable_robotics package
+Detailed Procedure Display the result of each step
+ Import shapely.geometry, foldable.layer, foldable.laminate, and foldable.manufacturing modules for using various shapely geometries, Layer(), and Laminate() classes, as well as for performing advanced computations.</description>
+    </item>
+    
+    <item>
+      <title>Jacobians</title>
+      <link>https://danaukes.com/modules/kinematics/jacobians/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/jacobians/</guid>
+      <description>Jacobians Jacobians A Jacobian is a matrix that collects the partial derivatives of rates of change between two vectors. These rates of change are related by
+$$\dot{a}=\mathbf{J}\dot{b}$$
+$$\mathbf{J}= \left[\begin{matrix} j_{11} &amp;amp; j_{12} &amp;amp; \ldots &amp;amp; j_{1n}\
+j_{21} &amp;amp; j_{22} &amp;amp; \ldots &amp;amp; j_{2n}\
+\vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\
+j_{m1} &amp;amp; j_{m2} &amp;amp; \ldots &amp;amp; j_{mn}\
+\end{matrix} \right]$$
+where $j_{ij} = \frac{\partial \dot{a}_i}{\partial \dot{b}_j}$
+Physical Meaning ::: {.text-center}  :::</description>
+    </item>
+    
+    <item>
+      <title>Kane&#39;s method</title>
+      <link>https://danaukes.com/modules/dynamics/generated/07-kanes-method/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/07-kanes-method/</guid>
+      <description>Kane&amp;rsquo;s method ::: {style=&amp;ldquo;text-align:center;&amp;quot;}  :::
+Frames Frame A
+$$ {}^{N}{}{\vec{\omega}}^{A}{} = \dot{\theta} \hat{n}_z= \dot{\theta} \hat{a}_z $$
+Velocity if point $p$&amp;rsquo;s position is represented by $\vec{r}$ where
+$$ \vec{r} = -l\hat{a}_y $$ then from the example in the derivatives module, we know that $$ \vec{v} = \frac{ {}^{N}{}{ d\vec{r}}{}{}}{dt}= l\dot{\theta}\hat{a}_x $$
+and $$ \vec{a} = l\ddot{\theta}\hat{a}_x + l\dot{\theta}^2\hat{a}_y $$
+Speed Variables In this system our speed variable is $\dot{\theta}$</description>
+    </item>
+    
+    <item>
+      <title>Kinematics Introduction</title>
+      <link>https://danaukes.com/modules/kinematics/introduction-to-kinematics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/introduction-to-kinematics/</guid>
+      <description>Kinematics Introduction Prototyping in Paper A second step is to ideate, mock-up, and prototype candidate mechanisms in paper.
+While experts may have other tools, like CAD, along with intuition and experience, a novice can gain quick physical intuition by developing families of paper prototypes that help to eliminate infeasible designs, giving clues as to how to alter or optimize a design, and can often result in a very close-to-final kinematic structure.</description>
+    </item>
+    
+    <item>
+      <title>Kinematics Via Prototyping &amp; CAD</title>
+      <link>https://danaukes.com/assignments/kinematics-via-prototyping-and-cad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/kinematics-via-prototyping-and-cad/</guid>
+      <description>Kinematics Via Prototyping &amp;amp; CAD Introduction The goal of this assignment is to 1) propose a mechanism that your team can study as part of a larger laminate system, and 2) to get you comfortable sketching the kinematics of foldable systems in CAD, establishing constraints, and counting degrees of freedom.
+Prerequisites  Solidworks should be installed. It may be downloaded from https://myapps.asu.edu.  Steps Pick one of the three basic kinematic elements we will be working with this semester: a planar four (or five) bar mechanism, a spherical four(or five) bar mechanism, or a sarrus linkage.</description>
+    </item>
+    
+    <item>
+      <title>Least Squares Optimization</title>
+      <link>https://danaukes.com/modules/optimization/generated/01-least-squares-optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/optimization/generated/01-least-squares-optimization/</guid>
+      <description>%matplotlib inline import numpy import numpy.random import matplotlib.pyplot as plt import numpy.linalg Define your x variable
+x = numpy.r_[-10:10:.5] Define y as a function of x. This can be anything
+#y = x #y = x**2 #y = x**3 y = numpy.sin(x) y /= y.max() Now create an array of normally distributed noise
+rand = numpy.random.randn(*y.shape)/10 y_rand = y+rand Plot y against the random vector
+plt.plot(x,y) plt.plot(x,y_rand,&amp;#39;o&amp;#39;) [&amp;lt;matplotlib.lines.Line2D at 0x1a76ccd0eb0&amp;gt;]</description>
+    </item>
+    
+    <item>
+      <title>Lecture 1</title>
+      <link>https://danaukes.com/lectures/lecture01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture01/</guid>
+      <description>Introduction to Foldable Robotics. Go over syllabus and course logistics. Discuss software-based tools, assignments</description>
+    </item>
+    
+    <item>
+      <title>Lecture 10</title>
+      <link>https://danaukes.com/lectures/lecture10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture10/</guid>
+      <description>Go over upcoming kinematics assignments and break out into teams for work time</description>
+    </item>
+    
+    <item>
+      <title>Lecture 11</title>
+      <link>https://danaukes.com/lectures/lecture11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture11/</guid>
+      <description>Loop Equations, Team Updates</description>
+    </item>
+    
+    <item>
+      <title>Lecture 12</title>
+      <link>https://danaukes.com/lectures/lecture12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture12/</guid>
+      <description>Team Checkoffs, HW Checkoffs Go over inertia, forces, F=ma, Kane&amp;rsquo;s method, and triple pendulum walkthrough</description>
+    </item>
+    
+    <item>
+      <title>Lecture 13</title>
+      <link>https://danaukes.com/lectures/lecture13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture13/</guid>
+      <description>Present system architecture, kinematics, forces</description>
+    </item>
+    
+    <item>
+      <title>Lecture 14</title>
+      <link>https://danaukes.com/lectures/lecture14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture14/</guid>
+      <description>Seminar, Presentation I Overflow, HW Flex Time</description>
+    </item>
+    
+    <item>
+      <title>Lecture 15</title>
+      <link>https://danaukes.com/lectures/lecture15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture15/</guid>
+      <description>Introduction to Optimization and Application to Model Fitting</description>
+    </item>
+    
+    <item>
+      <title>Lecture 16</title>
+      <link>https://danaukes.com/lectures/lecture16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture16/</guid>
+      <description>Discuss Euler-Bernoulli Beam Equations, go through Solidworks FEA example</description>
+    </item>
+    
+    <item>
+      <title>Lecture 17</title>
+      <link>https://danaukes.com/lectures/lecture17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture17/</guid>
+      <description>Application examples for modeling reality</description>
+    </item>
+    
+    <item>
+      <title>Lecture 18</title>
+      <link>https://danaukes.com/lectures/lecture18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lecture 19</title>
+      <link>https://danaukes.com/lectures/lecture19/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture19/</guid>
+      <description>Special Guest Seminar</description>
+    </item>
+    
+    <item>
+      <title>Lecture 2</title>
+      <link>https://danaukes.com/lectures/lecture02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture02/</guid>
+      <description>Foldable Robotics History. Bring popup books to class and share</description>
+    </item>
+    
+    <item>
+      <title>Lecture 20</title>
+      <link>https://danaukes.com/lectures/lecture20/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture20/</guid>
+      <description>Special Guest Seminar</description>
+    </item>
+    
+    <item>
+      <title>Lecture 21</title>
+      <link>https://danaukes.com/lectures/lecture21/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture21/</guid>
+      <description>Present updated dynamics including actuator selection and modeling, system compliance, and design optimization</description>
+    </item>
+    
+    <item>
+      <title>Lecture 22</title>
+      <link>https://danaukes.com/lectures/lecture22/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture22/</guid>
+      <description>CSG, Laminate Manufacturability</description>
+    </item>
+    
+    <item>
+      <title>Lecture 22 Code</title>
+      <link>https://danaukes.com/modules/manufacturing/generated/lec22_example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/manufacturing/generated/lec22_example/</guid>
+      <description>import shapely.geometry as sg from foldable_robotics.layer import Layer from foldable_robotics.laminate import Laminate a = sg.Point(0,0) a 
+b = sg.box(0,0,1,1) b 
+c = Layer(b) c 
+c.translate(.5,.5) 
+c|(c.translate(.5,.5)) 
+c.union((c.translate(.5,.5))) 
+d = Layer(a.buffer(.25)) d 
+e = c-d.translate(.5,.5) e 
+import foldable_robotics foldable_robotics.resolution=4 e.dilate(.2) 
+e.erode(.1) 
+e.plot() 
+e.erode(.1).plot() 
+list(b.centroid.coords) [(0.5, 0.5)] d.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 23</title>
+      <link>https://danaukes.com/lectures/lecture23/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture23/</guid>
+      <description>Special Guest Seminar</description>
+    </item>
+    
+    <item>
+      <title>Lecture 24</title>
+      <link>https://danaukes.com/lectures/lecture24/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture24/</guid>
+      <description>Laminate Manufacturability</description>
+    </item>
+    
+    <item>
+      <title>Lecture 25</title>
+      <link>https://danaukes.com/lectures/lecture25/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture25/</guid>
+      <description>Digital Manufacturing</description>
+    </item>
+    
+    <item>
+      <title>Lecture 26</title>
+      <link>https://danaukes.com/lectures/lecture26/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture26/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lecture 27</title>
+      <link>https://danaukes.com/lectures/lecture27/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture27/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lecture 28</title>
+      <link>https://danaukes.com/lectures/lecture28/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture28/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lecture 29</title>
+      <link>https://danaukes.com/lectures/lecture29/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture29/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lecture 3</title>
+      <link>https://danaukes.com/lectures/lecture03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture03/</guid>
+      <description>No Class &amp;ndash; MLK Day</description>
+    </item>
+    
+    <item>
+      <title>Lecture 30</title>
+      <link>https://danaukes.com/lectures/lecture30/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture30/</guid>
+      <description>Final Presentation Videos</description>
+    </item>
+    
+    <item>
+      <title>Lecture 31</title>
+      <link>https://danaukes.com/lectures/lecture31/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture31/</guid>
+      <description>No Class</description>
+    </item>
+    
+    <item>
+      <title>Lecture 32</title>
+      <link>https://danaukes.com/lectures/lecture32/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture32/</guid>
+      <description>No Class</description>
+    </item>
+    
+    <item>
+      <title>Lecture 4</title>
+      <link>https://danaukes.com/lectures/lecture04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture04/</guid>
+      <description>Introduction to Biomechanics</description>
+    </item>
+    
+    <item>
+      <title>Lecture 5</title>
+      <link>https://danaukes.com/lectures/lecture05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture05/</guid>
+      <description>Pitch projects and coalesce in teams</description>
+    </item>
+    
+    <item>
+      <title>Lecture 6</title>
+      <link>https://danaukes.com/lectures/lecture06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture06/</guid>
+      <description>Work on developing research question in class (teams), present out. Solidworks kinematics examples.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 7</title>
+      <link>https://danaukes.com/lectures/lecture07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture07/</guid>
+      <description>Biomechanics wrap-up. Origami, Kirigami Background. Introduction to kinematics and degrees of freedom. Break into teams for work time (20 min). Meet back and discuss singularities</description>
+    </item>
+    
+    <item>
+      <title>Lecture 8</title>
+      <link>https://danaukes.com/lectures/lecture08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture08/</guid>
+      <description>Introduce Jacobian. Introduce constraint equations, plotting, numpy, nonlinear optimization, motion paths. Using motion path to determine Jacobian, estimate forces, speed, and power. Work on kinematics example in class</description>
+    </item>
+    
+    <item>
+      <title>Lecture 9</title>
+      <link>https://danaukes.com/lectures/lecture09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/lectures/lecture09/</guid>
+      <description>Introduction to vectors, rotation, vector operations, differentiation</description>
+    </item>
+    
+    <item>
+      <title>Make a Bibliography</title>
+      <link>https://danaukes.com/modules/project/make-a-bibliography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/project/make-a-bibliography/</guid>
+      <description>Make a Bibliography Introduction The purpose of this assignment is to make a bibliography page and to include it in your website
+Resources https://www.mendeley.com
+Instructions  Install Mendeley or another reference manager your team agrees to use. Create a shared collection that your whole team can access, manage, and add to. For each webpage, create a subfolder that has only the references used on that page Add relevant references to each subfolder as needed.</description>
+    </item>
+    
+    <item>
+      <title>Make a Pop-up Book</title>
+      <link>https://danaukes.com/assignments/make-a-popup-book/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/make-a-popup-book/</guid>
+      <description>Make a Pop-up Book Assignment Overview The goal of this assignment is to search externally for origami-inspired mechanisms you could use for your project. Additionally, this assignment is meant to make you think critically about how the manufacturing of foldable robots is intertwined with cutting and joining processes, and to appreciate the automation
+Procedure   Read the entire assignment before starting.
+  Read this paper[1]. Look through other references you can find, including the book by Birmingham [2] or search via other online resources such as https://scholar.</description>
+    </item>
+    
+    <item>
+      <title>Make a Project Repository and Website</title>
+      <link>https://danaukes.com/modules/project/make-a-website/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/project/make-a-website/</guid>
+      <description>Make a Project Repository and Website Introduction The purpose of this post is to help you create a website to share your work. Sharing your work with the class and the broader community is important, as you should generate a persistent portfolio of class work to demonstrate your abilities when you apply for a job or academic career.
+We will be using github to host and share websites this year. This is for a couple reasons:</description>
+    </item>
+    
+    <item>
+      <title>Make a Website</title>
+      <link>https://danaukes.com/assignments/make-a-website/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/make-a-website/</guid>
+      <description>Make a Website Assignment Overview The purpose of this assignment is to create a project website as a living document that will document all your work for the class.
+Resources  Make a Project Repository and Website Tutorial https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet  Procedure   Follow the directions in the &amp;ldquo;Make a Project Repository and Website&amp;rdquo; tutorial
+  The website should contain the following information:
+ Project Title Team members and contact information    The website should also link to several subpages.</description>
+    </item>
+    
+    <item>
+      <title>Manufacturing Computation for Multi-layer Devices</title>
+      <link>https://danaukes.com/modules/manufacturing/generated/manufacturing_planning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/manufacturing/generated/manufacturing_planning/</guid>
+      <description>Manufacturing Computation for Multi-layer Devices Hinge width, laminate thickness, and range of motion The first thing to think about is how the thickness of your laminate will impact and alter the ideal kinematics you have been assuming up to this point. Let&amp;rsquo;s first discuss hinges
+A multilayer hinge typically is made by exposing a softer layer of material which is embedded in a multilayer laminate. IT is typically exposed along a straight line, and the cut away materail usually spans a straight line across the width of a material.</description>
+    </item>
+    
+    <item>
+      <title>Manufacturing Tutorial Video</title>
+      <link>https://danaukes.com/modules/manufacturing/manufacturing-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/manufacturing/manufacturing-tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Motor Modeling Process</title>
+      <link>https://danaukes.com/modules/integration/generated/motor-modeling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/integration/generated/motor-modeling/</guid>
+      <description>Motor Modeling Process from math import sin, cos, pi import numpy import matplotlib.pyplot as plt %matplotlib inline Part 0: Module Overview The purpose of this writeup is to familiarize you with the level of engineering required for selecting a motor and geartrain for your project. In this writup you will learn about the modeling, experimental, and design parameters you need in order to understand how to utilize a permanent-magnet DC motor in your project, how to pair it with a geartrain whose ratios you select, how to understand loss in your system, and how to select a battery</description>
+    </item>
+    
+    <item>
+      <title>Operators &amp; Operations</title>
+      <link>https://danaukes.com/modules/python/generated/operators-and-operations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/operators-and-operations/</guid>
+      <description>Operators &amp;amp; Operations Basic Operators a = 3 b = 2 c = 0b110011 d = 0x3ab1 a 3 b 2 c 51 d 15025 a+b 5 a-b 1 a*b 6 a**b 9 a%b 1 a/b 1.5 a//b 1 Evaluation a&amp;gt;b True a&amp;lt;b False a==b False a!=b True a&amp;gt;=b True a&amp;lt;=b False Binary Operators a=0b11111000 b=0b00011111 bin(a&amp;amp;b) &#39;0b11000&#39; bin(a|b) &#39;0b11111111&#39; bin(a^b) &#39;0b11100111&#39; bin(b&amp;lt;&amp;lt;1) &#39;0b111110&#39; bin(b&amp;gt;&amp;gt;1) &#39;0b1111&#39; </description>
+    </item>
+    
+    <item>
+      <title>Packages in Python</title>
+      <link>https://danaukes.com/modules/python/packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/packages/</guid>
+      <description>Packages in Python Introduction The most important packages that I use when creating python code are those packages which make a python more Matlab-like.
+Common Packages Numpy https://www.scipy.org/getting-started.html
+this package permits one to store and access data in arrays multidimensional arrays as one would do natively in Matlab. While python permits nested lists, the Paradigm of being able to slice multidimensional arrays of data, to index through it, too reshape and analyze it across dimensions in multiple ways is provided by this package</description>
+    </item>
+    
+    <item>
+      <title>Pendulum Model Fitting</title>
+      <link>https://danaukes.com/modules/optimization/pendulum_model_fitting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/optimization/pendulum_model_fitting/</guid>
+      <description>Find a bright round spherical object like a tennis ball, orange, etc. Weigh it Measure its diameter Find a piece of string and attach it to the ball Tape the other end of the string to a door frame. Make sure that the background is relatively neutral and free of color. Set up a video camera to capture the ball as it swings. Ensure the following to make sure your data is free from error:  That the camera is attached to a tripod or otherwise resting firmly on the ground.</description>
+    </item>
+    
+    <item>
+      <title>Plotting in 3D</title>
+      <link>https://danaukes.com/modules/python/generated/3d-plotting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/3d-plotting/</guid>
+      <description>%matplotlib inline Plotting in 3D  Visit this matplotlib tutorial on 3d Plotting Another useful reference  import matplotlib.pyplot as plt import numpy from math import pi from mpl_toolkits.mplot3d import Axes3D import idealab_tools.matplotlib_tools theta = numpy.r_[0:2*pi:40j] x = numpy.cos(theta) y = .5*numpy.sin(theta) z = numpy.sin(2*theta-pi/4) xyz = numpy.array([x,y,z]).T fig = plt.figure(); ax = fig.add_subplot(111, projection=&amp;#39;3d&amp;#39;); ax.view_init(30, 15) ax.plot3D(xyz[:,0],xyz[:,1],xyz[:,2]) idealab_tools.matplotlib_tools.equal_axes(ax,xyz)</description>
+    </item>
+    
+    <item>
+      <title>Presentation Feedback I</title>
+      <link>https://danaukes.com/assignments/presentation-feedback-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/presentation-feedback-i/</guid>
+      <description>Presentation Feedback I Assignment Overview Each of you is responsible for compiling at least three questions and submitting them to teams via a google form. Comments are helpful, but questions which require teams to address holes in their design are most useful. Be constructive and thoughtful.
+Procedure  Please use this form to send notes to teams Please provide one submission per team. You may edit your comments up to the due date.</description>
+    </item>
+    
+    <item>
+      <title>Presentation Feedback II</title>
+      <link>https://danaukes.com/assignments/presentation-feedback-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/presentation-feedback-ii/</guid>
+      <description>Presentation Feedback II Assignment Overview Each of you is responsible for compiling at least three questions and submitting them to teams via a google form. Comments are helpful, but questions which require teams to address holes in their design are most useful. Be constructive and thoughtful.
+Procedure  Please use this form to send notes to teams Please provide one submission per team. You may edit your comments up to the due date.</description>
+    </item>
+    
+    <item>
+      <title>Presentation I</title>
+      <link>https://danaukes.com/assignments/presentation-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/presentation-i/</guid>
+      <description>Presentation I Assignment Overview Please prepare your group presentation based on your most recent project activities
+Procedure   Create a powerpoint with 5 Slides:
+ Project Introduction  Team members Your team&amp;rsquo;s refined research question   Biomechanics-driven inspiration  Prior work on this animal Prior work related to similar robots Biomechanics-derived specifications   Proposed mechanism  Figure of Layout Picture of Prototype   Kinematics  Solution approach Estimate of Force/Torque required from actuator(s)   Future Plans  How does what you learned translate into future action by your team?</description>
+    </item>
+    
+    <item>
+      <title>Presentation II</title>
+      <link>https://danaukes.com/assignments/presentation-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/presentation-ii/</guid>
+      <description>Presentation II Assignment Overview Please prepare your group presentation based on your most recent project activities
+Procedure   Review your team&amp;rsquo;s prior feedback.
+  Create a powerpoint with 5 Slides:
+  Project Update
+ Team members Your team&amp;rsquo;s refined research question    Current Specifications
+ Has your source of bio-inspiration changed? Have your specs changed based on the realities of physics, material selection, known payloads, etc?</description>
+    </item>
+    
+    <item>
+      <title>Presentation III</title>
+      <link>https://danaukes.com/assignments/presentation-iii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/presentation-iii/</guid>
+      <description>Presentation III Assignment Overview Please prepare your group presentation based on your most recent project activities
+Procedure   Review your team&amp;rsquo;s prior feedback.
+  Create a five-minute powerpoint:
+ Project Update  Team members Your team&amp;rsquo;s refined research question Major updates to project definition and earlier work since last presentation   Manufacturing  Discuss the 1-layer and 5-layer manufacturing designs Discuss manufacturability Discuss how / whether you used this in your prototyping.</description>
+    </item>
+    
+    <item>
+      <title>Project Pitches</title>
+      <link>https://danaukes.com/assignments/project-pitches/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/project-pitches/</guid>
+      <description>Project Pitches Overview The goal of this assignment is to permit those interested in pitching their ideas to attract a group of people interested in joining them. This pitch will be used to inspire and promote discussion amongst students before teams are formed.
+This is your opportunity to shape your semester and to accomplish a personal research goal through class. If, after group discussion, you wish to create other pitches, you may upload them independently to the Google Drive Folder listed below.</description>
+    </item>
+    
+    <item>
+      <title>Project Selection Survey</title>
+      <link>https://danaukes.com/assignments/project-selection-survey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/project-selection-survey/</guid>
+      <description>Project Selection Survey Introduction Instructions Please fill out this survey to indicate your ranked project preferences. Only one team can answer each distinct research question.
+Submission Please complete your survey by the deadline noted in Canvas.
+Rubric    Description Points     Total {{page.points}}    </description>
+    </item>
+    
+    <item>
+      <title>Pynamics Vectors Example</title>
+      <link>https://danaukes.com/modules/kinematics/generated/vectors-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/generated/vectors-example/</guid>
+      <description>import pynamics from pynamics.system import System from pynamics.frame import Frame system = System() pynamics.set_system(__name__,system) A = Frame(&amp;#39;A&amp;#39;) B = Frame(&amp;#39;B&amp;#39;) C = Frame(&amp;#39;C&amp;#39;) v = A.x +B.y + C.z v A.x + B.y + C.z 3*v 3*A.x + 3*B.y + 3*C.z 3*v - A.x 2*A.x + 3*B.y + 3*C.z import sympy a = sympy.symbols(&amp;lsquo;a&amp;rsquo;) b = sympy.symbols(&amp;lsquo;b&amp;rsquo;)
+B.rotate_fixed_axis_directed(A,[0,0,1],a,system) C.rotate_fixed_axis_directed(B,[0,1,0],b,system)
+from pynamics.variable_types import Differentiable,Constant a, a_d, a_dd = Differentiable(&amp;#39;a&amp;#39;,system) b, b_d, b_dd = Differentiable(&amp;#39;b&amp;#39;,system) system.</description>
+    </item>
+    
+    <item>
+      <title>Python Development</title>
+      <link>https://danaukes.com/modules/python/python-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/python-development/</guid>
+      <description>Python Development Now What?  More Python Making your programs for others Releasing your code Licensing Collaborating Testing / Building  Imports   Imports should always be written at the top of the file, after any module comments and docstrings.
+  Imports should be divided according to what is being imported. There are generally three groups:
+ standard library imports (Python’s built-in modules) related third party imports (modules that are installed and do not belong to the current application) local application imports (modules that belong to the current application)    Each group of imports should be separated by a blank space.</description>
+    </item>
+    
+    <item>
+      <title>Python for Loops. Arrays. and Plotting</title>
+      <link>https://danaukes.com/assignments/python-for-loops-arrays-and-plotting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/python-for-loops-arrays-and-plotting/</guid>
+      <description>Python for loops, Arrays, and Plotting References Python  Basic Intro Control Flow: For, if, etc For loops List Comprehensions in Python  Arrays  NumPy for Matlab users Quickstart Tutorial Absolute Beginners Tutorial  Plotting with Matplotlib  Matplotlib Tutorials, specifically the pyplot tutorial General Examples and pyplot examples titles equal axis savefig() examples  Introduction The purpose of this assignment is to get to know Python and Juptyer Notebook.</description>
+    </item>
+    
+    <item>
+      <title>Python Functions</title>
+      <link>https://danaukes.com/assignments/python-functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/python-functions/</guid>
+      <description>Python Functions Resources  *args and **kwargs in python explained NumPy for Matlab users  Procedure   Become familiar with Python functions, including how you declare and call them.
+  Create a function sum1() that takes two arguments x and y and returns their sum. Demonstrate your working function by running the following commands:
+print(sum1(2,3)) print(sum1(x=3,y=4))   Create a function sum2() that takes two arguments x and y with default values of 10 and 20, respectively, and returns their sum.</description>
+    </item>
+    
+    <item>
+      <title>Robotics Domains</title>
+      <link>https://danaukes.com/modules/introduction/robotics-domains/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/introduction/robotics-domains/</guid>
+      <description>Introduction Robotics is multidisciplinary. Foldable robotics draws from the following fields
+ Mechanical Design - The process of determining the parameters and their values that should be used in creating a physical device. Dynamics - The study of how forces create motion. Kinematics - The study of how geometric rules drive motion/force relationships, and how those rules can be applied to systems of linkages, gears, and other mechanisms. Optimization - The study of how to arrive at a set of parameters that achieves a stated goal.</description>
+    </item>
+    
+    <item>
+      <title>Rotations</title>
+      <link>https://danaukes.com/modules/dynamics/generated/01-rotations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/01-rotations/</guid>
+      <description>Introduction While there may be many ways to navigate and describe the same three-dimensional space using reference frames, it is also necessary and desireable to be able to change representations; this can be useful for interpreting motion from a differet perspective, for adding forces or torques to a system using dirctional components which are a more natural description, or in order to perform mathematical operations between vectors which are represented by different basis vectors.</description>
+    </item>
+    
+    <item>
+      <title>Running Dynamixel X-Series</title>
+      <link>https://danaukes.com/modules/integration/dynamixel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/integration/dynamixel/</guid>
+      <description>Running Dynamixel X-Series Using Arduino IDE for OpenCM9.04 Install Arduino IDE and OpenCM9.04 Software   Install OpenCM9.04 USB CDC driver - Driver Download
+  Install Arduino IDE - Arduino IDE
+  After Arduino IDE is run, click File &amp;ndash;&amp;gt; Preferences in top menu of IDE
+  Copy and paste the following link to the Additional Boards Manager URLs textbox
+https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCM9.04/master/arduino/opencm_release/package_opencm9.04_index.json
+  Click Tools &amp;ndash;&amp;gt; Board &amp;ndash;&amp;gt; Boards Manager</description>
+    </item>
+    
+    <item>
+      <title>Sarrus Kinematics</title>
+      <link>https://danaukes.com/assignments/sarrus-kinematics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/sarrus-kinematics/</guid>
+      <description>Spherical Kinematics Assignment Overview The purpose of this assignment is to get you comfortable using the numerical computational capabilities of Python to start estimating the performance of your design.
+
+Instructions Numerically Solve for a Mechanism&amp;rsquo;s Position Using the examples on the foldable robotics website as a starting point, solve for the kinematics of the mechanism above.
+ Make a table of link lengths corresponding to the vectors defined by the six heavy black lines.</description>
+    </item>
+    
+    <item>
+      <title>Scaling</title>
+      <link>https://danaukes.com/modules/biomechanics/scaling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/biomechanics/scaling/</guid>
+      <description>Scaling </description>
+    </item>
+    
+    <item>
+      <title>Scipy Optimization Example</title>
+      <link>https://danaukes.com/modules/optimization/generated/02-scipy-optimization-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/optimization/generated/02-scipy-optimization-example/</guid>
+      <description>Scipy Optimization Example This short example shows you how to use the scipy minimize function to identify model parameters. This example is set up similarly to the linear least squares example for consistency. Being able to define pretty much anything in a python function, however, gives you great power to customize this, as opposed to a specific approach like linear least squares.
+First, we import all the necessary modules
+%matplotlib inline import numpy import numpy.</description>
+    </item>
+    
+    <item>
+      <title>Singularities and Solver Problems</title>
+      <link>https://danaukes.com/modules/kinematics/singularities-and-solver-problems/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/singularities-and-solver-problems/</guid>
+      <description>Singularities and Solver Problems Many of the devices you will prototype are highly nonlinear mechanisms which may have certain charactersitics which are hard to solve for in your typical CAD sketcher.
+Singularities can be described as a mathematical or mechanical condition in which one or more degrees of freedom of your device or of your description of the device &amp;ndash; can no longer be controlled or solved for. A typical kinematic singularity may be seen</description>
+    </item>
+    
+    <item>
+      <title>Sketching 2D Kinematics in CAD</title>
+      <link>https://danaukes.com/modules/kinematics/sketching-2d-kinematics-in-cad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/sketching-2d-kinematics-in-cad/</guid>
+      <description>Sketching 2D Kinematics in CAD Introduction Steps  Create a planar sketch Turn off the background color in Solidworks by changing the background to plain white in the options at the top of the viewport window. This will make exporting your sketches easier. Translate each rigid link into a straight line. Connect each line at a vertex. Vertices function as a revolute joint in 2D sketches, and spherical joints in 3D sketches.</description>
+    </item>
+    
+    <item>
+      <title>Software List</title>
+      <link>https://danaukes.com/course-documents/software-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/course-documents/software-list/</guid>
+      <description>\small
+   Name Link Required     Anaconda Python Anaconda Required    Miniconda Installer    Solidworks Link Required   Miktex Link Prerequisite for some Python/Jupyter functionality   Office 365 Link Highly Recommended, free for ASU Students   Inkscape Link Recommended   Adobe Creative Cloud Link Recommended   Git Extensions Link Recommended   Git for Windows Link Prerequisite for Git Extensions   kdiff3 Link Prerequisite for Git Extensions   putty Link Recommended   grepwin Link Recommended   7-zip Link Suggested    \normalsize</description>
+    </item>
+    
+    <item>
+      <title>Solidworks Export Tutorial</title>
+      <link>https://danaukes.com/modules/kinematics/solidworks-export-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/solidworks-export-tutorial/</guid>
+      <description>Solidworks is an attractive way to model popup devices because you can interact with the three-dimensional kinematics of your popup device. However, Solidworks is not good at everything. First, it cannot create your cut-files for you automatically. Solidworks knows nothing about how you&amp;rsquo;re going to make your device, out of how many layers, and with what manufacturing processes. Second, Solidworks is such an expansive tool, and can be used in so many different ways that the most straightforward way to design a popup device is not very obvious.</description>
+    </item>
+    
+    <item>
+      <title>Solidworks FEA Tutorial</title>
+      <link>https://danaukes.com/modules/compliance/solidworks-fea-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/compliance/solidworks-fea-tutorial/</guid>
+      <description>Solidworks FEA Tutorial   Create a new part
+
+  Select the Top Plane
+
+  Create a new Sketch
+  Select the rectangle tool
+  Draw a rectangle (hint: click on the origin to constrain the rectangle to that point)
+
+  Select the dimensioning tool
+
+  Click on the top edge of the rectangle. A dimension will appear.</description>
+    </item>
+    
+    <item>
+      <title>Solve Triangle</title>
+      <link>https://danaukes.com/modules/kinematics/generated/find-triangle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/generated/find-triangle/</guid>
+      <description>%matplotlib inline import matplotlib.pyplot as plt import scipy.optimize import numpy desired_length1=1 desired_length2=2 desired_length3=1.5 p1_desired_location = 0,0 def objective_function(variables): x1,y1,x2,y2,x3,y3 = variables p1 = numpy.array([x1,y1]) p2 = numpy.array([x2,y2]) p3 = numpy.array([x3,y3]) v0 = p1-p1_desired_location v1 = p2-p1 v2 = p3-p2 v3 = p1-p3 l0 = (v0.dot(v0))**.5 l1 = (v1.dot(v1))**.5 l2 = (v2.dot(v2))**.5 l3 = (v3.dot(v3))**.5 error = [] error.append(l0) error.append(y2-0) error.append(l1-desired_length1) error.append(l2-desired_length2) error.append(l3-desired_length3) error = numpy.array(error) error = (error.dot(error))**.5 return error ini = [2,2,2,4,1,1] ini = [1,2,2,6,2,-1] result = scipy.</description>
+    </item>
+    
+    <item>
+      <title>Solving Four-Bar Constraints</title>
+      <link>https://danaukes.com/modules/kinematics/generated/solving-four-bar-constraints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/generated/solving-four-bar-constraints/</guid>
+      <description>Solving Four-Bar Constraints Turn on inline plotting
+%matplotlib inline import required packages
+import pynamics from pynamics.frame import Frame from pynamics.variable_types import Differentiable,Constant from pynamics.system import System #from pynamics.body import Body #from pynamics.dyadic import Dyadic from pynamics.output import Output,PointsOutput #from pynamics.particle import Particle import pynamics.integration import sympy import numpy import matplotlib.pyplot as plt plt.ion() from math import pi #from pynamics.constraint import Constraint import scipy.optimize Create a pynamics system
+system = System() pynamics.</description>
+    </item>
+    
+    <item>
+      <title>Solving Kinematics Numerically with Python</title>
+      <link>https://danaukes.com/modules/kinematics/generated/solving-kinematics-with-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/generated/solving-kinematics-with-python/</guid>
+      <description>Solving Kinematics Numerically with Python Introduction This module takes you through solving the motion of a device by using a numerical nonlinear solver to solve a complex system of constraint equations. We will be using a number of Python packages to do this.
+Note that solving kinematics numerically can prove troublesome, as the lack of a symbolic system of equations prevents us from analyzing those equations for situations when the system approaches a singularity, or when the initial guess for the state of the system is far away from the solution.</description>
+    </item>
+    
+    <item>
+      <title>Solving Nonlinear Problems with Scipy Optimize and pyCMA</title>
+      <link>https://danaukes.com/modules/optimization/generated/03-solving-nonlinear-problems/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/optimization/generated/03-solving-nonlinear-problems/</guid>
+      <description>Solving Nonlinear Problems with Scipy Optimize and pyCMA Introduction Nonlinear solvers can suffer from the possibility of reaching local minima if the initial guess is too far away from the best minimum solution. This is especially true when trying to fit nonlinear functions. This example contrasts the difference between the scipy optimize function and the pyCMA package.
+The pyCMA package provides python with an implementation of the &amp;ldquo;covariance matrix adaptation evolutionary strategy&amp;rdquo; (wikipedia page here).</description>
+    </item>
+    
+    <item>
+      <title>Submission Best Practices</title>
+      <link>https://danaukes.com/course-documents/submission-best-practices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/course-documents/submission-best-practices/</guid>
+      <description>Submission Best Practices This page details how to prepare assignments for submission. The &amp;ldquo;Submission&amp;rdquo; section of your assignment should provide the details for what format and where to submit assignments. This document should be used in conjunction with each assignment to ensure that all required files are submitted, and in the correct format.
+General Document Preparation When answering questions, don&amp;rsquo;t just answer the question, phrase the answer in a complete sentence which includes what the question asked.</description>
+    </item>
+    
+    <item>
+      <title>Suggested Drawing and Modeling Software</title>
+      <link>https://danaukes.com/modules/misc/software/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/misc/software/</guid>
+      <description>Drawing Software    Title Description Availability     [Inkscape][[Inkscape]] Recommended. Open source, cross-platform drawing program that can produce vector drawings in many formats https://inkscape.org/   Draw.Io Recommended. Add-on to google drive documents, free http://draw.io   Adobe Illustrator Recommended. Professional Vector-based Drawing Software, part of Adobe Creative Cloud Available through ASU: http://links.asu.edu/adobestudent   [CorelDraw][[CorelDraw]] Professional Vector-based Drawing Software Available in Innovation Hub (for laser cutting).</description>
+    </item>
+    
+    <item>
+      <title>Suggested Materials List</title>
+      <link>https://danaukes.com/course-documents/suggested-materials-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/course-documents/suggested-materials-list/</guid>
+      <description>Suggested Materials List Prototyping    Item # Link(s)     Posterboard^[avoid common cardboard(chipboard). Its layers are too flaky and easy to damage. ]     Cardstock     Rubber Bands     Stapler / Staples     String or Twine     Duct Tape     Rivets      Measurement    Item # Link(s)     Kitchen Scale     Fish Scale     Tape Measure     SmartPhone     Multimeter      Electronics    Item # Link(s)     Microcontroller     RC Servo     IMU      </description>
+    </item>
+    
+    <item>
+      <title>Syllabus for Foldable Robotics</title>
+      <link>https://danaukes.com/course-documents/syllabus-web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/course-documents/syllabus-web/</guid>
+      <description>Overview Foldable Robotics is a course organized around new types of robots being developed in research labs and industry across the country. These devices are designed and built using layered, flat sheets of a wide variety of materials, and folded up to create both form and motion. This class studies these devices from initial prototype and design through implementation and optimization, with a focus on application-specific projects which seek to solve problems of cost, parallelism, complexity, and time with a relatively fast and easy prototyping method.</description>
+    </item>
+    
+    <item>
+      <title>Sympy Example</title>
+      <link>https://danaukes.com/modules/python/generated/sympy-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/sympy-example/</guid>
+      <description>import sympy a = sympy.Symbol(&amp;#39;a&amp;#39;) b = sympy.Symbol(&amp;#39;b&amp;#39;) x = sympy.Symbol(&amp;#39;x&amp;#39;) y = sympy.Symbol(&amp;#39;y&amp;#39;) a $\displaystyle a$
+f = a*x+b*y f $\displaystyle a x + b y$
+f = a*(x+y) f $\displaystyle a \left(x + y\right)$
+g = f.expand() g $\displaystyle a x + a y$
+g.diff(x) $\displaystyle a$
+g.simplify() $\displaystyle a \left(x + y\right)$
+factor, collect are two other useful functions
+g.subs({x:b}) $\displaystyle a b + a y$
+h = g.</description>
+    </item>
+    
+    <item>
+      <title>System Capture and Fitting</title>
+      <link>https://danaukes.com/modules/validation/system-capture-and-fitting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/validation/system-capture-and-fitting/</guid>
+      <description>System Capture and Fitting (camera) Introduction The purpose of this assignment is to collect data on your system for use in fitting your model
+Course Resources  Optimization Module Experimental Validation Module Dynamics Module  Instructions  Attach 3 optical tracking markers to the fixed base frame, at the same camera depth as your experimental setup. They must not be colinear, and would best be arranged orthogonally (as in x-y vectors) Measure the distance between all three markers.</description>
+    </item>
+    
+    <item>
+      <title>System Dynamics I</title>
+      <link>https://danaukes.com/assignments/system-dynamics-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/system-dynamics-i/</guid>
+      <description>System Dynamics I Assignment Overview This assignment is intended to get you familiar with the dynamics of your system. We will start with the triple pendulum example and turn it into a leg.
+Resources  dynamics modules  Procedure Starting with system kinematics code as well as the pendulum code shared on Wednesday (2/17/2021),
+ Scale: Ensure your system is using SI units. You should be specifying lengths in meters (so millimeters should be scaled down to the .</description>
+    </item>
+    
+    <item>
+      <title>System Dynamics II</title>
+      <link>https://danaukes.com/assignments/system-dynamics-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/system-dynamics-ii/</guid>
+      <description>System Dynamics II Assignment Overview The point of this assignment is to re-consolidate everything you have learned about your system back into your dynamic model. It should now include:
+ at least one &amp;ldquo;compliant&amp;rdquo; element all unknown parameters determined and included.  joint or system-level damping determined   An actuator model or stored energy source. Ground constraints eliminated (if applicable) Closed-loop constraints (if applicable) valid initial condition  Procedure Resources  dynamics modules  Assignment Goals Your dynamics should include:</description>
+    </item>
+    
+    <item>
+      <title>System Kinematics</title>
+      <link>https://danaukes.com/assignments/system-kinematics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/system-kinematics/</guid>
+      <description>Create and Plot Kinematics Assignment Overview The purpose of this assignment is to model the kinematics so that you can estimate the forces, and torques, power requirements, and speed of your system. This will be done using a symbolic approach with the pynamics package
+Resources  Triple Pendulum Example EGR557 Kinematics Module EGR557 Dynamics Module pynamics repository  Instructions Meet with your team to go over each of the prototypes and mockups you have individually created through past homework assignments.</description>
+    </item>
+    
+    <item>
+      <title>The Fabrication Process</title>
+      <link>https://danaukes.com/modules/manufacturing/the-fabrication-process/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/manufacturing/the-fabrication-process/</guid>
+      <description>The Fabrication Process 5-Layer Design A typical five layer design consists of
+ Rigid Material Adhesive Flexure MAterial Adhesive Rigid Material  Preparing your Cut Files You should have already generated cutfiles using the process outlined in the last chapter.
+A good idea is to use the same page dimensions in your arwork as the bed of the laser. It is also a good idea to combine cut files for the same material using a dxf or pdf editing tool, in order to minimize the number of manual operations.</description>
+    </item>
+    
+    <item>
+      <title>Tracker Tutorial</title>
+      <link>https://danaukes.com/modules/validation/tracker-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/validation/tracker-tutorial/</guid>
+      <description>Basic Tracker Tutorial Thanks to Chien-Wen Pan for his screenshots and assistance.
+External Resources Tracker Software
+Procedure   Set up your Experiment
+ Create your experiment so that captured motion is planar to the lens&amp;rsquo;s radial axis. Ensure markers are not occluded as your system moves. This will result in lost data. Ensure your &amp;ldquo;ground link&amp;rdquo; is rigidly attached to ground. Any unmeasured flexibility will add error to your system Eliminate the effects of contact and friction if possible.</description>
+    </item>
+    
+    <item>
+      <title>Triple Pendulum Example</title>
+      <link>https://danaukes.com/modules/dynamics/generated/08-triple-pendulum-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/08-triple-pendulum-example/</guid>
+      <description>%matplotlib inline Try running with this variable set to true and to false and see the difference in the resulting equations of motion
+global_q = False use_constraints = False Import all the necessary modules
+# -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34; Written by Daniel M. Aukes Email: danaukes&amp;lt;at&amp;gt;gmail.com Please see LICENSE for full license. &amp;#34;&amp;#34;&amp;#34; import pynamics from pynamics.frame import Frame from pynamics.variable_types import Differentiable,Constant from pynamics.system import System from pynamics.body import Body from pynamics.</description>
+    </item>
+    
+    <item>
+      <title>Unit Scaling</title>
+      <link>https://danaukes.com/modules/dynamics/generated/07-unit-scaling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/07-unit-scaling/</guid>
+      <description>Unit Scaling import idealab_tools.units idealab_tools.units.force  kg*m/s^2 idealab_tools.units.force.base_units {&#39;kg&#39;: 1, &#39;m&#39;: 1, &#39;s&#39;: -2} idealab_tools.units.force.compute_scaling() 1 idealab_tools.units.Unit.set_scaling(m=10) idealab_tools.units.Unit.set_scaling(kg=.1) idealab_tools.units.force.compute_scaling() 1.0 idealab_tools.units.length.compute_scaling() 10 idealab_tools.units.energy.compute_scaling() 10.0 </description>
+    </item>
+    
+    <item>
+      <title>Using Jupyter Notebook</title>
+      <link>https://danaukes.com/modules/python/using-jupyter-notebook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/using-jupyter-notebook/</guid>
+      <description>Using Jupyter Notebook About Jupyter Jupyter notebook is a useful browser-based IPython editor that provides inline documentation via markdown and inline plotting functionality for a one-stop-shop coding and documentation experience. Jupyter is useful for creating living documents for class reports, assignments, or other documents where the results may need to be updated and re-run from time to time, yet still be output in a more professional format than the output of a code execution window.</description>
+    </item>
+    
+    <item>
+      <title>Using the ASU Library Proxy</title>
+      <link>https://danaukes.com/modules/misc/library-proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/misc/library-proxy/</guid>
+      <description>Introduction Accessing journal and conference papers off-campus can be a chore, made more difficult by having to use VPN&amp;rsquo;s or navigate ASU Library&amp;rsquo;s search tool. But there&amp;rsquo;s an easier way!
+Drag this link into your bookmark toolbar and click whenever you want to sign in to a specific page through the library&amp;rsquo;s proxy server. It will reload the page you are on, often giving you access to the paper you are seeking.</description>
+    </item>
+    
+    <item>
+      <title>Variable Types</title>
+      <link>https://danaukes.com/modules/dynamics/generated/03-variable-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/03-variable-types/</guid>
+      <description>Variables in pynamics may be grouped into different categories, and used for different things. We must be careful to talk about these different types of variables carefully, as they have vastly different meanings when it comes to how they are used and computed in pynamics
+First is the concept of a variable as it is used in the context of Python programming. In python, any piece of data my be stored as a variable and used in subsequent computations.</description>
+    </item>
+    
+    <item>
+      <title>Vector Constraint Equations</title>
+      <link>https://danaukes.com/modules/kinematics/vector-based-constraint-equations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/vector-based-constraint-equations/</guid>
+      <description>Vector Constraint Equations v,w perpendicular {#sec:perpendicular_constraint} Here the intuition is that perpendicular lines have an angle of $\theta$ between them. This means that the expression for dot product or cross product can be used, as both use $\theta$. The dot product produces a scalar result, however, while the result of a cross product is a vector, meaning that all three elements of the vector must equal zero; hence we pick the dot product expression.</description>
+    </item>
+    
+    <item>
+      <title>Vectors and Vector Math</title>
+      <link>https://danaukes.com/modules/kinematics/vectors-and-vector-math/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/vectors-and-vector-math/</guid>
+      <description>Vectors and Vector Math A $\vec{v}$ defines a magnitude and direction in $n$-dimensional space.
+The concept of a vector comes with a lot of baggage. The first thing you must think about is how many dimensions are you working in? Two or three-dimensional space is normal, but the concept of a vector extends to any dimension.
+One way to interpret a vector is the thing which describes the difference in position between two points.</description>
+    </item>
+    
+    <item>
+      <title>Website Update I</title>
+      <link>https://danaukes.com/assignments/website-update-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/website-update-i/</guid>
+      <description>Website Update I Introduction The purpose of this assignment is to update your team&amp;rsquo;s progress towards creating a public-facing, unified project report.
+Instructions Please ensure each of the following assignments is posted and up-to-date. This is the time to re-evaluate each page to ensure that it matches any conclusions you have since come to since creating it the first time.
+Please make sure the following pages are present and consistent:</description>
+    </item>
+    
+    <item>
+      <title>Website Update II</title>
+      <link>https://danaukes.com/assignments/website-update-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/website-update-ii/</guid>
+      <description>Website Update II Introduction The purpose of this assignment is to update your team&amp;rsquo;s progress towards creating a public-facing, unified project report.
+Instructions Please ensure each of the following assignments is posted and up-to-date. This is the time to re-evaluate each page to ensure that it matches any conclusions you have since come to since creating it the first time.
+Please make sure the following pages are present and consistent:</description>
+    </item>
+    
+    <item>
+      <title>Website Update III</title>
+      <link>https://danaukes.com/assignments/website-update-iii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/website-update-iii/</guid>
+      <description>Website Update III Introduction The purpose of this assignment is to update your team&amp;rsquo;s progress towards creating a public-facing, unified project report.
+Instructions Please ensure each of the following assignments is posted and up-to-date. This is the time to re-evaluate each page to ensure that it matches any conclusions you have since come to since creating it the first time.
+Please make sure the following pages are present and consistent with your final project:</description>
+    </item>
+    
+    <item>
+      <title>Working with Jupyter Notebooks in your website</title>
+      <link>https://danaukes.com/modules/project/jupyter-notebooks-in-websites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/project/jupyter-notebooks-in-websites/</guid>
+      <description>Introduction The point of this tutorial is to show you how to add a compiled jupyter notebook to your website in a way that it can be viewed. There are two possible ways
+ Save the compiled notebook (.ipynb) directly to your website and use a third party site to view content Export the compiled notebook to html or markdown and post to your website  Both methods are relatively easy to do and neither is more preferable than the other.</description>
+    </item>
+    
+  </channel>
+</rss>

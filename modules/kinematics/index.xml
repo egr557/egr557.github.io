@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kinematics on Foldable Robotics</title>
+    <link>https://danaukes.com/modules/kinematics/</link>
+    <description>Recent content in Kinematics on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/modules/kinematics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://danaukes.com/modules/kinematics/generated/symbolic-kinematics-with-pynamics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/generated/symbolic-kinematics-with-pynamics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graphical Synthesis</title>
+      <link>https://danaukes.com/modules/kinematics/graphical-synthesis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/graphical-synthesis/</guid>
+      <description>Graphical Synthesis A popular way of deriving the desired kinematics of a device graphically has also been employed for centures.
+By Hand Instructions Download the [part]({{ .site.Params.home }}/assets/graphical-synthesis/part2.sldprt)
+The following instructions can be done by hand or with a tool like Solidworks. If you do it by hand you will need a ruler and straightedge.
+  Draw a constant length line (the output link) in three different positions.</description>
+    </item>
+    
+    <item>
+      <title>Jacobians</title>
+      <link>https://danaukes.com/modules/kinematics/jacobians/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/jacobians/</guid>
+      <description>Jacobians Jacobians A Jacobian is a matrix that collects the partial derivatives of rates of change between two vectors. These rates of change are related by
+$$\dot{a}=\mathbf{J}\dot{b}$$
+$$\mathbf{J}= \left[\begin{matrix} j_{11} &amp;amp; j_{12} &amp;amp; \ldots &amp;amp; j_{1n}\
+j_{21} &amp;amp; j_{22} &amp;amp; \ldots &amp;amp; j_{2n}\
+\vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots\
+j_{m1} &amp;amp; j_{m2} &amp;amp; \ldots &amp;amp; j_{mn}\
+\end{matrix} \right]$$
+where $j_{ij} = \frac{\partial \dot{a}_i}{\partial \dot{b}_j}$
+Physical Meaning ::: {.text-center}  :::</description>
+    </item>
+    
+    <item>
+      <title>Kinematics Introduction</title>
+      <link>https://danaukes.com/modules/kinematics/introduction-to-kinematics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/introduction-to-kinematics/</guid>
+      <description>Kinematics Introduction Prototyping in Paper A second step is to ideate, mock-up, and prototype candidate mechanisms in paper.
+While experts may have other tools, like CAD, along with intuition and experience, a novice can gain quick physical intuition by developing families of paper prototypes that help to eliminate infeasible designs, giving clues as to how to alter or optimize a design, and can often result in a very close-to-final kinematic structure.</description>
+    </item>
+    
+    <item>
+      <title>Pynamics Vectors Example</title>
+      <link>https://danaukes.com/modules/kinematics/generated/vectors-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/generated/vectors-example/</guid>
+      <description>import pynamics from pynamics.system import System from pynamics.frame import Frame system = System() pynamics.set_system(__name__,system) A = Frame(&amp;#39;A&amp;#39;) B = Frame(&amp;#39;B&amp;#39;) C = Frame(&amp;#39;C&amp;#39;) v = A.x +B.y + C.z v A.x + B.y + C.z 3*v 3*A.x + 3*B.y + 3*C.z 3*v - A.x 2*A.x + 3*B.y + 3*C.z import sympy a = sympy.symbols(&amp;lsquo;a&amp;rsquo;) b = sympy.symbols(&amp;lsquo;b&amp;rsquo;)
+B.rotate_fixed_axis_directed(A,[0,0,1],a,system) C.rotate_fixed_axis_directed(B,[0,1,0],b,system)
+from pynamics.variable_types import Differentiable,Constant a, a_d, a_dd = Differentiable(&amp;#39;a&amp;#39;,system) b, b_d, b_dd = Differentiable(&amp;#39;b&amp;#39;,system) system.</description>
+    </item>
+    
+    <item>
+      <title>Singularities and Solver Problems</title>
+      <link>https://danaukes.com/modules/kinematics/singularities-and-solver-problems/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/singularities-and-solver-problems/</guid>
+      <description>Singularities and Solver Problems Many of the devices you will prototype are highly nonlinear mechanisms which may have certain charactersitics which are hard to solve for in your typical CAD sketcher.
+Singularities can be described as a mathematical or mechanical condition in which one or more degrees of freedom of your device or of your description of the device &amp;ndash; can no longer be controlled or solved for. A typical kinematic singularity may be seen</description>
+    </item>
+    
+    <item>
+      <title>Sketching 2D Kinematics in CAD</title>
+      <link>https://danaukes.com/modules/kinematics/sketching-2d-kinematics-in-cad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/sketching-2d-kinematics-in-cad/</guid>
+      <description>Sketching 2D Kinematics in CAD Introduction Steps  Create a planar sketch Turn off the background color in Solidworks by changing the background to plain white in the options at the top of the viewport window. This will make exporting your sketches easier. Translate each rigid link into a straight line. Connect each line at a vertex. Vertices function as a revolute joint in 2D sketches, and spherical joints in 3D sketches.</description>
+    </item>
+    
+    <item>
+      <title>Solidworks Export Tutorial</title>
+      <link>https://danaukes.com/modules/kinematics/solidworks-export-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/solidworks-export-tutorial/</guid>
+      <description>Solidworks is an attractive way to model popup devices because you can interact with the three-dimensional kinematics of your popup device. However, Solidworks is not good at everything. First, it cannot create your cut-files for you automatically. Solidworks knows nothing about how you&amp;rsquo;re going to make your device, out of how many layers, and with what manufacturing processes. Second, Solidworks is such an expansive tool, and can be used in so many different ways that the most straightforward way to design a popup device is not very obvious.</description>
+    </item>
+    
+    <item>
+      <title>Solve Triangle</title>
+      <link>https://danaukes.com/modules/kinematics/generated/find-triangle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/generated/find-triangle/</guid>
+      <description>%matplotlib inline import matplotlib.pyplot as plt import scipy.optimize import numpy desired_length1=1 desired_length2=2 desired_length3=1.5 p1_desired_location = 0,0 def objective_function(variables): x1,y1,x2,y2,x3,y3 = variables p1 = numpy.array([x1,y1]) p2 = numpy.array([x2,y2]) p3 = numpy.array([x3,y3]) v0 = p1-p1_desired_location v1 = p2-p1 v2 = p3-p2 v3 = p1-p3 l0 = (v0.dot(v0))**.5 l1 = (v1.dot(v1))**.5 l2 = (v2.dot(v2))**.5 l3 = (v3.dot(v3))**.5 error = [] error.append(l0) error.append(y2-0) error.append(l1-desired_length1) error.append(l2-desired_length2) error.append(l3-desired_length3) error = numpy.array(error) error = (error.dot(error))**.5 return error ini = [2,2,2,4,1,1] ini = [1,2,2,6,2,-1] result = scipy.</description>
+    </item>
+    
+    <item>
+      <title>Solving Four-Bar Constraints</title>
+      <link>https://danaukes.com/modules/kinematics/generated/solving-four-bar-constraints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/generated/solving-four-bar-constraints/</guid>
+      <description>Solving Four-Bar Constraints Turn on inline plotting
+%matplotlib inline import required packages
+import pynamics from pynamics.frame import Frame from pynamics.variable_types import Differentiable,Constant from pynamics.system import System #from pynamics.body import Body #from pynamics.dyadic import Dyadic from pynamics.output import Output,PointsOutput #from pynamics.particle import Particle import pynamics.integration import sympy import numpy import matplotlib.pyplot as plt plt.ion() from math import pi #from pynamics.constraint import Constraint import scipy.optimize Create a pynamics system
+system = System() pynamics.</description>
+    </item>
+    
+    <item>
+      <title>Solving Kinematics Numerically with Python</title>
+      <link>https://danaukes.com/modules/kinematics/generated/solving-kinematics-with-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/generated/solving-kinematics-with-python/</guid>
+      <description>Solving Kinematics Numerically with Python Introduction This module takes you through solving the motion of a device by using a numerical nonlinear solver to solve a complex system of constraint equations. We will be using a number of Python packages to do this.
+Note that solving kinematics numerically can prove troublesome, as the lack of a symbolic system of equations prevents us from analyzing those equations for situations when the system approaches a singularity, or when the initial guess for the state of the system is far away from the solution.</description>
+    </item>
+    
+    <item>
+      <title>Vector Constraint Equations</title>
+      <link>https://danaukes.com/modules/kinematics/vector-based-constraint-equations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/vector-based-constraint-equations/</guid>
+      <description>Vector Constraint Equations v,w perpendicular {#sec:perpendicular_constraint} Here the intuition is that perpendicular lines have an angle of $\theta$ between them. This means that the expression for dot product or cross product can be used, as both use $\theta$. The dot product produces a scalar result, however, while the result of a cross product is a vector, meaning that all three elements of the vector must equal zero; hence we pick the dot product expression.</description>
+    </item>
+    
+    <item>
+      <title>Vectors and Vector Math</title>
+      <link>https://danaukes.com/modules/kinematics/vectors-and-vector-math/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/kinematics/vectors-and-vector-math/</guid>
+      <description>Vectors and Vector Math A $\vec{v}$ defines a magnitude and direction in $n$-dimensional space.
+The concept of a vector comes with a lot of baggage. The first thing you must think about is how many dimensions are you working in? Two or three-dimensional space is normal, but the concept of a vector extends to any dimension.
+One way to interpret a vector is the thing which describes the difference in position between two points.</description>
+    </item>
+    
+  </channel>
+</rss>

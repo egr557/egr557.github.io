@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Lectures | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+
+<main class="container">
+  <h1>Lecture Section: Lectures</h1>
+
+
+<table>
+<tr>
+<th>Lecture</th> <th>Name </th> <th></th>
+</tr>
+
+
+<tr>
+<td>01</td><td><a href="/lectures/lecture01/">Lecture 1: Welcome and Introduction</a></td><td>Introduction to Foldable Robotics.  Go over syllabus and course logistics.  Discuss software-based tools, assignments</td>
+</tr>
+
+<tr>
+<td>02</td><td><a href="/lectures/lecture02/">Lecture 2: Foldable Background</a></td><td>Foldable Robotics History.  Bring popup books to class and share</td>
+</tr>
+
+<tr>
+<td>03</td><td><a href="/lectures/lecture03/">Lecture 3: No Class</a></td><td>No Class -- MLK Day</td>
+</tr>
+
+<tr>
+<td>04</td><td><a href="/lectures/lecture04/">Lecture 4: Biomechanics</a></td><td>Introduction to Biomechanics</td>
+</tr>
+
+<tr>
+<td>05</td><td><a href="/lectures/lecture05/">Lecture 5: Project Pitches</a></td><td>Pitch projects and coalesce in teams</td>
+</tr>
+
+<tr>
+<td>06</td><td><a href="/lectures/lecture06/">Lecture 6: Developing a Research Question</a></td><td>Work on developing research question in class (teams), present out.  Solidworks kinematics examples.</td>
+</tr>
+
+<tr>
+<td>07</td><td><a href="/lectures/lecture07/">Lecture 7: Kinematics I</a></td><td>Biomechanics wrap-up.  Origami, Kirigami Background.  Introduction to kinematics and degrees of freedom.  Break into teams for work time (20 min).  Meet back and discuss singularities</td>
+</tr>
+
+<tr>
+<td>08</td><td><a href="/lectures/lecture08/">Lecture 8: Kinematics II</a></td><td>Introduce Jacobian.  Introduce constraint equations, plotting, numpy, nonlinear optimization, motion paths.  Using motion path to determine Jacobian, estimate forces, speed, and power.  Work on kinematics example in class.</td>
+</tr>
+
+<tr>
+<td>09</td><td><a href="/lectures/lecture09/">Lecture 9: Kinematics III</a></td><td>Introduction to vectors, rotation, vector operations, differentiation</td>
+</tr>
+
+<tr>
+<td>10</td><td><a href="/lectures/lecture10/">Lecture 10: Flex Day</a></td><td>Go over upcoming kinematics assignments and break out into teams for work time</td>
+</tr>
+
+<tr>
+<td>11</td><td><a href="/lectures/lecture11/">Lecture 11: Kinematics IV</a></td><td>Loop Equations, Team Updates</td>
+</tr>
+
+<tr>
+<td>12</td><td><a href="/lectures/lecture12/">Lecture 12: Dynamics I</a></td><td>Team Checkoffs, HW Checkoffs Go over inertia, forces, F=ma, Kane&#39;s method, and triple pendulum walkthrough</td>
+</tr>
+
+<tr>
+<td>13</td><td><a href="/lectures/lecture13/">Lecture 13: Presentations I</a></td><td>Present system architecture, kinematics, forces</td>
+</tr>
+
+<tr>
+<td>14</td><td><a href="/lectures/lecture14/">Lecture 14: Seminar</a></td><td>Seminar, Presentation I Overflow, HW Flex Time</td>
+</tr>
+
+<tr>
+<td>15</td><td><a href="/lectures/lecture15/">Lecture 15: Optimization I</a></td><td>Introduction to Optimization and Application to Model Fitting</td>
+</tr>
+
+<tr>
+<td>16</td><td><a href="/lectures/lecture16/">Lecture 16: Mechanics and Compliance</a></td><td>Discuss Euler-Bernoulli Beam Equations, go through Solidworks FEA example</td>
+</tr>
+
+<tr>
+<td>17</td><td><a href="/lectures/lecture17/">Lecture 17: Dynamics II</a></td><td>Application examples for modeling reality</td>
+</tr>
+
+<tr>
+<td>18</td><td><a href="/lectures/lecture18/">Lecture 18: Dynamics III</a></td><td>Continuing topics in Dynamics</td>
+</tr>
+
+<tr>
+<td>19</td><td><a href="/lectures/lecture19/">Lecture 19: Seminar</a></td><td>Special Guest Seminar</td>
+</tr>
+
+<tr>
+<td>20</td><td><a href="/lectures/lecture20/">Lecture 20: Seminar</a></td><td>Special Guest Seminar</td>
+</tr>
+
+<tr>
+<td>21</td><td><a href="/lectures/lecture21/">Lecture 21: Presentations II</a></td><td>Present updated dynamics including actuator selection and modeling, system compliance, and design optimization</td>
+</tr>
+
+<tr>
+<td>22</td><td><a href="/lectures/lecture22/">Lecture 22: Manufacturing I</a></td><td>CSG, Laminate Manufacturability</td>
+</tr>
+
+<tr>
+<td>23</td><td><a href="/lectures/lecture23/">Lecture 23: Seminar</a></td><td>Special Guest Seminar</td>
+</tr>
+
+<tr>
+<td>24</td><td><a href="/lectures/lecture24/">Lecture 24: Manufacturing II</a></td><td>Laminate Manufacturability</td>
+</tr>
+
+<tr>
+<td>25</td><td><a href="/lectures/lecture25/">Lecture 25: Manufacturing III</a></td><td>Digital Manufacturing</td>
+</tr>
+
+<tr>
+<td>26</td><td><a href="/lectures/lecture26/">Lecture 26: Flex Day</a></td><td>In-class consulting time for compliance, actuator modeling and design optimization</td>
+</tr>
+
+<tr>
+<td>27</td><td><a href="/lectures/lecture27/">Lecture 27: Flex Day</a></td><td>Bring prototypes to class</td>
+</tr>
+
+<tr>
+<td>28</td><td><a href="/lectures/lecture28/">Lecture 28: Experimental Validation</a></td><td></td>
+</tr>
+
+<tr>
+<td>29</td><td><a href="/lectures/lecture29/">Lecture 29: Seminar</a></td><td>Special Guest Seminar</td>
+</tr>
+
+<tr>
+<td>30</td><td><a href="/lectures/lecture30/">Lecture 30: Presentation III</a></td><td>Final Presentation Videos</td>
+</tr>
+
+<tr>
+<td>31</td><td><a href="/lectures/lecture31/">Lecture 31: Finals Week</a></td><td>No Class</td>
+</tr>
+
+<tr>
+<td>32</td><td><a href="/lectures/lecture32/">Lecture 32: Finals Week</a></td><td>No Class</td>
+</tr>
+
+</table>
+   
+
+</main>
+
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Vector Constraint Equations | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Vector Constraint Equations</h1>
+  <h1 id="vector-constraint-equations">Vector Constraint Equations</h1>
+<h2 id="vw-perpendicular-secperpendicular_constraint">v,w perpendicular {#sec:perpendicular_constraint}</h2>
+<p>Here the intuition is that perpendicular lines have an angle of $\theta$ between them. This means that the expression for dot product or cross product can be used, as both use $\theta$. The dot product produces a scalar result, however, while the result of a cross product is a vector, meaning that all three elements of the vector must equal zero; hence we pick the dot product expression. Using , we substitute $\theta = \frac{\pi}{2}$ into the expression, resulting in the simplified $$
+\vec{v}\cdot\vec{w}=0.$$ When broken out into basis vectors $\hat{a}_x$,$\hat{a}_y$,and $\hat{a}_z$, the expression becomes $$
+v_x w_x +v_y w_y +v_z w_z = 0$$</p>
+<h2 id="vw-parallel-secparallel_constraint">v,w parallel {#sec:parallel_constraint}</h2>
+<p>The intuition here is the same as above, except that we substitute the expression $\theta = 0$ into , because parallel lines have an angle of zero between them. This results in $$
+\vec{v}\cdot\vec{w}=|v||w|.$$ In expanded form, this looks like $$
+v_x w_x +v_y w_y +v_z w_z = \sqrt{(v_x^2+v_y^2+v_z^2)(w_x^2+w_y^2+w_z^2)}
+$$</p>
+<h2 id="pointp-on-lineqr">point(p) on line(q,r)</h2>
+<p>using the ideas of , we construct two vectors. The first is a vector between some point on the line, q, and the point p. The second vector is a vector of the line itself. For the point p to be on the line, the two lines must be parallel. 
+$$\text{given }\vec{a} = \vec{p} - \vec{q} \text{ and}\<br>
+\vec{b} = \vec{r} - \vec{q},\<br>
+\vec{a}\cdot\vec{b} = |\vec{a}||\vec{b}|.$$</p>
+<h2 id="distance-between-p-and-q-is-l-seclength_constraint">distance between p and q is l {#sec:length_constraint}</h2>
+<p>in this case, we create a vector between points p and q, and use to retrieve its magnitude. $$
+|\vec{p} - \vec{q}| = l \label{eqn:length_constraint}$$ In expanded form, $$
+\sqrt{(p_x-q_x)^2 +(p_y-q_y)^2 + (p_z-q_z)^2} = l \label{eqn:length_constraint_expanded}.$$</p>
+<h2 id="loop-constraints">loop constraints</h2>
+<p>A loop is a vector that ends where it began. If you think about generic mechanisms as branching articulated bodies, sometimes those branches meet back up at their ends to create closed kinematic chains with interesting motion. One example is the locomotive engine, which consists of a crank connected to a piston which slides. Other common devices include four-bar mechanisms, which can be found in pantographs, prosthetic knees, and the jaws of some fish.</p>
+<h3 id="loop-example" class="unnumbered">Loop Example</h3>
+<p>There are four vectors, $\vec{a}$,$\vec{b}$,$\vec{c}$, and $\vec{d}$ for whom $$
+\vec{a} + \vec{b} + \vec{c}+ \vec{d} =\vec{0}$$ in expanded form, with basis vectors $\hat{n}_x$,$\hat{n}_y$,$\hat{n}_z$ $$
+(a_x +b_x + c_x + d_x)\hat{n}_x
++(a_y +b_y + c_y + d_y)\hat{n}_y
++(a_z +b_z + c_z + d_z)\hat{n}_z  \nonumber \<br>
+= 0\hat{n}_x +0\hat{n}_y +0\hat{n}_z$$ This is a vector equation, however, and we are more interested in generating a set of scalar equations. To accomplish this, we may dot the entire expresssion with a basis vector to convert the vector expression into a scalar expression. This may be done for each of the three basis vectors. For $\hat{n}_i$, where $i=(x,y,z)$, $$
+(\vec{a} + \vec{b} + \vec{c}+ \vec{d})\cdot \hat{n}_i = \vec{0} \cdot \hat{n}_i\text{, resulting in } \<br>
+a_x +b_x + c_x + d_x = 0\<br>
+a_y +b_y + c_y + d_y = 0\<br>
+a_z +b_z + c_z + d_z = 0$$ We are left with three scalar constraint equations</p>
+<h2 id="origami-systems">Origami Systems</h2>
+<p>Using the results of the last section, we can finally start to make a system for analyzing generic origami structures. You can think of an idealized origami system as a set of rigid faces which are permitted to rotate about each other at the fold lines. An ideal origami face is rigid, <em>i.e.</em> any motion in the system occurs between faces, along the fold lines. Rigidity in the faces preserves face edge lengths, and as discussed in , the distance between two points can be expressed with . This allows us to create a system of equations which expresses the motion of the origami system with regard to those fold lines.</p>
+<h2 id="counting-degrees-of-freedom">Counting Degrees of Freedom</h2>
+<p>There is a fairly straightforward way to count the number of degrees of freedom in an origami design. Here are the steps:</p>
+<ol>
+<li>
+<p>Draw your origami structure(black for outline, red for mountain, blue for valley)</p>
+</li>
+<li>
+<p>Split any polygons with $&gt;3$ sides into triangles by adding green lines</p>
+</li>
+<li>
+<p>Draw vertices where any two lines meet</p>
+</li>
+<li>
+<p>Number each line as $l_i$. Set $m = $ the total number of all lines(black,red,blue,green)</p>
+</li>
+<li>
+<p>Number each vertex as $v_i$. Set $n = $ the total number of vertices.</p>
+</li>
+<li>
+<p>Count $r$, the number of rigid(green) lines</p>
+</li>
+<li>
+<p>Determine $f$, the degrees of freedom of your system using $f = 3n-m-r-6$</p>
+</li>
+</ol>
+<h2 id="assembling-the-constraint-equations-secorigami_constraint_equations">Assembling the constraint equations {#sec:origami_constraint_equations}</h2>
+<ol>
+<li>
+<p>The first set of equations is generated by directly defining the locations of one triangular face. For each vertex $v_i$ on such a fixed face, $$
+v_{ix} - x_i  = 0\<br>
+v_{iy} - y_i =0\<br>
+v_{iz} - z_i=0,
+$$</p>
+<p>where $x_i$, $y_i$ and $z_i$ are the positions of each point in x, y, and z coordinates. Repeated over the three vertices, this should produce 9 equations.</p>
+</li>
+<li>
+<p>For each line $l_i$ that is not on the edge of the fixed face, there should be two vertices, $v_j$ and $v_k$ connected to it. Using the expanded form of the length constraint , create an equation which should look like $$
+v_{jx}v_{kx}+v_{jy}v_{ky}+v_{jz}v_{kz} - \ell_i=0,
+$$</p>
+<p>where $\ell_i$ is the length of line $l_i$. This should be done $m-3$ times.</p>
+</li>
+<li>
+<p>For each green line, there is an additional constraint that the two neighboring faces are parallel to each other. let vertices $v_i$ and $v_j$ be the two vertices shared by the fixed(green) line, and vertices $v_a$ and $v_b$ be the remaining vertices of the two faces.</p>
+</li>
+</ol>
+<p>$$
+\vec{a}=\vec{v}_a - \vec{v}_i \<br>
+\vec{b}=\vec{v}_b - \vec{v}_i \<br>
+\vec{c}=\vec{v}_j - \vec{v}_i \<br>
+\vec{d}=\vec{c}\times\vec{a}\<br>
+\vec{e}=\vec{b}\times\vec{c}$$ Using the parallel constraint equation generates an extra equation per rigid line,</p>
+<p>$$
+\vec{d} \cdot \vec{e} - |\vec{d}||\vec{e}| = 0.$$ this should be done $r$ times.</p>
+<p>There should be a total of $c=9+(m-3)+r$ equations derived from the above three steps. Alternative derivations are possible, but this recipe is one of the more straightforward.</p>
+<h2 id="creating-the-jacobian">Creating the Jacobian</h2>
+<p>Each constraint equation from establishes a relationship between one or more of the variables that determine the vertices' positions. By taking the partial derivative of each equation with respect to each of those variables, we are able to understand how the velocity of one variable influences the velocity of the other variables. These partial derivatives can be assembled into a Jacobian matrix, which can be used to establish motion profiles for an origami mechanism. Let $\mathbf{e} = \left[\begin{matrix}e_1 &amp;\ldots &amp;e_c\end{matrix}\right]^T,$, where $e_i$ is the $i$th constraint equation. $\mathbf{J}$ can therefore be defined as $$
+\mathbf{J} = \left[
+\begin{matrix}
+\frac{\partial \mathbf{e}}{\partial v_{1x}} &amp; \frac{\partial \mathbf{e}}{\partial v_{1y}} &amp; \frac{\partial \mathbf{e}}{\partial v_{1z}} &amp; \ldots &amp; \frac{\partial \mathbf{e}}{\partial v_{nx}} &amp;\frac{\partial \mathbf{e}}{\partial v_{ny}} &amp; \frac{\partial \mathbf{e}}{\partial v_{nz}}\<br>
+\end{matrix}
+\right]
+$$</p>
+
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

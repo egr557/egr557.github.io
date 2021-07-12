@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Integration on Foldable Robotics</title>
+    <link>https://danaukes.com/modules/integration/</link>
+    <description>Recent content in Integration on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/modules/integration/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arduino Setup Tutorial</title>
+      <link>https://danaukes.com/modules/integration/arduino/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/integration/arduino/</guid>
+      <description>Arduino IDE and pro trinket setup Refer to the website for all the documentation and files
+ Install the Arduino IDE Install Adafruit windows drivers(if applicable) Add repository  file &amp;ndash;&amp;gt; preferences in &amp;ldquo;additional board managers&amp;rdquo;, type &amp;ldquo;https://adafruit.github.io/arduino-board-index/package_adafruit_index.json&amp;quot;   Add adafruit boards manager  tools &amp;ndash;&amp;gt; board &amp;ndash;&amp;gt; board manager&amp;hellip; search for adafruit, select, and install.    USB Bootloader Settings  Plug in USB Bootloader Select Board:  ProTrinket5V/16MHz(USB)   Select Programmer:  USBTinyISP   upload  USB/Serial Cable Settings  Plug in USB/Serial Cable to the six pins at the end of the adafruit pro trinket If necessary, install ftdi drivers Select Board:  ProTrinket5V/16MHz(FTDI)   Select Port (use device manager to identify) Select Programmer:  AVR ISP   upload  Working with serial Serial Echo void setup() {Serial.</description>
+    </item>
+    
+    <item>
+      <title>Motor Modeling Process</title>
+      <link>https://danaukes.com/modules/integration/generated/motor-modeling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/integration/generated/motor-modeling/</guid>
+      <description>Motor Modeling Process from math import sin, cos, pi import numpy import matplotlib.pyplot as plt %matplotlib inline Part 0: Module Overview The purpose of this writeup is to familiarize you with the level of engineering required for selecting a motor and geartrain for your project. In this writup you will learn about the modeling, experimental, and design parameters you need in order to understand how to utilize a permanent-magnet DC motor in your project, how to pair it with a geartrain whose ratios you select, how to understand loss in your system, and how to select a battery</description>
+    </item>
+    
+    <item>
+      <title>Running Dynamixel X-Series</title>
+      <link>https://danaukes.com/modules/integration/dynamixel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/integration/dynamixel/</guid>
+      <description>Running Dynamixel X-Series Using Arduino IDE for OpenCM9.04 Install Arduino IDE and OpenCM9.04 Software   Install OpenCM9.04 USB CDC driver - Driver Download
+  Install Arduino IDE - Arduino IDE
+  After Arduino IDE is run, click File &amp;ndash;&amp;gt; Preferences in top menu of IDE
+  Copy and paste the following link to the Additional Boards Manager URLs textbox
+https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCM9.04/master/arduino/opencm_release/package_opencm9.04_index.json
+  Click Tools &amp;ndash;&amp;gt; Board &amp;ndash;&amp;gt; Boards Manager</description>
+    </item>
+    
+  </channel>
+</rss>

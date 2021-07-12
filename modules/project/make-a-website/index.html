@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Make a Project Repository and Website | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Make a Project Repository and Website</h1>
+  <h1 id="make-a-project-repository-and-website">Make a Project Repository and Website</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The purpose of this post is to help you create a website to share your work.  Sharing your work with the class and the broader community is important, as you should generate a persistent portfolio of class work to demonstrate your abilities when you apply for a job or academic career.</p>
+<p>We will be using github to host and share websites this year.  This is for a couple reasons:</p>
+<ul>
+<li>Hosting websites on github is free.</li>
+<li>Git is iterative.  As your project evolves we can see how it has changed</li>
+<li>Editing content is easy, using either the web interface or windows-based clients.</li>
+</ul>
+<h2 id="procedure">Procedure</h2>
+<ol>
+<li>
+<p>Go to Github.com</p>
+</li>
+<li>
+<p>Create an account under the free plan</p>
+</li>
+<li>
+<p>Verify your email</p>
+</li>
+<li>
+<p>Create a new <strong>public</strong> repository</p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/01.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/01.png" alt="01"  class="img-fluid"/></a>
+</div></p>
+<ol>
+<li>
+<p>name it your-user-name.github.io (ex: <em>danaukestest01.github.io</em>)</p>
+</li>
+<li>
+<p>keep other options blank for now.</p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/02.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/02.png" alt="02"  class="img-fluid"/></a>
+</div></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Select the link to create a new file.</p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/03.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/03.png" alt="03"  class="img-fluid"/></a>
+</div></p>
+<ol>
+<li>
+<p>Name it index.md</p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/04.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/04.png" alt="04"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Paste in the following code and hit commit</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: Home
+---
+
+# Home
+
+</code></pre></div><p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/05.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/05.png" alt="05"  class="img-fluid"/></a>
+</div></p>
+</li>
+</ol>
+</li>
+<li>
+<p>In the main repository, go to settings and scroll down the main settings page.</p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/07.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/07.png" alt="07"  class="img-fluid"/></a>
+</div></p>
+<ol>
+<li>
+<p>Ensure that your site is published.</p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/09.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/09.png" alt="08"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Navigate to the linked page (your-user-name.github.io) and check out the results</p>
+</li>
+<li>
+<p>Now navigate back to the main repository</p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/10.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/10.png" alt="10"  class="img-fluid"/></a>
+</div></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Replace the text in index.md with the following code and hit save:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: Home
+---
+
+# Home
+
+<span style="color:#75715e">## Introduction
+</span><span style="color:#75715e"></span>
+<span style="font-weight:bold">**Bold Text**</span>
+<span style="font-style:italic">_Italic Text_</span>
+**_Bold and Italic Text_**
+
+<span style="color:#75715e">## Research Question
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">*</span> Bullet Point 1
+<span style="color:#66d9ef">*</span> Bullet Point 2
+<span style="color:#66d9ef">*</span> Bullet Point 3
+
+<span style="color:#75715e">## Background
+</span><span style="color:#75715e"></span>
+![<span style="color:#f92672">image caption</span>](<span style="color:#a6e22e">https://idealab.asu.edu/assets/images/research/jumper1.png</span>)
+
+[<span style="color:#f92672">link to background</span>](<span style="color:#a6e22e">/background</span>)
+
+<span style="color:#75715e">## Results
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">1.</span> Numbered Point 1
+<span style="color:#66d9ef">1.</span> Numbered Point 2
+<span style="color:#66d9ef">1.</span> Numbered Point 3
+
+<span style="color:#75715e">## Conclusions and Future Work
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">## External Links
+</span><span style="color:#75715e"></span>
+[<span style="color:#f92672">example link to idealab</span>](<span style="color:#a6e22e">https://idealab.asu.edu</span>)
+
+
+<span style="color:#75715e">## References
+</span></code></pre></div><p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/11.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/11.png" alt="11"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/13.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/13.png" alt="13"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/14.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/14.png" alt="14"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Navigate back to the repository</p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/15.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/15.png" alt="15"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Create a new file named &ldquo;background.md&rdquo;</p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/16.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/16.png" alt="16"  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/17.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/17.png" alt="17"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Paste in the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: Background
+---
+
+# Background
+
+<span style="color:#75715e">## Introduction
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">## Conclusions
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">## References
+</span><span style="color:#75715e"></span>
+</code></pre></div><p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/18.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/18.png" alt="18"  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Refresh the page at your-user-name.github.io and check out the results</p>
+<p><div class="text-center">
+  <a href="/figures/create-a-project-repository-and-website/19.png" target="_blank"><img src="/figures/create-a-project-repository-and-website/19.png" alt="19"  class="img-fluid"/></a>
+</div></p>
+</li>
+</ol>
+
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

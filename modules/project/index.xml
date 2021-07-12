@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project on Foldable Robotics</title>
+    <link>https://danaukes.com/modules/project/</link>
+    <description>Recent content in Project on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/modules/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Converting Powerpoint to .mp4</title>
+      <link>https://danaukes.com/modules/project/powerpoint-to-mp4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/project/powerpoint-to-mp4/</guid>
+      <description>Converting Powerpoint to .mp4 Introduction This tutorial takes you step-by-step through creating a .mp4 version of a powerpoint presentation for posting to youtube or a personal website
+ Open the Powerpoint presentation you would like to convert. Go through each slide. For each video, a. set it up to play automatically, and a. Ensure it is set to play full-screen Go to &amp;ldquo;Slideshow&amp;rdquo; &amp;ndash;&amp;gt; &amp;ldquo;Record slide show&amp;rdquo; &amp;ndash;&amp;gt; &amp;ldquo;Record from beginning&amp;rdquo;, and narrate your presentation.</description>
+    </item>
+    
+    <item>
+      <title>Developing a Research Question</title>
+      <link>https://danaukes.com/modules/project/developing-a-research-question/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/project/developing-a-research-question/</guid>
+      <description>Developing a Research Question Introduction Robotics as a field is highly multi-disciplinary. Even within that field, designing a robot requires knowledge and input from a variety of domains, including biology, materials, mechanics, mechanical design,dynamics, CAD, manufacturing, optimization, control, etc. Because of its highly interdisciplinary nature, as new knowledge emerges from any of its connected fields, there is an opportunity to innovate. Designing novel and innovative robots requires adapting new ideas from those neighboring fields, connecting them together, and remixing them with existing techniques, in order to realize new modes of locomotion or achieve higher performance.</description>
+    </item>
+    
+    <item>
+      <title>Make a Bibliography</title>
+      <link>https://danaukes.com/modules/project/make-a-bibliography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/project/make-a-bibliography/</guid>
+      <description>Make a Bibliography Introduction The purpose of this assignment is to make a bibliography page and to include it in your website
+Resources https://www.mendeley.com
+Instructions  Install Mendeley or another reference manager your team agrees to use. Create a shared collection that your whole team can access, manage, and add to. For each webpage, create a subfolder that has only the references used on that page Add relevant references to each subfolder as needed.</description>
+    </item>
+    
+    <item>
+      <title>Make a Project Repository and Website</title>
+      <link>https://danaukes.com/modules/project/make-a-website/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/project/make-a-website/</guid>
+      <description>Make a Project Repository and Website Introduction The purpose of this post is to help you create a website to share your work. Sharing your work with the class and the broader community is important, as you should generate a persistent portfolio of class work to demonstrate your abilities when you apply for a job or academic career.
+We will be using github to host and share websites this year. This is for a couple reasons:</description>
+    </item>
+    
+    <item>
+      <title>Working with Jupyter Notebooks in your website</title>
+      <link>https://danaukes.com/modules/project/jupyter-notebooks-in-websites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/project/jupyter-notebooks-in-websites/</guid>
+      <description>Introduction The point of this tutorial is to show you how to add a compiled jupyter notebook to your website in a way that it can be viewed. There are two possible ways
+ Save the compiled notebook (.ipynb) directly to your website and use a third party site to view content Export the compiled notebook to html or markdown and post to your website  Both methods are relatively easy to do and neither is more preferable than the other.</description>
+    </item>
+    
+  </channel>
+</rss>

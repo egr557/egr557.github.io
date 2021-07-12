@@ -1,265 +1,299 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Hinges | Foldable Robotics
+</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This site is about foldable robotics.
-">
-  <meta name="author" content="Daniel M. Aukes">
-  <meta name="generator" content="Jekyll v4.1.1">
-  <title>Hinges | Foldable Robotics </title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
-  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
-  
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
-  
-  <!-- Bootstrap core CSS -->
-  <link href="/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
     }
+  }
+</style>
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
-  </style>
-  
-  <!-- Custom styles for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-  <!-- Custom styles for this template -->
+  };
 
-  <link href="/assets/blog.css" rel="stylesheet">
-  <link href="/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
-  
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/assets/favicon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  
-</head>
-<body>
-<div class="container">      
-<header class="blog-header py-3">
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
   <div class="row flex-nowrap justify-content-between align-items-center">
     <div class="col-2 pt-1">
-      
     </div>
     <div class="col-8 text-center">
       <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
     </div>
     <div class="col-2 d-flex justify-content-end align-items-center">
-
     </div>
   </div>
 </header>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Home</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Modules
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          
-          <a class="dropdown-item" href="/modules/introduction">Introduction</a>
-          
-          <a class="dropdown-item" href="/modules/biomechanics">Biomechanics</a>
-          
-          <a class="dropdown-item" href="/modules/kinematics">Kinematics</a>
-          
-          <a class="dropdown-item" href="/modules/compliance">Mechanics and Compliance</a>
-          
-          <a class="dropdown-item" href="/modules/dynamics">Dynamics</a>
-          
-          <a class="dropdown-item" href="/modules/optimization">Optimization</a>
-          
-          <a class="dropdown-item" href="/modules/manufacturing">Prototyping & Manufacturing</a>
-          
-          <a class="dropdown-item" href="/modules/integration">Integration</a>
-          
-          <a class="dropdown-item" href="/modules/validation">Experimental Validation</a>
-          
-          <a class="dropdown-item" href="/modules/project">Project</a>
-          
-          <a class="dropdown-item" href="/modules/python">Python</a>
-          
-          <a class="dropdown-item" href="/modules/misc">Misc</a>
-          
-        </div>
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="/class_schedule">Class Schedule</a>
-      
-
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="/my-assignments">Assignments</a>
-      
-
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="/my-tutorials">Tutorials</a>
-      
-
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="https://canvas.asu.edu/calendar#view_name=month" target="_blank">Canvas Calendar <i class="fas fa-external-link-alt"></i></i></a>
-      
-
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
-      
-
-      </li>
-      
+    </div>
   </div>
 </nav>
-<div class="row">
-<div class="col-md-4 text-center">
-  
-  
-      <h5>
-        Module: <a href="/modules/manufacturing">manufacturing</a>
-      </h5>
-  
-  
-</div>
-<div class="col-md-4 text-center">
-  
-  
-      <h4>
-        Hinges
-      </h4>
-  
-  
-</div>
-<div class="col-md-4 text-center">
-  
-</div>
-</div>
-</div><!-- /.row -->
-<main role="main" class="container">
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Hinges</h1>
   <h1 id="hinges">Hinges</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shapely.geometry <span class="im">as</span> sg</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> foldable_robotics.layer <span class="im">import</span> Layer</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> foldable_robotics.laminate <span class="im">import</span> Laminate</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span></code></pre></div>
-<p>Hinges are portions of a laminate device where the stiff material has been removed to permit the remaining flexible material to rotate.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> shapely.geometry <span style="color:#f92672">as</span> sg
+<span style="color:#f92672">from</span> foldable_robotics.layer <span style="color:#f92672">import</span> Layer
+<span style="color:#f92672">from</span> foldable_robotics.laminate <span style="color:#f92672">import</span> Laminate
+<span style="color:#f92672">import</span> numpy
+
+</code></pre></div><p>Hinges are portions of a laminate device where the stiff material has been removed to permit the remaining flexible material to rotate.</p>
 <p>The simplest hinge in a one-layer laminate is a perforated line</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>radius <span class="op">=</span> <span class="fl">.01</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>num_perforations <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>num_segments <span class="op">=</span> num_perforations<span class="op">*</span><span class="dv">2</span><span class="op">+</span><span class="dv">1</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>num_points <span class="op">=</span> num_segments<span class="op">+</span><span class="dv">1</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>numpy.r_[<span class="dv">0</span>:<span class="dv">1</span>:num_points<span class="op">*</span><span class="ot">1j</span>]</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>lines <span class="op">=</span> []</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ii <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">int</span>(<span class="bu">len</span>(a)<span class="op">/</span><span class="dv">2</span>)<span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    p1 <span class="op">=</span> sg.Point(a[<span class="dv">2</span><span class="op">*</span>ii<span class="op">+</span><span class="dv">1</span>]<span class="op">+</span>radius,<span class="dv">0</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    p2 <span class="op">=</span> sg.Point(a[<span class="dv">2</span><span class="op">*</span>ii<span class="op">+</span><span class="dv">2</span>]<span class="op">-</span>radius,<span class="dv">0</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    lines.append(sg.LineString((p1,p2)))</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>hinge <span class="op">=</span> Layer(<span class="op">*</span>lines)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>hinge<span class="op">&lt;&lt;=</span>radius</span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>hinge.plot()</span></code></pre></div>
-<figure>
-<img src="output_4_0.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
-</figure>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">radius <span style="color:#f92672">=</span> <span style="color:#f92672">.</span><span style="color:#ae81ff">01</span>
+num_perforations <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+num_segments <span style="color:#f92672">=</span> num_perforations<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+num_points <span style="color:#f92672">=</span> num_segments<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+a<span style="color:#f92672">=</span>numpy<span style="color:#f92672">.</span>r_[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">1</span>:num_points<span style="color:#f92672">*</span><span style="color:#ae81ff">1j</span>]
+lines <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> ii <span style="color:#f92672">in</span> range(int(len(a)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+    p1 <span style="color:#f92672">=</span> sg<span style="color:#f92672">.</span>Point(a[<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>ii<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span>radius,<span style="color:#ae81ff">0</span>)
+    p2 <span style="color:#f92672">=</span> sg<span style="color:#f92672">.</span>Point(a[<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>ii<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>]<span style="color:#f92672">-</span>radius,<span style="color:#ae81ff">0</span>)
+    lines<span style="color:#f92672">.</span>append(sg<span style="color:#f92672">.</span>LineString((p1,p2)))
+hinge <span style="color:#f92672">=</span> Layer(<span style="color:#f92672">*</span>lines)
+hinge<span style="color:#f92672">&lt;&lt;=</span>radius
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">hinge<span style="color:#f92672">.</span>plot()
+</code></pre></div><p><div class="text-center">
+  <a href="output_4_0.png" target="_blank"><img src="output_4_0.png" alt="png"  class="img-fluid"/></a>
+</div></p>
 <p>When you remove a perforated line from a material, it produces a weakened joint along that line:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>body <span class="op">=</span> Layer(sg.box(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>joint <span class="op">=</span> body<span class="op">-</span>hinge.translate(<span class="dv">0</span>,<span class="fl">.5</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>joint.plot()</span></code></pre></div>
-<figure>
-<img src="output_6_0.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
-</figure>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">body <span style="color:#f92672">=</span> Layer(sg<span style="color:#f92672">.</span>box(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+joint <span style="color:#f92672">=</span> body<span style="color:#f92672">-</span>hinge<span style="color:#f92672">.</span>translate(<span style="color:#ae81ff">0</span>,<span style="color:#f92672">.</span><span style="color:#ae81ff">5</span>)
+joint<span style="color:#f92672">.</span>plot()
+</code></pre></div><p><div class="text-center">
+  <a href="output_6_0.png" target="_blank"><img src="output_6_0.png" alt="png"  class="img-fluid"/></a>
+</div></p>
 <p>In a multilayer laminate with a flexible center layer and two rigid outer layers, the simplest hinge is simply all the other layers removed except the flexible layer:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>line <span class="op">=</span> Layer(sg.LineString(((<span class="dv">0</span>,<span class="dv">0</span>),(<span class="dv">1</span>,<span class="dv">0</span>))))</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>line<span class="op">&lt;&lt;=</span>radius</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>line.plot()</span></code></pre></div>
-<figure>
-<img src="output_8_0.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
-</figure>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>multilayer_hinge <span class="op">=</span> Laminate(line,line,Layer(),line,line)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>multilayer_body <span class="op">=</span> Laminate(body,body,body,body,body)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>joint <span class="op">=</span> multilayer_body <span class="op">-</span> multilayer_hinge.translate(<span class="dv">0</span>,<span class="fl">.5</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>joint.plot()</span></code></pre></div>
-<figure>
-<img src="output_10_0.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
-</figure>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">line <span style="color:#f92672">=</span> Layer(sg<span style="color:#f92672">.</span>LineString(((<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>),(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>))))
+line<span style="color:#f92672">&lt;&lt;=</span>radius
+line<span style="color:#f92672">.</span>plot()
+</code></pre></div><p><div class="text-center">
+  <a href="output_8_0.png" target="_blank"><img src="output_8_0.png" alt="png"  class="img-fluid"/></a>
+</div></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">multilayer_hinge <span style="color:#f92672">=</span> Laminate(line,line,Layer(),line,line)
+multilayer_body <span style="color:#f92672">=</span> Laminate(body,body,body,body,body)
+joint <span style="color:#f92672">=</span> multilayer_body <span style="color:#f92672">-</span> multilayer_hinge<span style="color:#f92672">.</span>translate(<span style="color:#ae81ff">0</span>,<span style="color:#f92672">.</span><span style="color:#ae81ff">5</span>)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">joint<span style="color:#f92672">.</span>plot()
+</code></pre></div><p><div class="text-center">
+  <a href="output_10_0.png" target="_blank"><img src="output_10_0.png" alt="png"  class="img-fluid"/></a>
+</div></p>
 <h3 id="castellated-joints">Castellated Joints</h3>
-<p>A castellated joint is often preferred because it permits tight radii of curvature. It puts stresses on the rigid layers, though</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>num_segments <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>b1 <span class="op">=</span> Layer(sg.box(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ii <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">int</span>(num_segments<span class="op">/</span><span class="dv">2</span>))[<span class="dv">1</span>:]:</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(ii)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    b1<span class="op">|</span>b1.translate(ii<span class="op">*</span><span class="dv">2</span>,<span class="dv">0</span>)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>b1.plot()</span></code></pre></div>
-<pre><code>1</code></pre>
-<figure>
-<img src="output_12_1.png" alt="png" /><figcaption aria-hidden="true">png</figcaption>
-</figure>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>num_segments<span class="op">/</span><span class="dv">2</span></span></code></pre></div>
-<pre><code>2.5</code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">range</span>(<span class="bu">int</span>(num_segments<span class="op">/</span><span class="dv">2</span>)))</span></code></pre></div>
-<pre><code>[0, 1]</code></pre>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<p>A castellated joint is often preferred because it permits tight radii of curvature.  It puts stresses on the rigid layers, though</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">num_segments <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
 
-</main><!-- /.container -->
-<footer class="blog-footer">
-  
+b1 <span style="color:#f92672">=</span> Layer(sg<span style="color:#f92672">.</span>box(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
 
-  <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
-  <p><a href="#">Back to top</a></p>
-</footer>
+<span style="color:#66d9ef">for</span> ii <span style="color:#f92672">in</span> range(int(num_segments<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>))[<span style="color:#ae81ff">1</span>:]:
+    <span style="color:#66d9ef">print</span>(ii)
+    b1<span style="color:#f92672">|</span>b1<span style="color:#f92672">.</span>translate(ii<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>)
+b1<span style="color:#f92672">.</span>plot()
+</code></pre></div><pre><code>1
+</code></pre>
+<p><div class="text-center">
+  <a href="output_12_1.png" target="_blank"><img src="output_12_1.png" alt="png"  class="img-fluid"/></a>
+</div></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">num_segments<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+</code></pre></div><pre><code>2.5
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">list(range(int(num_segments<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)))
+</code></pre></div><pre><code>[0, 1]
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+</code></pre></div>
+  </article>
+</main>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
 </html>

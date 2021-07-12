@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Tracker Tutorial | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Tracker Tutorial</h1>
+  <h1 id="basic-tracker-tutorial">Basic Tracker Tutorial</h1>
+<p><em>Thanks to Chien-Wen Pan for his screenshots and assistance.</em></p>
+<h2 id="external-resources">External Resources</h2>
+<p><a href="https://physlets.org/tracker/">Tracker Software</a></p>
+<h2 id="procedure">Procedure</h2>
+<ol>
+<li>
+<p>Set up your Experiment</p>
+<ul>
+<li>Create your experiment so that captured motion is <em>planar</em> to the lens&rsquo;s radial axis.</li>
+<li>Ensure markers are not occluded as your system moves.  This will result in lost data.</li>
+<li>Ensure your &ldquo;ground link&rdquo; is rigidly attached to ground.  Any unmeasured flexibility will add error to your system</li>
+<li>Eliminate the effects of contact and friction if possible.  Rigidly attach your system in a given configuration rather than assuming it is unmoving due to friction.</li>
+</ul>
+</li>
+<li>
+<p>Place Markers.</p>
+<ul>
+<li>Utilize a high-contrast color scheme in the materials you use.  If your device is dark or light-colored, create colored markers that are the inverse color scheme.</li>
+<li>Add markers to your (fixed) base reference frame.  This will be useful in case your camera moves during capture.</li>
+<li>When sizing your markers, consider that the larger your marker, the larger the search window needs to be in tracker, which will slow tracking down.  The smaller your marker, the higher</li>
+</ul>
+</li>
+<li>
+<p>Light your Experiment</p>
+<ul>
+<li>Light your scene well so that your camera may use a smaller aperture.  This will help reduce blurring and improve tracking performance.</li>
+<li>Avoid shadows, changing lighting conditions, or other dark/light spots in your scene.  Sunlight is good as long as it does not go behind a cloud.</li>
+</ul>
+</li>
+<li>
+<p>Measure your experiment.  Take key measurements of your system, including:</p>
+<ul>
+<li>Distance between each marker</li>
+<li>Mass of rigid links</li>
+<li>Distance between camera lens and plane of experiment. (useful for expert-level calibration)</li>
+</ul>
+</li>
+<li>
+<p>Take video.  Suggestions:</p>
+<ul>
+<li>If possible to manually adjust camera settings, increase shutter rate
+<ul>
+<li>Set your shutter speed to at least 1/500th of a second or faster.</li>
+<li>Use a lens that has a long focus length so that you can reach the action (200mm or higher)</li>
+</ul>
+</li>
+<li>Use &ldquo;slow motion&rdquo; mode if available.  This will increase the frame-rate.</li>
+<li>Set the camera far enough back that it captures the whole scene as your device moves throughout its workspace.  Utilize the center of the frame as much as possible to minimize lens distortion effects</li>
+<li>Measure the angle of &ldquo;ground&rdquo; by including</li>
+<li>Use a tripod to ensure your camera does not move.</li>
+</ul>
+</li>
+<li>
+<p>Open Tracker, then load a new video.</p>
+<p><div class="text-center">
+  <a href="image3.jpg" target="_blank"><img src="image3.jpg" alt=""  class="img-fluid"/></a>
+</div></p>
+<ol>
+<li>Adjust the markers on the left and right of the timeline to select a portion of the video</li>
+</ol>
+</li>
+<li>
+<p>Create a &ldquo;coordinate system&rdquo;.</p>
+<p><div class="text-center">
+  <a href="image4.jpg" target="_blank"><img src="image4.jpg" alt=""  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="image1.jpg" target="_blank"><img src="image1.jpg" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Create a Calibration Stick.  Use shift+left click to place two points, then enter the length</p>
+<p><div class="text-center">
+  <a href="image8.jpg" target="_blank"><img src="image8.jpg" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Track points.</p>
+<ol>
+<li>
+<p>Create a new point mass</p>
+<p><div class="text-center">
+  <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Using ctrl+shift+left click, select an identifiable object in the scene to create a keyframe</p>
+<p><div class="text-center">
+  <a href="image5.jpg" target="_blank"><img src="image5.jpg" alt=""  class="img-fluid"/></a>
+</div></p>
+<p><div class="text-center">
+  <a href="image6.jpg" target="_blank"><img src="image6.jpg" alt=""  class="img-fluid"/></a>
+</div></p>
+<ul>
+<li>you can also adjust the size of the search box</li>
+</ul>
+</li>
+<li>
+<p>If problems occur, you can adjust points or reselect a keyfram using the tools in the autotracker window.</p>
+<ul>
+<li>if you select a point in the plot, you can delete all points after and reselect the marker, or redefine the keyframe.</li>
+</ul>
+<p><div class="text-center">
+  <a href="image7.jpg" target="_blank"><img src="image7.jpg" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+</ol>
+<p>Repeat if you have multiple markers to track.</p>
+</li>
+<li>
+<p>Export data table to a .csv file. Note: it seems that tracker&rsquo;s export function truncates floats to 2 values of precision.  Copy and paste the table directly into a text editor and save as a .csv file to get full precision.</p>
+</li>
+<li>
+<p>Use the following code to extract your data and interpolate it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># -*- coding: utf-8 -*-</span>
+<span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">Created on Wed Mar  3 13:54:15 2021
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">@author: danaukes
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> numpy
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> scipy.interpolate <span style="color:#f92672">as</span> si
+
+df<span style="color:#f92672">=</span>pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;C:\Users\danaukes\Documents\Tracker\mydata.csv&#39;</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;,&#39;</span>)
+
+<span style="color:#75715e">#x = df.x.astype(&#39;float64&#39;).to_numpy()</span>
+x <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>x<span style="color:#f92672">.</span>to_numpy()
+y <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>y<span style="color:#f92672">.</span>to_numpy()
+t <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>t<span style="color:#f92672">.</span>to_numpy()
+
+
+xy <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>array([x,y])<span style="color:#f92672">.</span>T
+f <span style="color:#f92672">=</span> si<span style="color:#f92672">.</span>interp1d(t,xy<span style="color:#f92672">.</span>T,fill_value<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;extrapolate&#39;</span>,kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;quadratic&#39;</span>)
+new_t <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>r_[<span style="color:#ae81ff">0</span>:t[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:<span style="color:#f92672">.</span><span style="color:#ae81ff">1</span>]
+
+plt<span style="color:#f92672">.</span>figure()
+plt<span style="color:#f92672">.</span>plot(t,x)
+plt<span style="color:#f92672">.</span>plot(new_t,f(new_t)[<span style="color:#ae81ff">0</span>])
+
+plt<span style="color:#f92672">.</span>figure()
+plt<span style="color:#f92672">.</span>plot(t,y)
+plt<span style="color:#f92672">.</span>plot(new_t,f(new_t)[<span style="color:#ae81ff">1</span>])
+plt<span style="color:#f92672">.</span>figure()
+plt<span style="color:#f92672">.</span>plot(x,y)
+</code></pre></div></li>
+</ol>
+<pre><code></code></pre>
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

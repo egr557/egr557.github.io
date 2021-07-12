@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on Foldable Robotics</title>
+    <link>https://danaukes.com/modules/introduction/</link>
+    <description>Recent content in Introduction on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/modules/introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Foldable Robotics Background</title>
+      <link>https://danaukes.com/modules/introduction/01-foldable-background/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/introduction/01-foldable-background/</guid>
+      <description>Foldable Robotics Background Laminate Fabrication Techniques  (Citation: Pister,&amp;#32;Judy&amp;amp; al.,&amp;#32;1992Pister,&amp;#32;K.,&amp;#32;Judy,&amp;#32;M.,&amp;#32;Burgett,&amp;#32;S.&amp;#32;&amp;amp;&amp;#32;Fearing,&amp;#32;R.&amp;#32;(1992).&amp;#32;Microfabricated hinges.Sensors and Actuators A: Physical,&amp;#32;33(3).&amp;#32;249–256.https://doi.org/10.1016/0924-4247(92)80172-Y)Foldable, laminate, and origami-inspired robots have origins in early MEMS work using planar processes to make three-dimensional mechansims in silicon (Citation: Pister,&amp;#32;Judy&amp;amp; al.,&amp;#32;1992Pister,&amp;#32;K.,&amp;#32;Judy,&amp;#32;M.,&amp;#32;Burgett,&amp;#32;S.&amp;#32;&amp;amp;&amp;#32;Fearing,&amp;#32;R.&amp;#32;(1992).&amp;#32;Microfabricated hinges.Sensors and Actuators A: Physical,&amp;#32;33(3).&amp;#32;249–256.https://doi.org/10.1016/0924-4247(92)80172-Y), where $\mu m$-scale hinges were fabricated in silicon to create articulated assemblies which folded out of a 2D plane.</description>
+    </item>
+    
+    <item>
+      <title>Foldable Robotics Timeline</title>
+      <link>https://danaukes.com/modules/introduction/02-foldable-timeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/introduction/02-foldable-timeline/</guid>
+      <description>Foldable Robotics Timeline 1992-1995 
+(Citation: Pister,&amp;#32;Judy&amp;amp; al.,&amp;#32;1992Pister,&amp;#32;K.,&amp;#32;Judy,&amp;#32;M.,&amp;#32;Burgett,&amp;#32;S.&amp;#32;&amp;amp;&amp;#32;Fearing,&amp;#32;R.&amp;#32;(1992).&amp;#32;Microfabricated hinges.Sensors and Actuators A: Physical,&amp;#32;33(3).&amp;#32;249–256.https://doi.org/10.1016/0924-4247(92)80172-Y)
+(Citation: Yeh,&amp;#32;Kruglick&amp;amp; al.,&amp;#32;1995Yeh,&amp;#32;R.,&amp;#32;Kruglick,&amp;#32;E.&amp;#32;&amp;amp;&amp;#32;Pister,&amp;#32;K.&amp;#32;(1995).&amp;#32;Microelectromechanical Components For Articulated Microrobots.&amp;#32;IEEE.https://doi.org/10.1109/SENSOR.1995.721817)
+(Citation: Reid,&amp;#32;Bright&amp;amp; al.,&amp;#32;1998Reid,&amp;#32;J.,&amp;#32;Bright,&amp;#32;V.&amp;#32;&amp;amp;&amp;#32;Butler,&amp;#32;J.&amp;#32;(1998).&amp;#32;Automated assembly of flip-up micromirrors.Sensors and Actuators A: Physical,&amp;#32;66(1-3).&amp;#32;292–298.https://doi.</description>
+    </item>
+    
+    <item>
+      <title>Robotics Domains</title>
+      <link>https://danaukes.com/modules/introduction/robotics-domains/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/introduction/robotics-domains/</guid>
+      <description>Introduction Robotics is multidisciplinary. Foldable robotics draws from the following fields
+ Mechanical Design - The process of determining the parameters and their values that should be used in creating a physical device. Dynamics - The study of how forces create motion. Kinematics - The study of how geometric rules drive motion/force relationships, and how those rules can be applied to systems of linkages, gears, and other mechanisms. Optimization - The study of how to arrive at a set of parameters that achieves a stated goal.</description>
+    </item>
+    
+  </channel>
+</rss>

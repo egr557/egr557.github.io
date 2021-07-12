@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Experimental Validation on Foldable Robotics</title>
+    <link>https://danaukes.com/modules/validation/</link>
+    <description>Recent content in Experimental Validation on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/modules/validation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Actuator Fitting</title>
+      <link>https://danaukes.com/modules/validation/actuator-fitting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/validation/actuator-fitting/</guid>
+      <description>Introduction The purpose of this assignment is to develop a model for your actuator.
+Steps  Decide as a team what kind of actuator you will use. This semester you may choose any actuator or energy storage device you like, including  A stretched or wound spring A preloaded beam A deformed elastic shape A motor, gear motor, or RC Servo Shape Memory Alloy &amp;hellip; (see the professor to get something else approved)   Develop a model which accurately captures the principal dynamics of the actuator.</description>
+    </item>
+    
+    <item>
+      <title>System Capture and Fitting</title>
+      <link>https://danaukes.com/modules/validation/system-capture-and-fitting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/validation/system-capture-and-fitting/</guid>
+      <description>System Capture and Fitting (camera) Introduction The purpose of this assignment is to collect data on your system for use in fitting your model
+Course Resources  Optimization Module Experimental Validation Module Dynamics Module  Instructions  Attach 3 optical tracking markers to the fixed base frame, at the same camera depth as your experimental setup. They must not be colinear, and would best be arranged orthogonally (as in x-y vectors) Measure the distance between all three markers.</description>
+    </item>
+    
+    <item>
+      <title>Tracker Tutorial</title>
+      <link>https://danaukes.com/modules/validation/tracker-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/validation/tracker-tutorial/</guid>
+      <description>Basic Tracker Tutorial Thanks to Chien-Wen Pan for his screenshots and assistance.
+External Resources Tracker Software
+Procedure   Set up your Experiment
+ Create your experiment so that captured motion is planar to the lens&amp;rsquo;s radial axis. Ensure markers are not occluded as your system moves. This will result in lost data. Ensure your &amp;ldquo;ground link&amp;rdquo; is rigidly attached to ground. Any unmeasured flexibility will add error to your system Eliminate the effects of contact and friction if possible.</description>
+    </item>
+    
+  </channel>
+</rss>

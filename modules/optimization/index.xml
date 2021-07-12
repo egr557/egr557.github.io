@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimization on Foldable Robotics</title>
+    <link>https://danaukes.com/modules/optimization/</link>
+    <description>Recent content in Optimization on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/modules/optimization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fitting a Dynamic Model</title>
+      <link>https://danaukes.com/modules/optimization/generated/04-fitting-a-dynamic-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/optimization/generated/04-fitting-a-dynamic-model/</guid>
+      <description>Fitting a Dynamic Model Introduction This example takes us through the beginning of the triple pendulum example again.
+# -*- coding: utf-8 -*- import pynamics from pynamics.frame import Frame from pynamics.variable_types import Differentiable,Constant from pynamics.system import System from pynamics.body import Body from pynamics.dyadic import Dyadic from pynamics.output import Output,PointsOutput from pynamics.particle import Particle import pynamics.integration import numpy import matplotlib.pyplot as plt plt.ion() from math import pi We need to import some additional libraries for optimization and interpolation</description>
+    </item>
+    
+    <item>
+      <title>Least Squares Optimization</title>
+      <link>https://danaukes.com/modules/optimization/generated/01-least-squares-optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/optimization/generated/01-least-squares-optimization/</guid>
+      <description>%matplotlib inline import numpy import numpy.random import matplotlib.pyplot as plt import numpy.linalg Define your x variable
+x = numpy.r_[-10:10:.5] Define y as a function of x. This can be anything
+#y = x #y = x**2 #y = x**3 y = numpy.sin(x) y /= y.max() Now create an array of normally distributed noise
+rand = numpy.random.randn(*y.shape)/10 y_rand = y+rand Plot y against the random vector
+plt.plot(x,y) plt.plot(x,y_rand,&amp;#39;o&amp;#39;) [&amp;lt;matplotlib.lines.Line2D at 0x1a76ccd0eb0&amp;gt;]</description>
+    </item>
+    
+    <item>
+      <title>Pendulum Model Fitting</title>
+      <link>https://danaukes.com/modules/optimization/pendulum_model_fitting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/optimization/pendulum_model_fitting/</guid>
+      <description>Find a bright round spherical object like a tennis ball, orange, etc. Weigh it Measure its diameter Find a piece of string and attach it to the ball Tape the other end of the string to a door frame. Make sure that the background is relatively neutral and free of color. Set up a video camera to capture the ball as it swings. Ensure the following to make sure your data is free from error:  That the camera is attached to a tripod or otherwise resting firmly on the ground.</description>
+    </item>
+    
+    <item>
+      <title>Scipy Optimization Example</title>
+      <link>https://danaukes.com/modules/optimization/generated/02-scipy-optimization-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/optimization/generated/02-scipy-optimization-example/</guid>
+      <description>Scipy Optimization Example This short example shows you how to use the scipy minimize function to identify model parameters. This example is set up similarly to the linear least squares example for consistency. Being able to define pretty much anything in a python function, however, gives you great power to customize this, as opposed to a specific approach like linear least squares.
+First, we import all the necessary modules
+%matplotlib inline import numpy import numpy.</description>
+    </item>
+    
+    <item>
+      <title>Solving Nonlinear Problems with Scipy Optimize and pyCMA</title>
+      <link>https://danaukes.com/modules/optimization/generated/03-solving-nonlinear-problems/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/optimization/generated/03-solving-nonlinear-problems/</guid>
+      <description>Solving Nonlinear Problems with Scipy Optimize and pyCMA Introduction Nonlinear solvers can suffer from the possibility of reaching local minima if the initial guess is too far away from the best minimum solution. This is especially true when trying to fit nonlinear functions. This example contrasts the difference between the scipy optimize function and the pyCMA package.
+The pyCMA package provides python with an implementation of the &amp;ldquo;covariance matrix adaptation evolutionary strategy&amp;rdquo; (wikipedia page here).</description>
+    </item>
+    
+  </channel>
+</rss>

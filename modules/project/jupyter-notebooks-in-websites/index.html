@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Working with Jupyter Notebooks in your website | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Working with Jupyter Notebooks in your website</h1>
+  <h2 id="introduction">Introduction</h2>
+<p>The point of this tutorial is to show you how to add a compiled jupyter notebook to your website in a way that it can be viewed.  There are two possible ways</p>
+<ol>
+<li>Save the compiled notebook (.ipynb) directly to your website and use a third party site to view content</li>
+<li>Export the compiled notebook to html or markdown and post to your website</li>
+</ol>
+<p>Both methods are relatively easy to do and neither is more preferable than the other.</p>
+<h3 id="option-1-save-the-complied-notebook-directly">Option 1: Save the complied notebook directly</h3>
+<ol>
+<li>
+<p>Start Jupyter notebook by opening up a command terminal and typing <code>jupyter notebook</code></p>
+</li>
+<li>
+<p>In Jupyter notebook, load the notebook and select the &ldquo;kernel&rdquo; &ndash;&gt; &ldquo;restart and run all&rdquo; menu item.</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/15.png" target="_blank"><img src="/figures/notebooks-in-website/15.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Save the notebook, then select &ldquo;file&rdquo; &ndash;&gt; &ldquo;close and halt&rdquo;</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/14.png" target="_blank"><img src="/figures/notebooks-in-website/14.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Navigate to your github repository and select the &ldquo;files&rdquo; &ndash;&gt; &ldquo;upload files&rdquo; menu item.</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/16.png" target="_blank"><img src="/figures/notebooks-in-website/16.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Select the .ipynb file, upload, and commit.</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/17.png" target="_blank"><img src="/figures/notebooks-in-website/17.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Create a special link to your file</p>
+<ol>
+<li>
+<p>Open up index.md or whatever file you would like to point to the new notebook from.  Select edit</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/18.png" target="_blank"><img src="/figures/notebooks-in-website/18.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Add a new link.  Remember, that links look like <code>[link text](http://www.mycustomurl.com/path/to/file)</code>.  In our case, the link will start with <code>https://nbviewer.jupyter.org/url/</code> and end with the path to your file, <code>danaukestest01.github.io/vectors.ipynb</code>.  The link text can be whatever you want it to be.  So, for a full example, the whole link to an example file would look like this</p>
+<pre><code>[link to vectors notebook](https://nbviewer.jupyter.org/url/danaukestest01.github.io/vectors.ipynb)
+</code></pre></li>
+</ol>
+</li>
+<li>
+<p>Save and commit your changes to index.md</p>
+</li>
+<li>
+<p>Navigate to your website (myusername.github.io)</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/19.png" target="_blank"><img src="/figures/notebooks-in-website/19.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Try out the new link.</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/20.png" target="_blank"><img src="/figures/notebooks-in-website/20.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+</ol>
+<h3 id="option-2">Option 2:</h3>
+<ol>
+<li>
+<p>Start Jupyter notebook by opening up a command terminal and typing <code>jupyter notebook</code></p>
+</li>
+<li>
+<p>Make sure your notebook starts with a markdown header that looks like the following:</p>
+<pre><code>---
+title: this is a simple juptyer notebook
+---
+</code></pre></li>
+<li>
+<p>In Jupyter notebook, load the notebook and select the &ldquo;kernel&rdquo; &ndash;&gt; &ldquo;restart and run all&rdquo; menu item.</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/15.png" target="_blank"><img src="/figures/notebooks-in-website/15.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Select &ldquo;file&rdquo; &ndash;&gt; &ldquo;download as&rdquo; &ndash;&gt; &ldquo;markdown&rdquo;.  Save the file to disk when the option pops up.</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/02.png" target="_blank"><img src="/figures/notebooks-in-website/02.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Save the notebook, then select &ldquo;file&rdquo; &ndash;&gt; &ldquo;close and halt&rdquo;</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/14.png" target="_blank"><img src="/figures/notebooks-in-website/14.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Unzip the file that was downloaded (if necessary).</p>
+</li>
+<li>
+<p>Navigate to your github repository and select the &ldquo;files&rdquo; &ndash;&gt; &ldquo;upload files&rdquo; menu item.</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/16.png" target="_blank"><img src="/figures/notebooks-in-website/16.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Select the .md file as well as any other unzipped files (if applicable), upload, and commit.</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/17.png" target="_blank"><img src="/figures/notebooks-in-website/17.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Create a link to your file</p>
+<ol>
+<li>
+<p>Open up index.md or whatever file you would like to point to the new notebook from.  Select edit</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/18.png" target="_blank"><img src="/figures/notebooks-in-website/18.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Add a new link.  Remember, that markdown files get compiled for you to html files.  Thus, if you name it &ldquo;simple.md&rdquo;, github will convert that to a folder titled &ldquo;/simple&rdquo;.  The link text can be whatever you want it to be.  So, for a full example, the whole link to an example file would look like this</p>
+<pre><code>[link to simple markdown](/simple)
+</code></pre><p><div class="text-center">
+  <a href="/figures/notebooks-in-website/03.png" target="_blank"><img src="/figures/notebooks-in-website/03.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Save and commit your changes to index.md</p>
+</li>
+<li>
+<p>Navigate to your website (myusername.github.io)</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/21.png" target="_blank"><img src="/figures/notebooks-in-website/21.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+<li>
+<p>Try out the new link.</p>
+<p><div class="text-center">
+  <a href="/figures/notebooks-in-website/22.png" target="_blank"><img src="/figures/notebooks-in-website/22.png" alt=""  class="img-fluid"/></a>
+</div></p>
+</li>
+</ol>
+
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

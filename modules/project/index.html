@@ -1,348 +1,305 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Project | Foldable Robotics
+</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This site is about foldable robotics.
-">
-  <meta name="author" content="Daniel M. Aukes">
-  <meta name="generator" content="Jekyll v4.1.1">
-  <title>Project | Foldable Robotics </title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
-  <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">-->
-  
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
-  
-  <!-- Bootstrap core CSS -->
-  <link href="/assets/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
     }
+  }
+</style>
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
-  </style>
-  
-  <!-- Custom styles for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-  <!-- Custom styles for this template -->
+  };
 
-  <link href="/assets/blog.css" rel="stylesheet">
-  <link href="/assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
-  
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/assets/favicon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  
-</head>
-<body>
-<div class="container">      
-<header class="blog-header py-3">
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
   <div class="row flex-nowrap justify-content-between align-items-center">
     <div class="col-2 pt-1">
-      
     </div>
     <div class="col-8 text-center">
       <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
     </div>
     <div class="col-2 d-flex justify-content-end align-items-center">
-
     </div>
   </div>
 </header>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Home</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Modules
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          
-          <a class="dropdown-item" href="/modules/introduction">Introduction</a>
-          
-          <a class="dropdown-item" href="/modules/biomechanics">Biomechanics</a>
-          
-          <a class="dropdown-item" href="/modules/kinematics">Kinematics</a>
-          
-          <a class="dropdown-item" href="/modules/compliance">Mechanics and Compliance</a>
-          
-          <a class="dropdown-item" href="/modules/dynamics">Dynamics</a>
-          
-          <a class="dropdown-item" href="/modules/optimization">Optimization</a>
-          
-          <a class="dropdown-item" href="/modules/manufacturing">Prototyping & Manufacturing</a>
-          
-          <a class="dropdown-item" href="/modules/integration">Integration</a>
-          
-          <a class="dropdown-item" href="/modules/validation">Experimental Validation</a>
-          
-          <a class="dropdown-item" href="/modules/project">Project</a>
-          
-          <a class="dropdown-item" href="/modules/python">Python</a>
-          
-          <a class="dropdown-item" href="/modules/misc">Misc</a>
-          
-        </div>
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="/class_schedule">Class Schedule</a>
-      
-
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="/my-assignments">Assignments</a>
-      
-
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="/my-tutorials">Tutorials</a>
-      
-
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="https://canvas.asu.edu/calendar#view_name=month" target="_blank">Canvas Calendar <i class="fas fa-external-link-alt"></i></i></a>
-      
-
-      </li>
-      
-      <li class="nav-item">
-      
-      <a class="nav-link" href="https://canvas.asu.edu/courses/71725" target="_blank">Canvas <i class="fas fa-external-link-alt"></i></i></a>
-      
-
-      </li>
-      
+    </div>
   </div>
 </nav>
-<div class="row">
-<div class="col-md-4 text-center">
-  
-  
-      <h5>
-        Module: <a href="/modules/project">project</a>
-      </h5>
-  
-  
-</div>
-<div class="col-md-4 text-center">
-  
-  
-      <h4>
-        Project
-      </h4>
-  
-  
-</div>
-<div class="col-md-4 text-center">
-  
-</div>
-</div>
-</div><!-- /.row -->
-<main role="main" class="container">
-  <article class="post">
 
-  <div class="post-content">
-    
-    
-        
-    
-    <h2>Modules</h2>
-    <div class="row">
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/project/developing-a-research-question.html"><i class="fas fa-chalkboard-teacher fa-5x"></i></a></h3><h3 class="card-title">Developing a Research Question</h3></div>
-</div>
-    
     </div>
-    
-    
-    
 
     
-    <h2>Assignments</h2>
-    <div class="row">
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/CATME-I.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">CATME I</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/CATME-II.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">CATME II</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/develop-a-research-question.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">Develop a Research Question</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/make-a-website.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">Make a Website</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/presentation-I.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">Presentation I</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/presentation-II.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">Presentation II</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/presentation-III.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">Presentation III</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/presentation-feedback-I.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">Presentation Feedback I</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/presentation-feedback-ii.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">Presentation Feedback II</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/project-pitches.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">Project Pitches</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/project-selection-survey.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">Project Selection Survey</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/website-update-I.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">Website Update I</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/website-update-II.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">Website Update II</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/assignments/website-update-III.html"><i class="fas fa-paper-plane fa-5x"></i></a></h3><h3 class="card-title">Website Update III</h3></div>
-</div>
-    
-    </div>
-    
+
+<main class="container">
+  <h1>module section: Project</h1>
+
+
+
+
+
+
+<h2>Submodules</h2>
+<div class="row g-3">
   
+  <div class="col-md-3">
+  <div class="card text-center h-100 mt-3 mb-3">
     
-
-    
-    <h2>Tutorials</h2>
-    <div class="row">
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/project/jupyter-notebooks-in-websites.html"><i class="fas fa-graduation-cap fa-5x"></i></a></h3><h3 class="card-title">Working with Jupyter Notebooks in your website</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/project/make-a-bibliography.html"><i class="fas fa-graduation-cap fa-5x"></i></a></h3><h3 class="card-title">Make a Bibliography</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/project/make-a-website.html"><i class="fas fa-graduation-cap fa-5x"></i></a></h3><h3 class="card-title">Make a Project Repository and Website</h3></div>
-</div>
-    
-    <div class="col-md-4">
-<div class="card text-center">
-<h3 class="card-title"><a href="/modules/project/powerpoint-to-mp4.html"><i class="fas fa-graduation-cap fa-5x"></i></a></h3><h3 class="card-title">Converting Powerpoint to .mp4</h3></div>
-</div>
-    
+    <h3 class="card-title"><a href="/modules/project/developing-a-research-question/">Developing a Research Question</a></h3>
+    <div class="card-body">
+      <p class="card-text"></p>
     </div>
-    
-    
-    
-
-    
-    
-    
-
-
-    
-
-    
-    
-    
-    
-    
-    
-
-    
   </div>
-
-</article>
-
-</main><!-- /.container -->
-<footer class="blog-footer">
+</div>
   
+</div>
 
-  <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
-  <p><a href="#">Back to top</a></p>
-</footer>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+
+<h2>Tutorials</h2>
+<div class="row g-3">
+  
+  <div class="col-md-3">
+  <div class="card text-center h-100 mt-3 mb-3">
+    
+    <h3 class="card-title"><a href="/modules/project/powerpoint-to-mp4/">Converting Powerpoint to .mp4</a></h3>
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  </div>
+</div>
+  
+  <div class="col-md-3">
+  <div class="card text-center h-100 mt-3 mb-3">
+    
+    <h3 class="card-title"><a href="/modules/project/make-a-bibliography/">Make a Bibliography</a></h3>
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  </div>
+</div>
+  
+  <div class="col-md-3">
+  <div class="card text-center h-100 mt-3 mb-3">
+    
+    <h3 class="card-title"><a href="/modules/project/make-a-website/">Make a Project Repository and Website</a></h3>
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  </div>
+</div>
+  
+  <div class="col-md-3">
+  <div class="card text-center h-100 mt-3 mb-3">
+    
+    <h3 class="card-title"><a href="/modules/project/jupyter-notebooks-in-websites/">Working with Jupyter Notebooks in your website</a></h3>
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  </div>
+</div>
+  
+</div>
+
+
+
+
+
+
+
+</main>
+
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
 </html>

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Packages in Python | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Packages in Python</h1>
+  <h1 id="packages-in-python">Packages in Python</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The most important packages that I use when creating python code are those packages which make a python more Matlab-like.</p>
+<h2 id="common-packages">Common Packages</h2>
+<h3 id="numpy">Numpy</h3>
+<p><a href="https://www.scipy.org/getting-started.html">https://www.scipy.org/getting-started.html</a></p>
+<p>this package permits one to store and access data in arrays multidimensional arrays as one would do natively in Matlab. While python permits nested lists, the Paradigm of being able to slice multidimensional arrays of data, to index through it, too reshape and analyze it across dimensions in multiple ways is provided by this package</p>
+<h3 id="scipy">Scipy</h3>
+<p><a href="https://docs.scipy.org/doc/scipy/reference/index.html">https://docs.scipy.org/doc/scipy/reference/index.html</a></p>
+<p>Scipy complements numpy in that it permits low-level arrays defined in numpy to be analyzed across a wide array of linear algebra and scientific functions. The most notable packages with inside Pi include modules for integration, interpolation, linear algebra, optimization, nonlinear optimization, sparse matrices, spatial operations such as triangulation convex hole Etc and statistics</p>
+<p>Module list: <a href="https://docs.scipy.org/doc/scipy/reference/py-modindex.html">https://docs.scipy.org/doc/scipy/reference/py-modindex.html</a></p>
+<h3 id="matplotlib">Matplotlib</h3>
+<p>Matplotlib is a package which permits the visualization of data, especially Ray base data used in numpy. matplotlib also provides an interface which is similar to Matlab, making it easy to make the transition between Matlab plotting and plotting in Python. Not live also permits object-oriented-style access to its structures in classes, making it possible to embed object-oriented style code and enhance it with plotting functionality. specialty modules within matplotlib start with pi plot, the scripted interface for creating python plots. Other modules which are worth noting are the path modules, which allow you to access complex geometric classes such as lines and polygons, and to program these shapes at a very low level in order to get the exact type of drawing you want. Another module within matplotlib which is worth knowing about is the color map capability, which allows you to specify and generate colors along a spectrum. A variety of Spectra are predefined, permitting you to ship the color of your plots for different uses very easily. Other common modules are the figure and axis modules, which provide access to the axis and figure classes. One of their module to know about is the image module, which allows you to display image data or bitmapdata and to operate on pictures and images within figures and plots.</p>
+<p><a href="https://matplotlib.org/tutorials/index.html"><em>https://matplotlib.org/tutorials/index.html</em></a></p>
+<p>Other things that you can do in that pot live include animation, simple interactions with data such as clicking and dragging, 3D plotting of all kinds including surfaces contour lines and custom triangulated data. you can do subplots in matplotlib just as you do with Matlab</p>
+<h2 id="other-packages">Other packages</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">package</th>
+<th style="text-align:left">Description / Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3/">python</a></td>
+<td style="text-align:left">Get Python 3</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://docs.scipy.org/doc/numpy-dev/dev/">numpy</a></td>
+<td style="text-align:left">basic array types and operations</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://docs.scipy.org/doc/scipy/reference/">scipy</a></td>
+<td style="text-align:left">huge, multipurpose numpy-enhancing package, covering many topics including optimization, matrix operations &amp; linear algebra, spatial data, transforms, and integration.</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="">sympy</a></td>
+<td style="text-align:left">symbolic equation manipulation</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="">shapely</a></td>
+<td style="text-align:left">2d constructive solid geometry, based on libgeos</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="">matplotlib</a></td>
+<td style="text-align:left">the definitive plotting tool for python</td>
+</tr>
+<tr>
+<td style="text-align:left">pyqt / pyside</td>
+<td style="text-align:left">QT GUI development</td>
+</tr>
+<tr>
+<td style="text-align:left">pyyaml</td>
+<td style="text-align:left">yaml file type support</td>
+</tr>
+<tr>
+<td style="text-align:left">spyder</td>
+<td style="text-align:left">great GUI for python editing / debug</td>
+</tr>
+<tr>
+<td style="text-align:left">jupyter</td>
+<td style="text-align:left">great web-based editor for ipython</td>
+</tr>
+</tbody>
+</table>
+<h2 id="packages-modules-etc">Packages, modules, etc</h2>
+<p>One of the hardest things to understand once you started scripting in Python is how to get access to all of the good code that is already out there, and how to use it once you&rsquo;ve got it installed. At the heart of this issue is the import command, which permits you to load packages of code. packages are term for many different python files, and the folder structure, support files, and data files which support and Surround it. Packages are distributed in a variety of ways, some historically used more and better than others,. once installed, packages typically live within the python distribution folder system itself. A package is a collection of more than just python files, it is the structure of how those files interact. Python packages, when run, can store data inside them, and access files from within their package, and load other modules. Module is a term for a reusable python file that has functions variables and data inside of it.</p>
+<p>typically the import statement can be used to load both packages and modules. Import can be used in a variety of ways, which makes it unclear exactly how it&rsquo;s being used except for on a case-by-case basis. the simplest import statement looks like this</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
+</code></pre></div><p>what I just done is imported the math package so that I can use it . just from this line of code it is impossible to tell whether the math is a module parentheses file, for a package, folder structure with many files,. Find out I type</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">type(math)
+</code></pre></div><p>I do know running or after running this line of code, is that when I want to access functions within math, I will have to access them by typing</p>
+<p>math. Math function</p>
+<p>the <code>import</code> statement imported</p>
+
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

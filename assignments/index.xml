@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Assignments on Foldable Robotics</title>
+    <link>https://danaukes.com/assignments/</link>
+    <description>Recent content in Assignments on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Biomechanics Background and Initial Specifications</title>
+      <link>https://danaukes.com/assignments/biomechanics-background-and-initial-specificaitons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/biomechanics-background-and-initial-specificaitons/</guid>
+      <description>Biomechanics Background and Initial Specifications Assignment Overview The goal of this part is to encourage you to get &amp;ldquo;bio-inspired&amp;rdquo;, to get you thinking about the scale of your robot, and to think about how to replicate the efficiencies of biological systems. You may refer to the developing specifications page for more information
+Please Read this whole assignment first.
+Suggestions  It will be useful to start using a program like Mendeley to collect and organize references.</description>
+    </item>
+    
+    <item>
+      <title>CATME I</title>
+      <link>https://danaukes.com/assignments/catme-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/catme-i/</guid>
+      <description>CATME I Assignment Overview Please use the link provided in the email sent from CATME to complete an assessment of your teammates.
+Please remember that feedback to teammates will be released to them, so keep your criticism constructive
+Rubric    Description Points     Total 200    </description>
+    </item>
+    
+    <item>
+      <title>CATME II</title>
+      <link>https://danaukes.com/assignments/catme-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/catme-ii/</guid>
+      <description>CATME II Assignment Overview Please use the link provided in the email sent from CATME to complete an assessment of your teammates.
+Please remember that feedback to teammates will be released to them, so keep your criticism constructive
+Rubric    Description Points     Total {{page.points}}    </description>
+    </item>
+    
+    <item>
+      <title>Course Feedback I</title>
+      <link>https://danaukes.com/assignments/course-feedback-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/course-feedback-i/</guid>
+      <description>Course Feedback I Assignment Overview The goal of this assignment is to learn about your activities in this course and how the course can be improved in the future.
+Procedure  Fill out the survey listed in Canvas  Submission instructions  Submission of the form is all that is needed for credit.  Rubric    Description Points     Total 20      </description>
+    </item>
+    
+    <item>
+      <title>Course Feedback II</title>
+      <link>https://danaukes.com/assignments/course-feedback-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/course-feedback-ii/</guid>
+      <description>Course Feedback II Assignment Overview The goal of this assignment is to learn about your activities in this course and how the course can be improved in the future.
+Procedure  Fill out this survey Fill out the official course feedback survey. You should have gotten an email about it. This is not a graded component of this assignment, but is important for the future of the class and the students who take it.</description>
+    </item>
+    
+    <item>
+      <title>Data Collection and Experimental Validation</title>
+      <link>https://danaukes.com/assignments/data-collection-and-experimental-validation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/data-collection-and-experimental-validation/</guid>
+      <description>Data Collection and Experimental Validation Assignment Overview The purpose of this assignment is to collect data on your system and compare against the results estimated from simulation.
+Procedure  Perform an experiment to collect either trajectory or force information over 5 cycles of motion (if cyclic) or 5 separate experiments (if single-run). Take a picture of your setup. Annotate the photo with arrows, text boxes etc to help us undestand how you tested your device Record a video of at least one run of your experiment.</description>
+    </item>
+    
+    <item>
+      <title>Design and Manufacturing Workflow</title>
+      <link>https://danaukes.com/assignments/design-and-manufacturing-workflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/design-and-manufacturing-workflow/</guid>
+      <description>Design and Manufacturing Workflow Introduction The purpose of this assignment is to plan for the manufacturing of the full system, test the output, and hopefully use it to produce a prototype.
+Resources  Solidworks Tutorial kinematics tutorial:	https://drive.google.com/open?id=1En2zWrJg5EV_T9sTThubRUUclYcnW9jV&amp;amp;authuser=daukes%40asu.edu&amp;amp;usp=drive_fs The macros for exporting a laminate to .dxf: https://github.com/popupcad/code_popupcad_solidworks_exporter  Steps   Create a quick paper mockup of your final prototype design(You may use a prior prototype if it still applies, but you may destroy it.</description>
+    </item>
+    
+    <item>
+      <title>Design Optimization</title>
+      <link>https://danaukes.com/assignments/design-optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/design-optimization/</guid>
+      <description>Design Optimization Introduction The purpose of this assignment is to optimize the dynamics of your system to maximize performance against your team&amp;rsquo;s selected research question and design goal.
+Procedure   Performance Measurement a. Explain, in words, how your team will evaluate the success of your robot&amp;rsquo;s design. This could be by measuring the forces produced by your design, the speed at which it walks, its thrust:weight ratio, the height it can jump, etc.</description>
+    </item>
+    
+    <item>
+      <title>Develop a Research Question</title>
+      <link>https://danaukes.com/assignments/develop-a-research-question/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/develop-a-research-question/</guid>
+      <description>Develop a Research Question Introduction Generate a research question worthy of your time.
+Resources  The associated module on developing a research question Mendeley Desktop, a useful citation manager  Instructions  Starting with the research question selected for your team, work on adapting and refining it to fit your team&amp;rsquo;s specific goals and this year&amp;rsquo;s course constraints (with regard to makeability, feasibility, etc)   Defend your selected question by answering the questions below.</description>
+    </item>
+    
+    <item>
+      <title>Dynamics II Plan</title>
+      <link>https://danaukes.com/assignments/dynamics-ii-plan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/dynamics-ii-plan/</guid>
+      <description>Dynamics II Plan Introduction The purpose of this assignment is to decide as a team how you will split up the various Parameter ID tasks individually
+Procedure   Identify and discuss the materials you plan to use in fabrication. Decide who will be obtaining those materials and distributing them.
+  Identify and Discuss the various parameters you plan to model in your simulation, including
+  actuator modeling</description>
+    </item>
+    
+    <item>
+      <title>Dynamics II Prep (Parameter ID)</title>
+      <link>https://danaukes.com/assignments/dynamics-ii-prep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/dynamics-ii-prep/</guid>
+      <description>Dynamics II Prep Introduction The purpose of this assignment is to get your team to model the various aspects of your model including
+ The full system Actuator Parameters Energy Storage Devices System / Link Stiffness Damping and Friction  Procedure Part I Your team should have decided what each of your tasks are for this week. Please ensure you document what your contributions are. For example, you can omplete a task such as:</description>
+    </item>
+    
+    <item>
+      <title>Incoming Survey</title>
+      <link>https://danaukes.com/assignments/incoming-survey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/incoming-survey/</guid>
+      <description>Incoming Survey Assignment Overview The goal of this assignment is to learn about you, your background, and your interests and abilities.
+Procedure  Fill out this survey  Submission instructions  Submission of the form is all that is needed for credit.  Rubric    Description Points     Total 50    </description>
+    </item>
+    
+    <item>
+      <title>Install Python</title>
+      <link>https://danaukes.com/assignments/install-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/install-python/</guid>
+      <description>Install Python Assignment Overview The goal here is to verify you have python installed correctly.
+Resources  Installing Anaconda Python Tutorial Add folder to system path (Windows)  Procedure   Read the entire assignment before starting.
+  Follow the instuctions in the Installing Anaconda Python Tutorial for installing the anaconda distribution of python.
+  Download the windows build for ffmpeg, a common video encoder. Unzip and move it into a new root-level folder called &amp;ldquo;c:/binaries&amp;rdquo; or similar.</description>
+    </item>
+    
+    <item>
+      <title>Install Solidworks</title>
+      <link>https://danaukes.com/assignments/install-solidworks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/install-solidworks/</guid>
+      <description>Install Solidworks Assignment Overview The goal here is to ensure you have Solidworks installed correctly.
+Optional External Resources GNU Image Manipulation Program (Image Editor)
+Procedure   Read the entire assignment before starting.
+  Go to myapps.asu.edu and follow the instructions for installing Solidworks
+  After installation, open Solidworks and create a new part
+  Create a sketch
+
+  Add your name as text to the sketch</description>
+    </item>
+    
+    <item>
+      <title>Intro to Shapely</title>
+      <link>https://danaukes.com/assignments/shapely/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/shapely/</guid>
+      <description>Shapely &amp;amp; Manufacturing Overview The purpose of this exercise is to get used to working with shapely polygons and to use it to compute some manufacturing geometry. It is your job to determine how to compute the cut files using Python, shapely, and the foldable_robotics package
+Detailed Procedure Display the result of each step
+ Import shapely.geometry, foldable.layer, foldable.laminate, and foldable.manufacturing modules for using various shapely geometries, Layer(), and Laminate() classes, as well as for performing advanced computations.</description>
+    </item>
+    
+    <item>
+      <title>Kinematics Via Prototyping &amp; CAD</title>
+      <link>https://danaukes.com/assignments/kinematics-via-prototyping-and-cad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/kinematics-via-prototyping-and-cad/</guid>
+      <description>Kinematics Via Prototyping &amp;amp; CAD Introduction The goal of this assignment is to 1) propose a mechanism that your team can study as part of a larger laminate system, and 2) to get you comfortable sketching the kinematics of foldable systems in CAD, establishing constraints, and counting degrees of freedom.
+Prerequisites  Solidworks should be installed. It may be downloaded from https://myapps.asu.edu.  Steps Pick one of the three basic kinematic elements we will be working with this semester: a planar four (or five) bar mechanism, a spherical four(or five) bar mechanism, or a sarrus linkage.</description>
+    </item>
+    
+    <item>
+      <title>Make a Pop-up Book</title>
+      <link>https://danaukes.com/assignments/make-a-popup-book/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/make-a-popup-book/</guid>
+      <description>Make a Pop-up Book Assignment Overview The goal of this assignment is to search externally for origami-inspired mechanisms you could use for your project. Additionally, this assignment is meant to make you think critically about how the manufacturing of foldable robots is intertwined with cutting and joining processes, and to appreciate the automation
+Procedure   Read the entire assignment before starting.
+  Read this paper[1]. Look through other references you can find, including the book by Birmingham [2] or search via other online resources such as https://scholar.</description>
+    </item>
+    
+    <item>
+      <title>Make a Website</title>
+      <link>https://danaukes.com/assignments/make-a-website/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/make-a-website/</guid>
+      <description>Make a Website Assignment Overview The purpose of this assignment is to create a project website as a living document that will document all your work for the class.
+Resources  Make a Project Repository and Website Tutorial https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet  Procedure   Follow the directions in the &amp;ldquo;Make a Project Repository and Website&amp;rdquo; tutorial
+  The website should contain the following information:
+ Project Title Team members and contact information    The website should also link to several subpages.</description>
+    </item>
+    
+    <item>
+      <title>Presentation Feedback I</title>
+      <link>https://danaukes.com/assignments/presentation-feedback-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/presentation-feedback-i/</guid>
+      <description>Presentation Feedback I Assignment Overview Each of you is responsible for compiling at least three questions and submitting them to teams via a google form. Comments are helpful, but questions which require teams to address holes in their design are most useful. Be constructive and thoughtful.
+Procedure  Please use this form to send notes to teams Please provide one submission per team. You may edit your comments up to the due date.</description>
+    </item>
+    
+    <item>
+      <title>Presentation Feedback II</title>
+      <link>https://danaukes.com/assignments/presentation-feedback-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/presentation-feedback-ii/</guid>
+      <description>Presentation Feedback II Assignment Overview Each of you is responsible for compiling at least three questions and submitting them to teams via a google form. Comments are helpful, but questions which require teams to address holes in their design are most useful. Be constructive and thoughtful.
+Procedure  Please use this form to send notes to teams Please provide one submission per team. You may edit your comments up to the due date.</description>
+    </item>
+    
+    <item>
+      <title>Presentation I</title>
+      <link>https://danaukes.com/assignments/presentation-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/presentation-i/</guid>
+      <description>Presentation I Assignment Overview Please prepare your group presentation based on your most recent project activities
+Procedure   Create a powerpoint with 5 Slides:
+ Project Introduction  Team members Your team&amp;rsquo;s refined research question   Biomechanics-driven inspiration  Prior work on this animal Prior work related to similar robots Biomechanics-derived specifications   Proposed mechanism  Figure of Layout Picture of Prototype   Kinematics  Solution approach Estimate of Force/Torque required from actuator(s)   Future Plans  How does what you learned translate into future action by your team?</description>
+    </item>
+    
+    <item>
+      <title>Presentation II</title>
+      <link>https://danaukes.com/assignments/presentation-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/presentation-ii/</guid>
+      <description>Presentation II Assignment Overview Please prepare your group presentation based on your most recent project activities
+Procedure   Review your team&amp;rsquo;s prior feedback.
+  Create a powerpoint with 5 Slides:
+  Project Update
+ Team members Your team&amp;rsquo;s refined research question    Current Specifications
+ Has your source of bio-inspiration changed? Have your specs changed based on the realities of physics, material selection, known payloads, etc?</description>
+    </item>
+    
+    <item>
+      <title>Presentation III</title>
+      <link>https://danaukes.com/assignments/presentation-iii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/presentation-iii/</guid>
+      <description>Presentation III Assignment Overview Please prepare your group presentation based on your most recent project activities
+Procedure   Review your team&amp;rsquo;s prior feedback.
+  Create a five-minute powerpoint:
+ Project Update  Team members Your team&amp;rsquo;s refined research question Major updates to project definition and earlier work since last presentation   Manufacturing  Discuss the 1-layer and 5-layer manufacturing designs Discuss manufacturability Discuss how / whether you used this in your prototyping.</description>
+    </item>
+    
+    <item>
+      <title>Project Pitches</title>
+      <link>https://danaukes.com/assignments/project-pitches/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/project-pitches/</guid>
+      <description>Project Pitches Overview The goal of this assignment is to permit those interested in pitching their ideas to attract a group of people interested in joining them. This pitch will be used to inspire and promote discussion amongst students before teams are formed.
+This is your opportunity to shape your semester and to accomplish a personal research goal through class. If, after group discussion, you wish to create other pitches, you may upload them independently to the Google Drive Folder listed below.</description>
+    </item>
+    
+    <item>
+      <title>Project Selection Survey</title>
+      <link>https://danaukes.com/assignments/project-selection-survey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/project-selection-survey/</guid>
+      <description>Project Selection Survey Introduction Instructions Please fill out this survey to indicate your ranked project preferences. Only one team can answer each distinct research question.
+Submission Please complete your survey by the deadline noted in Canvas.
+Rubric    Description Points     Total {{page.points}}    </description>
+    </item>
+    
+    <item>
+      <title>Python for Loops. Arrays. and Plotting</title>
+      <link>https://danaukes.com/assignments/python-for-loops-arrays-and-plotting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/python-for-loops-arrays-and-plotting/</guid>
+      <description>Python for loops, Arrays, and Plotting References Python  Basic Intro Control Flow: For, if, etc For loops List Comprehensions in Python  Arrays  NumPy for Matlab users Quickstart Tutorial Absolute Beginners Tutorial  Plotting with Matplotlib  Matplotlib Tutorials, specifically the pyplot tutorial General Examples and pyplot examples titles equal axis savefig() examples  Introduction The purpose of this assignment is to get to know Python and Juptyer Notebook.</description>
+    </item>
+    
+    <item>
+      <title>Python Functions</title>
+      <link>https://danaukes.com/assignments/python-functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/python-functions/</guid>
+      <description>Python Functions Resources  *args and **kwargs in python explained NumPy for Matlab users  Procedure   Become familiar with Python functions, including how you declare and call them.
+  Create a function sum1() that takes two arguments x and y and returns their sum. Demonstrate your working function by running the following commands:
+print(sum1(2,3)) print(sum1(x=3,y=4))   Create a function sum2() that takes two arguments x and y with default values of 10 and 20, respectively, and returns their sum.</description>
+    </item>
+    
+    <item>
+      <title>Sarrus Kinematics</title>
+      <link>https://danaukes.com/assignments/sarrus-kinematics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/sarrus-kinematics/</guid>
+      <description>Spherical Kinematics Assignment Overview The purpose of this assignment is to get you comfortable using the numerical computational capabilities of Python to start estimating the performance of your design.
+
+Instructions Numerically Solve for a Mechanism&amp;rsquo;s Position Using the examples on the foldable robotics website as a starting point, solve for the kinematics of the mechanism above.
+ Make a table of link lengths corresponding to the vectors defined by the six heavy black lines.</description>
+    </item>
+    
+    <item>
+      <title>System Dynamics I</title>
+      <link>https://danaukes.com/assignments/system-dynamics-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/system-dynamics-i/</guid>
+      <description>System Dynamics I Assignment Overview This assignment is intended to get you familiar with the dynamics of your system. We will start with the triple pendulum example and turn it into a leg.
+Resources  dynamics modules  Procedure Starting with system kinematics code as well as the pendulum code shared on Wednesday (2/17/2021),
+ Scale: Ensure your system is using SI units. You should be specifying lengths in meters (so millimeters should be scaled down to the .</description>
+    </item>
+    
+    <item>
+      <title>System Dynamics II</title>
+      <link>https://danaukes.com/assignments/system-dynamics-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/system-dynamics-ii/</guid>
+      <description>System Dynamics II Assignment Overview The point of this assignment is to re-consolidate everything you have learned about your system back into your dynamic model. It should now include:
+ at least one &amp;ldquo;compliant&amp;rdquo; element all unknown parameters determined and included.  joint or system-level damping determined   An actuator model or stored energy source. Ground constraints eliminated (if applicable) Closed-loop constraints (if applicable) valid initial condition  Procedure Resources  dynamics modules  Assignment Goals Your dynamics should include:</description>
+    </item>
+    
+    <item>
+      <title>System Kinematics</title>
+      <link>https://danaukes.com/assignments/system-kinematics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/system-kinematics/</guid>
+      <description>Create and Plot Kinematics Assignment Overview The purpose of this assignment is to model the kinematics so that you can estimate the forces, and torques, power requirements, and speed of your system. This will be done using a symbolic approach with the pynamics package
+Resources  Triple Pendulum Example EGR557 Kinematics Module EGR557 Dynamics Module pynamics repository  Instructions Meet with your team to go over each of the prototypes and mockups you have individually created through past homework assignments.</description>
+    </item>
+    
+    <item>
+      <title>Website Update I</title>
+      <link>https://danaukes.com/assignments/website-update-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/website-update-i/</guid>
+      <description>Website Update I Introduction The purpose of this assignment is to update your team&amp;rsquo;s progress towards creating a public-facing, unified project report.
+Instructions Please ensure each of the following assignments is posted and up-to-date. This is the time to re-evaluate each page to ensure that it matches any conclusions you have since come to since creating it the first time.
+Please make sure the following pages are present and consistent:</description>
+    </item>
+    
+    <item>
+      <title>Website Update II</title>
+      <link>https://danaukes.com/assignments/website-update-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/website-update-ii/</guid>
+      <description>Website Update II Introduction The purpose of this assignment is to update your team&amp;rsquo;s progress towards creating a public-facing, unified project report.
+Instructions Please ensure each of the following assignments is posted and up-to-date. This is the time to re-evaluate each page to ensure that it matches any conclusions you have since come to since creating it the first time.
+Please make sure the following pages are present and consistent:</description>
+    </item>
+    
+    <item>
+      <title>Website Update III</title>
+      <link>https://danaukes.com/assignments/website-update-iii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/assignments/website-update-iii/</guid>
+      <description>Website Update III Introduction The purpose of this assignment is to update your team&amp;rsquo;s progress towards creating a public-facing, unified project report.
+Instructions Please ensure each of the following assignments is posted and up-to-date. This is the time to re-evaluate each page to ensure that it matches any conclusions you have since come to since creating it the first time.
+Please make sure the following pages are present and consistent with your final project:</description>
+    </item>
+    
+  </channel>
+</rss>

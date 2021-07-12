@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dynamics on Foldable Robotics</title>
+    <link>https://danaukes.com/modules/dynamics/</link>
+    <description>Recent content in Dynamics on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/modules/dynamics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Derivatives and the Golden Rule</title>
+      <link>https://danaukes.com/modules/dynamics/generated/05-derivatives-and-the-golden-rule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/05-derivatives-and-the-golden-rule/</guid>
+      <description>Derivatives and the Golden Rule $$ \frac{ {}^N{d\vec{v}}}{dt} = \frac{ {}^A{d\vec{v}}}{dt} + {}^N{\vec{w}}^{A} \times \vec{v} $$
+::: {style=&amp;ldquo;text-align:center;&amp;quot;} 
+ :::
+Example ::: {style=&amp;ldquo;text-align:center;&amp;quot;}  :::
+$$ \vec{r} = -l\hat{a}_y $$ $$ \vec{v} = \frac{ {}^N{d\vec{r}}}{dt} =\frac{ {}^{A} { d\vec{r}}}{dt} + {}^{N}{\vec{\omega}}^{A} \times \vec{r} $$ $$ \vec{v} = \frac{ {}^{N}{d\vec{r}}}{dt} = \dot{\theta}\hat{a}_z \times -l\hat{a}_y $$ $$ \vec{v} = \frac{ {}^{N}{}{ d\vec{r}}{}{}}{dt}= l\dot{\theta}\hat{a}_x $$ $$ \vec{a} = \frac{ {}^{N}{}{ d\vec{v}}{}{}}{dt} = \frac{ {}^{N}{}{d^2\vec{r}}{}{}}{dt^2} $$ $$ \vec{a} = \frac{ {}^{A}{}{d\vec{v}}{}{}}{dt} + {}^{N}{}{\vec{\omega}}^{A}{} \times \vec{v} $$ $$ \vec{a} = l\ddot{\theta}\hat{a}_x + \dot{\theta}\hat{a}_z \times l\dot{\theta}\hat{a}_x $$ $$ \vec{a} = l\ddot{\theta}\hat{a}_x + l\dot{\theta}^2\hat{a}_y $$</description>
+    </item>
+    
+    <item>
+      <title>Dyads, Dyadics, and Inertia</title>
+      <link>https://danaukes.com/modules/dynamics/generated/04-dyads-dyadics-and-inertia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/04-dyads-dyadics-and-inertia/</guid>
+      <description>Dyads Dyads and dyadics are a difficult concept to understand, initially. Dyads may be defined in a number of ways, but the way which makes most sense to me is that dyads are the vector-based mathematical representation for physical phenomena that contain coupled, multi-dimensional information. An example of a physical system that contains multi-dimensional information is inertia. Inertia describes the spatial distribution of mass throughout a rigid body, and this spatial distribution comes encoded in a structure in which mass is represented in two-vector pairs.</description>
+    </item>
+    
+    <item>
+      <title>Falling Rod Example</title>
+      <link>https://danaukes.com/modules/dynamics/generated/09-falling-rod-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/09-falling-rod-example/</guid>
+      <description>Falling Rod Example This example shows how to implement contact and friction using a penalty method and damping
+# -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34; Written by Daniel M. Aukes Email: danaukes&amp;lt;at&amp;gt;gmail.com Please see LICENSE for full license. &amp;#34;&amp;#34;&amp;#34; import sympy sympy.init_printing(pretty_print=False) import pynamics from pynamics.frame import Frame from pynamics.variable_types import Differentiable,Constant,Variable from pynamics.system import System from pynamics.body import Body from pynamics.dyadic import Dyadic from pynamics.output import Output,PointsOutput from pynamics.particle import Particle import pynamics.</description>
+    </item>
+    
+    <item>
+      <title>Forces and Torques</title>
+      <link>https://danaukes.com/modules/dynamics/generated/06-forces-and-torques/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/06-forces-and-torques/</guid>
+      <description>Forces and Torques Introduction Non-Conservative Forces Damping $$\vec{f} = -b\vec{v}$$
+Friction Friction is typically formulated as the forces acting between two bodies $A$ and $B$
+$$\vec{f} = \mu|\vec{n}|\frac{\vec{v}}{|\vec{v}|}$$
+where $\mu$ is the coefficient of friction, determined experimentally, $\vec{n}$ is the magnitude of the normal force between two rigid bodies, and $\vec{v}$ is the relative velocity of the contact point on $B$ with respect to the contact point on $A$. If $|\vec{v}|==0$, you must be careful to ensure that the expression does not evaluate as NaN.</description>
+    </item>
+    
+    <item>
+      <title>Frames, Basis Vectors, and Vectors</title>
+      <link>https://danaukes.com/modules/dynamics/generated/02-vectors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/02-vectors/</guid>
+      <description>Frames When analyzing a system, sometimes it&amp;rsquo;s convenient or simple to represent a system in a specific way. We all know of the Cartesian system of coordinates which span a three dimensional space, but did you know that there are an infinte number of ways to describe that same space? Just as we are familiar with the x,y, and z directions, we can use different reference frames to navigate and represent the same coordinates and vectors in different ways.</description>
+    </item>
+    
+    <item>
+      <title>Inertias for common shapes</title>
+      <link>https://danaukes.com/modules/dynamics/inertias-for-common-shapes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/inertias-for-common-shapes/</guid>
+      <description>Inertias for common shapes Rectangular parallelepiped/prism (a box) with length $a$, width $b$, height $c$
+$$V=abc$$
+$$I_{xx}=\frac{1}{12}m(b^2+c^2)$$ $$I_{yy}=\frac{1}{12}m(a^2+c^2)$$ $$I_{zz}=\frac{1}{12}m(a^2+b^2)$$
+$$I_{xy}=I_{yz}=I_{zx}=0$$
+Solid Cylinder with radius $r$ and length $h$
+$$V=\pi r^2 h$$
+$$I_{xx}=I_{yy}=\frac{1}{12}m(3r^2+h^2)$$ $$I_{zz}=\frac{1}{2}m(r^2)$$ $$I_{xy}=I_{yz}=I_{zx}=0$$
+Thick-walled cylinder with inner radius $r_i$ and outer radius $r_o$ and length $h$
+$$V=\pi (r_o^2-r_i^2) h$$
+$$I_{xx}=I_{yy}=\frac{1}{12}m(3(r_o^2+r_i^2)+h^2)$$ $$I_{zz}=\frac{1}{2}m(r_o^2+r_i^2)$$ $$I_{xy}=I_{yz}=I_{zx}=0$$
+Thin-walled cylinder with radius $r$ and length $h$
+$$I_{xx}=I_{yy}=\frac{1}{12}m(6r^2+h^2)$$ $$I_{zz}=m(r^2)$$ $$I_{xy}=I_{yz}=I_{zx}=0$$
+Solid Sphere with radius $r$
+$$V=\frac{4}{3}\pi r^3$$</description>
+    </item>
+    
+    <item>
+      <title>Kane&#39;s method</title>
+      <link>https://danaukes.com/modules/dynamics/generated/07-kanes-method/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/07-kanes-method/</guid>
+      <description>Kane&amp;rsquo;s method ::: {style=&amp;ldquo;text-align:center;&amp;quot;}  :::
+Frames Frame A
+$$ {}^{N}{}{\vec{\omega}}^{A}{} = \dot{\theta} \hat{n}_z= \dot{\theta} \hat{a}_z $$
+Velocity if point $p$&amp;rsquo;s position is represented by $\vec{r}$ where
+$$ \vec{r} = -l\hat{a}_y $$ then from the example in the derivatives module, we know that $$ \vec{v} = \frac{ {}^{N}{}{ d\vec{r}}{}{}}{dt}= l\dot{\theta}\hat{a}_x $$
+and $$ \vec{a} = l\ddot{\theta}\hat{a}_x + l\dot{\theta}^2\hat{a}_y $$
+Speed Variables In this system our speed variable is $\dot{\theta}$</description>
+    </item>
+    
+    <item>
+      <title>Rotations</title>
+      <link>https://danaukes.com/modules/dynamics/generated/01-rotations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/01-rotations/</guid>
+      <description>Introduction While there may be many ways to navigate and describe the same three-dimensional space using reference frames, it is also necessary and desireable to be able to change representations; this can be useful for interpreting motion from a differet perspective, for adding forces or torques to a system using dirctional components which are a more natural description, or in order to perform mathematical operations between vectors which are represented by different basis vectors.</description>
+    </item>
+    
+    <item>
+      <title>Triple Pendulum Example</title>
+      <link>https://danaukes.com/modules/dynamics/generated/08-triple-pendulum-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/08-triple-pendulum-example/</guid>
+      <description>%matplotlib inline Try running with this variable set to true and to false and see the difference in the resulting equations of motion
+global_q = False use_constraints = False Import all the necessary modules
+# -*- coding: utf-8 -*- &amp;#34;&amp;#34;&amp;#34; Written by Daniel M. Aukes Email: danaukes&amp;lt;at&amp;gt;gmail.com Please see LICENSE for full license. &amp;#34;&amp;#34;&amp;#34; import pynamics from pynamics.frame import Frame from pynamics.variable_types import Differentiable,Constant from pynamics.system import System from pynamics.body import Body from pynamics.</description>
+    </item>
+    
+    <item>
+      <title>Unit Scaling</title>
+      <link>https://danaukes.com/modules/dynamics/generated/07-unit-scaling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/07-unit-scaling/</guid>
+      <description>Unit Scaling import idealab_tools.units idealab_tools.units.force  kg*m/s^2 idealab_tools.units.force.base_units {&#39;kg&#39;: 1, &#39;m&#39;: 1, &#39;s&#39;: -2} idealab_tools.units.force.compute_scaling() 1 idealab_tools.units.Unit.set_scaling(m=10) idealab_tools.units.Unit.set_scaling(kg=.1) idealab_tools.units.force.compute_scaling() 1.0 idealab_tools.units.length.compute_scaling() 10 idealab_tools.units.energy.compute_scaling() 10.0 </description>
+    </item>
+    
+    <item>
+      <title>Variable Types</title>
+      <link>https://danaukes.com/modules/dynamics/generated/03-variable-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/dynamics/generated/03-variable-types/</guid>
+      <description>Variables in pynamics may be grouped into different categories, and used for different things. We must be careful to talk about these different types of variables carefully, as they have vastly different meanings when it comes to how they are used and computed in pynamics
+First is the concept of a variable as it is used in the context of Python programming. In python, any piece of data my be stored as a variable and used in subsequent computations.</description>
+    </item>
+    
+  </channel>
+</rss>

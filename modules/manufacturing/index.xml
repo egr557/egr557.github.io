@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prototyping &amp; Manufacturing on Foldable Robotics</title>
+    <link>https://danaukes.com/modules/manufacturing/</link>
+    <description>Recent content in Prototyping &amp; Manufacturing on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/modules/manufacturing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Full Design Pipeline</title>
+      <link>https://danaukes.com/modules/manufacturing/generated/full-workflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/manufacturing/generated/full-workflow/</guid>
+      <description>Full Design Pipeline %matplotlib inline import foldable_robotics import foldable_robotics.dxf import numpy import shapely.geometry as sg from foldable_robotics.layer import Layer from foldable_robotics.laminate import Laminate import foldable_robotics.manufacturing import foldable_robotics.parts.castellated_hinge1 import idealab_tools.plot_tris from math import pi, sin,cos,tan import idealab_tools.text_to_polygons foldable_robotics.display_height=200 foldable_robotics.line_width=.5 from foldable_robotics.layer import Layer from foldable_robotics.laminate import Laminate import foldable_robotics import foldable_robotics.dxf import foldable_robotics.manufacturing import foldable_robotics.parts.castellated_hinge1 foldable_robotics.display_height=200 foldable_robotics.line_width=.5 #import workflow_support as ws import os import foldable_robotics.solidworks_support def get_bodies(filename, layername, num_layers): body = foldable_robotics.</description>
+    </item>
+    
+    <item>
+      <title>Hinges</title>
+      <link>https://danaukes.com/modules/manufacturing/generated/hinges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/manufacturing/generated/hinges/</guid>
+      <description>Hinges import shapely.geometry as sg from foldable_robotics.layer import Layer from foldable_robotics.laminate import Laminate import numpy Hinges are portions of a laminate device where the stiff material has been removed to permit the remaining flexible material to rotate.
+The simplest hinge in a one-layer laminate is a perforated line
+radius = .01 num_perforations = 5 num_segments = num_perforations*2+1 num_points = num_segments+1 a=numpy.r_[0:1:num_points*1j] lines = [] for ii in range(int(len(a)/2)-1): p1 = sg.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 22 Code</title>
+      <link>https://danaukes.com/modules/manufacturing/generated/lec22_example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/manufacturing/generated/lec22_example/</guid>
+      <description>import shapely.geometry as sg from foldable_robotics.layer import Layer from foldable_robotics.laminate import Laminate a = sg.Point(0,0) a 
+b = sg.box(0,0,1,1) b 
+c = Layer(b) c 
+c.translate(.5,.5) 
+c|(c.translate(.5,.5)) 
+c.union((c.translate(.5,.5))) 
+d = Layer(a.buffer(.25)) d 
+e = c-d.translate(.5,.5) e 
+import foldable_robotics foldable_robotics.resolution=4 e.dilate(.2) 
+e.erode(.1) 
+e.plot() 
+e.erode(.1).plot() 
+list(b.centroid.coords) [(0.5, 0.5)] d.</description>
+    </item>
+    
+    <item>
+      <title>Manufacturing Computation for Multi-layer Devices</title>
+      <link>https://danaukes.com/modules/manufacturing/generated/manufacturing_planning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/manufacturing/generated/manufacturing_planning/</guid>
+      <description>Manufacturing Computation for Multi-layer Devices Hinge width, laminate thickness, and range of motion The first thing to think about is how the thickness of your laminate will impact and alter the ideal kinematics you have been assuming up to this point. Let&amp;rsquo;s first discuss hinges
+A multilayer hinge typically is made by exposing a softer layer of material which is embedded in a multilayer laminate. IT is typically exposed along a straight line, and the cut away materail usually spans a straight line across the width of a material.</description>
+    </item>
+    
+    <item>
+      <title>Manufacturing Tutorial Video</title>
+      <link>https://danaukes.com/modules/manufacturing/manufacturing-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/manufacturing/manufacturing-tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Fabrication Process</title>
+      <link>https://danaukes.com/modules/manufacturing/the-fabrication-process/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/manufacturing/the-fabrication-process/</guid>
+      <description>The Fabrication Process 5-Layer Design A typical five layer design consists of
+ Rigid Material Adhesive Flexure MAterial Adhesive Rigid Material  Preparing your Cut Files You should have already generated cutfiles using the process outlined in the last chapter.
+A good idea is to use the same page dimensions in your arwork as the bed of the laser. It is also a good idea to combine cut files for the same material using a dxf or pdf editing tool, in order to minimize the number of manual operations.</description>
+    </item>
+    
+  </channel>
+</rss>

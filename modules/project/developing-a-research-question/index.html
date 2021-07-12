@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Developing a Research Question | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Developing a Research Question</h1>
+  <h1 id="developing-a-research-question">Developing a Research Question</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Robotics as a field is highly multi-disciplinary. Even within that field, designing a robot requires knowledge and input from a variety of domains, including biology,  materials,  mechanics, mechanical design,dynamics, CAD, manufacturing, optimization, control, etc.  Because of its highly interdisciplinary nature, as new knowledge emerges from any of its connected fields, there is an opportunity to innovate.  Designing  novel and innovative  robots requires adapting new ideas from those neighboring fields, connecting them together, and remixing them with existing techniques, in order to realize new modes of locomotion or achieve higher performance.</p>
+<p>This is where research comes in.  The goal of research is to help us understand the underlying mechanisms that connect these concepts together.   Unlike industry, that may be more focused on applying the output of knowledge to solve an applied problem, research often helps us make connections and understand relationships between concepts</p>
+<h2 id="research-questions">Research Questions</h2>
+<p>Research questions are at the heart of this process.  There can be big research questions or small research questions.  In fact, the biggest research questions, the answers to life, the universe, and everything ^[Douglas Adams] are composed of a thousand small questions.</p>
+<p>In fact, this class &ndash; and my research in general &ndash; focuses on a small set of research questions.  Research questions are at the heart of every paper and proposal I write.  Asking a good research question is important because as engineers and scientists, it is important to understand underlying connections between two disparate domains before trying to connect them together for an application.</p>
+<p>The biggest questions &ndash; the answers to life, the secrets of intelligence, and our understanding of matter &ndash; These by nature are open ended,  multifaceted and, in my opinion, have don&rsquo;t have a single answer.  But these are terrible questions to start with when opening up a new line of questioning.  Why?</p>
+<ul>
+<li>They are too big.  You can&rsquo;t expect to answer them completely by yourself as a result of a single project.</li>
+<li>They don&rsquo;t provide a good starting point.  Where should you start to answer these questions</li>
+<li>They don&rsquo;t provide a good starting point.  Where should you start to answer these questions?</li>
+<li>They don&rsquo;t leverage your knowledge and abilities.  Ask a question you are both  interested in, but more importantly, ask a question you can answer!</li>
+</ul>
+<p>On the other hand, questions like these can be broken down into smaller problems.  Take what I might consider the driving  question of much of my research:</p>
+<blockquote>
+<p>How can higher-acheiving robots be made more easily and more affordably by more people?</p>
+</blockquote>
+<p>This remaines a poor starting point for new projects because it still fails by the same points above, except that maybe my expertise can go a long way towards answering that question, in the longer term.  Given my interests, how can I break that question up into smaller parts?</p>
+<p>A good research question has the following characteristics:</p>
+<h3 id="achievable--tractable">Achievable / Tractable</h3>
+<p>The question should focus your work towards an achievable goal.  It should be limited in nature and may even hint at the approaches you might use  to answer it.  Consider that for this class, an appropriate research question must be able to be answered in one semester.</p>
+<!-- raw HTML omitted -->
+<p>If, after some background reading and initial testing you find it&rsquo;s too broad, you should adjust and refocus your question.  This can be done using a number of techniques:</p>
+<ul>
+<li><strong>Be more specific.</strong>  Are you talking about a solution for all robots in general, or for a class of robots?</li>
+<li><strong>Restricting yourself to a specific class of solutions.</strong>  Maybe there are a hundred ways to answer a question.  How can one particular mechanism be leveraged to solve it?  For example, perhaps you want to improve the jumping performance of a legged robot.  How can you use beam theory to address it?  How can you use engineered nonlinearity?  How can you optimize your DC motors?  Each of those questions implies one path of many possible paths that you might take in solving the problem.  Defining that path is appropriate as long as you acknowledge that you are focusing in this way.</li>
+<li><strong>Adding constraints.</strong>  Defining a framework within which you are answering a broader question is a good way of focusing your question.  Such a framework can be a legitimate constraint (like gravity) or more hypothetical.  If you can provide a good rationale for why that framework is important, then your question is still valid.  For example,  while a number of researchers have built  walking robots, have they made one out of cardboard?  Have they made one for less than $100?  Have they made it in an hour?  Have they designed it for walking on an asteroid?  Constraints can be useful for focusing your process of answering the question</li>
+<li><strong>etc.</strong>  What other techniques can you think of that helps you focus your question on something more achievable?</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="novel">Novel</h3>
+<p>Through background reading of prior research, existing patents, and popular literature you should be relatively sure that the question hasn&rsquo;t already been answered.  Granted, if it&rsquo;s a good idea, other people may already be working on the problem, but if the main structure of the answer is already mapped out, then, unless you are reasonably sure you have something new to add, you will probably find that most of the most interesting questions within that subfield have already been asked and answered as well.</p>
+<!-- raw HTML omitted -->
+<p>Though it is hard to prove a negative, a five minute search on google scholar by a domain expert like your professor shouldn&rsquo;t come up with many highly cited results.  The toughest part is identifying the keywords that people within the field (if it already exists in a nascent form) already use.</p>
+<p>Here are some ways to make a research question more novel</p>
+<ul>
+<li><strong>Importing a new concept, material</strong> What are the current trends in other fields?  Have they been applied to robotics yet?  Try swapping out a traditional approach for a new one. For example, instead of developing a traditional model for some phenomenon, based on experimental data and numerical analsis, can machine learning techniques be applied to solve a problem more efficiently?  Can you swap out a motor for a liquid crystal actuator?  Can you make your device entirely 3D printable?
+<ul>
+<li>Use new materials.  Instead of rubber, use hydrogels or LCA&rsquo;s.  Instead of metal links, try cardboard</li>
+<li>Apply something used for sensing towards actuation, or actuation towards sensing.</li>
+<li>Use off-the-shelf components that are newly available.  Consider the myriad of new, small form factor sensors that have been developed for cell phones.  How can you integrate them to solve a problem?</li>
+</ul>
+</li>
+<li><strong>Try a new approach to an existing solution.</strong>  Some people solve a problem in a cosmetic manner and move on, never fully understanding exploiting the underlying phenomenon.  Searching through old robotics conferences reveals many cool ideas that were poorly implemented or not well understood.  How can you do it better?
+<ul>
+<li>Add a better model that more completely explains the phenomenon you&rsquo;re seeing and use that to build a better version.</li>
+<li>Come up with an improved design of an existing robot.  Push the envelope through better engineering.</li>
+</ul>
+</li>
+<li><strong>Looking at the problem more broadly.</strong>  If you&rsquo;re too focused on one mechanism or technique, you may find &ndash; after deeper searching &ndash; that someone has explored that particular problem in depth.  Have they explored that class of problems more generally?  For example, many people have solved interesting problems using soft robots actuated with pneumatic bellows; what happens when you switch to soft materials that themselves can be actuated?  What new challenges can these materials address that were perhaps solved less gracefully with other soft robots?</li>
+<li><strong>Other techniques&hellip;</strong> How else do you make a concept more novel?</li>
+</ul>
+<!-- raw HTML omitted -->
+<h3 id="interesting-timely-and-relevant">Interesting, Timely, and Relevant</h3>
+<p>Your question should be interesting to the broader community.  How do you achieve this sweet spot of something that is interesting while at the same time being novel?  This is the challenge to research in general &ndash; finding topics that are unexplored while at the same time of interest to the community.  If it is truly of interest, probably someone else is already thinking of your idea.  If someone else has solved it already, less can be learned from you re-examining the same question.  The only way to work through this is to proceed quickly and efficiently through your research, and to publish your results early and often.</p>
+<h3 id="open-ended">Open-Ended</h3>
+<p>Most research questions should contain &ldquo;how&rdquo; or &ldquo;why&rdquo; phrases, and probe more fundamental relationships.  Why?  Yes/No questions are boring, and most of the time are not fundable.  Open ended questions are the bedrock of science, while application-focused projects are typically more goal-oriented.  Goal oriented questions are great in a number of scenarios, especially in military and industry-oriented projects, but to get funded by the National Science Foundation, your project needs &ldquo;Intellectual Merit&rdquo;, which relates back to answering fundamental scientific questions of interest to the community.  So let&rsquo;s practice</p>
+<h4 id="exercise-turn-this-goal-oriented-question-to-a-more-open-ended-question">Exercise: Turn this goal-oriented question to a more open-ended question</h4>
+<p>Use some of the techniques described above to refocus the given research questions to something more open-ended</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Goal-Oriented</th>
+<th style="text-align:left">Open-Ended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Can I make a jumping robot with liquid crystal actuators?</td>
+<td style="text-align:left">What are the optimal material design parameters to increase the performance of jumping robots</td>
+</tr>
+<tr>
+<td style="text-align:left">How do I make the world&rsquo;s fastest robot?^[ Still goal oriented.  I said how, but I don&rsquo;t care why.]</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="modular">Modular</h3>
+<p>While the research question you ask should be rational, achievable, and focused in order to fit within the constraints of a single project or semester, your question should also be able to be assembled into a broader picture.  This helps you as a researcher create a unique narrative around which you can define your academic career.  This is useful for a number of reasons.  First, building up blocks of questions defines you as a domain expert.  People start to associate you with a sub-field, or field, and &ndash; if it is interesting to the community &ndash; you will probably become more sought out to speak, collaborate on proposals or papers, etc..  Second, it gives you a mastery of a research pipeline that allows you to ask newer, related questions better and faster.  Like the gravity in a black hole, the better you are at something, the better you become, and it accelerates.  Finally, having multiple pieces that you can fit together in a variety of ways allows you to reframe your expertise as the field evolves.  While some topics become &ldquo;solved&rdquo;, if you can swap out one piece of your research for another, you can continue to remain relevant, even if some of your topics remain stale.  Who knows, maybe it will become popular again, if something new comes along and makes it relevant again?</p>
+<p>In summary the process of asking new questions can help you build up a research portfolio that you can remix and reframe as needed.</p>
+<h3 id="leverages-your-own-abilities">Leverages your own abilities.</h3>
+<p>This may be obvious, but you should ask research questions that are both interesting, and that you are best able to answer.  If you are a mechanical engineer asking a research question about game theory, you may fall into some of the above pitfalls of novelty, interest, and focus</p>
+<h3 id="demonstrates-your-expertise">Demonstrates your expertise</h3>
+<p>Finally, a good research question also demonstrates you know enough about your field to make a novel, interesting, and relevant new contribution to the field.</p>
+<h2 id="relevant">Relevant</h2>
+<p>And finally, the question you ask must be answerable with the topics you learn in <em>Foldable Robotics</em>.</p>
+<ul>
+<li>Do I use other types of transmissions to solve a tough problem?  How much of my design time am I spending on this
+<ul>
+<li>Gears, pulleys, belts, wheels, shafts, etc</li>
+</ul>
+</li>
+<li>Do I use alternate manufacturing methods to achieve success?
+<ul>
+<li>3D printing, traditional machining</li>
+</ul>
+</li>
+<li>Is the contribution of the foldable mechanism nontrivial?
+<ul>
+<li>Does it transform input motion to output motion in a meaningful way?</li>
+<li>Does the use of foldable techniques solve a key design problem?</li>
+<li>Is the foldable portion a mechanism or just a structure?</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

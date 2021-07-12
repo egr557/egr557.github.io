@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Course Documents on Foldable Robotics</title>
+    <link>https://danaukes.com/course-documents/</link>
+    <description>Recent content in Course Documents on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/course-documents/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software List</title>
+      <link>https://danaukes.com/course-documents/software-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/course-documents/software-list/</guid>
+      <description>\small
+   Name Link Required     Anaconda Python Anaconda Required    Miniconda Installer    Solidworks Link Required   Miktex Link Prerequisite for some Python/Jupyter functionality   Office 365 Link Highly Recommended, free for ASU Students   Inkscape Link Recommended   Adobe Creative Cloud Link Recommended   Git Extensions Link Recommended   Git for Windows Link Prerequisite for Git Extensions   kdiff3 Link Prerequisite for Git Extensions   putty Link Recommended   grepwin Link Recommended   7-zip Link Suggested    \normalsize</description>
+    </item>
+    
+    <item>
+      <title>Submission Best Practices</title>
+      <link>https://danaukes.com/course-documents/submission-best-practices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/course-documents/submission-best-practices/</guid>
+      <description>Submission Best Practices This page details how to prepare assignments for submission. The &amp;ldquo;Submission&amp;rdquo; section of your assignment should provide the details for what format and where to submit assignments. This document should be used in conjunction with each assignment to ensure that all required files are submitted, and in the correct format.
+General Document Preparation When answering questions, don&amp;rsquo;t just answer the question, phrase the answer in a complete sentence which includes what the question asked.</description>
+    </item>
+    
+    <item>
+      <title>Suggested Materials List</title>
+      <link>https://danaukes.com/course-documents/suggested-materials-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/course-documents/suggested-materials-list/</guid>
+      <description>Suggested Materials List Prototyping    Item # Link(s)     Posterboard^[avoid common cardboard(chipboard). Its layers are too flaky and easy to damage. ]     Cardstock     Rubber Bands     Stapler / Staples     String or Twine     Duct Tape     Rivets      Measurement    Item # Link(s)     Kitchen Scale     Fish Scale     Tape Measure     SmartPhone     Multimeter      Electronics    Item # Link(s)     Microcontroller     RC Servo     IMU      </description>
+    </item>
+    
+    <item>
+      <title>Syllabus for Foldable Robotics</title>
+      <link>https://danaukes.com/course-documents/syllabus-web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/course-documents/syllabus-web/</guid>
+      <description>Overview Foldable Robotics is a course organized around new types of robots being developed in research labs and industry across the country. These devices are designed and built using layered, flat sheets of a wide variety of materials, and folded up to create both form and motion. This class studies these devices from initial prototype and design through implementation and optimization, with a focus on application-specific projects which seek to solve problems of cost, parallelism, complexity, and time with a relatively fast and easy prototyping method.</description>
+    </item>
+    
+  </channel>
+</rss>

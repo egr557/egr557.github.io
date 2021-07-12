@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Biomechanics &amp; Bio-inspiration on Foldable Robotics</title>
+    <link>https://danaukes.com/modules/biomechanics/</link>
+    <description>Recent content in Biomechanics &amp; Bio-inspiration on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/modules/biomechanics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Developing Specifications</title>
+      <link>https://danaukes.com/modules/biomechanics/developing-specifications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/biomechanics/developing-specifications/</guid>
+      <description>Developing Specifications Introduction Developing specifications for a novel robot is difficult, especially considering how wide-open the potential design space is. I recommend a bio-inspired approach in order to simplify your design workspace. Other difficulties might involve not being able to find information in research literature. This will require a bit more inference on your part.
+Workflow  Synthesize the information you have from your biomechanics investigation into an initial specifications table.</description>
+    </item>
+    
+    <item>
+      <title>Scaling</title>
+      <link>https://danaukes.com/modules/biomechanics/scaling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/biomechanics/scaling/</guid>
+      <description>Scaling </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Foldable Robotics</title>
+    <link>https://danaukes.com/modules/python/</link>
+    <description>Recent content in Python on Foldable Robotics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://danaukes.com/modules/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://danaukes.com/modules/python/generated/conditionals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/conditionals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Advanced Data Types</title>
+      <link>https://danaukes.com/modules/python/generated/advanced-data-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/advanced-data-types/</guid>
+      <description>Advanced Data Types Tuples tup1 = (0,1) tup1 (0, 1) tup2 = (3,-2) tup2 (3, -2) tup3 = tuple(range(5)) tup3 (0, 1, 2, 3, 4) tuple of tuples
+tup4 = (tup2,tup1) tup4 ((3, -2), (0, 1)) you can use the sorted method to create a sorted list of tuples
+sorted(tup4) [(0, 1), (3, -2)] you can also pick how you sort based on a lambda method</description>
+    </item>
+    
+    <item>
+      <title>Basic Data Types</title>
+      <link>https://danaukes.com/modules/python/generated/basic-data-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/basic-data-types/</guid>
+      <description>Basic Data Types type(4.1) float type(int(4.1)) int Bool True True False False 1==2 False 3!=5 True Integer 1 1 1+2 3 2-1 1 a = 1 b = 2 a+b 3 Float Operations import math 1.1 1.1 1.1*2.2 2.4200000000000004 2*1.1 2.2 round(1.4) 1 round(1.5) 2 round(-1.4) -1 round(-1.5) -2 math.trunc(1.8) 1 math.floor(1.8) 1 math.</description>
+    </item>
+    
+    <item>
+      <title>Download and Link to Python Packages</title>
+      <link>https://danaukes.com/modules/python/download-and-link-to-python-packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/download-and-link-to-python-packages/</guid>
+      <description>Download and Link to Python Packages Say you want to run a python package from source using a git repository. Here is a quick set of steps, using the pynamics repository as an example:
+ Install and set up git extensions. clone the pynamics repository on your local computer  go here: https://github.com/idealabasu/code_pynamics click on clone and copy the path: right click in a destination directory and select the clone menu item   add the path to your new repository to your system variables  open up explorer, navigate to and right click on&amp;quot;this pc&amp;ndash;&amp;gt;properties&amp;ndash;&amp;gt;advanced system settings&amp;ndash;&amp;gt;environment variables&amp;quot; add a new PYTHONPATH key in your user variables if it does not exist add a path to the list of packages inside the repository folder, ie &amp;ldquo;C:\Users\username(wherever you&amp;rsquo;ve placed the repo)\code_pynamics\python&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Google Colab Documentation</title>
+      <link>https://danaukes.com/modules/python/generated/google-colab-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/google-colab-tutorial/</guid>
+      <description>Google Colab Documentation Contributed by Mason Smith
+EGR 557 - Foldable Robotics
+1. Resources Introduction to Colab and Python
+Getting Started with Google Colab
+External data: Local Files, Drive, Sheets, and Cloud Storage
+How to Connect Google Colab with Google Drive
+Embedding your image in google colab markdown
+2. What is Google Colab &amp;ldquo;Colaboratory is a free Jupyter notebook environment that requires no setup and runs entirely in the cloud. With Colaboratory you can write and execute code, save and share your analyses, and access powerful computing resources, all for free from your browser&amp;hellip; As the name suggests, Google Colab comes with collaboration backed in the product.</description>
+    </item>
+    
+    <item>
+      <title>Installing Anaconda</title>
+      <link>https://danaukes.com/modules/python/installing-anaconda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/installing-anaconda/</guid>
+      <description>Installing Anaconda Introduction Anaconda is a distribution of Python that includes the ability to manage packages using the conda package manager as well as the ability to create and manage environments, or collections of packages that work together. Anaconda ships as a ~500 Mb installer. This tutorial gets you started with miniconda, a slimmed down installer that allows you to install just the packages you need. Below are the steps to gettting a working installation of Python with all the packages you need for Foldable Robotics.</description>
+    </item>
+    
+    <item>
+      <title>Intro to Python</title>
+      <link>https://danaukes.com/modules/python/why-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/why-python/</guid>
+      <description>Intro to Python One thing I really like about python is that it is based on good programming practice . if you&amp;rsquo;ve ever looked at python help tutorials online, you&amp;rsquo;ll see the term &amp;ldquo;pythonic&amp;rdquo;. The Zen of python by Tim Peters is copied below
+ The Zen of Python, by Tim Peters^[http://docs.python-guide.org/en/latest/writing/style/]
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.</description>
+    </item>
+    
+    <item>
+      <title>Operators &amp; Operations</title>
+      <link>https://danaukes.com/modules/python/generated/operators-and-operations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/operators-and-operations/</guid>
+      <description>Operators &amp;amp; Operations Basic Operators a = 3 b = 2 c = 0b110011 d = 0x3ab1 a 3 b 2 c 51 d 15025 a+b 5 a-b 1 a*b 6 a**b 9 a%b 1 a/b 1.5 a//b 1 Evaluation a&amp;gt;b True a&amp;lt;b False a==b False a!=b True a&amp;gt;=b True a&amp;lt;=b False Binary Operators a=0b11111000 b=0b00011111 bin(a&amp;amp;b) &#39;0b11000&#39; bin(a|b) &#39;0b11111111&#39; bin(a^b) &#39;0b11100111&#39; bin(b&amp;lt;&amp;lt;1) &#39;0b111110&#39; bin(b&amp;gt;&amp;gt;1) &#39;0b1111&#39; </description>
+    </item>
+    
+    <item>
+      <title>Packages in Python</title>
+      <link>https://danaukes.com/modules/python/packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/packages/</guid>
+      <description>Packages in Python Introduction The most important packages that I use when creating python code are those packages which make a python more Matlab-like.
+Common Packages Numpy https://www.scipy.org/getting-started.html
+this package permits one to store and access data in arrays multidimensional arrays as one would do natively in Matlab. While python permits nested lists, the Paradigm of being able to slice multidimensional arrays of data, to index through it, too reshape and analyze it across dimensions in multiple ways is provided by this package</description>
+    </item>
+    
+    <item>
+      <title>Plotting in 3D</title>
+      <link>https://danaukes.com/modules/python/generated/3d-plotting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/3d-plotting/</guid>
+      <description>%matplotlib inline Plotting in 3D  Visit this matplotlib tutorial on 3d Plotting Another useful reference  import matplotlib.pyplot as plt import numpy from math import pi from mpl_toolkits.mplot3d import Axes3D import idealab_tools.matplotlib_tools theta = numpy.r_[0:2*pi:40j] x = numpy.cos(theta) y = .5*numpy.sin(theta) z = numpy.sin(2*theta-pi/4) xyz = numpy.array([x,y,z]).T fig = plt.figure(); ax = fig.add_subplot(111, projection=&amp;#39;3d&amp;#39;); ax.view_init(30, 15) ax.plot3D(xyz[:,0],xyz[:,1],xyz[:,2]) idealab_tools.matplotlib_tools.equal_axes(ax,xyz)</description>
+    </item>
+    
+    <item>
+      <title>Python Development</title>
+      <link>https://danaukes.com/modules/python/python-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/python-development/</guid>
+      <description>Python Development Now What?  More Python Making your programs for others Releasing your code Licensing Collaborating Testing / Building  Imports   Imports should always be written at the top of the file, after any module comments and docstrings.
+  Imports should be divided according to what is being imported. There are generally three groups:
+ standard library imports (Python’s built-in modules) related third party imports (modules that are installed and do not belong to the current application) local application imports (modules that belong to the current application)    Each group of imports should be separated by a blank space.</description>
+    </item>
+    
+    <item>
+      <title>Sympy Example</title>
+      <link>https://danaukes.com/modules/python/generated/sympy-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/generated/sympy-example/</guid>
+      <description>import sympy a = sympy.Symbol(&amp;#39;a&amp;#39;) b = sympy.Symbol(&amp;#39;b&amp;#39;) x = sympy.Symbol(&amp;#39;x&amp;#39;) y = sympy.Symbol(&amp;#39;y&amp;#39;) a $\displaystyle a$
+f = a*x+b*y f $\displaystyle a x + b y$
+f = a*(x+y) f $\displaystyle a \left(x + y\right)$
+g = f.expand() g $\displaystyle a x + a y$
+g.diff(x) $\displaystyle a$
+g.simplify() $\displaystyle a \left(x + y\right)$
+factor, collect are two other useful functions
+g.subs({x:b}) $\displaystyle a b + a y$
+h = g.</description>
+    </item>
+    
+    <item>
+      <title>Using Jupyter Notebook</title>
+      <link>https://danaukes.com/modules/python/using-jupyter-notebook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danaukes.com/modules/python/using-jupyter-notebook/</guid>
+      <description>Using Jupyter Notebook About Jupyter Jupyter notebook is a useful browser-based IPython editor that provides inline documentation via markdown and inline plotting functionality for a one-stop-shop coding and documentation experience. Jupyter is useful for creating living documents for class reports, assignments, or other documents where the results may need to be updated and re-run from time to time, yet still be output in a more professional format than the output of a code execution window.</description>
+    </item>
+    
+  </channel>
+</rss>

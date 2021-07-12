@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Python Development | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Python Development</h1>
+  <h1 id="python-development">Python Development</h1>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="now-what">Now What?</h2>
+<ul>
+<li>More Python</li>
+<li>Making your programs for others</li>
+<li>Releasing your code</li>
+<li>Licensing</li>
+<li>Collaborating</li>
+<li>Testing / Building</li>
+</ul>
+<h2 id="imports">Imports</h2>
+<ul>
+<li>
+<p>Imports should always be written at the top of the file, after any module comments and docstrings.</p>
+</li>
+<li>
+<p>Imports should be divided according to what is being imported. There are generally three groups:</p>
+<ul>
+<li>standard library imports (Python’s built-in modules)</li>
+<li>related third party imports (modules that are installed and do not belong to the current application)</li>
+<li>local application imports (modules that belong to the current application)</li>
+</ul>
+</li>
+<li>
+<p>Each group of imports should be separated by a blank space.</p>
+</li>
+<li>
+<p><a href="https://pep8.org/#imports">https://pep8.org/#imports</a></p>
+</li>
+</ul>
+<h2 id="naming-conventions">Naming Conventions</h2>
+<ul>
+<li>
+<p>Functions &amp; Variables: lowercase with underscores</p>
+<ul>
+<li>Ex: my_special_number, square_root</li>
+</ul>
+</li>
+<li>
+<p>Classes: Use CamelCase</p>
+<ul>
+<li>Ex: MyClass, RigidBody, AddressBook</li>
+</ul>
+</li>
+<li>
+<p>Constants</p>
+<ul>
+<li>GRAVITY=9.81</li>
+</ul>
+</li>
+<li>
+<p><a href="https://pep8.org/#overriding-principle">https://pep8.org/#overriding-principle</a></p>
+</li>
+</ul>
+<h2 id="structuring-your-python-projects">Structuring your Python projects</h2>
+<ul>
+<li>
+<p>Classes* – Containers of data &amp; functions</p>
+</li>
+<li>
+<p>Modules* – individual python files</p>
+</li>
+<li>
+<p>Packages* – like folders of files, often structured that way too</p>
+</li>
+<li>
+<p>Projects* – Multiple packages, documentation, examples, unit tests, and distribution code all put together</p>
+</li>
+<li>
+<ul>
+<li>can be much more complicated than this</li>
+</ul>
+</li>
+</ul>
+<h2 id="classes">Classes</h2>
+<ul>
+<li>Classes vs Class Instances</li>
+<li>Inheritance
+<ul>
+<li>Object class</li>
+</ul>
+</li>
+<li>Instance Methods, Class Methods, Methods</li>
+</ul>
+<h2 id="make-a-class">Make a Class</h2>
+<h2 id="instance-methods--class-methods">Instance Methods &amp; Class Methods</h2>
+<h2 id="modules">Modules</h2>
+<ul>
+<li>Typical structure:
+<ul>
+<li>Import packages &amp; modules</li>
+<li>Define functions</li>
+<li>Code which always gets run, on import or main</li>
+<li>Test for main
+<ul>
+<li>Run local script</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="packages">Packages</h2>
+<ul>
+<li>Typically a folder with code grouped together</li>
+<li>/folder – this name is the name of the package
+<ul>
+<li><code>__init__.py</code> – required to be a package</li>
+<li>module1.py - submodules</li>
+<li>module2.py</li>
+</ul>
+</li>
+<li>If you want to load a package it should be in your python path.</li>
+<li><code>__init__.py</code> gets run when you import a package.  Can use this to pre-load submodules or define constants, etc.</li>
+</ul>
+<h2 id="packages-1">Packages</h2>
+<ul>
+<li>Any folder with an <code>__init__.py</code> file in it</li>
+<li>Must be somewhere in PYTHONPATH</li>
+</ul>
+<h2 id="packages-you-already-have">Packages you already have</h2>
+<ul>
+<li>spyder: Python GUI</li>
+<li>pyyaml: read/write yaml files (like json)</li>
+<li>numpy, scipy: arrays and linear algebra</li>
+<li>sympy: symbolic equations</li>
+<li>pyqt: GUI development</li>
+<li>pyopengl, pyqtgraph:</li>
+<li>matplotlib: plotting</li>
+<li>jupyter: web-based inline interactive coding</li>
+<li>shapely: 2D geometry engine</li>
+<li>pillow, lxml, pandoc, ezdxf, imageio, meshio,</li>
+<li>Pypoly2tri, idealab_tools, foldable_robotics, pynamics</li>
+<li>cython: c compiler for python</li>
+</ul>
+<h2 id="other-packages">Other Packages</h2>
+<ul>
+<li>OpenCV</li>
+<li>networkX</li>
+<li>sphinx</li>
+<li>tornado</li>
+<li>pycairo – graphics library for pdf, svg…</li>
+<li>gitpython – work with git</li>
+<li>pythonocc – CAD</li>
+<li>kivy – Android-compatible gui framework</li>
+<li>pyserial</li>
+<li>pygame</li>
+</ul>
+<h2 id="python-path">Python Path</h2>
+<ul>
+<li>The list of directories python searches for your code in
+<ul>
+<li>Looks first in the folder you are running the script from</li>
+<li>Secondarily, looks in all the places you have added in your $PYTHONPATH environment variable</li>
+<li>Third, looks in Python system directories (many of them, different by os)</li>
+</ul>
+</li>
+<li>This list can be viewed and edited in the sys module under the path variable</li>
+</ul>
+<h2 id="projects">Projects</h2>
+<pre><code>/Project  
+  /documentation  
+  /examples  
+  /python  
+    /package1
+      __init__.py  
+      /subpackage1  
+        __init__.py  
+    /package2  
+      __init__.py  
+  /licenses – where you put the licenses of the code you are reusing with permission  
+  setup.py  
+  LICENSE  
+  README  
+</code></pre><h2 id="example-foldable_robotics">Example: foldable_robotics</h2>
+<h2 id="speeding-up-python">Speeding up Python</h2>
+<ul>
+<li>Python is interpreted, not compiled.</li>
+<li>How do you work with compiled code?</li>
+<li>Simplest way: load_dll
+<ul>
+<li>Requires that dll to be in your system path, machine dependent.</li>
+</ul>
+</li>
+<li>Try cython.
+<ul>
+<li>Convert your python code into c</li>
+<li>Compile your c code into a dll
+<ul>
+<li>doesn’t have to be from python originally</li>
+<li>Now supports c++! (with some glue code)</li>
+<li>Requires a compiler to be installed</li>
+</ul>
+</li>
+<li>Import the dll just like a normal python module</li>
+<li>However, machine dependent.</li>
+</ul>
+</li>
+</ul>
+<h2 id="example-pypoly2tri">Example: pypoly2tri</h2>
+<h2 id="making-windows-and-applications">Making Windows and applications</h2>
+<ul>
+<li>PyQt4 / PyQt5 / PySide – Qt
+<ul>
+<li>Many others, but this is very cross-platform, used a lot, etc</li>
+</ul>
+</li>
+<li>Already have PyQt5 installed in your anaconda distribution</li>
+<li>Way to create windows, menus, etc</li>
+<li>Turn your script into a user application</li>
+</ul>
+<h2 id="example-putting-matplotlib-in-a-window">Example: putting matplotlib in a window</h2>
+<ul>
+<li><a href="https://github.com/idealabasu/code_idealab_empty_project">https://github.com/idealabasu/code_idealab_empty_project</a></li>
+</ul>
+<h2 id="collaborative-projects">Collaborative projects</h2>
+<ul>
+<li>Git – versioning tool
+<ul>
+<li>Command-line tool for tracking and committing changes</li>
+<li>many guis available</li>
+<li>I suggest &ldquo;git-extensions&rdquo; for windows</li>
+</ul>
+</li>
+<li>Github
+<ul>
+<li>website built around git: <a href="https://github.com/">https://github.com/</a></li>
+<li>Other collaboration tools
+<ul>
+<li>Documentation, bugtracking, code releases</li>
+</ul>
+</li>
+<li>Integration with other services</li>
+</ul>
+</li>
+</ul>
+<h2 id="concept-of-git">Concept of GIT</h2>
+<ul>
+<li>Work simultaneously, merge your code when ready</li>
+<li>There is no central administration, repositories can be local or on the web</li>
+<li>Create branches to manage</li>
+</ul>
+<h2 id="example">Example</h2>
+<h2 id="licensing--really-important">Licensing – really important</h2>
+<ul>
+<li>Strongly encourage you to learn about licensing.  The future of your work depends on it.</li>
+<li>Copyright and who owns it.</li>
+<li>&ldquo;What is Open source?&rdquo;
+<ul>
+<li>Ability to see/use/change/release others’ code?</li>
+<li>Ability to use others’ code with your code</li>
+</ul>
+</li>
+<li>Copyright vs copyleft
+<ul>
+<li>GPL, LGPL, MIT, BSD, Apache</li>
+</ul>
+</li>
+</ul>
+<h2 id="distributing-your-code">Distributing your Code</h2>
+<ul>
+<li>setup.py</li>
+<li>Make a pip project and deploying to Pypi
+<ul>
+<li><a href="https://packaging.python.org/tutorials/packaging-projects/">https://packaging.python.org/tutorials/packaging-projects/</a></li>
+</ul>
+</li>
+<li>Freezing your code
+<ul>
+<li>Py2exe,pyinstaller, cx_freeze,</li>
+</ul>
+</li>
+<li>Creating an Anaconda package</li>
+</ul>
+<h2 id="setup-script">Setup script</h2>
+<ul>
+<li>This is the basic way to release and install python code.</li>
+<li>Installing moves project code from local folder to python system directory.</li>
+<li>Download source, open command terminal, type
+<ul>
+<li>&ldquo;python setup.py install&rdquo;</li>
+<li>Can also build, build_ext, etc.</li>
+</ul>
+</li>
+<li>Being phased out in favor of pip</li>
+<li>Setup script still important</li>
+</ul>
+<h2 id="future">Future</h2>
+<ul>
+<li>This class
+<ul>
+<li>One of a kind</li>
+<li>Still emerging</li>
+<li>Chance to define it</li>
+</ul>
+</li>
+<li>Research
+<ul>
+<li>Open field</li>
+<li>Can move faster</li>
+<li>New manufacturing processes need new design tools</li>
+</ul>
+</li>
+</ul>
+<h2 id="wrapup">Wrapup</h2>
+<ul>
+<li>You’ve built many parts you find in CAD
+<ul>
+<li>Motion analysis – nonlinear constraint solving – how sketches are dimensioned, how assemblies are moved around.</li>
+<li>Python code for</li>
+<li>Constructive Solid Geometry
+<ul>
+<li>Union, difference, intersection</li>
+</ul>
+</li>
+<li>Manufacturing
+<ul>
+<li>Accessing the functions for understanding the manufacturing process</li>
+</ul>
+</li>
+<li>Dynamics? Some</li>
+<li>Stiffness?  Some</li>
+<li>Kinematics? Some</li>
+</ul>
+</li>
+</ul>
+
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

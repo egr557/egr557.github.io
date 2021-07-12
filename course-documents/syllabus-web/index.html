@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+Syllabus for Foldable Robotics | Foldable Robotics
+</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+
+<link href="/css/blog.css" rel="stylesheet">
+<link href="/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/hugo-cite.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="blog-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-2 pt-1">
+    </div>
+    <div class="col-8 text-center">
+      <a class="blog-header-logo text-dark" href="/">Foldable Robotics</a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+    </div>
+  </div>
+</header>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/assignments/">Assignments</a>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar/">Course Calendar</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/course-documents/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Documents
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/course-documents/software-list/">Software List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/submission-best-practices/">Submission Best Practices</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/suggested-materials-list/">Suggested Materials List</a></li>
+            
+            <li><a class="dropdown-item" href="/course-documents/syllabus-web/">Syllabus for Foldable Robotics</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/modules/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Course Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="/modules/biomechanics/">Biomechanics &amp; Bio-inspiration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/dynamics/">Dynamics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/validation/">Experimental Validation</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/integration/">Integration</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/introduction/">Introduction</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/kinematics/">Kinematics</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/compliance/">Mechanics and Compliance</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/misc/">Misc</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/optimization/">Optimization</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/project/">Project</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/manufacturing/">Prototyping &amp; Manufacturing</a></li>
+            
+            <li><a class="dropdown-item" href="/modules/python/">Python</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/lectures/">Lectures</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://canvas.asu.edu/"target="_blank">Canvas <i class="bi bi-link"></i></a> 
+        </li>
+        
+        
+      </ul>
+      <span class="navbar-text">
+        Making better Foldable Robots
+      </span>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+
+    
+<main class="container">
+  <article>
+  <h1>Default Single Page: Syllabus for Foldable Robotics</h1>
+  <h2 id="overview">Overview</h2>
+<p><em><strong>Foldable Robotics</strong></em> is a course organized around new types of robots being developed in research labs and industry across the country.  These devices are designed and built using layered, flat sheets of a wide variety of materials, and folded up to create both form and motion.  This class studies these devices from initial prototype and design through implementation and optimization, with a focus on application-specific projects which seek to solve problems of cost, parallelism, complexity, and time with a relatively fast and easy prototyping method.</p>
+<p>This class allows students to delve deeper into the analytical problems associated with these devices, in topics such as design, manufacturing, dynamics &amp; simulation, optimization, kinematics &amp; motion, and stiffness analysis.</p>
+<h2 class="allowframebreaks" id="class-basics">Class Basics</h2>
+<h3 id="section-info-and-meeting-times">Section Info and Meeting Times</h3>
+<p><strong>Class:</strong> EGR557 &ndash; Foldable Robotics<br>
+<strong>Class Schedule:</strong> Monday/Wednesday, 3:00pm-4:15pm<br>
+<strong>Meeting Location:</strong> Polytechnic Campus, Tech 162<br>
+<strong>Course Number:</strong> <a href="https://webapp4.asu.edu/catalog/course?t=2211&amp;r=30967">30967</a></p>
+<!-- raw HTML omitted -->
+<p><strong>Zoom Link:</strong> Shared Privately</p>
+<h3 id="instructor-contact-info">Instructor Contact Info</h3>
+<p><strong>Instructor:</strong> Daniel M. Aukes<br>
+<strong>E-mail:</strong> <a href="mailto://danaukes@asu.edu">danaukes@asu.edu</a><br>
+<strong>Instructor Office:</strong> Tech 152, Polytechnic Campus</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="office-hours">Office Hours</h3>
+<p>TBD.  Will be arranged after week 1.  This document will be updated to reflect up-to-date office hours</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="prerequisites">Prerequisites</h2>
+<p>There are no formal prerequisites, but students taking <em>Foldable Robotics</em> should be familiar with:</p>
+<ul>
+<li>Programming fundamentals, ideally in a scripted language like Python or Matlab.</li>
+<li>Linear algebra, differential equations, calculus, trigonometry, vectors, etc.</li>
+<li>Working around rapid prototyping machines, and if not, willing to learn.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="course-objectives">Course Objectives</h2>
+<p>At the end of this course, students will demonstrate proficiency in synthesizing concepts from across a number of engineering domains including robotics, modeling and analysis, optimization, data collection and experimental validation, CAD/CAM design, and manufacturing &amp; rapid prototyping.</p>
+<h2 id="expected-learning-outcomes">Expected Learning Outcomes</h2>
+<h3 id="main-topics">Main Topics</h3>
+<ul>
+<li>Foldable Robotics Background</li>
+<li>Introduction to Python</li>
+<li>Biomechanics and Bio-inspiration</li>
+<li>Kinematics, Jacobians, Forces, and Power</li>
+<li>Dynamics</li>
+<li>Compliance and System Stiffness</li>
+<li>Actuator Selection, Characterization, and Integration</li>
+<li>Optimization for model fitting and design improvement</li>
+<li>Prototyping, manufacturing, and computation</li>
+<li>Experimental Validation</li>
+<li>Teamwork, Communication, and Documentation</li>
+</ul>
+<h2 id="foldable-robotics-background">Foldable Robotics Background</h2>
+<ul>
+<li>Identify key innovations in the foldable robotics timeline and their impact.</li>
+<li>Identify key mechanisms and persistent or recurring designs, as well as why they are useful and successful</li>
+<li>The difference between origami for art and origami for mechanisms</li>
+</ul>
+<h2 id="introduction-to-python">Introduction to Python</h2>
+<ul>
+<li>Get you compfortable with the basics of Python
+<ul>
+<li>Built-in datatypes</li>
+<li>Operators and Operations</li>
+<li>Logic, Loops, and Conditionals</li>
+<li>Methods and Classes</li>
+</ul>
+</li>
+<li>Learn how to plot with Matplotlib</li>
+<li>Learn how to create and work with arrays and matrices using Numpy and Scipy</li>
+<li>Learn how to work with symbolic equations using Sympy.</li>
+<li>Learn about Jupyter Notebooks and how to work with them.</li>
+</ul>
+<h2 id="biomechanics-and-bio-inspiration">Biomechanics and Bio-inspiration</h2>
+<ul>
+<li>Identify key literature surrounding an animal that helps engineers understand the underlying mechanisms for locomotion</li>
+<li>Translate the biomechanics of a selected organism to a set of initial design goals or specifications.</li>
+</ul>
+<h2 id="kinematics-jacobians-forces-and-power">Kinematics, Jacobians, Forces, and Power</h2>
+<ul>
+<li>Ideate a kinematic mechanism &ndash;  prototype it, draw it and demonstrate its motion</li>
+<li>Translate the kinematic rules of a mechanism to a computer program and visualise / plot its motion.</li>
+<li>Interpret the motion of a kinematic end-effector in robotics terms, such as:
+<ul>
+<li>The input/output speed relationship</li>
+<li>The output/input force relationship</li>
+<li>The power transferred during motion</li>
+</ul>
+</li>
+<li>Utilize numerical or symbolic approaches to obtain the kinematics.</li>
+</ul>
+<h2 id="dynamics">Dynamics</h2>
+<ul>
+<li>Create and populate a rigid body dynamical system composed of
+<ul>
+<li>Rigid Frames</li>
+<li>Masses and Inertias</li>
+<li>Joints</li>
+<li>Forces</li>
+</ul>
+</li>
+<li>Model the f=ma relationship of a dynamic system over time.</li>
+<li>Integrate the motion of a dynamic system over time</li>
+</ul>
+<h2 id="actuator-selection-characterization-and-integration">Actuator Selection, Characterization, and Integration</h2>
+<ul>
+<li>Select an actuator or power-storage mechanism</li>
+<li>Size an actuator or power-storage mechanism based on project specifications</li>
+<li>Model an actuator or power-storage mechanism</li>
+<li>Test an actuator or power-storage mechanism.</li>
+<li>Collect performance / model data on a selected actuator or power-storage mechanism.</li>
+<li>Integrate an actuator or power-storage mechanism into your kinematic mechanism</li>
+<li></li>
+</ul>
+<h2 id="compliance-and-system-stiffness">Compliance and System Stiffness</h2>
+<ul>
+<li>Describe the deflection of a beam using Euler-Bernoulli beam equations</li>
+<li>Model a beam in Solidworks and calculate its deflection under load using FEA.</li>
+<li>Experimentally measure the deflection of a beam and obtain its Young&rsquo;s modulus.</li>
+<li>Create an approximate model for beam compliance and add it to your system dynamics</li>
+</ul>
+<h2 id="optimization-for-model-fitting-and-design-improvement">Optimization for model fitting and design improvement</h2>
+<ul>
+<li>Understand basic approaches for minimizing or optimizing a function</li>
+<li>Use coding-based tools to optimize simple functions and perform a regression.</li>
+<li>Use a data-driven approach to fit unknown model parameters to a real system.</li>
+<li>Use a model-based approach for selecting ideal design parameters using optimization.</li>
+</ul>
+<h2 id="prototyping-manufacturing-and-computation">Prototyping, manufacturing, and computation</h2>
+<ul>
+<li>Design an origami-inspired mechanism using analog techniques</li>
+<li>Be able to enumerate the various manufacturing considerations of cutting and lamination</li>
+<li>Be able to compute a manufacturing-aware digital design file.</li>
+<li>Make a laminate device using digital techniques (optional)</li>
+<li>Make robots and mechanisms
+<ul>
+<li>Learn layer-based fabrication steps</li>
+<li>Make mechanisms using rapid prototyping tools</li>
+</ul>
+</li>
+</ul>
+<h2 id="experimental-validation">Experimental Validation</h2>
+<ul>
+<li>Understand best practices for developing an experiment</li>
+<li>Understand ways to reduce noise and variation</li>
+<li>Develop a small experiment and collect data</li>
+<li>Interpret sources of error and corrective actions</li>
+</ul>
+<h2 id="team-based-project-management-communication-etc">Team-based project management, communication, etc.</h2>
+<ul>
+<li>Develop a computation-focused project website for communicating progress in written form.</li>
+<li>Present work orally to the class</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="asu-sync">ASU Sync</h2>
+<p>This course uses Sync. ASU Sync is a technology-enhanced approach, designed to meet the dynamic needs of the class. During Sync classes, students learn remotely through live class lectures, discussions, study groups and/or tutoring. You can find out more information about ASU Sync for students here, <a href="https://provost.asu.edu/sync/students">https://provost.asu.edu/sync/students</a> and <a href="https://www.asu.edu/about/fall-2020">https://www.asu.edu/about/fall-2020</a>.</p>
+<h2 class="allowframebreaks" id="textbook-materials-equipment-and-personal-laptops">Textbook, Materials, Equipment, and Personal Laptops</h2>
+<h3 id="textbook">Textbook</h3>
+<p>There is no textbook.  Selected readings from will be provided on blackboard and/or linked to online.</p>
+<h3 id="software">Software</h3>
+<p>Please see the software list posted on the course site for more information about required and recommended software.  The software listed is either open-source and freely available to download or available through ASU.</p>
+<h3 id="materials">Materials</h3>
+<p>Students will be responsible for obtaining consumable materials used in their project, such as cardboard, adhesive, plastic, etc.  We may be able to supply a limited number of motors, sensors, and controllers which can be used for development, but if students wish to keep their robots they will need to purchase their own components.</p>
+<h3 id="equipment">Equipment</h3>
+<p>Special equipment for making laminate robots is available  for use on the Poly Campus at your discretion.  If you wish to use the tools and equipment you will need to pass all safety training required by the Innovation Hub and follow all campus public health protocols.  See <a href="https://poly.engineering.asu.edu/innovation-hub/">https://poly.engineering.asu.edu/innovation-hub/</a> for more information.</p>
+<h3 class="standout" id="checkout">Checkout</h3>
+<p>Checkout of equipment or reusable parts may be possible through Dr. Aukes, the Innovation Hub, or Peralta Labs.  Any checked-out tools or parts must be returned in order to receive a grade in the class.</p>
+<h3 id="computers">Computers</h3>
+<p>It is expected that you can bring a laptop to class to complete in-class programming tasks.  You will be expected to install and use the Anaconda distribution of Python.  This class is friendly to all operating systems, but I will be using a Windows machine, so that may be easiest.  Others have used Ubuntu or OS/X on their own in the past with no problems.</p>
+<h3 id="asu-sync-1">ASU Sync</h3>
+<p>If attending class in-person, you will need to bring and use earbuds in the classroom; this is essential to reduce interference and cross-talk during breakout sessions.</p>
+<p>If attending remotely, you will need the following:</p>
+<ul>
+<li>Reliable home internet for accessing Zoom, Canvas, and other course content.</li>
+<li>A webcam or smartphone with camera for participating in class as well as for data collection.</li>
+</ul>
+<p>If you are not able to personally finance the equipment needed to attend class via ASU Sync, ASU has a laptop and WiFi hotspot checkout program available through <a href="https://lib.asu.edu/laptops-and-hotspots">ASU Library</a>.</p>
+<h3 id="other-recommended-resources">Other recommended resources</h3>
+<ul>
+<li>Adobe Creative Cloud, available to all ASU students for free: <a href="https://uto.asu.edu/adobe-creative-cloud">https://uto.asu.edu/adobe-creative-cloud</a>.</li>
+<li>Microsoft Office (<a href="https://myapps.asu.edu/app/microsoft-office-2016-home-usage">Microsoft 365</a> is free for all currently-enrolled ASU students)</li>
+<li>Solidwoks, available via <a href="https://myapps.asu.edu">https://myapps.asu.edu</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="project">Project</h2>
+<p>The final project will involve designing a foldable robot using the methods introduced in this class.   The project will span the entire semester.  Teams of ~4 students will propose a research question they would like to focus on in the realm of foldable robotics.  They will survey the state of research on this topic, and craft a project of appropriate scope (with the guidance of the professor) and depth that can be accomplished in the time frame.   They will then develop a design workflow, analysis, manufacturing plan, a robot, and validating data that supports the design decisions made.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="class-schedule">Class Schedule</h1>
+<p>The class schedule can be found on Canvas.  It is subject to change, and will be updated regularly. It is your responsibility to keep track of all due dates, which will all be found on canvas.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="tentative-schedulethe-schedule-is-subject-to-change">Tentative Schedule^[The Schedule is subject to change.]</h2>
+<p>\scriptsize</p>
+<p><strong>Week</strong>   <strong>Monday</strong>                               <strong>Wednesday</strong></p>
+<hr>
+<p>1          <em>Class 1:</em> Welcome                       <em>Class 2:</em> Foldable Background
+2          <em>Class 3:</em> <em><strong>No Class</strong></em>                <em>Class 4:</em> Biomechanics, Nick Gravish Seminar
+3          <em>Class 5:</em> Biomechanics II               <em>Class 6:</em> Developing a Research Question, etc.
+4          <em>Class 7:</em> Kinematics I                  <em>Class 8:</em> Kinematics II
+5          <em>Class 9:</em> Dynamics I                    <em>Class 10:</em> Dynamics II
+6          <em>Class 11:</em> Dynamics III                 <em>Class 12:</em> Flex Day
+7          <em>Class 13:</em> Optimization I               <em>Class 14:</em> Presentations I
+8          <em>Class 15:</em> Motor Modeling &amp; Selection   <em>Class 16:</em> Mechanics and Compliance
+9          <em>Class 17:</em> Seminar: Rob Wood            <em>Class 18:</em> Optimization II
+10         <em>Class 19:</em> Optimization III             <em>Class 20:</em> Seminar: Rebecca Bottigglio-Kramer
+11         <em>Class 21:</em> Flex Day                     <em>Class 22:</em> Presentations II
+12         <em>Class 23:</em> Manufacturing I              <em>Class 24:</em> Manufacturing II
+13         <em>Class 25:</em> Manufacturing III            <em>Class 26:</em> Flex Day
+14         <em>Class 27:</em> TBD Seminar                  <em>Class 28:</em> TBD Seminar
+15         <em>Class 29:</em> Experimental Validation      <em>Class 30:</em> Presentation III (Video)
+16         <em>Class 31:</em> <em><strong>Finals Week</strong></em>            <em>Class 32:</em> <em><strong>Finals Week</strong></em></p>
+<p>\normalsize</p>
+<h2 id="tentative-list-of-assignmentsassignments-due-dates-and-point-totals-are--subject-to-change">Tentative List of Assignments^[Assignments, due dates, and point totals are  subject to change.]</h2>
+<p>\scriptsize</p>
+<p><strong>Week</strong>   <strong>Title</strong>                                            <strong>Team/Individual</strong>     <strong>Points</strong></p>
+<hr>
+<p>01         Incoming Survey                                      Individual Assignment   50
+01         Install Python                                       Individual Assignment   50
+01         Make a Pop-up Book                                   Individual Assignment   200
+02         Project Pitches                                      In-class Activity       0
+02         Project Selection Survey                             Individual Assignment   20
+02         Python for loops and Plotting                        Individual Assignment   100
+03         Develop a Research Question                          Team Assignment         200
+03         Install Solidworks                                   Individual Assignment   50
+03         Python Functions                                     Individual Assignment   100
+04         Biomechanics Background and Initial Specifications   Team Assignment         200
+04         Kinematics Via Sketching &amp; CAD                       Individual Assignment   100
+04         Make a Website                                       Team Assignment         100
+05         Dynamics Fundamentals                                Individual Assignment   100
+05         System Kinematics                                    Team Assignment         200
+06         Subsystem Prototyping                                Individual Assignment   100
+06         System Dynamics                                      Team Assignment         200
+07         Pendulum Model Fitting                               Individual Assignment   100
+07         Presentation I                                       Team Assignment         200
+07         Website Update I                                     Team Assignment         100
+08         CATME I                                              Individual Assignment   200
+08         Course Feedback I                                    Individual Assignment   20
+08         Motor &amp; Battery Selection                            Team Assignment         200
+08         Week 8 Individual Assignment                         Individual Assignment   100
+09         Model Fitting                                        Individual Assignment   200
+09         Week 9 Team Assignment                               Team Assignment         200
+10         System Dynamics II                                   Team Assignment         200
+10         Week 10 Individual Assignment                        Individual Assignment   100
+11         Presentation II                                      Team Assignment         200
+11         Website Update II                                    Team Assignment         200
+11         Week 10 Individual Assignment                        Individual Assignment   100
+12         Course Feedback II                                   Individual Assignment   20
+12         Design Optimization                                  Team Assignment         200
+13         Design and Manufacturing Workflow                    Team Assignment         200
+13         System Prototyping                                   Individual Assignment   100
+14         Data Collection and Experimental Validation          Individual Assignment   200
+15         CATME II                                             Individual Assignment   200
+15         Presentation III                                     Team Assignment         200
+15         Website Update III                                   Team Assignment         400
+-         <strong>TOTAL</strong>                                            -                      5410</p>
+<p>\normalsize</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="how-to-succeed-in-this-course">How to Succeed in this Course</h1>
+<ul>
+<li>Attend all class sessions</li>
+<li>Complete all pre-class preparation assignments and reading</li>
+<li>Complete all post-class follow up assignments and reading</li>
+<li>Participate in office hours</li>
+<li>Check your ASU email regularly</li>
+<li>Log in to the Canvas at least once each week</li>
+<li>Communicate proactively with your instructor</li>
+<li>Create a study schedule so that you don’t fall behind on assignments</li>
+</ul>
+<h1 id="grading-policies">Grading Policies</h1>
+<p>Assignments will be posted to Canvas throughout the semester.  It is the student&rsquo;s responsibility to check canvas periodically for announcements and posted material.  Assignments will cover many of the topics presented in class.  The goal of assignments is to develop a fundamental understanding of the topics required to create foldable robots, using coding to design, manufacture, and analyze.</p>
+<p>Assigned work may be individual in nature, team-based, or an in-class activity.  Individual assignments will be graded on an individual basis.  The grade for team-based assignments will be shared by all participating members.  In-class work generally serves as a starting point for assigned homework, though it may be graded occasionally.  Please see the <em>&ldquo;Rubric&rdquo;</em> section of each assignment for assignment-specific expectations.</p>
+<h2 id="grading-scale">Grading Scale</h2>
+<p>Final points will receive a letter grade according to the following table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Grade</th>
+<th style="text-align:right">Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">A+</td>
+<td style="text-align:right">97-100.0</td>
+</tr>
+<tr>
+<td style="text-align:left">A</td>
+<td style="text-align:right">93-96.9</td>
+</tr>
+<tr>
+<td style="text-align:left">A-</td>
+<td style="text-align:right">90-92.9</td>
+</tr>
+<tr>
+<td style="text-align:left">B+</td>
+<td style="text-align:right">87-89.9</td>
+</tr>
+<tr>
+<td style="text-align:left">B</td>
+<td style="text-align:right">83-86.9</td>
+</tr>
+<tr>
+<td style="text-align:left">B-</td>
+<td style="text-align:right">80-82.9</td>
+</tr>
+<tr>
+<td style="text-align:left">C+</td>
+<td style="text-align:right">77-79.9</td>
+</tr>
+<tr>
+<td style="text-align:left">C</td>
+<td style="text-align:right">70-76.9</td>
+</tr>
+<tr>
+<td style="text-align:left">D</td>
+<td style="text-align:right">60-69.9</td>
+</tr>
+<tr>
+<td style="text-align:left">E</td>
+<td style="text-align:right">0-59.9</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grading-rubric">Grading Rubric</h2>
+<p>Some assignments will be graded according to rubric with number values corresponding to a sliding qualitative scale .  The following is a general description of what each percentage means in this course:</p>
+<p>\small</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Description</th>
+<th style="text-align:right">%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Shows superior effort, quality, mastering of the concepts, and innovation in execution.  Documentation is publication-ready.</td>
+<td style="text-align:right">100</td>
+</tr>
+<tr>
+<td style="text-align:left">Exceeds expectations.  Demonstrates a complete understanding of the problem, and solution is well executed, documented, and presented.</td>
+<td style="text-align:right">90</td>
+</tr>
+<tr>
+<td style="text-align:left">Above expectations.  Minor mistakes are present, but student demonstrates a general understanding of the concepts.  Documentation present but perhaps not comprehensive.</td>
+<td style="text-align:right">80</td>
+</tr>
+<tr>
+<td style="text-align:left">Meets expectations. Some effort shown, though there may be flaws in analysis or execution.  Documentation is present but lacking in certain areas.</td>
+<td style="text-align:right">70</td>
+</tr>
+<tr>
+<td style="text-align:left">Below expectations.  Minimal effort shown.  Does not show understanding and may not have thought through their methods.  Documentation is lacking substance, clarity, completeness, evidence of effort.</td>
+<td style="text-align:right">60</td>
+</tr>
+<tr>
+<td style="text-align:left">Fails to meet minimum expections.</td>
+<td style="text-align:right">50</td>
+</tr>
+<tr>
+<td style="text-align:left">Not submitted, illegible, not readable, not properly linked</td>
+<td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
+<p>\normalsize</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="late-penalities">Late Penalities</h2>
+<p>Due to the nature of this class, failing to turn in an assignment on time affects you and your classmates, as each concept builds on the last.  It is your responsibility to get in touch with the instructor regarding any questions before assignments are due.  Late submissions will lose one letter grade(10%) for every day they are late^[meaning 10% of the total possible number of points].  <strong>Any sumbission more than four days late will receive a zero.</strong>  Additionally, due to the nature of the submission process, <strong>late CATME assignments will not be accepted.</strong></p>
+<p>All assignments must be posted to Canvas by <em><strong>11:59 pm</strong></em> on the day it is due unless otherwise noted in Canvas</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 class="allowframebreaks" id="submitting-and-presenting-work">Submitting and Presenting work</h2>
+<p>Assignment submissions must follow the &ldquo;Submission Best Practices&rdquo; document shared on Canvas.  It outlines the expectations for well written assignments, reports, and presentations.</p>
+<p>Assigned homework will be submitted for grading several different ways.  This is always indicated in the <em>&ldquo;Submission&rdquo;</em> section of each assignment.</p>
+<ul>
+<li>It may be submitted for grading via Canvas.</li>
+<li>Other work involving external tools (Google Surveys, CATME, etc) will be graded based on submitting to that external tool.</li>
+<li>Some work will be presented in front of the class, and the grade derived from the presentation.</li>
+<li>Other work will be compiled into the design notebook (in the form of a website or report) and graded priodically.</li>
+</ul>
+<p><strong><em>It is the student&rsquo;s responsibility to pay close attention to each assignment&rsquo;s submission instructions, as each assignment indicates the method by which the work must be submitted for grading.  Failure to submit work in the manner asked for in each assignment will result in a zero.</em></strong></p>
+<h1 id="course-policies">Course Policies</h1>
+<h2 class="allowframebreaks" id="attendance--participation">Attendance &amp; Participation</h2>
+<h3 id="summary">Summary</h3>
+<ul>
+<li>Attendance is <strong>required</strong>.  More than two absences result in -2% grade reduction per missed class.</li>
+<li>Absences and Tardies are treated the same</li>
+<li>Attend in-person or over Zoom, <em>however</em> attendance is taken over Zoom, so <strong>always sign on to Zoom</strong>, even if attending in person</li>
+<li>Email me at once of technical difficulties, but try to reconnect ASAP using other technology (Hotspot, cell-phone, call-in, etc.)</li>
+</ul>
+<p>::: {.notes}</p>
+<h3 id="details">Details</h3>
+<p>This class is structured so that it can only be successful with your attendance.  Classes will be interactive, and will require you to come with questions, answers, and ideas to discuss.  Students should notify me if they will miss class, although this does not excuse them from learning the concepts or turning in their assignments on time.</p>
+<p>As this is a Sync-enabled course, however, in-person attendance is not required.  It is possible to complete all assigned work remotely.</p>
+<p>Thus, attendance <em>in Zoom</em> will be required to count your participation.  Attendance will be taken each class by taking a snapshot of the Zoom participant list; this may occur more than once per class.  Students are expected to sign in to Zoom on time, as important issues are often introduced within the first few minutes of class.  Tardies are thus treated as absences.  If a student is found to be either absent or inactive on Zoom, they will be counted absent.</p>
+<p>In the case of technical difficulty preventing your from attending via Zoom, please contact the instructor right away over email and explain the situation.  Please try another means of reconnecting to zoom, such as over your cell-phone (by calling in or by using the Zoom app).</p>
+<p><em>Attending the class in person doesn&rsquo;t change any of the above requirements.  You will still be required to sign in to Zoom to participate and be counted present.</em></p>
+<p>Minus the above exceptions, missing more than <strong>two</strong> classes will result in noticeable penalties to students' participation grade, in the form of -2% off the student&rsquo;s final grade per missed class over two.^[counted as 2% of total points.]</p>
+<p>Please coordinate with your fellow students to make sure someone takes notes during class if you will be unavoidably gone.  The participation grade will reflect your contribution to class, office hour sessions, and planned group meetings.</p>
+<p>:::</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="accommodations">Accommodations</h3>
+<p>Accommodations will be made for the following:</p>
+<ul>
+<li>excused absences related to religious observances/practices that are in accord with <a href="https://www.asu.edu/aad/manuals/acd/acd304-04.html">ACD 304–04</a>, &ldquo;Accommodation for Religious Practices&rdquo;</li>
+<li>excused absences related to university sanctioned events/activities that are in accord with <a href="https://www.asu.edu/aad/manuals/acd/acd304-02.html">ACD 304–02</a>, &ldquo;Missed Classes Due to University-Sanctioned Activities&rdquo;</li>
+<li>Excused absences related to missed class due to military line-of-duty activities that are in accord with <a href="https://www.asu.edu/aad/manuals/acd/acd304-11.html">ACD 304–11</a>, &ldquo;Missed Class Due to Military Line-of-Duty Activities,&rdquo; and SSM 201–18, &ldquo;Accommodating Active Duty Military&rdquo;</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 class="allowframebreaks" id="classroom-behavior">Classroom Behavior</h2>
+<h3 id="covid-19-notice">COVID-19 Notice</h3>
+<p><strong><em>Until further notified, per ASU policy, faculty, staff, students and visitors, are required to wear face coverings in classrooms, labs, offices and community spaces.</em></strong></p>
+<h3 id="summary-1">Summary</h3>
+<ul>
+<li>Keep all communication professional</li>
+<li>Turn off all cell phones, pagers, and other personal devices when participating in class</li>
+<li>Use your laptops for classroom activities, not email, chats, web browsing, or other non-class related activities.</li>
+</ul>
+<p>::: {.notes}</p>
+<h3 id="details-1">Details</h3>
+<h4 id="professional-communication">Professional Communication</h4>
+<p>Professional Communication in all forms is required.  This includes proper dress when attending class remotely and in-person.  Please refrain from using any background images in your zoom video feed, though you should consider blacking out your background for privacy and professionalism.</p>
+<h4 id="cell-phones-pagers-and-other-personal-devices">Cell phones, pagers, and other personal devices</h4>
+<p>Cell phones, pagers, and other personal devices must be turned off during class to avoid causing distractions.  The use of recording devices is not permitted during class.  Any violent or threatening conduct by an ASU student in this class will be reported to the ASU Police Department and the Office of the Dean of Students.</p>
+<h4 id="use-of-laptops-in-class">Use of laptops in class</h4>
+<p>Laptops are strongly suggested for this course.  You may use your laptop to take notes, during tutorial sessions, or when giving presentations.  Please do not use class time for emails, chats, web browsing, or other non-class related activities.
+:::</p>
+<h2 class="allowframebreaks" id="reorganizing-a-team">Reorganizing a Team</h2>
+<h3 id="summary-2">Summary</h3>
+<ul>
+<li>Please try to work out any team-based issues.</li>
+<li>Please see me if the team is not working.  I may choose to split the team</li>
+</ul>
+<p>::: {.notes}</p>
+<h3 id="details-2">Details</h3>
+<p>Reorganizing teams is not a desired outcome of a group project but is sometimes necessary if dysfunction rises to a level that it cannot complete the project.  One or more teammates or the instructor may initiate the process to split or reorganize a team.  Splitting teams does not necessarily work in any members' best interests, as team-based Team Assignments, which each team member must contribute to, are afterwards spread across fewer people.</p>
+<p>However, if the need arises, members must work with the professor to outline the issues which are creating the need to reorganize and the measures which remaining teammates may take to rectify the situation.  This can take the form of changes made to communication, workload reallocation, new meeting times, etc.  The professor will have the final say in establishing a set of expectations for the team, which must be met within a week.  If members fail to live up to these expectations, the team may be split and reorganized by the instructor.</p>
+<p>When reorganiztion occurs, each new team will set up their own folders starting with the former team&rsquo;s work, but  new material will be created by the new team, and old material adapted based on the new direction of each new team.  Any changes to the project definition due to the split (such as project scope, performance specifications, timeline, etc) will need to be rectified for all future submissions or presentations.</p>
+<p>:::</p>
+<h2 class="standout" id="heading"></h2>
+<p><strong>The instructor has the final say in the establishment and reoganization of teams.</strong></p>
+<h2 class="allowframebreaks" id="academic-integrity">Academic Integrity</h2>
+<p>::: {.notes}
+This class is meant to teach you how to create and use your own design tools for creating folding robots using a variety of published resources, online resources, and classroom content.  I encourage you to plumb the depths of what&rsquo;s available; through this synthesis you might be able to create something unique.  However, I expect to be able to tell what is your work and what is someone else&rsquo;s.  For this reason, specific rules for this class are:
+:::</p>
+<h3 id="specific-rules">Specific Rules</h3>
+<ul>
+<li>Do your own work for individual assignments and tests.</li>
+<li>Include the your sources of inspiration within assignments and projects.  This will help grow the list of cool references, but more importantly, help distinguish inspiration from wholesale plagarism.</li>
+<li>Keep code/text/information you use from outside sources separate from your own original content (through the use of separate folders, for example).  Make it explicit what is yours and what is not.</li>
+<li>Include all the licenses or copyright statements as required by the things you reuse.  This will make your own code more reuseable for yourself and potentially others in the future.</li>
+<li>See <a href="https://provost.asu.edu/academic-integrity/policy">https://provost.asu.edu/academic-integrity/policy</a> for more info.</li>
+</ul>
+<p>::: {.notes}
+Students in this class must adhere to ASU’s academic integrity policy, which can be found at <a href="https://provost.asu.edu/academic-integrity/policy">https://provost.asu.edu/academic-integrity/policy</a>). Students are responsible for reviewing this policy and understanding each of the areas in which academic dishonesty can occur. In addition, all engineering students are expected to adhere to both the ASU Academic Integrity Honor Code and the Fulton Schools of Engineering Honor Code. All academic integrity violations will be reported to the Fulton Schools of Engineering Academic Integrity Office (AIO).  The AIO maintains record of all violations and has access to academic integrity violations committed in all other ASU college/schools. 
+:::</p>
+<h2 class="allowframebreaks" id="copyright">Copyright</h2>
+<p>All course content and materials, including lectures (Zoom recorded lectures included), are copyrighted materials and students may not share outside the class, upload to online websites not approved by the instructor, sell, or distribute course content or notes taken during the conduct of the course (see <a href="https://www.asu.edu/aad/manuals/acd/acd304-06.html">ACD 304–06</a>, &ldquo;Commercial Note Taking Services&rdquo; and ABOR Policy [5-308 F.14](<a href="https://public.azregents.edu/Policy">https://public.azregents.edu/Policy</a> Manual/5-308-Student Code of Conduct.pdf) for more information).</p>
+<p>You must refrain from uploading to any course shell, discussion board, or website used by the course instructor or other course forum, material that is not the student&rsquo;s original work, unless the students first comply with all applicable copyright laws; faculty members reserve the right to delete materials on the grounds of suspected copyright infringement.</p>
+<h2 id="policy-against-threatening-behavior-per-the-student-services-manual-ssm-10402httpswwwasueduaadmanualsssmssm104-02html">Policy against threatening behavior, per the Student Services Manual, <a href="https://www.asu.edu/aad/manuals/ssm/ssm104-02.html">SSM 104–02</a></h2>
+<p>Students, faculty, staff, and other individuals do not have an unqualified right of access to university grounds, property, or services. Interfering with the peaceful conduct of university-related business or activities or remaining on campus grounds after a request to leave may be considered a crime. All incidents and allegations of violent or threatening conduct by an ASU student (whether on- or off-campus) must be reported to the ASU Police Department (ASU PD) and the Office of the Dean of Students.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 class="allowframebreaks" id="disability-accommodations">Disability Accommodations</h2>
+<p>\small</p>
+<p>Suitable accommodations will be made for students having disabilities. Students needing accommodations must register with the ASU Disabilities Resource Center and provide documentation of that registration to the instructor. Students should communicate the need for an accommodation in sufficient time for it to be properly arranged. See <a href="https://www.asu.edu/aad/manuals/acd/acd304-08.html">ACD 304-08</a> Classroom and Testing Accommodations for Students with Disabilities.</p>
+<p>The Americans with Disabilities Act (ADA) is a federal antidiscrimination statute that provides comprehensive civil rights protection for persons with disabilities. One element of this legislation requires that all qualified students with documented disabilities be guaranteed a learning environment that provides for reasonable accommodation of their disabilities. If you believe you have a disability requiring an accommodation please contact the Disability Resource Center at ASU Polytechnic located in Student Affairs Quad # 4 or call 480-727-1039 / TTY: 480-727-1009.  Eligibility and documentation policies are online at:  <a href="http://www.asu.edu/studentaffairs/ed/drc/">http://www.asu.edu/studentaffairs/ed/drc/</a></p>
+<p>\normalsize</p>
+<h2 class="allowframebreaks" id="harassment-and-sexual-discrimination">Harassment and Sexual Discrimination</h2>
+<p>\small</p>
+<p>Arizona State University is committed to providing an environment free of discrimination, harassment, or retaliation for the entire university community, including all students, faculty members, staff employees, and guests. ASU expressly prohibits discrimination, harassment, and retaliation by employees, students, contractors, or agents of the university based on any protected status: race, color, religion, sex, national origin, age, disability, veteran status, sexual orientation, gender identity, and genetic information.</p>
+<p>Title IX is a federal law that provides that no person be excluded on the basis of sex from participation in, be denied benefits of, or be subjected to discrimination under any education program or activity.  Both Title IX and university policy make clear that sexual violence and harassment based on sex is prohibited.  An individual who believes they have been subjected to sexual violence or harassed on the basis of sex can seek support, including counseling and academic support, from the university.  If you or someone you know has been harassed on the basis of sex or sexually assaulted, you can find information and resources at <a href="https://sexualviolenceprevention.asu.edu/faqs">https://sexualviolenceprevention.asu.edu/faqs</a>.</p>
+<p>Mandated sexual harassment reporter: As a mandated reporter, I am obligated to report any information I become aware of regarding alleged acts of sexual discrimination, including sexual violence and dating violence.  ASU Counseling Services, <a href="https://eoss.asu.edu/counseling">https://eoss.asu.edu/counseling</a>, is available if you wish discuss any concerns confidentially and privately.</p>
+<p>\normalsize</p>
+<h2 class="allowframebreaks" id="student-support-services">Student Support Services</h2>
+<p>\small</p>
+<ul>
+<li>ASU Libraries - offers 24/7 access to librarians through &ldquo;Ask a Librarian&rdquo; online chat and help by librarians in person at the Reference Desk during most hours the libraries are open. <a href="http://www.asu.edu/lib/">http://www.asu.edu/lib/</a></li>
+<li>Counseling and Consultation – provides confidential mental health and career counseling services for all ASU students. <a href="http://www.asu.edu/studentaffairs/counseling/">http://www.asu.edu/studentaffairs/counseling/</a></li>
+<li>Learning Resource Center – provides students with academic support services such as tutoring, peer advising, computer assisted instruction, and supplemental instruction.  Offers both free and fee-based services.  <a href="http://www.asu.edu/vpsa/lrc/">http://www.asu.edu/vpsa/lrc/</a></li>
+<li>Writing Center – provides on-site tutors to help students increase their confidence as writers and improve writing skills free of charge.  <a href="http://www.asu.edu/duas/wcenter/">http://www.asu.edu/duas/wcenter/</a></li>
+<li>Career Services – offers assistance to students in choosing a major, setting career goals, interviewing and job hunting strategies. <a href="http://career.asu.edu/">http://career.asu.edu/</a></li>
+<li>Student Financial Aid Office – offers information and applications for student funding such as grants, loans, scholarships and student employment. <a href="http://www.asu.edu/fa/">http://www.asu.edu/fa/</a></li>
+<li>Student Health and Wellness Center – provides non-emergency medical health care to all ASU students regardless of insurance status. Most visits with a physician or nurse practitioner are free of charge, but fees will be incurred for x-rays, lab results, etc., <a href="http://www.asu.edu/health/">http://www.asu.edu/health/</a></li>
+<li>Student Recreational Center – offers individual and group fitness opportunities, as well as information on nutrition and wellness, and massages. Use of the general facilities (weights, circuit training and cardio machines) are free, other services (yoga classes, massages) are fee-based.  <a href="http://www.asu.edu/src/">http://www.asu.edu/src/</a></li>
+<li>Student Legal Assistance – provides legal advice and counsel free of charge to all ASU students in areas such as landlord-tenant law, credit reports and collection issues, taxability of scholarships and grants, etc. Notary service is also available at no charge. <a href="http://www.asu.edu/mu/legal/">http://www.asu.edu/mu/legal/</a></li>
+<li>Help Wiki – provides a frequently asked questions resource for technology users at ASU. <a href="http://wiki.asu.edu/help/">http://wiki.asu.edu/help/</a></li>
+<li>EMPACT Crisis Hotline – offers free 24-hour support for mental health crises. Call (480) 784-1500 in the Phoenix area, (866) 205-5229 for the toll-free number outside of Phoenix, and (480) 736-4949 for the sexual assault hotline. All services are free and confidential. <a href="http://www.empact-spc.com/">http://www.empact-spc.com/</a></li>
+</ul>
+<p>\normalsize</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 class="standout" id="notice">Notice</h2>
+<p>Any information in this syllabus (other than grading and absence policies) may be subject to change with reasonable advance notice.</p>
+
+  </article>
+</main>
+
+
+    
+    <footer class="blog-footer">
+      <p>Copyright &copy; 2021 Daniel M. Aukes.  All rights reserved.</p>
+      <p><a href="#">Back to top</a></p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
