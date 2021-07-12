@@ -213,7 +213,6 @@ Variable Types | Foldable Robotics
     
 <main class="container">
   <article>
-  <h1>Default Single Page: Variable Types</h1>
   <p>Variables in pynamics may be grouped into different categories, and used for different things.  We must be careful to talk about these different types of variables carefully, as they have vastly different meanings when it comes to  how they are used and computed in <em>pynamics</em></p>
 <p>First is the concept of a variable as it is used in the context of Python programming.  In python, any piece of data my be stored as a variable and used in subsequent computations.  we will be careful when discussing programming variables to distinguish between them and the other types of variables.</p>
 <p>When it comes to symbolic variables used in dynamic modeling, we can discuss several more kinds of variables.  First are state variables.  State variables are the variables which are used to define the dynamic state of the system.  If used to describe the position or orientation of a system, we think of these variables as having smooth and continuous second derivatives.  If state variables are used to describe velocities or angular velocities of a system, they must have a smooth and continuous derivative.  State variables must be differentiable to at least describe the acceleration of a system.  Why?  Because $F=ma$, and these variables constitute the variables, that, when derivated, contain that $a$ information.</p>
