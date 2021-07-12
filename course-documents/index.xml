@@ -12,8 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/course-documents/software-list/</guid>
-      <description>\small
-   Name Link Required     Anaconda Python Anaconda Required    Miniconda Installer    Solidworks Link Required   Miktex Link Prerequisite for some Python/Jupyter functionality   Office 365 Link Highly Recommended, free for ASU Students   Inkscape Link Recommended   Adobe Creative Cloud Link Recommended   Git Extensions Link Recommended   Git for Windows Link Prerequisite for Git Extensions   kdiff3 Link Prerequisite for Git Extensions   putty Link Recommended   grepwin Link Recommended   7-zip Link Suggested    \normalsize</description>
+      <description>   Name Link Required     Anaconda Python Anaconda Required    Miniconda Installer    Solidworks Link Required   Miktex Link Prerequisite for some Python/Jupyter functionality   Office 365 Link Highly Recommended, free for ASU Students   Inkscape Link Recommended   Adobe Creative Cloud Link Recommended   Git Extensions Link Recommended   Git for Windows Link Prerequisite for Git Extensions   kdiff3 Link Prerequisite for Git Extensions   putty Link Recommended   grepwin Link Recommended   7-zip Link Suggested    </description>
     </item>
     
     <item>
@@ -22,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/course-documents/submission-best-practices/</guid>
-      <description>Submission Best Practices This page details how to prepare assignments for submission. The &amp;ldquo;Submission&amp;rdquo; section of your assignment should provide the details for what format and where to submit assignments. This document should be used in conjunction with each assignment to ensure that all required files are submitted, and in the correct format.
+      <description>This page details how to prepare assignments for submission. The &amp;ldquo;Submission&amp;rdquo; section of your assignment should provide the details for what format and where to submit assignments. This document should be used in conjunction with each assignment to ensure that all required files are submitted, and in the correct format.
 General Document Preparation When answering questions, don&amp;rsquo;t just answer the question, phrase the answer in a complete sentence which includes what the question asked.</description>
     </item>
     

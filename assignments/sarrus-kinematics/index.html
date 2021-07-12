@@ -220,47 +220,6 @@ Sarrus Kinematics | Foldable Robotics
   <a href="/figures/kinematics/sarrus.png" target="_blank"><img src="/figures/kinematics/sarrus.png" alt="mechanism"  class="img-fluid"/></a>
 </div></p>
 <!-- raw HTML omitted -->
-<h2 id="instructions">Instructions</h2>
-<!-- raw HTML omitted -->
-<h3 id="numerically-solve-for-a-mechanisms-position">Numerically Solve for a Mechanism&rsquo;s Position</h3>
-<p>Using the examples on the foldable robotics website as a starting point, solve for the kinematics of the mechanism above.</p>
-<ol>
-<li>Make a table of link lengths corresponding to the vectors defined by the six heavy black lines.  Please approximate the lengths of each link of the mechanism, as well as the device&rsquo;s initial position.  No need to match exactly with the original drawing.</li>
-<li>Plot the mechanism in Python using the matplotlib.pyplot package, making sure to label each vertex over each line.</li>
-<li>Create an objective function whose error is zero when:
-a. All of the length constraints of the mechanism are correctly estimated
-a. The base of the robot is fixed to the ground and in a specified orientation
-a. The end-effector(defined by the link between $p_3$ and $p_4$) is parallel to the base link($p_0$-$p_5$).
-a. The $\hat{n}_x$-component of the distance between $p_0$ and $p_4$ is zero.
-a. The internal degree of freedom defined by $q$ matches a value given or set by you.</li>
-<li>Solve this function three times using the <code>scipy.optimize.minimize</code> function: once for each of three states where the input $q$ is varied by a small, constant amount. ^[consider using a for loop].  Select an initial guess for the state of the system that is close to the right answer but not exact; update the initial guess with the results of the prior solution after that.
-a. Show the result of each evaluation.  This should demonstrate that the error in the result after each calculation is small (less than ~1e-3).
-a. Plot the device in each of its three configurations (within a single figure)</li>
-<li>Now approximate the rate of change of the middle point of the trajectory by finding the slope between the first and third point. Define a point on the mechanism that serves as the &ldquo;output&rdquo; or &ldquo;end-effector&rdquo;.^[$p_3$ or $p_4$ would be a good choice.]
-a. Calculate the slope in python and print the result.
-a. Plot the 3-point trajectory.
-a. Overplot the slope on the middle point using an arrow.</li>
-<li>Compute the Jacobian Matrix in that middle state.  This should be a 2x1 matrix, as it is a 2D mechanism.</li>
-<li>Now, assume that a force $\vec{f}$ of $f=\left[\begin{matrix}10\-10\end{matrix}\right]$(2D) <!-- raw HTML omitted --> is applied to the end-effector.  Compute the force experienced at the input.</li>
-<li>What happens when the force $\vec{f}$ applied to the end-effector changes to $f=\left[\begin{matrix}0\-10\end{matrix}\right]$(2D).  Provide a rationale as to how or why this answer contrasts with the previous one.</li>
-</ol>
-<!-- raw HTML omitted -->
-<ol>
-<li>Now, assume that the input is moving at a rate of 2.4 <!-- raw HTML omitted -->.  How fast is the output moving?</li>
-</ol>
-<h2 id="submission">Submission</h2>
-<p>Please include:</p>
-<ol>
-<li>A Jupyter notebook with the following
-<ol>
-<li>Your plot of the mechanism with labeled vertices</li>
-<li>Your code detailing your approach to solving the problem</li>
-<li>Detailed description of the steps you took (included as blocks alongside chunks of related code)</li>
-<li>Include answers to all questions above</li>
-</ol>
-</li>
-</ol>
-<p>This can be submitted as a single jupyter notebook file.  Please follow the posted submission instructions for Jupyter submissions</p>
 <h2 id="rubric">Rubric</h2>
 <table>
 <thead>
@@ -336,7 +295,10 @@ a. Overplot the slope on the middle point using an arrow.</li>
 </tr>
 </tbody>
 </table>
-
+<h2 id="instructions">Instructions</h2>
+  
+  <div class="alert-danger text-center"><h2><i class="bi bi-exclamation-triangle-fill"></i> This assignment has not yet been posted</h1></div>
+  
   </article>
 </main>
 

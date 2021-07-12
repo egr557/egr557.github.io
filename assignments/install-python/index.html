@@ -216,94 +216,6 @@ Install Python | Foldable Robotics
   <h1 id="install-python">Install Python</h1>
 <h2 id="assignment-overview">Assignment Overview</h2>
 <p>The goal here is to verify you have python installed correctly.</p>
-<h2 id="resources">Resources</h2>
-<ul>
-<li><a href="../modules/python/installing-anaconda.html">Installing Anaconda Python Tutorial</a></li>
-<li><a href="../modules/misc/add-folder-to-system-path.html">Add folder to system path (Windows)</a></li>
-</ul>
-<h2 id="procedure">Procedure</h2>
-<!-- raw HTML omitted -->
-<ol>
-<li>
-<p>Read the entire assignment before starting.</p>
-</li>
-<li>
-<p>Follow the instuctions in the <a href="../modules/python/installing-anaconda.html">Installing Anaconda Python Tutorial</a> for installing the anaconda distribution of python.</p>
-</li>
-<li>
-<p>Download the windows build for <a href="https://www.ffmpeg.org/">ffmpeg</a>, a common video encoder.  Unzip and move it into a new root-level folder called &ldquo;c:/binaries&rdquo; or similar.  <a href="../modules/misc/add-folder-to-system-path.html">Add this folder to your system path</a></p>
-</li>
-<li>
-<p>Open up jupyter notebook.  In windows 10, type &ldquo;windows+x&rdquo; and then select Windows Powershell or Command Prompt.  In the window that opens, type:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jupyter notebook
-</code></pre></div><p>if installed correctly, a browser window should eventually pop open</p>
-</li>
-<li>
-<p>Create a new python 3 notebook.</p>
-</li>
-<li>
-<p>Practice navigating through a Jupyter environment</p>
-</li>
-<li>
-<p>In the first code cell, add</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#75715e">## EGR557: Install Python
-</span><span style="color:#75715e"></span>Full Name
-</code></pre></div></li>
-<li>
-<p>Change the cell type to markdown and hit &ldquo;shift+enter&rdquo; to compile</p>
-</li>
-<li>
-<p>Create a new code cell below the first one and enter:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> animation, rc
-<span style="color:#f92672">from</span> IPython.display <span style="color:#f92672">import</span> HTML
-<span style="color:#f92672">import</span> shapely
-<span style="color:#f92672">import</span> idealab_tools
-<span style="color:#f92672">import</span> foldable_robotics
-<span style="color:#f92672">import</span> pynamics
-<span style="color:#f92672">import</span> pynamics_examples.pendulum_2_ways
-</code></pre></div></li>
-<li>
-<p>Run that code by hitting shift+enter.  Some information should pop out, along with a blank plot.  There should be a new code window below the first.  In this window, enter:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">HTML(pynamics_examples<span style="color:#f92672">.</span>pendulum_2_ways<span style="color:#f92672">.</span>points_output<span style="color:#f92672">.</span>anim<span style="color:#f92672">.</span>to_html5_video())
-</code></pre></div></li>
-<li>
-<p>Run the code.</p>
-</li>
-<li>
-<p>Enter and run this last snippet</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> foldable_robotics.laminate <span style="color:#f92672">import</span> Laminate
-<span style="color:#f92672">from</span> foldable_robotics.layer <span style="color:#f92672">import</span> Layer
-<span style="color:#f92672">import</span> shapely.geometry <span style="color:#f92672">as</span> sg
-box <span style="color:#f92672">=</span> sg<span style="color:#f92672">.</span>box(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>)
-box <span style="color:#f92672">=</span> Layer(box)
-circle <span style="color:#f92672">=</span>sg<span style="color:#f92672">.</span>Point((<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>))
-circle <span style="color:#f92672">=</span> Layer(circle)<span style="color:#f92672">&lt;&lt;</span><span style="color:#ae81ff">1.5</span>
-lam <span style="color:#f92672">=</span> Laminate(box,circle)
-lam<span style="color:#f92672">.</span>plot()
-</code></pre></div></li>
-<li>
-<p>Test saving your results as a pdf.  Did it work?  If not you may need to install Miktex (see the software list document).</p>
-</li>
-</ol>
-<h2 id="suggestions">Suggestions</h2>
-<ul>
-<li>
-<p>If you already have Python installed, it may not be what you need.  We need the most up-to-date version of the Anaconda distribution with specific packages installed.</p>
-</li>
-<li>
-<p>You can update anaconda from the commandline or powershell with the following command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">conda update --all
-</code></pre></div></li>
-<li>
-<p>Make sure you add anaconda to the system path in the installer</p>
-</li>
-</ul>
-<h2 id="submission">Submission</h2>
-<ul>
-<li>Submit your compiled jupyter file (.ipynb) to Canvas.</li>
-<li>Please follow the &ldquo;Submission Best Practices&rdquo; document posted on Canvas.</li>
-</ul>
-<!-- raw HTML omitted -->
 <h2 id="rubric">Rubric</h2>
 <table>
 <thead>
@@ -319,7 +231,15 @@ lam<span style="color:#f92672">.</span>plot()
 </tr>
 </tbody>
 </table>
-
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="../modules/python/installing-anaconda.html">Installing Anaconda Python Tutorial</a></li>
+<li><a href="../modules/misc/add-folder-to-system-path.html">Add folder to system path (Windows)</a></li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+  
+  <div class="alert-danger text-center"><h2><i class="bi bi-exclamation-triangle-fill"></i> This assignment has not yet been posted</h1></div>
+  
   </article>
 </main>
 

@@ -41,7 +41,8 @@ j_{21} &amp;amp; j_{22} &amp;amp; \ldots &amp;amp; j_{2n}\
 j_{m1} &amp;amp; j_{m2} &amp;amp; \ldots &amp;amp; j_{mn}\
 \end{matrix} \right]$$
 where $j_{ij} = \frac{\partial \dot{a}_i}{\partial \dot{b}_j}$
-Physical Meaning ::: {.text-center}  :::</description>
+Physical Meaning 
+How Jacobians are Used</description>
     </item>
     
     <item>

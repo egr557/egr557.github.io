@@ -13,9 +13,9 @@
       
       <guid>https://danaukes.com/modules/dynamics/generated/05-derivatives-and-the-golden-rule/</guid>
       <description>Derivatives and the Golden Rule $$ \frac{ {}^N{d\vec{v}}}{dt} = \frac{ {}^A{d\vec{v}}}{dt} + {}^N{\vec{w}}^{A} \times \vec{v} $$
-::: {style=&amp;ldquo;text-align:center;&amp;quot;} 
- :::
-Example ::: {style=&amp;ldquo;text-align:center;&amp;quot;}  :::
+
+
+Example 
 $$ \vec{r} = -l\hat{a}_y $$ $$ \vec{v} = \frac{ {}^N{d\vec{r}}}{dt} =\frac{ {}^{A} { d\vec{r}}}{dt} + {}^{N}{\vec{\omega}}^{A} \times \vec{r} $$ $$ \vec{v} = \frac{ {}^{N}{d\vec{r}}}{dt} = \dot{\theta}\hat{a}_z \times -l\hat{a}_y $$ $$ \vec{v} = \frac{ {}^{N}{}{ d\vec{r}}{}{}}{dt}= l\dot{\theta}\hat{a}_x $$ $$ \vec{a} = \frac{ {}^{N}{}{ d\vec{v}}{}{}}{dt} = \frac{ {}^{N}{}{d^2\vec{r}}{}{}}{dt^2} $$ $$ \vec{a} = \frac{ {}^{A}{}{d\vec{v}}{}{}}{dt} + {}^{N}{}{\vec{\omega}}^{A}{} \times \vec{v} $$ $$ \vec{a} = l\ddot{\theta}\hat{a}_x + \dot{\theta}\hat{a}_z \times l\dot{\theta}\hat{a}_x $$ $$ \vec{a} = l\ddot{\theta}\hat{a}_x + l\dot{\theta}^2\hat{a}_y $$</description>
     </item>
     
@@ -87,13 +87,14 @@ $$V=\frac{4}{3}\pi r^3$$</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/modules/dynamics/generated/07-kanes-method/</guid>
-      <description>Kane&amp;rsquo;s method ::: {style=&amp;ldquo;text-align:center;&amp;quot;}  :::
+      <description>Kane&amp;rsquo;s method 
 Frames Frame A
 $$ {}^{N}{}{\vec{\omega}}^{A}{} = \dot{\theta} \hat{n}_z= \dot{\theta} \hat{a}_z $$
 Velocity if point $p$&amp;rsquo;s position is represented by $\vec{r}$ where
 $$ \vec{r} = -l\hat{a}_y $$ then from the example in the derivatives module, we know that $$ \vec{v} = \frac{ {}^{N}{}{ d\vec{r}}{}{}}{dt}= l\dot{\theta}\hat{a}_x $$
 and $$ \vec{a} = l\ddot{\theta}\hat{a}_x + l\dot{\theta}^2\hat{a}_y $$
-Speed Variables In this system our speed variable is $\dot{\theta}$</description>
+Speed Variables In this system our speed variable is $\dot{\theta}$
+Forces There are a number of forces acting within the system</description>
     </item>
     
     <item>

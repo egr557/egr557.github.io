@@ -219,11 +219,9 @@ Rotations | Foldable Robotics
 <p>In <em>pynamics</em>, the rotation class can be created in a variety of ways.  You may supply a 3x3 matrix directly, generate one using an axis, angle pair, or create one by defining a rotation along an x,y,or z axis.  Rotations in <em>pynamics</em> are stored as $3x3$ matrices.  Rotations do not have to be fixed, as the matrices which encode their information can hold variables.  Thus, axis,angle pairs themselves may be composed of one or more variables.</p>
 <p>Rotation classes <em>in pynamics</em> must be defined as the relationship between two existing frames.  Thus, rotations between frames must be created after the frames themselves.  Only one rotation may be stored between two reference frames.  (though there are ways to represent more than one).  Progrmmaticaly, this is because pynamics uses the rotational connections defined by the user in determining the shortest and simplest possible representation for vectors when performing vector operations, and having multiple pathways would undesireably increase computational cost and complexity.</p>
 <h2 id="theory">Theory</h2>
-<p>::: {style=&ldquo;text-align:center;&quot;}
-<div class="text-center">
+<p><div class="text-center">
   <a href="/figures/dynamics/rotation_matrix.png" target="_blank"><img src="/figures/dynamics/rotation_matrix.png" alt="rotation between frames"  class="img-fluid"/></a>
-</div>
-:::</p>
+</div></p>
 <p>$$
 \begin{array}{c|c c c}
 {}^N{\textbf{R}}^{A} &amp; \hat{a}_x &amp;\hat{a}_y &amp; \hat{a}_z\<br>

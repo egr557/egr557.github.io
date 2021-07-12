@@ -214,81 +214,8 @@ Python Functions | Foldable Robotics
 <main class="container">
   <article>
   <h1 id="python-functions">Python Functions</h1>
-<h2 id="resources">Resources</h2>
-<ul>
-<li><a href="https://pythontips.com/2013/08/04/args-and-kwargs-in-python-explained/">*args and **kwargs in python explained</a></li>
-<li><a href="https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html">NumPy for Matlab users</a></li>
-</ul>
-<h2 id="procedure">Procedure</h2>
-<!-- raw HTML omitted -->
-<ol>
-<li>
-<p>Become familiar with Python functions, including how you declare and call them.</p>
-</li>
-<li>
-<p>Create a function <code>sum1()</code> that takes two arguments x and y and returns their sum. Demonstrate your working function by running the following commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(sum1(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>))
-<span style="color:#66d9ef">print</span>(sum1(x<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>,y<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>))
-</code></pre></div></li>
-<li>
-<p>Create a function <code>sum2()</code> that takes two arguments x and y with default values of 10 and 20, respectively, and returns their sum. Demonstrate your working function by running the following commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(sum2())
-<span style="color:#66d9ef">print</span>(sum2(<span style="color:#ae81ff">2</span>))
-<span style="color:#66d9ef">print</span>(sum2(y<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>))
-</code></pre></div></li>
-<li>
-<p>Create a list of 100 elements called <code>list1</code> using <code>range()</code>.</p>
-</li>
-<li>
-<p>Create a function <code>sum3()</code> that takes n arguments and computes their sum.   Demonstrate your working function by running the following commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(sum3())
-<span style="color:#66d9ef">print</span>(sum3(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>))
-<span style="color:#66d9ef">print</span>(sum3(<span style="color:#f92672">*</span>list1))
-</code></pre></div></li>
-<li>
-<p>Create a dictionary using the following code:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dict1<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;item1&#39;</span>:<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;item2&#39;</span>:<span style="color:#ae81ff">7</span>}
-</code></pre></div></li>
-<li>
-<p>Create a function <code>sum4()</code> that takes n <em>keyword arguments</em>, prints each key, and computes the sum of all keyed values.  Demonstrate your working function by running the following commands</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(sum4())
-<span style="color:#66d9ef">print</span>(sum4(x<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>,y<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>))
-<span style="color:#66d9ef">print</span>(sum4(<span style="color:#f92672">**</span>dict1))
-</code></pre></div></li>
-<li>
-<p>Create a function <code>sum5()</code> which sums an arbitrary number of arguments and the values of any keyword arguments, and prints the key of each keyword arguments.  Demonstrate your working function by running the following commands</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(sum5())
-<span style="color:#66d9ef">print</span>(sum5(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,x<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>,y<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>))
-<span style="color:#66d9ef">print</span>(sum5(<span style="color:#f92672">*</span>list1,<span style="color:#f92672">**</span>dict1))
-</code></pre></div></li>
-</ol>
-<h2 id="discussion">Discussion</h2>
-<ol>
-<li>
-<p>Describe what happens to x when supplying a function with <code>*</code> within a function call, as in <code>function1(*x)</code>.</p>
-</li>
-<li>
-<p>Describe what happens to x when supplying a function with <code>**</code> within a function call, as in <code>function1(**x)</code>.</p>
-</li>
-<li>
-<p>If a function is declared with variables <code>x</code> and <code>y</code>, as specified below, using the <code>*</code> and <code>**</code> arguments, please describe in what form(data type) those variables are delivered to function, and how to access sub-elements contained within them.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">arbitrary_function</span>(<span style="color:#f92672">*</span>x,<span style="color:#f92672">**</span>y):
-    <span style="color:#75715e">#put code here</span>
-    <span style="color:#66d9ef">return</span> arbitrary_value
-</code></pre></div></li>
-</ol>
-<h2 id="submission">Submission</h2>
-<p>Please include:</p>
-<ol>
-<li>Report with the following
-<ol>
-<li>Answers to the discussion points above</li>
-</ol>
-</li>
-<li>Code</li>
-</ol>
-<p>Please follow the &ldquo;Submission Best Practices&rdquo; document posted on Canvas.  This assignment may be submitted as a .pdf document or a jupyter notebook (.ipynb).  If submitted as a notebook, make sure it is fully compiled.  This can be done by opening the file in the jupyter browser and in the top jupyter menu selecting &ldquo;Kernel&rdquo; &ndash;&gt; &ldquo;Restart and Run All&rdquo;.</p>
-<!-- raw HTML omitted -->
+<h2 id="introduction">Introduction</h2>
+<p>The purpose of this assignment is to get you comfortable understanding the basics of python functions and how to use them with arguments and keyword arguments</p>
 <h2 id="rubric">Rubric</h2>
 <table>
 <thead>
@@ -312,7 +239,15 @@ Python Functions | Foldable Robotics
 </tr>
 </tbody>
 </table>
-
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://pythontips.com/2013/08/04/args-and-kwargs-in-python-explained/">*args and **kwargs in python explained</a></li>
+<li><a href="https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html">NumPy for Matlab users</a></li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+  
+  <div class="alert-danger text-center"><h2><i class="bi bi-exclamation-triangle-fill"></i> This assignment has not yet been posted</h1></div>
+  
   </article>
 </main>
 

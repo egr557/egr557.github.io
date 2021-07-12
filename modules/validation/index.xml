@@ -12,8 +12,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/modules/validation/actuator-fitting/</guid>
-      <description>Introduction The purpose of this assignment is to develop a model for your actuator.
-Steps  Decide as a team what kind of actuator you will use. This semester you may choose any actuator or energy storage device you like, including  A stretched or wound spring A preloaded beam A deformed elastic shape A motor, gear motor, or RC Servo Shape Memory Alloy &amp;hellip; (see the professor to get something else approved)   Develop a model which accurately captures the principal dynamics of the actuator.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to develop a model for your actuator.&lt;/p&gt;
+&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -22,8 +23,16 @@ Steps  Decide as a team what kind of actuator you will use. This semester you ma
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/modules/validation/system-capture-and-fitting/</guid>
-      <description>System Capture and Fitting (camera) Introduction The purpose of this assignment is to collect data on your system for use in fitting your model
-Course Resources  Optimization Module Experimental Validation Module Dynamics Module  Instructions  Attach 3 optical tracking markers to the fixed base frame, at the same camera depth as your experimental setup. They must not be colinear, and would best be arranged orthogonally (as in x-y vectors) Measure the distance between all three markers.</description>
+      <description>&lt;h1 id=&#34;system-capture-and-fitting-camera&#34;&gt;System Capture and Fitting (camera)&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to collect data on your system for use in fitting your model&lt;/p&gt;
+&lt;h2 id=&#34;course-resources&#34;&gt;Course Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Optimization Module&lt;/li&gt;
+&lt;li&gt;Experimental Validation Module&lt;/li&gt;
+&lt;li&gt;Dynamics Module&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>

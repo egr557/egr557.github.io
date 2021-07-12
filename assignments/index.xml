@@ -12,9 +12,119 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/biomechanics-background-and-initial-specificaitons/</guid>
-      <description>Biomechanics Background and Initial Specifications Assignment Overview The goal of this part is to encourage you to get &amp;ldquo;bio-inspired&amp;rdquo;, to get you thinking about the scale of your robot, and to think about how to replicate the efficiencies of biological systems. You may refer to the developing specifications page for more information
-Please Read this whole assignment first.
-Suggestions  It will be useful to start using a program like Mendeley to collect and organize references.</description>
+      <description>&lt;h1 id=&#34;biomechanics-background-and-initial-specifications&#34;&gt;Biomechanics Background and Initial Specifications&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;The goal of this part is to encourage you to get &amp;ldquo;bio-inspired&amp;rdquo;, to get you thinking about the scale of your robot, and to think about how to replicate the efficiencies of biological systems.  You may refer to the &lt;a href=&#34;../modules/biomechanics/developing-specifications.html&#34;&gt;developing specifications&lt;/a&gt; page for more information&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Please Read this whole assignment first.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;suggestions&#34;&gt;Suggestions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;It will be useful to start using a program like &lt;a href=&#34;https://www.mendeley.com/?interaction_required=true&#34;&gt;Mendeley&lt;/a&gt; to collect and organize references.&lt;/li&gt;
+&lt;li&gt;Be creative in your search terms. Use 
+
+
+
+
+&lt;span class=&#34;hugo-cite-intext&#34;
+        itemprop=&#34;citation&#34;&gt;(&lt;span class=&#34;hugo-cite-group&#34;&gt;
+
+          &lt;a href=&#34;#dickinson2000&#34;&gt;&lt;span class=&#34;visually-hidden&#34;&gt;Citation: &lt;/span&gt;&lt;span itemprop=&#34;author&#34; itemscope itemtype=&#34;https://schema.org/Person&#34;&gt;&lt;meta itemprop=&#34;givenName&#34; content=&#34;Michael H.&#34;&gt;&lt;span itemprop=&#34;familyName&#34;&gt;Dickinson&lt;/span&gt;&lt;/span&gt;,&amp;#32;&lt;span itemprop=&#34;author&#34; itemscope itemtype=&#34;https://schema.org/Person&#34;&gt;&lt;meta itemprop=&#34;givenName&#34; content=&#34;C T&#34;&gt;&lt;span itemprop=&#34;familyName&#34;&gt;Farley&lt;/span&gt;&lt;/span&gt;
+                  &lt;em&gt;&amp;amp; al.&lt;/em&gt;,&amp;#32;&lt;span itemprop=&#34;datePublished&#34;&gt;2000&lt;/span&gt;&lt;/a&gt;&lt;span class=&#34;hugo-cite-citation&#34;&gt; 
+
+
+
+
+
+
+
+
+
+
+&lt;span itemscope
+      itemtype=&#34;https://schema.org/Article&#34;
+      data-type=&#34;article&#34;&gt;&lt;span itemprop=&#34;author&#34; itemscope itemtype=&#34;https://schema.org/Person&#34;&gt;&lt;span itemprop=&#34;familyName&#34;&gt;Dickinson&lt;/span&gt;,&amp;#32;
+    &lt;meta itemprop=&#34;givenName&#34; content=&#34;Michael H.&#34; /&gt;
+    M.&lt;/span&gt;,&amp;#32;
+  &lt;span itemprop=&#34;author&#34; itemscope itemtype=&#34;https://schema.org/Person&#34;&gt;&lt;span itemprop=&#34;familyName&#34;&gt;Farley&lt;/span&gt;,&amp;#32;
+    &lt;meta itemprop=&#34;givenName&#34; content=&#34;C T&#34; /&gt;
+    C.&lt;/span&gt;,&amp;#32;
+  &lt;span itemprop=&#34;author&#34; itemscope itemtype=&#34;https://schema.org/Person&#34;&gt;&lt;span itemprop=&#34;familyName&#34;&gt;Full&lt;/span&gt;,&amp;#32;
+    &lt;meta itemprop=&#34;givenName&#34; content=&#34;R J&#34; /&gt;
+    R.&lt;/span&gt;,&amp;#32;
+  &lt;span itemprop=&#34;author&#34; itemscope itemtype=&#34;https://schema.org/Person&#34;&gt;&lt;span itemprop=&#34;familyName&#34;&gt;Koehl&lt;/span&gt;,&amp;#32;
+    &lt;meta itemprop=&#34;givenName&#34; content=&#34;M A&#34; /&gt;
+    M.&lt;/span&gt;,&amp;#32;
+  &lt;span itemprop=&#34;author&#34; itemscope itemtype=&#34;https://schema.org/Person&#34;&gt;&lt;span itemprop=&#34;familyName&#34;&gt;Kram&lt;/span&gt;,&amp;#32;
+    &lt;meta itemprop=&#34;givenName&#34; content=&#34;R&#34; /&gt;
+    R.&lt;/span&gt;&amp;#32;&amp;amp;&amp;#32;&lt;span itemprop=&#34;author&#34; itemscope itemtype=&#34;https://schema.org/Person&#34;&gt;&lt;span itemprop=&#34;familyName&#34;&gt;Lehman&lt;/span&gt;,&amp;#32;
+    &lt;meta itemprop=&#34;givenName&#34; content=&#34;S&#34; /&gt;
+    S.&lt;/span&gt;
+  &amp;#32;
+    (&lt;span itemprop=&#34;datePublished&#34;&gt;2000&lt;/span&gt;).
+  &amp;#32;&lt;span itemprop=&#34;name&#34;&gt;&lt;!-- raw HTML omitted --&gt;How animals move: an integrative view.&lt;!-- raw HTML omitted --&gt;&lt;/span&gt;.&lt;i&gt;
+    &lt;span itemprop=&#34;about&#34;&gt;Science (New York, N.Y.)&lt;/span&gt;,&amp;#32;288(5463)&lt;/i&gt;.&amp;#32;&lt;span itemprop=&#34;pagination&#34;&gt;100–6&lt;/span&gt;.
+  &lt;a href=&#34;https://doi.org/10.1126/science.288.5463.100&#34;
+     itemprop=&#34;identifier&#34;
+     itemtype=&#34;https://schema.org/URL&#34;&gt;https://doi.org/10.1126/science.288.5463.100&lt;/a&gt;&lt;/span&gt;
+
+
+
+
+&lt;/span&gt;&lt;/span&gt;)&lt;/span&gt;
+ to find good starting points for references and keywords.&lt;/li&gt;
+&lt;li&gt;Start writing down search keywords from class.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;external-resources&#34;&gt;External Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Kleiber%27s_law&#34;&gt;https://en.wikipedia.org/wiki/Kleiber%27s_law&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Bio Inspiration&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Other bio-inspired robots&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Table&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Other Assumptions&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Figures&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Engineering Representation&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Discussion&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Bibliography&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -36,7 +146,7 @@ Rubric    Description Points     Total 200    </description>
       <guid>https://danaukes.com/assignments/catme-ii/</guid>
       <description>CATME II Assignment Overview Please use the link provided in the email sent from CATME to complete an assessment of your teammates.
 Please remember that feedback to teammates will be released to them, so keep your criticism constructive
-Rubric    Description Points     Total {{page.points}}    </description>
+Rubric    Description Points     Total 200    </description>
     </item>
     
     <item>
@@ -45,8 +155,25 @@ Rubric    Description Points     Total {{page.points}}    </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/course-feedback-i/</guid>
-      <description>Course Feedback I Assignment Overview The goal of this assignment is to learn about your activities in this course and how the course can be improved in the future.
-Procedure  Fill out the survey listed in Canvas  Submission instructions  Submission of the form is all that is needed for credit.  Rubric    Description Points     Total 20      </description>
+      <description>&lt;h1 id=&#34;course-feedback-i&#34;&gt;Course Feedback I&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;The goal of this assignment is to learn about your activities in this course and how the course can be improved in the future.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -55,8 +182,25 @@ Procedure  Fill out the survey listed in Canvas  Submission instructions  Submis
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/course-feedback-ii/</guid>
-      <description>Course Feedback II Assignment Overview The goal of this assignment is to learn about your activities in this course and how the course can be improved in the future.
-Procedure  Fill out this survey Fill out the official course feedback survey. You should have gotten an email about it. This is not a graded component of this assignment, but is important for the future of the class and the students who take it.</description>
+      <description>&lt;h1 id=&#34;course-feedback-ii&#34;&gt;Course Feedback II&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;The goal of this assignment is to learn about your activities in this course and how the course can be improved in the future.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -65,8 +209,45 @@ Procedure  Fill out this survey Fill out the official course feedback survey. Yo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/data-collection-and-experimental-validation/</guid>
-      <description>Data Collection and Experimental Validation Assignment Overview The purpose of this assignment is to collect data on your system and compare against the results estimated from simulation.
-Procedure  Perform an experiment to collect either trajectory or force information over 5 cycles of motion (if cyclic) or 5 separate experiments (if single-run). Take a picture of your setup. Annotate the photo with arrows, text boxes etc to help us undestand how you tested your device Record a video of at least one run of your experiment.</description>
+      <description>&lt;h1 id=&#34;data-collection-and-experimental-validation&#34;&gt;Data Collection and Experimental Validation&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to collect data on your system and compare against the results estimated from simulation.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Report Narrative&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Figure(s) of Data&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Image of Experimental&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Video&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Discussion&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -75,8 +256,65 @@ Procedure  Perform an experiment to collect either trajectory or force informati
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/design-and-manufacturing-workflow/</guid>
-      <description>Design and Manufacturing Workflow Introduction The purpose of this assignment is to plan for the manufacturing of the full system, test the output, and hopefully use it to produce a prototype.
-Resources  Solidworks Tutorial kinematics tutorial:	https://drive.google.com/open?id=1En2zWrJg5EV_T9sTThubRUUclYcnW9jV&amp;amp;authuser=daukes%40asu.edu&amp;amp;usp=drive_fs The macros for exporting a laminate to .dxf: https://github.com/popupcad/code_popupcad_solidworks_exporter  Steps   Create a quick paper mockup of your final prototype design(You may use a prior prototype if it still applies, but you may destroy it.</description>
+      <description>&lt;h1 id=&#34;design-and-manufacturing-workflow&#34;&gt;Design and Manufacturing Workflow&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to plan for the manufacturing of the full system, test the output, and &lt;em&gt;hopefully&lt;/em&gt; use it to produce a prototype.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1a&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1b&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2a&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2b&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;4a&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;4b&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;4c&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;total&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Solidworks Tutorial kinematics tutorial:	&lt;a href=&#34;https://drive.google.com/open?id=1En2zWrJg5EV_T9sTThubRUUclYcnW9jV&amp;amp;authuser=daukes%40asu.edu&amp;amp;usp=drive_fs&#34;&gt;https://drive.google.com/open?id=1En2zWrJg5EV_T9sTThubRUUclYcnW9jV&amp;amp;authuser=daukes%40asu.edu&amp;amp;usp=drive_fs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The macros for exporting a laminate to .dxf: &lt;a href=&#34;https://github.com/popupcad/code_popupcad_solidworks_exporter&#34;&gt;https://github.com/popupcad/code_popupcad_solidworks_exporter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -85,8 +323,61 @@ Resources  Solidworks Tutorial kinematics tutorial:	https://drive.google.com/ope
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/design-optimization/</guid>
-      <description>Design Optimization Introduction The purpose of this assignment is to optimize the dynamics of your system to maximize performance against your team&amp;rsquo;s selected research question and design goal.
-Procedure   Performance Measurement a. Explain, in words, how your team will evaluate the success of your robot&amp;rsquo;s design. This could be by measuring the forces produced by your design, the speed at which it walks, its thrust:weight ratio, the height it can jump, etc.</description>
+      <description>&lt;h1 id=&#34;design-optimization&#34;&gt;Design Optimization&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to optimize the dynamics of your system to maximize performance against your team&amp;rsquo;s selected research question and design goal.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1a&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1b&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1c&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1d&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1e&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2a&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2b&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -95,8 +386,62 @@ Procedure   Performance Measurement a. Explain, in words, how your team will eva
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/develop-a-research-question/</guid>
-      <description>Develop a Research Question Introduction Generate a research question worthy of your time.
-Resources  The associated module on developing a research question Mendeley Desktop, a useful citation manager  Instructions  Starting with the research question selected for your team, work on adapting and refining it to fit your team&amp;rsquo;s specific goals and this year&amp;rsquo;s course constraints (with regard to makeability, feasibility, etc)   Defend your selected question by answering the questions below.</description>
+      <description>&lt;h1 id=&#34;develop-a-research-question&#34;&gt;Develop a Research Question&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Generate a research question worthy of your time.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Question&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Tractability Discussion&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Novelty Discussion&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Interesting Discussion&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Open-endedness Discussion&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Modularity Discussion&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Team Fit Discussion&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Topic Fit Discussion&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;200&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The associated module on &lt;a href=&#34;../modules/project/developing-a-research-question.html&#34;&gt;developing a research question&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mendeley.com/download-desktop-new/&#34;&gt;Mendeley Desktop&lt;/a&gt;, a useful citation manager&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -106,9 +451,8 @@ Resources  The associated module on developing a research question Mendeley Desk
       
       <guid>https://danaukes.com/assignments/dynamics-ii-plan/</guid>
       <description>Dynamics II Plan Introduction The purpose of this assignment is to decide as a team how you will split up the various Parameter ID tasks individually
-Procedure   Identify and discuss the materials you plan to use in fabrication. Decide who will be obtaining those materials and distributing them.
-  Identify and Discuss the various parameters you plan to model in your simulation, including
-  actuator modeling</description>
+Rubric    Description Points     Total 0    Instructions   Identify and discuss the materials you plan to use in fabrication. Decide who will be obtaining those materials and distributing them.
+  Identify and Discuss the various parameters you plan to model in your simulation, including</description>
     </item>
     
     <item>
@@ -117,8 +461,32 @@ Procedure   Identify and discuss the materials you plan to use in fabrication. D
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/dynamics-ii-prep/</guid>
-      <description>Dynamics II Prep Introduction The purpose of this assignment is to get your team to model the various aspects of your model including
- The full system Actuator Parameters Energy Storage Devices System / Link Stiffness Damping and Friction  Procedure Part I Your team should have decided what each of your tasks are for this week. Please ensure you document what your contributions are. For example, you can omplete a task such as:</description>
+      <description>&lt;h1 id=&#34;dynamics-ii-prep&#34;&gt;Dynamics II Prep&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to get your team to model the various aspects of your model including&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The full system&lt;/li&gt;
+&lt;li&gt;Actuator Parameters&lt;/li&gt;
+&lt;li&gt;Energy Storage Devices&lt;/li&gt;
+&lt;li&gt;System / Link Stiffness&lt;/li&gt;
+&lt;li&gt;Damping and Friction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -127,8 +495,25 @@ Procedure   Identify and discuss the materials you plan to use in fabrication. D
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/incoming-survey/</guid>
-      <description>Incoming Survey Assignment Overview The goal of this assignment is to learn about you, your background, and your interests and abilities.
-Procedure  Fill out this survey  Submission instructions  Submission of the form is all that is needed for credit.  Rubric    Description Points     Total 50    </description>
+      <description>&lt;h1 id=&#34;incoming-survey&#34;&gt;Incoming Survey&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;The goal of this assignment is to learn about you, your background, and your interests and abilities.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -137,10 +522,30 @@ Procedure  Fill out this survey  Submission instructions  Submission of the form
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/install-python/</guid>
-      <description>Install Python Assignment Overview The goal here is to verify you have python installed correctly.
-Resources  Installing Anaconda Python Tutorial Add folder to system path (Windows)  Procedure   Read the entire assignment before starting.
-  Follow the instuctions in the Installing Anaconda Python Tutorial for installing the anaconda distribution of python.
-  Download the windows build for ffmpeg, a common video encoder. Unzip and move it into a new root-level folder called &amp;ldquo;c:/binaries&amp;rdquo; or similar.</description>
+      <description>&lt;h1 id=&#34;install-python&#34;&gt;Install Python&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;The goal here is to verify you have python installed correctly.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../modules/python/installing-anaconda.html&#34;&gt;Installing Anaconda Python Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../modules/misc/add-folder-to-system-path.html&#34;&gt;Add folder to system path (Windows)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -149,14 +554,39 @@ Resources  Installing Anaconda Python Tutorial Add folder to system path (Window
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/install-solidworks/</guid>
-      <description>Install Solidworks Assignment Overview The goal here is to ensure you have Solidworks installed correctly.
-Optional External Resources GNU Image Manipulation Program (Image Editor)
-Procedure   Read the entire assignment before starting.
-  Go to myapps.asu.edu and follow the instructions for installing Solidworks
-  After installation, open Solidworks and create a new part
-  Create a sketch
-
-  Add your name as text to the sketch</description>
+      <description>&lt;h1 id=&#34;install-solidworks&#34;&gt;Install Solidworks&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;The goal here is to ensure you have Solidworks installed correctly.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Solidworks Installed&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Transparent Background without artifacts&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Correct Use of Jupyter&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;50&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;optional-external-resources&#34;&gt;Optional External Resources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.gimp.org/&#34;&gt;GNU Image Manipulation Program&lt;/a&gt; (Image Editor)&lt;/p&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -165,9 +595,38 @@ Procedure   Read the entire assignment before starting.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/shapely/</guid>
-      <description>Shapely &amp;amp; Manufacturing Overview The purpose of this exercise is to get used to working with shapely polygons and to use it to compute some manufacturing geometry. It is your job to determine how to compute the cut files using Python, shapely, and the foldable_robotics package
-Detailed Procedure Display the result of each step
- Import shapely.geometry, foldable.layer, foldable.laminate, and foldable.manufacturing modules for using various shapely geometries, Layer(), and Laminate() classes, as well as for performing advanced computations.</description>
+      <description>&lt;h1 id=&#34;shapely--manufacturing&#34;&gt;Shapely &amp;amp; Manufacturing&lt;/h1&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;The purpose of this exercise is to get used to working with shapely polygons and to use it to compute some manufacturing geometry.  It is your job to determine how to compute the cut files using Python, shapely, and the foldable_robotics package&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Steps&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;60&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Discussion&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/idealabasu/code_foldable_robotics&#34;&gt;https://github.com/idealabasu/code_foldable_robotics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://shapely.readthedocs.io/en/stable/manual.html&#34;&gt;The Shapely User Manual&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -176,8 +635,57 @@ Detailed Procedure Display the result of each step
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/kinematics-via-prototyping-and-cad/</guid>
-      <description>Kinematics Via Prototyping &amp;amp; CAD Introduction The goal of this assignment is to 1) propose a mechanism that your team can study as part of a larger laminate system, and 2) to get you comfortable sketching the kinematics of foldable systems in CAD, establishing constraints, and counting degrees of freedom.
-Prerequisites  Solidworks should be installed. It may be downloaded from https://myapps.asu.edu.  Steps Pick one of the three basic kinematic elements we will be working with this semester: a planar four (or five) bar mechanism, a spherical four(or five) bar mechanism, or a sarrus linkage.</description>
+      <description>&lt;h1 id=&#34;kinematics-via-prototyping--cad&#34;&gt;Kinematics Via Prototyping &amp;amp; CAD&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The goal of this assignment is to 1) propose a mechanism that your team can study as part of a larger laminate system, and 2) to get you comfortable sketching the kinematics of foldable systems in CAD, establishing constraints, and counting degrees of freedom.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Picture of prototype&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Evaluation of 2D/3D&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Drawing of Kinematics&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;DOF&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Input/Output&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Range of Motion&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;discussion&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Solidworks should be installed.  It may be downloaded from &lt;a href=&#34;https://myapps.asu.edu&#34;&gt;https://myapps.asu.edu&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -186,9 +694,54 @@ Prerequisites  Solidworks should be installed. It may be downloaded from https:/
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/make-a-popup-book/</guid>
-      <description>Make a Pop-up Book Assignment Overview The goal of this assignment is to search externally for origami-inspired mechanisms you could use for your project. Additionally, this assignment is meant to make you think critically about how the manufacturing of foldable robots is intertwined with cutting and joining processes, and to appreciate the automation
-Procedure   Read the entire assignment before starting.
-  Read this paper[1]. Look through other references you can find, including the book by Birmingham [2] or search via other online resources such as https://scholar.</description>
+      <description>&lt;h1 id=&#34;make-a-pop-up-book&#34;&gt;Make a Pop-up Book&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;The goal of this assignment is to search externally for origami-inspired mechanisms you could use for your project.  Additionally, this assignment is meant to make you think critically about how the manufacturing of foldable robots is intertwined with cutting and joining processes, and to appreciate the automation&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Report&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;80&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Figure(s)&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Pictures&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Videos&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;References&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;external-resources&#34;&gt;External Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Video Series by D. Birmingham:&lt;br&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=aGJZbNh9Phs&#34;&gt;https://www.youtube.com/watch?v=aGJZbNh9Phs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Itai Cohen Explains The Physics of Origami&lt;br&gt;
+&lt;a href=&#34;http://www.cornell.edu/video/itai-cohen-explains-origami-physics&#34;&gt;http://www.cornell.edu/video/itai-cohen-explains-origami-physics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;KMMODL Linkage Collection
+&lt;a href=&#34;http://kmoddl.library.cornell.edu/index.php&#34;&gt;http://kmoddl.library.cornell.edu/index.php&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -197,10 +750,30 @@ Procedure   Read the entire assignment before starting.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/make-a-website/</guid>
-      <description>Make a Website Assignment Overview The purpose of this assignment is to create a project website as a living document that will document all your work for the class.
-Resources  Make a Project Repository and Website Tutorial https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet  Procedure   Follow the directions in the &amp;ldquo;Make a Project Repository and Website&amp;rdquo; tutorial
-  The website should contain the following information:
- Project Title Team members and contact information    The website should also link to several subpages.</description>
+      <description>&lt;h1 id=&#34;make-a-website&#34;&gt;Make a Website&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to create a project website as a living document that will document all your work for the class.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../modules/project/make-a-website.html&#34;&gt;Make a Project Repository and Website&lt;/a&gt; Tutorial&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -209,8 +782,25 @@ Resources  Make a Project Repository and Website Tutorial https://github.com/ada
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/presentation-feedback-i/</guid>
-      <description>Presentation Feedback I Assignment Overview Each of you is responsible for compiling at least three questions and submitting them to teams via a google form. Comments are helpful, but questions which require teams to address holes in their design are most useful. Be constructive and thoughtful.
-Procedure  Please use this form to send notes to teams Please provide one submission per team. You may edit your comments up to the due date.</description>
+      <description>&lt;h1 id=&#34;presentation-feedback-i&#34;&gt;Presentation Feedback I&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;Each of you is responsible for compiling at least three questions and submitting them to teams via a google form.  Comments are helpful, but questions which require teams to address holes in their design are most useful.  Be constructive and thoughtful.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -219,8 +809,25 @@ Procedure  Please use this form to send notes to teams Please provide one submis
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/presentation-feedback-ii/</guid>
-      <description>Presentation Feedback II Assignment Overview Each of you is responsible for compiling at least three questions and submitting them to teams via a google form. Comments are helpful, but questions which require teams to address holes in their design are most useful. Be constructive and thoughtful.
-Procedure  Please use this form to send notes to teams Please provide one submission per team. You may edit your comments up to the due date.</description>
+      <description>&lt;h1 id=&#34;presentation-feedback-ii&#34;&gt;Presentation Feedback II&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;Each of you is responsible for compiling at least three questions and submitting them to teams via a google form.  Comments are helpful, but questions which require teams to address holes in their design are most useful.  Be constructive and thoughtful.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -229,9 +836,53 @@ Procedure  Please use this form to send notes to teams Please provide one submis
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/presentation-i/</guid>
-      <description>Presentation I Assignment Overview Please prepare your group presentation based on your most recent project activities
-Procedure   Create a powerpoint with 5 Slides:
- Project Introduction  Team members Your team&amp;rsquo;s refined research question   Biomechanics-driven inspiration  Prior work on this animal Prior work related to similar robots Biomechanics-derived specifications   Proposed mechanism  Figure of Layout Picture of Prototype   Kinematics  Solution approach Estimate of Force/Torque required from actuator(s)   Future Plans  How does what you learned translate into future action by your team?</description>
+      <description>&lt;h1 id=&#34;presentation-i&#34;&gt;Presentation I&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;Please prepare your group presentation based on your most recent project activities&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Content&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 3&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 4&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 5&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Video&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -240,12 +891,53 @@ Procedure   Create a powerpoint with 5 Slides:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/presentation-ii/</guid>
-      <description>Presentation II Assignment Overview Please prepare your group presentation based on your most recent project activities
-Procedure   Review your team&amp;rsquo;s prior feedback.
-  Create a powerpoint with 5 Slides:
-  Project Update
- Team members Your team&amp;rsquo;s refined research question    Current Specifications
- Has your source of bio-inspiration changed? Have your specs changed based on the realities of physics, material selection, known payloads, etc?</description>
+      <description>&lt;h1 id=&#34;presentation-ii&#34;&gt;Presentation II&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;Please prepare your group presentation based on your most recent project activities&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Content&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 3&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 4&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 5&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Video&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -254,10 +946,53 @@ Procedure   Review your team&amp;rsquo;s prior feedback.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/presentation-iii/</guid>
-      <description>Presentation III Assignment Overview Please prepare your group presentation based on your most recent project activities
-Procedure   Review your team&amp;rsquo;s prior feedback.
-  Create a five-minute powerpoint:
- Project Update  Team members Your team&amp;rsquo;s refined research question Major updates to project definition and earlier work since last presentation   Manufacturing  Discuss the 1-layer and 5-layer manufacturing designs Discuss manufacturability Discuss how / whether you used this in your prototyping.</description>
+      <description>&lt;h1 id=&#34;presentation-iii&#34;&gt;Presentation III&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;Please prepare your group presentation based on your most recent project activities&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Content&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 3&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 4&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Slide 5&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Video&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -266,8 +1001,26 @@ Procedure   Review your team&amp;rsquo;s prior feedback.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/project-pitches/</guid>
-      <description>Project Pitches Overview The goal of this assignment is to permit those interested in pitching their ideas to attract a group of people interested in joining them. This pitch will be used to inspire and promote discussion amongst students before teams are formed.
-This is your opportunity to shape your semester and to accomplish a personal research goal through class. If, after group discussion, you wish to create other pitches, you may upload them independently to the Google Drive Folder listed below.</description>
+      <description>&lt;h1 id=&#34;project-pitches&#34;&gt;Project Pitches&lt;/h1&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;The goal of this assignment is to permit those interested in pitching their ideas to attract a group of people interested in joining them.  This pitch will be used to inspire and promote discussion amongst students before teams are formed.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is your opportunity to shape your semester and to accomplish a personal research goal through class.  If, after group discussion, you wish to create other pitches, you may upload them independently to the Google Drive Folder listed below.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -276,9 +1029,24 @@ This is your opportunity to shape your semester and to accomplish a personal res
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/project-selection-survey/</guid>
-      <description>Project Selection Survey Introduction Instructions Please fill out this survey to indicate your ranked project preferences. Only one team can answer each distinct research question.
-Submission Please complete your survey by the deadline noted in Canvas.
-Rubric    Description Points     Total {{page.points}}    </description>
+      <description>&lt;h1 id=&#34;project-selection-survey&#34;&gt;Project Selection Survey&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -287,7 +1055,59 @@ Rubric    Description Points     Total {{page.points}}    </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/python-for-loops-arrays-and-plotting/</guid>
-      <description>Python for loops, Arrays, and Plotting References Python  Basic Intro Control Flow: For, if, etc For loops List Comprehensions in Python  Arrays  NumPy for Matlab users Quickstart Tutorial Absolute Beginners Tutorial  Plotting with Matplotlib  Matplotlib Tutorials, specifically the pyplot tutorial General Examples and pyplot examples titles equal axis savefig() examples  Introduction The purpose of this assignment is to get to know Python and Juptyer Notebook.</description>
+      <description>&lt;h1 id=&#34;python-for-loops-arrays-and-plotting&#34;&gt;Python &lt;code&gt;for&lt;/code&gt; loops, Arrays, and Plotting&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to get to know Python and Juptyer Notebook.&lt;/p&gt;
+&lt;h2 id=&#34;asdf&#34;&gt;Resources&lt;/h2&gt;
+&lt;h3 id=&#34;python&#34;&gt;Python&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.python.org/3/tutorial/introduction.html&#34;&gt;Basic Intro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.python.org/3/tutorial/controlflow.html&#34;&gt;Control Flow: For, if, etc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.python.org/moin/ForLoop&#34;&gt;For loops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pythonforbeginners.com/basics/list-comprehensions-in-python&#34;&gt;List Comprehensions in Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;arrays&#34;&gt;Arrays&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html&#34;&gt;NumPy for Matlab users&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://numpy.org/doc/stable/user/quickstart.html&#34;&gt;Quickstart Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://numpy.org/doc/stable/user/absolute_beginners.html&#34;&gt;Absolute Beginners Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;plotting-with-matplotlib&#34;&gt;Plotting with Matplotlib&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://matplotlib.org/3.3.3/tutorials/index.html&#34;&gt;Matplotlib Tutorials&lt;/a&gt;, specifically the &lt;a href=&#34;https://matplotlib.org/3.3.3/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py&#34;&gt;pyplot&lt;/a&gt; tutorial&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://matplotlib.org/3.3.3/gallery/index.html&#34;&gt;General Examples&lt;/a&gt; and pyplot &lt;a href=&#34;https://matplotlib.org/3.3.3/tutorials/introductory/sample_plots.html#sphx-glr-tutorials-introductory-sample-plots-py&#34;&gt;examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/figure_title.html&#34;&gt;titles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/axis_equal_demo.html&#34;&gt;equal axis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://matplotlib.org/3.3.3/api/_as_gen/matplotlib.pyplot.savefig.html#examples-using-matplotlib-pyplot-savefig&#34;&gt;&lt;code&gt;savefig()&lt;/code&gt; examples&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Looping&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Arrays&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Plotting&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -296,9 +1116,38 @@ Rubric    Description Points     Total {{page.points}}    </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/python-functions/</guid>
-      <description>Python Functions Resources  *args and **kwargs in python explained NumPy for Matlab users  Procedure   Become familiar with Python functions, including how you declare and call them.
-  Create a function sum1() that takes two arguments x and y and returns their sum. Demonstrate your working function by running the following commands:
-print(sum1(2,3)) print(sum1(x=3,y=4))   Create a function sum2() that takes two arguments x and y with default values of 10 and 20, respectively, and returns their sum.</description>
+      <description>&lt;h1 id=&#34;python-functions&#34;&gt;Python Functions&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to get you comfortable understanding the basics of python functions and how to use them with arguments and keyword arguments&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Report&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Code&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;70&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;&lt;strong&gt;100&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://pythontips.com/2013/08/04/args-and-kwargs-in-python-explained/&#34;&gt;*args and **kwargs in python explained&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html&#34;&gt;NumPy for Matlab users&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -307,10 +1156,89 @@ print(sum1(2,3)) print(sum1(x=3,y=4))   Create a function sum2() that takes two 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/sarrus-kinematics/</guid>
-      <description>Spherical Kinematics Assignment Overview The purpose of this assignment is to get you comfortable using the numerical computational capabilities of Python to start estimating the performance of your design.
-
-Instructions Numerically Solve for a Mechanism&amp;rsquo;s Position Using the examples on the foldable robotics website as a starting point, solve for the kinematics of the mechanism above.
- Make a table of link lengths corresponding to the vectors defined by the six heavy black lines.</description>
+      <description>&lt;h1 id=&#34;spherical-kinematics&#34;&gt;Spherical Kinematics&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to get you comfortable using the numerical computational capabilities of Python to start estimating the performance of your design.&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;text-center&#34;&gt;
+  &lt;a href=&#34;https://danaukes.com/figures/kinematics/sarrus.png&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://danaukes.com/figures/kinematics/sarrus.png&#34; alt=&#34;mechanism&#34;  class=&#34;img-fluid&#34;/&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 3a&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 3b&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 3b&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 3c&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 3d&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 3e&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 4a&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 4b&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 5&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 6&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 7&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 8&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 9&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -319,9 +1247,57 @@ Instructions Numerically Solve for a Mechanism&amp;rsquo;s Position Using the ex
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/system-dynamics-i/</guid>
-      <description>System Dynamics I Assignment Overview This assignment is intended to get you familiar with the dynamics of your system. We will start with the triple pendulum example and turn it into a leg.
-Resources  dynamics modules  Procedure Starting with system kinematics code as well as the pendulum code shared on Wednesday (2/17/2021),
- Scale: Ensure your system is using SI units. You should be specifying lengths in meters (so millimeters should be scaled down to the .</description>
+      <description>&lt;h1 id=&#34;system-dynamics-i&#34;&gt;System Dynamics I&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;This assignment is intended to get you familiar with the dynamics of your system.  We will start with the triple pendulum example and turn it into a leg.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Draft&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 3&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 4&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 5&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Step 6&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;&lt;strong&gt;200&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;dynamics &lt;a href=&#34;%7B%7Bsite.baseurl%7D%7D/modules/dynamics&#34;&gt;modules&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -330,8 +1306,53 @@ Resources  dynamics modules  Procedure Starting with system kinematics code as w
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/system-dynamics-ii/</guid>
-      <description>System Dynamics II Assignment Overview The point of this assignment is to re-consolidate everything you have learned about your system back into your dynamic model. It should now include:
- at least one &amp;ldquo;compliant&amp;rdquo; element all unknown parameters determined and included.  joint or system-level damping determined   An actuator model or stored energy source. Ground constraints eliminated (if applicable) Closed-loop constraints (if applicable) valid initial condition  Procedure Resources  dynamics modules  Assignment Goals Your dynamics should include:</description>
+      <description>&lt;h1 id=&#34;system-dynamics-ii&#34;&gt;System Dynamics II&lt;/h1&gt;
+&lt;h2 id=&#34;assignment-overview&#34;&gt;Assignment Overview&lt;/h2&gt;
+&lt;p&gt;The point of this assignment is to re-consolidate everything you have learned about your system back into your dynamic model.  It should now include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;at least one &amp;ldquo;compliant&amp;rdquo; element&lt;/li&gt;
+&lt;li&gt;all unknown parameters determined and included.
+&lt;ul&gt;
+&lt;li&gt;joint or system-level damping determined&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;An actuator model or stored energy source.&lt;/li&gt;
+&lt;li&gt;Ground constraints eliminated (if applicable)&lt;/li&gt;
+&lt;li&gt;Closed-loop constraints (if applicable)&lt;/li&gt;
+&lt;li&gt;valid initial condition&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Procedure&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Discussion&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;60&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Code&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Figures/Videos&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -340,8 +1361,7 @@ Resources  dynamics modules  Procedure Starting with system kinematics code as w
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/system-kinematics/</guid>
-      <description>Create and Plot Kinematics Assignment Overview The purpose of this assignment is to model the kinematics so that you can estimate the forces, and torques, power requirements, and speed of your system. This will be done using a symbolic approach with the pynamics package
-Resources  Triple Pendulum Example EGR557 Kinematics Module EGR557 Dynamics Module pynamics repository  Instructions Meet with your team to go over each of the prototypes and mockups you have individually created through past homework assignments.</description>
+      <description></description>
     </item>
     
     <item>
@@ -350,9 +1370,25 @@ Resources  Triple Pendulum Example EGR557 Kinematics Module EGR557 Dynamics Modu
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/website-update-i/</guid>
-      <description>Website Update I Introduction The purpose of this assignment is to update your team&amp;rsquo;s progress towards creating a public-facing, unified project report.
-Instructions Please ensure each of the following assignments is posted and up-to-date. This is the time to re-evaluate each page to ensure that it matches any conclusions you have since come to since creating it the first time.
-Please make sure the following pages are present and consistent:</description>
+      <description>&lt;h1 id=&#34;website-update-i&#34;&gt;Website Update I&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to update your team&amp;rsquo;s progress towards creating a public-facing, unified project report.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -361,9 +1397,25 @@ Please make sure the following pages are present and consistent:</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/website-update-ii/</guid>
-      <description>Website Update II Introduction The purpose of this assignment is to update your team&amp;rsquo;s progress towards creating a public-facing, unified project report.
-Instructions Please ensure each of the following assignments is posted and up-to-date. This is the time to re-evaluate each page to ensure that it matches any conclusions you have since come to since creating it the first time.
-Please make sure the following pages are present and consistent:</description>
+      <description>&lt;h1 id=&#34;website-update-ii&#34;&gt;Website Update II&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to update your team&amp;rsquo;s progress towards creating a public-facing, unified project report.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -372,9 +1424,97 @@ Please make sure the following pages are present and consistent:</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://danaukes.com/assignments/website-update-iii/</guid>
-      <description>Website Update III Introduction The purpose of this assignment is to update your team&amp;rsquo;s progress towards creating a public-facing, unified project report.
-Instructions Please ensure each of the following assignments is posted and up-to-date. This is the time to re-evaluate each page to ensure that it matches any conclusions you have since come to since creating it the first time.
-Please make sure the following pages are present and consistent with your final project:</description>
+      <description>&lt;h1 id=&#34;website-update-iii&#34;&gt;Website Update III&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The purpose of this assignment is to update your team&amp;rsquo;s progress towards creating a public-facing, unified project report.&lt;/p&gt;
+&lt;h2 id=&#34;rubric&#34;&gt;Rubric&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Assignments&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Grade Consideration&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Points&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Main Page&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Update&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Research Question&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Update&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Biomechanics Background &amp;amp; Specifications&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Update&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Kinematics&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Update&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Dynamics (I, Prep, Plan, II)&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Update&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Design Optimization&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;New&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Manufacturing&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;New&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Experimental Validation&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;New&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Presentations&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Add Presentation 3&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Data&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;New&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Gallery&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;New&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;CAD&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;New&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Code&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;New&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;References&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Update&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;340&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;</description>
     </item>
     
   </channel>
